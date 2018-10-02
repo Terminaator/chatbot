@@ -1,4 +1,4 @@
-#import sentenceProcesser
+import ois2chatbot.sentenceProcesser as sentProc
 
 class chatbot():
 
