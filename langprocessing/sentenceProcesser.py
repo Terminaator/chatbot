@@ -1,6 +1,6 @@
 import estnltk as enl
 from estnltk import Text
-from estnltk.taggers import VabamorfDisambiguator, VabamorfTagger, UserDictTagger
+#from estnltk.taggers import VabamorfDisambiguator, VabamorfTagger, UserDictTagger
 
 """
 
@@ -11,15 +11,15 @@ from estnltk.taggers import VabamorfDisambiguator, VabamorfTagger, UserDictTagge
 
 def getWords(sentence):
     inputText = Text(sentence)
-    morphTagger = VabamorfTagger()
-    morphDisambiguator = VabamorfDisambiguator()
+    # morphTagger = VabamorfTagger()
+    # morphDisambiguator = VabamorfDisambiguator()
     # userTagger = UserDictTagger()
     inputText.tag_layer(['words', 'sentences'])
-    morphTagger.tag(inputText)
+    # morphTagger.tag(inputText)
     # print(inputText.morph_analysis.partofspeech)
     # userTagger.add_word("eap", {"root": "eap", "type": "ects", })
     # userTagger.tag(inputText)
-    morphDisambiguator.tag(inputText)
+    # morphDisambiguator.tag(inputText)
     return [x.lemma for x in inputText.morph_analysis]
 
 
