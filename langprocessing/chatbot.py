@@ -1,32 +1,46 @@
-
 class chatbot():
     def __init__(self):
-        frames = {}
-        currentFrame = 0
+        self.frames = {}
+        self.currentFrame = -1
 
-    def generateResponse(self, inputSentence):
+    def getResponse(self, inputSentence):
         # words = sentProc.getWords(inputSentence)
-        words = {"question": "mitu", "ects": "eap", "0": "on", "1": "kursus", "courseID": "LTAT.05.005"}
-        self.fillFrame(words)
+        words = {"questionWord": "mitu", "ects": True, "0": "on", "1": "kursus", "courseID": "LTAT.05.005"}
+        self.addFrameLayer(words)
 
-    def fillFrame(self, words):
+    def addFrameLayer(self, words):
+        """
+        creates a new frame layer
+        :param words:  dictionary of words to be added to the new frame layer
+        """
+        self.currentFrame += 1
+        self.frames["layer " + str(self.currentFrame)] = self.fillFrameLayer(words)
+
+    def fillFrameLayer(self, words):
+        """
+        fills a frame layer
+        :param words: dictionary of words to be added to the layer
+        :return: filled frame layer
+        """
         layer = self.createEmptyLayer()
-
-
-
+        for key in layer:
+            for k in layer[key]:
+                if (k in words):
+                    layer[key][k] = words[k]
+        return layer
 
     def createEmptyLayer(self):
         """
         Creates a layer for frame
-        Frame structure example:
+        Frame with 1 layer structure
         frame = {
-            layer n: {
-                courses : {courseID: "" , ects : boolean}
+            layer 0: {
+                misc : {questionWord: String}
+                courses : {courseID: String , ects : boolean}
             }
         }
         """
+        misc = {"questionWord": ""}
         courses = {"courseID": "", "ects": ""}
-        layer = {"courses": courses}
+        layer = {"misc": misc, "courses": courses}
         return layer
-
-
