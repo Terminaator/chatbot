@@ -1,3 +1,7 @@
+import views.ois.courses as oisCourses
+from estnltk.vabamorf.morf import synthesize, analyze
+
+
 class chatbot():
     def __init__(self):
         self.frames = {}
@@ -5,8 +9,22 @@ class chatbot():
 
     def getResponse(self, inputSentence):
         # words = sentProc.getWords(inputSentence)
-        words = {"questionWord": "mitu", "ects": True, "0": "on", "1": "kursus", "courseID": "LTAT.05.005"}
+        words = inputSentence  # TODO: remove this line once sentenceProcesser is ready
         self.addFrameLayer(words)
+        return self.putTogetherAnAnswer()
+
+    def putTogetherAnAnswer(self):
+        currentLayer = self.frames["layer " + str(self.currentFrame)]
+        misc = currentLayer["misc"]
+        courses = currentLayer["courses"]
+
+        if len(courses["courseID"]) != 0:
+            if courses["ects"]:
+                return self.answerCourseEcts(courses["courseID"])
+            if misc["questionWord"] == "mis":
+                return self.answerCourseCode(courses["courseID"])
+
+        return "Kahjuks ma ei saanud teist aru."
 
     def addFrameLayer(self, words):
         """
@@ -36,11 +54,36 @@ class chatbot():
         frame = {
             layer 0: {
                 misc : {questionWord: String}
-                courses : {courseID: String , ects : boolean}
+                courses : {courseID: String, ects : boolean}
             }
         }
         """
         misc = {"questionWord": ""}
-        courses = {"courseID": "", "ects": ""}
+        courses = {"courseID": "", "ects": False}
         layer = {"misc": misc, "courses": courses}
         return layer
+
+    def answerCourseEcts(self, courseId):
+        json = oisCourses.coursesId(courseId)
+        title = json["title"]["et"]
+        if " " in title:
+            return "Kursuse " + title + " maht on " + str(json["credits"]) + " eap."
+        return self.synthesizeWord(title, "g").capitalize() + " maht on " + str(json["credits"]) + " eap."
+
+    def answerCourseCode(self, courseId):
+        json = oisCourses.coursesId(courseId)
+        title = json["title"]["et"]
+        if " " in title:
+            return "Kursuse " + title + " ainekood on " + courseId
+        return self.synthesizeWord(title, "g").capitalize() + " ainekood on " + courseId
+
+    def synthesizeWord(self, word, f):
+        """
+        Changes the word's form without changing it form plural to singular or vice versa
+        :param word: word to be formed
+        :param f: desired form
+        :return: word in desired form
+        """
+        # need to check if the title is plural or not.
+        form = analyze(word)[0]["analysis"][0]["form"]
+        return synthesize(word, form[:2] + " " + f, "S")[0]
