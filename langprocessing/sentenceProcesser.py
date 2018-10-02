@@ -8,6 +8,7 @@ from estnltk.taggers import VabamorfDisambiguator, VabamorfTagger, UserDictTagge
 """
 
 
+
 def getWords(sentence):
     inputText = Text(sentence)
     morphTagger = VabamorfTagger()
