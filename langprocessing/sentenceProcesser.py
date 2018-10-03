@@ -1,32 +1,26 @@
 import estnltk as enl
 from estnltk import Text
-#from estnltk.taggers import VabamorfDisambiguator, VabamorfTagger, UserDictTagger
-
-"""
-
-:param sentence: 
-"""
-
+from estnltk.taggers import VabamorfTagger, PhraseTagger, read_vocabulary, SpanTagger
 
 
 def getWords(sentence):
+    """
+
+    :param sentence:
+    """
+    v = read_vocabulary(vocabulary_file='vocabulary.csv', key='_token_',  string_attributes=['value', '_token_'])
     inputText = Text(sentence)
-    # morphTagger = VabamorfTagger()
-    # morphDisambiguator = VabamorfDisambiguator()
-    # userTagger = UserDictTagger()
-    inputText.tag_layer(['words', 'sentences'])
-    # morphTagger.tag(inputText)
-    # print(inputText.morph_analysis.partofspeech)
-    # userTagger.add_word("eap", {"root": "eap", "type": "ects", })
-    # userTagger.tag(inputText)
-    # morphDisambiguator.tag(inputText)
-    return [x.lemma for x in inputText.morph_analysis]
+    tagger = SpanTagger(output_layer='tagged_tokens',
+                        input_layer='morph_analysis',
+                        input_attribute='lemma',
+                        vocabulary=v,
+                        output_attributes=['value'],  # default: None
+                        ambiguous=False  # default: False
+                        )
+    inputText.tag_layer(['morph_analysis'])
+    tagger.tag(inputText)
+    print(inputText.morph_analysis)
+    return [(i, j) for i, j in zip(inputText.tagged_tokens.text, inputText.tagged_tokens.value)]
 
 
-def tagWords(words):
-    wordDict = dict()
-    for word in words:
-        for lemma in words:
-            pass
-
-# print(getWords("Mitu eap on kursus tarkvaraprojekt?"))
+print(getWords("Mitu eap'd on kursus tarkvaraprojekt?"))
