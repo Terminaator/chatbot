@@ -1,5 +1,6 @@
 import views.ois.courses as oisCourses
 from estnltk.vabamorf.morf import synthesize, analyze
+import langprocessing.sentenceProcesser as sentProc
 
 
 class chatbot():
@@ -8,8 +9,8 @@ class chatbot():
         self.currentFrame = -1
 
     def getResponse(self, inputSentence):
-        # words = sentProc.getWords(inputSentence)
-        words = inputSentence  # TODO: remove this line once sentenceProcesser is ready
+        words = sentProc.getWords(inputSentence)
+        # words = inputSentence  # TODO: remove this line once sentenceProcesser is ready
         self.addFrameLayer(words)
         return self.putTogetherAnAnswer()
 

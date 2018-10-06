@@ -6,3 +6,10 @@ def coursesId(id):
     if status_code == 200:
         return request.json()
     raise Exception("reguest status code: " + status_code)
+
+def getNCourses(n: int, start: int):
+    request = requests.get('https://ois2.ut.ee/api/courses?take=' + str(n) + '&start=' + str(start))
+    status_code = request.status_code
+    if status_code == 200:
+        return request.json()
+    raise Exception("reguest status code: " + str(status_code))
