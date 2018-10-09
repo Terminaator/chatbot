@@ -44,7 +44,7 @@ class SentenceProcessor:
             for lemma in itertools.combinations(lemmas, i):
                 word = " ".join(lemma)
                 if word in courses:
-                    result['courseID'] = courses[word]
+                    result['courseID'] += (courses[word])
                     coursesWords += lemma
                 elif 'eap' in word and len(word) <= 4:
                     result['ects'] = True
