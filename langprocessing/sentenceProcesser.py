@@ -37,7 +37,7 @@ class SentenceProcessor:
         inputText.tag_layer(['morph_analysis'])
 
         # looks for courses from lemmatized courses dictionary
-        lemmas = [x[0] for x in inputText.morph_analysis.lemma]
+        lemmas = [x[0].lower() for x in inputText.morph_analysis.lemma]
         i = len(lemmas)
         coursesWords = []
         while i > 0:
@@ -46,7 +46,7 @@ class SentenceProcessor:
                 if word in courses:
                     result['courseID'] = courses[word]
                     coursesWords += lemma
-                elif word == 'eap':
+                elif 'eap' in word and len(word) <= 4:
                     result['ects'] = True
                 elif word in questionwords:
                     result['questionWord'] = word
@@ -55,6 +55,7 @@ class SentenceProcessor:
                     counter += 1
             i -= 1
         return result
+
 
     def _getCourses(self):
         """

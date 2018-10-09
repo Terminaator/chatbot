@@ -73,12 +73,12 @@ class TestSimpleRequests(unittest.TestCase):
 
     def test_simpleGetWords(self):
         sentProcessor = sentProc.SentenceProcessor()
-        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": {"LTAT.05.005"}},
+        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": ["LTAT.05.005"]},
                          sentProcessor.getWords("Mitu eap'd on aine Tarkvaraprojekt"))
-        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": {"MTAT.03.263"}},
+        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": ["MTAT.03.263"]},
                          sentProcessor.getWords("Mitu eap'd on aine Arvutimängude loomine ja disain"))
         self.assertEqual(
-            {'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": {"P2NC.01.094", "LTAT.05.004"}},
+            {'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": ["LTAT.05.004", "P2NC.01.094"]},
             sentProcessor.getWords("Mitu eap'd on aine Veebirakenduste loomine"))
 
 
