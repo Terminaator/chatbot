@@ -1,3 +1,6 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
 asn1crypto=0.24.0=py36_0
 beautifulsoup4=4.6.3=py36_0
 blas=1.0=mkl
@@ -59,6 +62,7 @@ vc=14.1=h21ff451_3
 vs2015_runtime=15.5.2=3
 webencodings=0.5.1=py36_1
 wheel=0.32.1=py36_0
+whitenoise=4.1=py_0
 win_inet_pton=1.0.1=py36_1
 wincertstore=0.2=py36h7fe50ca_0
 zlib=1.2.11=h8395fce_2
