@@ -1,1 +1,1 @@
-estnltk
+estnltk=1.6.0
