@@ -1,0 +1,1 @@
+web: gunicorn ois2chatbot.wsgi --log-file -
