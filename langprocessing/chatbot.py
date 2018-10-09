@@ -7,9 +7,10 @@ class chatbot():
     def __init__(self):
         self.frames = {}
         self.currentFrame = -1
+        self.sentenceProcessor = sentProc.SentenceProcessor()
 
     def getResponse(self, inputSentence):
-        words = sentProc.getWords(inputSentence)
+        words = self.sentenceProcessor.getWords(inputSentence)
         # words = inputSentence  # TODO: remove this line once sentenceProcesser is ready
         self.addFrameLayer(words)
         return self.putTogetherAnAnswer()

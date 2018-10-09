@@ -1,5 +1,6 @@
 import unittest
 import langprocessing.chatbot as cbot
+import langprocessing.sentenceProcesser as sentProc
 
 
 class TestSimpleRequests(unittest.TestCase):
@@ -64,10 +65,10 @@ class TestSimpleRequests(unittest.TestCase):
         self.assertEqual("Kursuse Arvutimängude loomine ja disain ainekood on MTAT.03.263", bot.getResponse(words))
 
     def test_simpleGetWords(self):
-        sentProc = cbot.sentProc
-        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": "LTAT.05.005"}, sentProc.getWords("Mitu eap'd on aine Tarkvaraprojekt"))
-        self.maxDiff = None
-        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": "MTAT.03.263"}, sentProc.getWords("Mitu eap'd on aine Arvutimängude loomine ja disain"))
+        sentProcessor = sentProc.SentenceProcessor()
+        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": {"LTAT.05.005"}}, sentProcessor.getWords("Mitu eap'd on aine Tarkvaraprojekt"))
+        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": {"MTAT.03.263"}}, sentProcessor.getWords("Mitu eap'd on aine Arvutimängude loomine ja disain"))
+        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": {"P2NC.01.094", "LTAT.05.004"}}, sentProcessor.getWords("Mitu eap'd on aine Veebirakenduste loomine"))
 
 
 if __name__ == '__main__':
