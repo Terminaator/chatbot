@@ -1,1 +1,1 @@
-estnltk=1.6.0
+estnltk -c conda-forge estnltk
