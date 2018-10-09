@@ -14,4 +14,5 @@ class ClientQuestionView(View):
     @method_decorator(RequestJson)
     def post(self, request):
         json_data = request.json
-        return JsonResponse({"answer": self.__chatbot.getResponse(json_data["question"])})
+        #return JsonResponse({"answer": self.__chatbot.getResponse(json_data["question"])})
+        return 2
