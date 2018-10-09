@@ -1,1 +1,0 @@
-estnltk -c conda-forge estnltk
