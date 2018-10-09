@@ -58,9 +58,18 @@ class TestSimpleRequests(unittest.TestCase):
         # words = {"questionWord": "mis", "0": "on", "1": "kursuse", "courseID": {"MTAT.03.006}"}, "2": "kood"}
         words = "Mis on kursuse Programmeerimiskeeled kood?"
         self.assertEqual("Programmeerimiskeelte ainekood on MTAT.03.006", bot.getResponse(words))
-        # words = {"questionWord": "mis", "0": "on", "1": "kursuse", "courseID": {"MTAT.03.263"}, "2": "kood"}
+        # words = {"questionWord": "mis", "0": "on", "1": "kursuse"e, "courseID": {"MTAT.03.263"}, "2": "kood"}
         words = "Mis on kursuse Arvutimängude loomine ja disain kood?"
         self.assertEqual("Kursuse Arvutimängude loomine ja disain ainekood on MTAT.03.263", bot.getResponse(words))
+
+    def test_multipleCourseIdsWithSameName(self):
+        bot = cbot.chatbot()
+        sentence = "Mitu eap'd annab veebirakenduste loomise läbimine?"
+        self.assertEqual("Selle nimega on 2 erinevat kursust. LTAT.05.004 mille maht on 6 eap ja P2NC.01.094 mille maht on 5 eap.", bot.getResponse(sentence))
+
+        sentence = "Mis on veebirakenduste loomise ainekood."
+        self.assertEqual("Selle nimega on 2 erinevat kursust. Nende ainekoodid on LTAT.05.004 ja P2NC.01.094.", bot.getResponse(sentence))
+
 
     def test_simpleGetWords(self):
         sentProcessor = sentProc.SentenceProcessor()

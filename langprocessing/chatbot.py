@@ -10,11 +10,20 @@ class chatbot():
         self.sentenceProcessor = sentProc.SentenceProcessor()
 
     def getResponse(self, inputSentence):
+        """
+        fills the frame and returns an answer
+        :param inputSentence: Question that the client asked
+        :return:A response for the client
+        """
         words = self.sentenceProcessor.getWords(inputSentence)
         self.addFrameLayer(words)
         return self.putTogetherAnAnswer()
 
     def putTogetherAnAnswer(self):
+        """
+        looks at the frame and answers based on that.
+        :return: A response for the client
+        """
         currentLayer = self.frames["layer " + str(self.currentFrame)]
         misc = currentLayer["misc"]
         courses = currentLayer["courses"]
@@ -65,18 +74,48 @@ class chatbot():
         return layer
 
     def answerCourseEcts(self, courseId):
-        json = oisCourses.coursesId(courseId)
-        title = json["title"]["et"]
-        if " " in title:
-            return "Kursuse " + title + " maht on " + str(json["credits"]) + " eap."
-        return self.synthesizeWord(title, "g").capitalize() + " maht on " + str(json["credits"]) + " eap."
+        """
+        Creates an answer for questions about course ects.
+        :param courseId: Courses which, were asked for
+        :return: an answer
+        """
+        if len(courseId) == 1:
+            json = oisCourses.coursesId(courseId[0])
+            title = json["title"]["et"]
+            if " " in title:
+                return "Kursuse " + title + " maht on " + str(json["credits"]) + " eap."
+            return self.synthesizeWord(title, "g").capitalize() + " maht on " + str(json["credits"]) + " eap."
+
+        else:
+            response = "Selle nimega on " + str(len(courseId)) + " erinevat kursust."
+            json = oisCourses.coursesId(courseId[0])
+            response += " " + courseId[0] + " mille maht on " + str(json["credits"]) + " eap"
+            for i in courseId[1:-1]:
+                json = oisCourses.coursesId(i)
+                response += ", " + i + " mille maht on " + str(json["credits"]) + " eap"
+            json = oisCourses.coursesId(courseId[-1])
+            response += " ja " + courseId[-1] + " mille maht on " + str(json["credits"]) + " eap."
+            return response
 
     def answerCourseCode(self, courseId):
-        json = oisCourses.coursesId(courseId)
-        title = json["title"]["et"]
-        if " " in title:
-            return "Kursuse " + title + " ainekood on " + courseId
-        return self.synthesizeWord(title, "g").capitalize() + " ainekood on " + courseId
+        """
+        Creates an answer for questions about course code.
+        :param courseId: Courses which, were asked for
+        :return: an answer with course code(s)
+        """
+        if len(courseId) == 1:
+            id = courseId.pop()
+            json = oisCourses.coursesId(id)
+            title = json["title"]["et"]
+            if " " in title:
+                return "Kursuse " + title + " ainekood on " + id
+            return self.synthesizeWord(title, "g").capitalize() + " ainekood on " + id
+        else:
+            response = "Selle nimega on " + str(len(courseId)) + " erinevat kursust. Nende ainekoodid on "
+            for i in courseId[:-2]:
+                response += i + ", "
+            response += courseId[-2] + " ja "
+            return response + courseId[-1] + "."
 
     def synthesizeWord(self, word, f):
         """

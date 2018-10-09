@@ -31,7 +31,7 @@ class SentenceProcessor:
         :return: tagged words in dictionary
         """
         questionwords = ['kes', 'mis', 'kus', 'mitu']  # todo more or think something else
-        result = defaultdict(set)
+        result = defaultdict(list)
         counter = 0
         courses = self._getCourses()
         inputText.tag_layer(['morph_analysis'])
@@ -61,11 +61,11 @@ class SentenceProcessor:
         Reads courses from csv file
         :return: courses in dictionary
         """
-        courses = defaultdict(set)
+        courses = defaultdict(list)
         with open(os.path.join(os.path.dirname(__file__), 'courses.csv'), encoding="UTF-8") as file:
             reader = csv.reader(file)
             for line in reader:
-                courses[line[0].strip()].add(line[1].strip())
+                courses[line[0].strip()].append(line[1].strip())
             return courses
 
     def updateCourses(self):
