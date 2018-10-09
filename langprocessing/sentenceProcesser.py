@@ -12,7 +12,7 @@ class SentenceProcessor:
     def __init__(self):
         self.courses = self._getCourses()
         self.logger = logging.getLogger(__name__)
-        logging.basicConfig(level='debug')
+        self.logger.setLevel('DEBUG')
 
     def getWords(self, sentence):
         """

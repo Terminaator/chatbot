@@ -11,7 +11,6 @@ class chatbot():
 
     def getResponse(self, inputSentence):
         words = self.sentenceProcessor.getWords(inputSentence)
-        # words = inputSentence  # TODO: remove this line once sentenceProcesser is ready
         self.addFrameLayer(words)
         return self.putTogetherAnAnswer()
 
