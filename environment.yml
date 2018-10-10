@@ -2,3 +2,4 @@ name: chatbot
 dependencies:
   - requests
   - django
+  - estnltk
