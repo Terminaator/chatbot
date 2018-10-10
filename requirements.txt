@@ -1,6 +1,0 @@
-whitenoise==3.2.1
-gunicorn==19.1.0
-djangorestframework==3.8.2
-Django==2.1.1
-requests==2.19.1
-estnltk==1.6.1b0
