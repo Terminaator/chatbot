@@ -1,3 +1,5 @@
 name: chatbot
 dependencies:
   - requests
+  - django
+  - djangorestframework
