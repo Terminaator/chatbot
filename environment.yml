@@ -1,4 +1,6 @@
 name: chatbot
+channels:
+  - conda-forge
 dependencies:
   - requests
   - django
