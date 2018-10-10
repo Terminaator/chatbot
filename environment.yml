@@ -1,6 +1,5 @@
 name: chatbot
 channels:
-  - conda-forge
   - estnltk
 dependencies:
   - requests
