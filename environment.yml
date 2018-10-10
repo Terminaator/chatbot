@@ -1,7 +1,8 @@
 name: chatbot
 channels:
   - conda-forge
+  - estnltk
 dependencies:
   - requests
   - django
-  - estnltk=1.6.1beta=3.5
+  - estnltk

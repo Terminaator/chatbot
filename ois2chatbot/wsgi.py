@@ -14,5 +14,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ois2chatbot.settings')
 
 application = get_wsgi_application()
 
-from whitenoise.django import DjangoWhiteNoise
-application = DjangoWhiteNoise(application)
+#from whitenoise.django import DjangoWhiteNoise
+#application = DjangoWhiteNoise(application)
