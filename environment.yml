@@ -1,4 +1,4 @@
-name: chatbot
+name: root
 dependencies:
   - requests
   - django
