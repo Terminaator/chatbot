@@ -4,4 +4,4 @@ channels:
 dependencies:
   - requests
   - django
-  - estnltk
+  - estnltk=1.6.1beta=3.5
