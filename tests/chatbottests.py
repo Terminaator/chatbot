@@ -62,6 +62,13 @@ class TestSimpleRequests(unittest.TestCase):
         words = "Mis on kursuse Arvutimängude loomine ja disain kood?"
         self.assertEqual("Kursuse Arvutimängude loomine ja disain ainekood on MTAT.03.263", bot.getResponse(words))
 
+        sentence = "mis on Programmeerimiskeelte eeldusained"
+        self.assertEqual("Selle kursuse eeldusaine on LTAT.03.005 \"Algoritmid ja andmestruktuurid\" või MTAT.03.133 \"Algoritmid ja andmestruktuurid\".", bot.getResponse(sentence))
+        sentence = "mis on Tarkvaraprojekti eeldusained"
+        self.assertEqual("Sellel kursusel pole eeldusaineid.", bot.getResponse(sentence))
+        sentence = "mis on veebirakenduste loomise eeldusained"
+        self.assertEqual("Selle nimega on 2 erinevat kursust. Kursuse LTAT.05.004 eeldusaine on LTAT.03.003 \"Objektorienteeritud programmeerimine\" või MTAT.03.130 \"Objektorienteeritud programmeerimine\" Kursusel P2NC.01.094 eeldusained puuduvad.", bot.getResponse(sentence))
+
     def test_multipleCourseIdsWithSameName(self):
         bot = cbot.chatbot()
         sentence = "Mitu eap'd annab veebirakenduste loomise läbimine?"
@@ -80,6 +87,8 @@ class TestSimpleRequests(unittest.TestCase):
         self.assertEqual(
             {'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": ["LTAT.05.004", "P2NC.01.094"]},
             sentProcessor.getWords("Mitu eap'd on aine Veebirakenduste loomine"))
+
+        self.assertEqual({'CourseCodeMentioned': True, 'preReqs': True}, sentProcessor.getWords("ainekood eeldusained"))
 
 
 if __name__ == '__main__':

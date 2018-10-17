@@ -31,6 +31,8 @@ class SentenceProcessor:
         :return: tagged words in dictionary
         """
         questionwords = ['kes', 'mis', 'kus', 'mitu']  # todo more or think something else
+        courseCodeWords = ['ainekood', 'kood']
+        preReqMentionWords = ['eeldusaine', 'eeldus']
         result = defaultdict(list)
         counter = 0
         courses = self._getCourses()
@@ -48,6 +50,10 @@ class SentenceProcessor:
                     coursesWords += lemma
                 elif 'eap' in word and len(word) <= 4:
                     result['ects'] = True
+                elif word in courseCodeWords:
+                    result['CourseCodeMentioned'] = True
+                elif word in preReqMentionWords:
+                    result['preReqs'] = True
                 elif word in questionwords:
                     result['questionWord'] = word
                 elif i == 1 and word not in coursesWords:

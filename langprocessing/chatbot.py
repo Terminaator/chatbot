@@ -31,8 +31,10 @@ class chatbot():
         if len(courses["courseID"]) != 0:
             if courses["ects"]:
                 return self.answerCourseEcts(courses["courseID"])
-            if misc["questionWord"] == "mis":
+            if courses["CourseCodeMentioned"]:
                 return self.answerCourseCode(courses["courseID"])
+            if courses["preReqs"]:
+                return self.answerCoursePreReqs(courses["courseID"])
 
         return "Kahjuks ma ei saanud teist aru."
 
@@ -64,12 +66,12 @@ class chatbot():
         frame = {
             layer 0: {
                 misc : {questionWord: String}
-                courses : {courseID: String, ects : boolean}
+                courses : {courseID: String, ects : boolean, preReqs : boolean, CourseCodeMentioned: boolean}
             }
         }
         """
         misc = {"questionWord": ""}
-        courses = {"courseID": "", "ects": False}
+        courses = {"courseID": "", "ects": False, "preReqs": False, "CourseCodeMentioned": False}
         layer = {"misc": misc, "courses": courses}
         return layer
 
@@ -116,6 +118,43 @@ class chatbot():
                 response += i + ", "
             response += courseId[-2] + " ja "
             return response + courseId[-1] + "."
+
+    def answerCoursePreReqs(self, courseId):
+        """
+        Creates an answer for question about prerequired courses
+        :param courseId: Courses which, were asked for
+        :return: An answer, that contains prerequired courses
+        """
+        if len(courseId) == 1:
+            result = "Selle kursuse"
+        else:
+            result = "Selle nimega on " + str(len(courseId)) + " erinevat kursust."
+
+        for id in courseId:
+
+            json = oisCourses.coursesId(id)
+            if "prerequisites" in json["additional_info"]:
+                if len(courseId) > 1:
+                    result += " Kursuse " + id
+
+                preReqs = json["additional_info"]["prerequisites"]
+                if len(preReqs) == 1:
+                    result += " eeldusaine on"
+                else:
+                    result += " eeldusained on"
+
+                for req in preReqs:
+                    result += " " + req["code"] + " \"" + req["title"]["et"] + "\""
+                    if "alternatives" in req:
+                        alternatives = req["alternatives"]
+                        for alt in alternatives:
+                            result += " või " + alt["code"] + " \"" + alt["title"]["et"] + "\""
+            elif len(courseId) > 1:
+                result += " Kursusel " + id + " eeldusained puuduvad"
+            else:
+                return "Sellel kursusel pole eeldusaineid."
+        return result + "."
+
 
     def synthesizeWord(self, word, f):
         """
