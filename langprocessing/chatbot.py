@@ -1,6 +1,7 @@
 import views.ois.courses as oisCourses
 from estnltk.vabamorf.morf import synthesize, analyze
 import langprocessing.sentenceProcesser as sentProc
+from random import randint
 
 
 class chatbot():
@@ -35,6 +36,8 @@ class chatbot():
                 return self.answerCourseCode(courses["courseID"])
             if courses["preReqs"]:
                 return self.answerCoursePreReqs(courses["courseID"])
+        if misc['greeting']:
+            return self.sayHello()
 
         return "Kahjuks ma ei saanud teist aru."
 
@@ -70,7 +73,7 @@ class chatbot():
             }
         }
         """
-        misc = {"questionWord": ""}
+        misc = {"questionWord": "", "greeting": False}
         courses = {"courseID": "", "ects": False, "preReqs": False, "CourseCodeMentioned": False}
         layer = {"misc": misc, "courses": courses}
         return layer
@@ -154,6 +157,10 @@ class chatbot():
             else:
                 return "Sellel kursusel pole eeldusaineid."
         return result + "."
+
+    def sayHello(self):
+        greetings = ['Tere!', 'Hello!', 'Ahoi!', 'Tervitus!', 'Ära ehmata! Hommikust sullegi!', '01010100 01100101 01110010 01100101 00001010', 'Tsau tsau!']
+        return greetings[randint(0, len(greetings) - 1)]
 
 
     def synthesizeWord(self, word, f):

@@ -33,6 +33,8 @@ class SentenceProcessor:
         questionwords = ['kes', 'mis', 'kus', 'mitu']  # todo more or think something else
         courseCodeWords = ['ainekood', 'kood']
         preReqMentionWords = ['eeldusaine', 'eeldus']
+        greetings = ['tere', 'hei', 'hommikust', 'hommik', 'õhtust', 'tsau', 'ahoi']
+        pronoun = ['mina', 'sina', 'tema', 'teie', 'meie', 'nemad']
         result = defaultdict(list)
         counter = 0
         courses = self._getCourses()
@@ -56,9 +58,14 @@ class SentenceProcessor:
                     result['preReqs'] = True
                 elif word in questionwords:
                     result['questionWord'] = word
+                elif word in greetings:
+                    result['greeting'] = True
+                elif word in pronoun:
+                    result['pronoun'] = word
                 elif i == 1 and word not in coursesWords:
                     result[counter] = word
                     counter += 1
+
             i -= 1
         return result
 
