@@ -1,4 +1,5 @@
 import views.ois.courses as oisCourses
+import views.ois.structuralUnits as oisStructuralUnits
 from estnltk.vabamorf.morf import synthesize, analyze
 import langprocessing.sentenceProcesser as sentProc
 from random import randint
@@ -29,8 +30,16 @@ class chatbot():
         currentLayer = self.frames["layer " + str(self.currentFrame)]
         misc = currentLayer[wt.misc]
         courses = currentLayer[wt.courses]
+        sUnits = currentLayer[wt.structureUnits]
+
+        #WHAT IS questions
+        if self.isWhatIsQuestionAsked(currentLayer):
+            if sUnits[wt.structureUnitCode] != "":
+                return self.answerWhatIsStructureCode(sUnits[wt.structureUnitCode])
 
 
+
+        #COURSES questions
         if len(courses[wt.courseID]) != 0:
             if courses[wt.ects]:
                 return self.answerCourseEcts(courses[wt.courseID])
@@ -43,13 +52,6 @@ class chatbot():
             return self.sayHello()
 
         return "Kahjuks ma ei saanud teist aru."
-
-    def isWhatIsQuestionAsked(self, currentLayer):
-        misc = currentLayer[wt.misc]
-        sentence = currentLayer[wt.courses]
-        if (sentence[0] == "questionWord"):
-            return True
-        return False
 
     def addFrameLayer(self, words):
         """
@@ -69,8 +71,9 @@ class chatbot():
         for key in layer:
             for k in layer[key]:
                 if (k in words):
-                    layer[wt.sentence].append(k)
                     layer[key][k] = words[k]
+        for k in words:
+            layer[wt.sentence].append(k)
         return layer
 
     def createEmptyLayer(self):
@@ -80,15 +83,41 @@ class chatbot():
         frame = {
             layer 0: {
                 sentence : [words]
-                misc : {questionWord: String, greeting: boolean, pronoun: String}
+                misc : {questionWord: String, greeting: boolean, pronoun: String, wt.whatIsQuestionSecondWord: String}
                 courses : {courseID: String, ects : boolean, preReqs : boolean, CourseCodeMentioned: boolean}
+                structuralUnits: {structuralUnitCode: String}
             }
         }
         """
-        misc = {wt.questionWord: "", wt.greeting: False}
+        misc = {wt.questionWord: "", wt.greeting: False, wt.pronoun: "", wt.whatIsQuestionSecondWord: ""}
         courses = {wt.courseID: "", wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False}
-        layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses}
+        sUnit = {wt.structureUnitCode: ""}
+        layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
         return layer
+
+    def isWhatIsQuestionAsked(self, currentLayer):
+        """
+        tries to see if user asked a "What is x" question
+        :param currentLayer: currently used layer
+        :return: Returns if client asked a term explanation question
+        """
+        misc = currentLayer[wt.misc]
+        sentence = currentLayer[wt.sentence]
+        if len(sentence) < 3:
+            return False
+        if sentence[1] != wt.whatIsQuestionSecondWord or sentence[0] != wt.questionWord:
+            return False
+
+        return (misc[wt.questionWord] in ["mis"] and misc[wt.whatIsQuestionSecondWord] in ["tähendama", "on"]) and (sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID)
+
+    def answerWhatIsStructureCode(self, structureCode):
+        """
+        Creates an answer for a what is structure code question
+        :param structureCode: structure code, that the client wants to know about
+        :return: answer about the structure unit
+        """
+        json = oisStructuralUnits.getStructuralUnit(structureCode)
+        return "Antud koodi kasutab struktuuriüksus: " + json["name"]["et"] + "."
 
     def answerCourseEcts(self, courseId):
         """
@@ -116,7 +145,7 @@ class chatbot():
 
     def answerCourseCode(self, courseId):
         """
-        Creates an answer for questions about course code.
+        Creates an answer for questions about course code. like "mis on masinõppe ainekood"
         :param courseId: Courses which, were asked for
         :return: an answer with course code(s)
         """

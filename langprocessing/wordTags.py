@@ -9,6 +9,8 @@ class WordTag(Enum):
     questionWord = 1
     greeting = 2
     pronoun = 3
+    whatIsQuestionSecondWord = 4
+    whatIsQuestionTargetWord = 5
 
     #courses
     courses = 20
@@ -16,4 +18,8 @@ class WordTag(Enum):
     ects = 22
     preReqs = 23
     courseCodeMentioned = 24
+
+    #Structure Units
+    structureUnits = 40
+    structureUnitCode = 41
 

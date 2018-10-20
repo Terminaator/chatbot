@@ -9,7 +9,7 @@ class TestSimpleRequests(unittest.TestCase):
         words = {wt.questionWord: "mitu", wt.ects: True, wt.courseID: "LTAT.05.005"}
 
         expectedLayer = bot.createEmptyLayer()
-        expectedLayer[wt.sentence] = [wt.questionWord, wt.courseID, wt.ects]
+        expectedLayer[wt.sentence] = [wt.questionWord, wt.ects, wt.courseID]
         expectedLayer[wt.misc][wt.questionWord] = "mitu"
         expectedLayer[wt.courses][wt.courseID] = "LTAT.05.005"
         expectedLayer[wt.courses][wt.ects] = True
@@ -25,8 +25,8 @@ class TestSimpleRequests(unittest.TestCase):
         layer2 = bot.createEmptyLayer()
 
         layer0[wt.sentence] = [wt.courseID]
-        layer1[wt.sentence] = [wt.courseID, wt.ects]
-        layer2[wt.sentence] = [wt.questionWord, wt.courseID, wt.ects]
+        layer1[wt.sentence] = [wt.ects, wt.courseID]
+        layer2[wt.sentence] = [wt.questionWord, wt.ects, wt.courseID]
 
         layer0[wt.courses][wt.courseID] = "LTAT.05.005"
         layer1[wt.courses][wt.courseID] = "LTAT.05.005"
@@ -73,6 +73,12 @@ class TestSimpleRequests(unittest.TestCase):
         self.assertEqual("Sellel kursusel pole eeldusaineid.", bot.getResponse(sentence))
         sentence = "mis on veebirakenduste loomise eeldusained"
         self.assertEqual("Selle nimega on 2 erinevat kursust. Kursuse LTAT.05.004 eeldusaine on LTAT.03.003 \"Objektorienteeritud programmeerimine\" või MTAT.03.130 \"Objektorienteeritud programmeerimine\" Kursusel P2NC.01.094 eeldusained puuduvad.", bot.getResponse(sentence))
+
+
+    def test_whatisQuestions(self):
+        bot = cbot.chatbot()
+        sentence = "mida tähendab MTAT?"
+        self.assertEqual("Antud koodi kasutab struktuuriüksus: arvutiteaduse instituut.", bot.getResponse(sentence))
 
     def test_multipleCourseIdsWithSameName(self):
         bot = cbot.chatbot()
