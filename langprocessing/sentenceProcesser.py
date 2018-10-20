@@ -6,7 +6,7 @@ import itertools
 import logging
 import csv
 import os
-
+from langprocessing.wordTags import WordTag as wt
 
 class SentenceProcessor:
     def __init__(self):
@@ -48,20 +48,20 @@ class SentenceProcessor:
             for lemma in itertools.combinations(lemmas, i):
                 word = " ".join(lemma)
                 if word in courses:
-                    result['courseID'] += (courses[word])
+                    result[wt.courseID] += (courses[word])
                     coursesWords += lemma
                 elif 'eap' in word and len(word) <= 4:
-                    result['ects'] = True
+                    result[wt.ects] = True
                 elif word in courseCodeWords:
-                    result['CourseCodeMentioned'] = True
+                    result[wt.courseCodeMentioned] = True
                 elif word in preReqMentionWords:
-                    result['preReqs'] = True
+                    result[wt.preReqs] = True
                 elif word in questionwords:
-                    result['questionWord'] = word
+                    result[wt.questionWord] = word
                 elif word in greetings:
-                    result['greeting'] = True
+                    result[wt.greeting] = True
                 elif word in pronoun:
-                    result['pronoun'] = word
+                    result[wt.pronoun] = word
                 elif i == 1 and word not in coursesWords:
                     result[counter] = word
                     counter += 1

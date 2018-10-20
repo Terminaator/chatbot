@@ -1,17 +1,18 @@
 import unittest
 import langprocessing.chatbot as cbot
 import langprocessing.sentenceProcesser as sentProc
-
+from langprocessing.wordTags import WordTag as wt
 
 class TestSimpleRequests(unittest.TestCase):
     def test_fillFrameLayer(self):
         bot = cbot.chatbot()
-        words = {"questionWord": "mitu", "ects": True, "courseID": "LTAT.05.005"}
+        words = {wt.questionWord: "mitu", wt.ects: True, wt.courseID: "LTAT.05.005"}
 
         expectedLayer = bot.createEmptyLayer()
-        expectedLayer["misc"]["questionWord"] = "mitu"
-        expectedLayer["courses"]["courseID"] = "LTAT.05.005"
-        expectedLayer["courses"]["ects"] = True
+        expectedLayer[wt.sentence] = [wt.questionWord, wt.courseID, wt.ects]
+        expectedLayer[wt.misc][wt.questionWord] = "mitu"
+        expectedLayer[wt.courses][wt.courseID] = "LTAT.05.005"
+        expectedLayer[wt.courses][wt.ects] = True
         actualLayer = bot.fillFrameLayer(words)
 
         self.assertEqual(expectedLayer, actualLayer)
@@ -23,22 +24,26 @@ class TestSimpleRequests(unittest.TestCase):
         layer1 = bot.createEmptyLayer()
         layer2 = bot.createEmptyLayer()
 
-        layer0["courses"]["courseID"] = "LTAT.05.005"
-        layer1["courses"]["courseID"] = "LTAT.05.005"
-        layer2["courses"]["courseID"] = "LTAT.05.005"
+        layer0[wt.sentence] = [wt.courseID]
+        layer1[wt.sentence] = [wt.courseID, wt.ects]
+        layer2[wt.sentence] = [wt.questionWord, wt.courseID, wt.ects]
 
-        layer1["courses"]["ects"] = True
-        layer2["courses"]["ects"] = True
+        layer0[wt.courses][wt.courseID] = "LTAT.05.005"
+        layer1[wt.courses][wt.courseID] = "LTAT.05.005"
+        layer2[wt.courses][wt.courseID] = "LTAT.05.005"
 
-        layer2["misc"]["questionWord"] = "mitu"
+        layer1[wt.courses][wt.ects] = True
+        layer2[wt.courses][wt.ects] = True
+
+        layer2[wt.misc][wt.questionWord] = "mitu"
 
         expectedFrames = {"layer 0": layer0, "layer 1": layer1, "layer 2": layer2}
 
-        words = {"courseID": "LTAT.05.005"}
+        words = {wt.courseID: "LTAT.05.005"}
         bot.addFrameLayer(words)
-        words = {"ects": True, "courseID": "LTAT.05.005"}
+        words = {wt.ects: True, wt.courseID: "LTAT.05.005"}
         bot.addFrameLayer(words)
-        words = {"questionWord": "mitu", "ects": True, "courseID": "LTAT.05.005"}
+        words = {wt.questionWord: "mitu", wt.ects: True, wt.courseID: "LTAT.05.005"}
         bot.addFrameLayer(words)
 
         self.assertEqual(expectedFrames, bot.frames)
@@ -80,15 +85,15 @@ class TestSimpleRequests(unittest.TestCase):
 
     def test_simpleGetWords(self):
         sentProcessor = sentProc.SentenceProcessor()
-        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": ["LTAT.05.005"]},
+        self.assertEqual({wt.questionWord: "mitu", wt.ects: True, 0: "olema", 1: "aine", wt.courseID: ["LTAT.05.005"]},
                          sentProcessor.getWords("Mitu eap'd on aine Tarkvaraprojekt"))
-        self.assertEqual({'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": ["MTAT.03.263"]},
+        self.assertEqual({wt.questionWord: "mitu", wt.ects: True, 0: "olema", 1: "aine", wt.courseID: ["MTAT.03.263"]},
                          sentProcessor.getWords("Mitu eap'd on aine Arvutimängude loomine ja disain"))
         self.assertEqual(
-            {'questionWord': "mitu", "ects": True, 0: "olema", 1: "aine", "courseID": ["LTAT.05.004", "P2NC.01.094"]},
+            {wt.questionWord: "mitu", wt.ects: True, 0: "olema", 1: "aine", wt.courseID: ["LTAT.05.004", "P2NC.01.094"]},
             sentProcessor.getWords("Mitu eap'd on aine Veebirakenduste loomine"))
 
-        self.assertEqual({'CourseCodeMentioned': True, 'preReqs': True}, sentProcessor.getWords("ainekood eeldusained"))
+        self.assertEqual({wt.courseCodeMentioned: True, wt.preReqs: True}, sentProcessor.getWords("ainekood eeldusained"))
 
 
 if __name__ == '__main__':

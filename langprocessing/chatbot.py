@@ -2,6 +2,7 @@ import views.ois.courses as oisCourses
 from estnltk.vabamorf.morf import synthesize, analyze
 import langprocessing.sentenceProcesser as sentProc
 from random import randint
+from langprocessing.wordTags import WordTag as wt
 
 
 class chatbot():
@@ -26,20 +27,29 @@ class chatbot():
         :return: A response for the client
         """
         currentLayer = self.frames["layer " + str(self.currentFrame)]
-        misc = currentLayer["misc"]
-        courses = currentLayer["courses"]
+        misc = currentLayer[wt.misc]
+        courses = currentLayer[wt.courses]
 
-        if len(courses["courseID"]) != 0:
-            if courses["ects"]:
-                return self.answerCourseEcts(courses["courseID"])
-            if courses["CourseCodeMentioned"]:
-                return self.answerCourseCode(courses["courseID"])
-            if courses["preReqs"]:
-                return self.answerCoursePreReqs(courses["courseID"])
-        if misc['greeting']:
+
+        if len(courses[wt.courseID]) != 0:
+            if courses[wt.ects]:
+                return self.answerCourseEcts(courses[wt.courseID])
+            if courses[wt.courseCodeMentioned]:
+                return self.answerCourseCode(courses[wt.courseID])
+            if courses[wt.preReqs]:
+                return self.answerCoursePreReqs(courses[wt.courseID])
+
+        if misc[wt.greeting]:
             return self.sayHello()
 
         return "Kahjuks ma ei saanud teist aru."
+
+    def isWhatIsQuestionAsked(self, currentLayer):
+        misc = currentLayer[wt.misc]
+        sentence = currentLayer[wt.courses]
+        if (sentence[0] == "questionWord"):
+            return True
+        return False
 
     def addFrameLayer(self, words):
         """
@@ -59,6 +69,7 @@ class chatbot():
         for key in layer:
             for k in layer[key]:
                 if (k in words):
+                    layer[wt.sentence].append(k)
                     layer[key][k] = words[k]
         return layer
 
@@ -68,14 +79,15 @@ class chatbot():
         Frame with 1 layer structure
         frame = {
             layer 0: {
-                misc : {questionWord: String}
+                sentence : [words]
+                misc : {questionWord: String, greeting: boolean, pronoun: String}
                 courses : {courseID: String, ects : boolean, preReqs : boolean, CourseCodeMentioned: boolean}
             }
         }
         """
-        misc = {"questionWord": "", "greeting": False}
-        courses = {"courseID": "", "ects": False, "preReqs": False, "CourseCodeMentioned": False}
-        layer = {"misc": misc, "courses": courses}
+        misc = {wt.questionWord: "", wt.greeting: False}
+        courses = {wt.courseID: "", wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False}
+        layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses}
         return layer
 
     def answerCourseEcts(self, courseId):
