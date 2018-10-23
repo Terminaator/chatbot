@@ -43,43 +43,46 @@ class SentenceProcessor:
         inputText.tag_layer(['morph_analysis'])
 
         # looks for courses from lemmatized courses dictionary
-        lemmas = [x[0].lower() for x in inputText.morph_analysis.lemma]
-        i = len(lemmas)
+        words = inputText.morph_analysis
+        i = len(words)
         coursesWords = []
         otherWords = []
         counter = 0
         wordCounter = 0
 
-        for word in lemmas:
-            if 'eap' in word and len(word) <= 4:
+        for word in words:
+            lemma = word.lemma[0].lower()
+            if 'eap' in lemma and len(lemma) <= 4:
                 result[wt.ects] = True
-            elif word in courseCodeWords:
+            elif lemma in courseCodeWords:
                 result[wt.courseCodeMentioned] = True
-            elif word in preReqMentionWords:
+            elif lemma in preReqMentionWords:
                 result[wt.preReqs] = True
-            elif word in questionwords:
-                result[wt.questionWord] = word
-            elif word in whatIsQuestionSecondWord and counter == 1:
-                result[wt.whatIsQuestionSecondWord] = word
-            elif word in greetings:
+            elif lemma in questionwords:
+                result[wt.questionWord] = lemma
+            elif lemma in greetings:
                 result[wt.greeting] = True
-            elif word in pronoun:
-                result[wt.pronoun] = word
-            elif word in self.structuralUnits:
-                result[wt.structureUnitCode] = word
+            elif lemma in pronoun:
+                result[wt.pronoun] = lemma
+            elif lemma in self.structuralUnits:
+                result[wt.structureUnitCode] = lemma
             else:
-                otherWords.append(word)
+                if 'V' in word.partofspeech:
+                    result[wt.verb] += [lemma]
+                else:
+                    otherWords.append(lemma)
 
             counter += 1
 
+        lemmas = [x.lemma[0].lower() for x in words]
         while i > 0:
             for lemma in itertools.combinations(lemmas, i):
-                word = " ".join(lemma)
-                if word in courses:
-                    result[wt.courseID] += (courses[word])
+                lemm = " ".join(lemma)
+                if lemm in courses:
+                    result[wt.courseID] += (courses[lemm])
                     coursesWords += lemma
-                elif i == 1 and word not in coursesWords and word in otherWords:
-                    result[wordCounter] = word
+                elif i == 1 and lemm not in coursesWords and lemm in otherWords:
+                    result[wordCounter] = lemm
                     wordCounter += 1
             i -= 1
 

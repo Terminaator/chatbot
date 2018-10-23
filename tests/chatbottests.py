@@ -91,15 +91,38 @@ class TestSimpleRequests(unittest.TestCase):
 
     def test_simpleGetWords(self):
         sentProcessor = sentProc.SentenceProcessor()
-        self.assertEqual({wt.questionWord: "mitu", wt.ects: True, 0: "olema", 1: "aine", wt.courseID: ["LTAT.05.005"]},
+        self.assertEqual({wt.questionWord: "mitu", wt.ects: True, wt.verb: ["olema"],0: "aine", wt.courseID: ["LTAT.05.005"]},
                          sentProcessor.getWords("Mitu eap'd on aine Tarkvaraprojekt"))
-        self.assertEqual({wt.questionWord: "mitu", wt.ects: True, 0: "olema", 1: "aine", wt.courseID: ["MTAT.03.263"]},
+        self.assertEqual({wt.questionWord: "mitu", wt.ects: True, wt.verb: ["olema"], 0: "aine", wt.courseID: ["MTAT.03.263"]},
                          sentProcessor.getWords("Mitu eap'd on aine Arvutimängude loomine ja disain"))
         self.assertEqual(
-            {wt.questionWord: "mitu", wt.ects: True, 0: "olema", 1: "aine", wt.courseID: ["LTAT.05.004", "P2NC.01.094"]},
+            {wt.questionWord: "mitu", wt.ects: True, wt.verb: ["olema"], 0: "aine", wt.courseID: ["LTAT.05.004", "P2NC.01.094"]},
             sentProcessor.getWords("Mitu eap'd on aine Veebirakenduste loomine"))
 
         self.assertEqual({wt.courseCodeMentioned: True, wt.preReqs: True}, sentProcessor.getWords("ainekood eeldusained"))
+
+    def test_ExtraQuestions(self):
+        bot = cbot.chatbot()
+        sentence = "Anna infot tarkvaraprojekti kohta?"
+        self.assertEqual("Mulle tundub, et sa tahtsid küsida infot kursuse kohta. Kursuse kohta saad küsida eelduaineid, eapde arvu ja ainekoodi.\nPalun täpsusta!", bot.getResponse(sentence))
+        sentence = "eap"
+        self.assertEqual("Tarkvaraprojekti maht on 6 eap.", bot.getResponse(sentence))
+
+        sentence = "Anna infot tarkvaraprojekti kohta?"
+        self.assertEqual(
+            "Mulle tundub, et sa tahtsid küsida infot kursuse kohta. Kursuse kohta saad küsida eelduaineid, eapde arvu ja ainekoodi.\nPalun täpsusta!",
+            bot.getResponse(sentence))
+        sentence = "django on jama"
+        self.assertEqual("Kahjuks ma ei saanud teist aru.", bot.getResponse(sentence))
+
+    def test_ExtraQuestions2(self):
+        bot = cbot.chatbot()
+        sentence = "Anna infot tarkvaraprojekti kohta?"
+        self.assertEqual("Mulle tundub, et sa tahtsid küsida infot kursuse kohta. Kursuse kohta saad küsida eelduaineid, eapde arvu ja ainekoodi.\nPalun täpsusta!", bot.getResponse(sentence))
+        sentence = "Mitu eap'd annab veebirakenduste loomise läbimine?"
+        self.assertEqual(
+            "Selle nimega on 2 erinevat kursust. LTAT.05.004 mille maht on 6 eap ja P2NC.01.094 mille maht on 5 eap.",
+            bot.getResponse(sentence))
 
 
 if __name__ == '__main__':
