@@ -1,3 +1,4 @@
+# coding: utf-8
 import views.ois.courses as oisCourses
 import views.ois.structuralUnits as oisStructuralUnits
 from estnltk.vabamorf.morf import synthesize, analyze
@@ -68,15 +69,17 @@ class chatbot():
             possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi"]  # todo add words if you add questions
 
 
-
+        # Greeting
         if misc[wt.greeting]:
             self.askedQuestion = 0
             return self.sayHello()
 
+        # Who you are
         if misc[wt.questionWord] in ['mis', 'kes'] and misc[wt.pronoun] == 'sina' and 'olema' in misc[wt.verb]:
             self.askedQuestion = 0
             return self.answerWhoYouAre()
 
+        # Questions with memory
         if self.askedQuestion == 1:
             self.askedQuestion = 2
             temp = self.currentFrame
@@ -85,8 +88,6 @@ class chatbot():
             self.currentFrame = temp
             self.askedQuestion = 0
             return answer
-
-
         if len(possibleTopics) != 0 and self.askedQuestion == 0:
             self.askedQuestion = 1
             return self.askExtraInfo(subject, possibleTopics)
@@ -171,6 +172,12 @@ class chatbot():
         return (misc[wt.questionWord] in ["mis"] and len(set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID)
 
     def askExtraInfo(self, subject, possibleTopics):
+        """
+        Creates response if user asks question without sufficent informations
+        :param subject: user asked question subject
+        :param possibleTopics: What user can ask about that subject
+        :return: response
+        """
         result = "Mulle tundub, et sa tahtsid küsida infot " + subject + " kohta. " + subject.capitalize() + " kohta saad küsida "
         if len(possibleTopics) == 1:
             result += possibleTopics[0] + "."

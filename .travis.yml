@@ -1,0 +1,21 @@
+language: python
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
+env:
+  - DJANGO_VERSION=2.1.2
+addons:
+  apt_packages:
+    - swig
+before_install:
+  - export DJANGO_SETTINGS_MODULE=ois2chatbot.settings
+  - export PYTHONPATH=$HOME/builds/diffusa/djangoapp
+  - export PIP_USE_MIRRORS=true
+install:
+  - pip install -q Django==$2.1.2
+  - pip install djangorestframework
+  - pip install requests
+  - pip install estnltk==1.6.0b0 --quiet
+script: python chatbottests.py
