@@ -12,6 +12,9 @@ class chatbot():
         self.frames = {}
         self.currentFrame = -1
         self.sentenceProcessor = sentProc.SentenceProcessor()
+        self.askedQuestion = 0
+
+
 
     def getResponse(self, inputSentence):
         """
@@ -23,6 +26,7 @@ class chatbot():
         self.addFrameLayer(words)
         return self.putTogetherAnAnswer()
 
+
     def putTogetherAnAnswer(self):
         """
         looks at the frame and answers based on that.
@@ -32,10 +36,15 @@ class chatbot():
         misc = currentLayer[wt.misc]
         courses = currentLayer[wt.courses]
         sUnits = currentLayer[wt.structureUnits]
+        possibleTopics = []
+        subject = ""
+
+
 
         #WHAT IS questions
         if self.isWhatIsQuestionAsked(currentLayer):
             if sUnits[wt.structureUnitCode] != "":
+                self.askedQuestion = False
                 return self.answerWhatIsStructureCode(sUnits[wt.structureUnitCode])
 
 
@@ -43,15 +52,44 @@ class chatbot():
         #COURSES questions
         if len(courses[wt.courseID]) != 0:
             if courses[wt.ects]:
+                self.askedQuestion = 0
                 return self.answerCourseEcts(courses[wt.courseID])
             if courses[wt.courseCodeMentioned]:
+                self.askedQuestion = 0
                 return self.answerCourseCode(courses[wt.courseID])
             if courses[wt.preReqs]:
+                self.askedQuestion = 0
                 return self.answerCoursePreReqs(courses[wt.courseID])
 
+            # If doesn't know what to answer
+            subject = "kursuse"  # todo käänamine või panna kõik juba sobivasse käändesse
+            possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi"]  # todo add words if you add questions
+
+
+
         if misc[wt.greeting]:
+            self.askedQuestion = 0
             return self.sayHello()
 
+        if misc[wt.questionWord] in ['mis', 'kes'] and misc[wt.pronoun] == 'sina' and 'olema' in misc[wt.verb]:
+            self.askedQuestion = 0
+            return self.answerWhoYouAre()
+
+        if self.askedQuestion == 1:
+            self.askedQuestion = 2
+            temp = self.currentFrame
+            self.currentFrame = -1
+            answer = self.putTogetherAnAnswer()
+            self.currentFrame = temp
+            self.askedQuestion = 0
+            return answer
+
+
+        if len(possibleTopics) != 0 and self.askedQuestion == 0:
+            self.askedQuestion = 1
+            return self.askExtraInfo(subject, possibleTopics)
+
+        self.askedQuestion = False
         return "Kahjuks ma ei saanud teist aru."
 
     def addFrameLayer(self, words):
@@ -61,6 +99,24 @@ class chatbot():
         """
         self.currentFrame += 1
         self.frames["layer " + str(self.currentFrame)] = self.fillFrameLayer(words)
+        if self.askedQuestion:
+            self.frames["layer -1"] = self.updateFrameLayer(words)
+
+    def updateFrameLayer(self, words):
+        """
+        Adds words to existing layer. Used if bot asked extra questions
+        :param words: dictionary of words to be added to the layer
+        :return: updated frame layer
+        """
+        layer = self.frames["layer " + str(self.currentFrame - 1)]
+        for key in layer:
+            if key != wt.sentence:
+                for k in layer[key]:
+                    if k in words:
+                        layer[key][k] = words[k]
+        for k in words:
+            layer[wt.sentence].append(k)
+        return layer
 
     def fillFrameLayer(self, words):
         """
@@ -71,11 +127,12 @@ class chatbot():
         layer = self.createEmptyLayer()
         for key in layer:
             for k in layer[key]:
-                if (k in words):
+                if k in words:
                     layer[key][k] = words[k]
         for k in words:
             layer[wt.sentence].append(k)
         return layer
+
 
     def createEmptyLayer(self):
         """
@@ -84,13 +141,13 @@ class chatbot():
         frame = {
             layer 0: {
                 sentence : [words]
-                misc : {questionWord: String, greeting: boolean, pronoun: String, wt.whatIsQuestionSecondWord: String}
+                misc : {questionWord: String, greeting: boolean, pronoun: String, verb: String}
                 courses : {courseID: String, ects : boolean, preReqs : boolean, CourseCodeMentioned: boolean}
                 structuralUnits: {structuralUnitCode: String}
             }
         }
         """
-        misc = {wt.questionWord: "", wt.greeting: False, wt.pronoun: "", wt.whatIsQuestionSecondWord: ""}
+        misc = {wt.questionWord: "", wt.greeting: False, wt.pronoun: "", wt.verb: ""}
         courses = {wt.courseID: "", wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False}
         sUnit = {wt.structureUnitCode: ""}
         layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
@@ -106,10 +163,23 @@ class chatbot():
         sentence = currentLayer[wt.sentence]
         if len(sentence) < 3:
             return False
-        if sentence[1] != wt.whatIsQuestionSecondWord or sentence[0] != wt.questionWord:
+        if sentence[1] != wt.verb or sentence[0] != wt.questionWord:
             return False
 
-        return (misc[wt.questionWord] in ["mis"] and misc[wt.whatIsQuestionSecondWord] in ["tähendama", "on"]) and (sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID)
+        return (misc[wt.questionWord] in ["mis"] and len(set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID)
+
+    def askExtraInfo(self, subject, possibleTopics):
+        result = "Mulle tundub, et sa tahtsid küsida infot " + subject + " kohta. " + subject.capitalize() + " kohta saad küsida "
+        if len(possibleTopics) == 1:
+            result += possibleTopics[0] + "."
+        else:
+            for i in possibleTopics[:-2]:
+                result += i + ", "
+            result += possibleTopics[-2] + " ja "
+            result += possibleTopics[-1] + "."
+        result += "\nPalun täpsusta!"
+        return result
+
 
     def answerWhatIsStructureCode(self, structureCode):
         """
@@ -143,6 +213,13 @@ class chatbot():
             json = oisCourses.coursesId(courseId[-1])
             response += " ja " + courseId[-1] + " mille maht on " + str(json["credits"]) + " eap."
             return response
+
+    def answerWhoYouAre(self):
+        """
+        Creates an answer for question who you are
+        :return: Describtion of bot
+        """
+        return "Mina olen sõbralik Õis2 bot. Mina aitan sul saada vastust küsimustele, mis sind vaevavad."
 
     def answerCourseCode(self, courseId):
         """

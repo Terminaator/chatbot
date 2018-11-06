@@ -9,7 +9,7 @@ class WordTag(Enum):
     questionWord = 1
     greeting = 2
     pronoun = 3
-    whatIsQuestionSecondWord = 4
+    verb = 4
     whatIsQuestionTargetWord = 5
 
     #courses
