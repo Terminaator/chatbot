@@ -33,7 +33,7 @@ class SentenceProcessor:
         :return: tagged words in dictionary
         """
         questionwords = ['kes', 'mis', 'kus', 'mitu']  # todo more or think something else
-        whatIsQuestionSecondWord = ['tähendama', 'on'] # TODO: think of a better variable name
+        whatIsQuestionSecondWord = ['tähendama', 'on']  # TODO: think of a better variable name
         courseCodeWords = ['ainekood', 'kood']
         preReqMentionWords = ['eeldusaine', 'eeldus']
         greetings = ['tere', 'hei', 'hommikust', 'hommik', 'õhtust', 'tsau', 'ahoi']

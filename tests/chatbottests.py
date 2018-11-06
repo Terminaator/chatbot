@@ -79,6 +79,8 @@ class TestSimpleRequests(unittest.TestCase):
         bot = cbot.chatbot()
         sentence = "mida tähendab MTAT?"
         self.assertEqual("Antud koodi kasutab struktuuriüksus: arvutiteaduse instituut.", bot.getResponse(sentence))
+        sentence = "mis on MTAT?"
+        self.assertEqual("Antud koodi kasutab struktuuriüksus: arvutiteaduse instituut.", bot.getResponse(sentence))
 
     def test_multipleCourseIdsWithSameName(self):
         bot = cbot.chatbot()

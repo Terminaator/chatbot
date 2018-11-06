@@ -45,6 +45,9 @@ class chatbot():
             if sUnits[wt.structureUnitCode] != "":
                 self.askedQuestion = False
                 return self.answerWhatIsStructureCode(sUnits[wt.structureUnitCode])
+            if courses[wt.courseID] != "":
+                return self.answerWhatIsCourseCode(courses[wt.courseID])
+
 
 
 
@@ -188,6 +191,10 @@ class chatbot():
         """
         json = oisStructuralUnits.getStructuralUnit(structureCode)
         return "Antud koodi kasutab struktuuriüksus: " + json["name"]["et"] + "."
+
+    def answerWhatIsCourseCode(self, courseCode):
+        json = oisCourses.coursesId(courseCode)
+        return "Antud koodi kasutab kursus: " + json["name"]["et"] + "."
 
     def answerCourseEcts(self, courseId):
         """
