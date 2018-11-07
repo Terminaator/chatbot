@@ -33,14 +33,20 @@ class SentenceProcessor:
         :param inputText: Text object with morph_analysis layer
         :return: tagged words in dictionary
         """
-        questionwords = ['kes', 'mis', 'kus', 'mitu']  # todo more or think something else
-        whatIsQuestionSecondWord = ['tähendama', 'on']  # TODO: think of a better variable name
-        courseCodeWords = ['ainekood', 'kood']
-        preReqMentionWords = ['eeldusaine', 'eeldus']
-        greetings = ['tere', 'hei', 'hommikust', 'hommik', 'õhtust', 'tsau', 'ahoi']
-        pronoun = ['mina', 'sina', 'tema', 'teie', 'meie', 'nemad']
+        keywords = defaultdict(list)
+        keywords[wt.questionWord] = ['kes', 'mis', 'kus', 'mitu']
+        keywords[wt.courseCodeWords] = ['ainekood', 'kood']
+        keywords[wt.preReqs] = ['eeldusaine', 'eeldus']
+        keywords[wt.greeting] = ['tere', 'hei', 'hommikust', 'hommik', 'õhtust', 'tsau', 'ahoi']
+        keywords[wt.pronoun] = ['mina', 'sina', 'tema', 'teie', 'meie', 'nemad']
+        keywords[wt.language] = ['keel']
+        keywords[wt.description] = ['kirjeldus']
+        keywords[wt.objective] = ['eesmärk']
+        keywords[wt.website] = ['koduleht', 'leht', 'veeb', 'veebileht']
+        keywords[wt.lecturers] = ['õppejõud']
+        keywords[wt.ects] = ['eap', 'eapd']
+
         result = defaultdict(list)
-        courses = self._getCourses()
         inputText.tag_layer(['morph_analysis'])
 
         # looks for courses from lemmatized courses dictionary
@@ -53,18 +59,25 @@ class SentenceProcessor:
 
         for word in words:
             lemma = word.lemma[0].lower()
+            # courses
             if 'eap' in lemma and len(lemma) <= 4:
                 result[wt.ects] = True
-            elif lemma in courseCodeWords:
+            elif lemma in keywords[wt.courseCodeWords]:
                 result[wt.courseCodeMentioned] = True
-            elif lemma in preReqMentionWords:
+            elif lemma in keywords[wt.preReqs]:
                 result[wt.preReqs] = True
-            elif lemma in questionwords:
+            elif lemma in keywords[wt.language]:
+                result[wt.language] = True
+            elif lemma in keywords[wt.description]:
+                result[wt.description] = True
+            # Misc
+            elif lemma in keywords[wt.questionWord]:
                 result[wt.questionWord] = lemma
-            elif lemma in greetings:
+            elif lemma in keywords[wt.greeting]:
                 result[wt.greeting] = True
-            elif lemma in pronoun:
+            elif lemma in keywords[wt.pronoun]:
                 result[wt.pronoun] = lemma
+            # Structural units
             elif lemma in self.structuralUnits:
                 result[wt.structureUnitCode] = lemma
             else:
@@ -72,22 +85,21 @@ class SentenceProcessor:
                     result[wt.verb] += [lemma]
                 else:
                     otherWords.append(lemma)
-
             counter += 1
 
+        # Multi word keywords
         lemmas = [x.lemma[0].lower() for x in words]
         while i > 0:
             for lemma in itertools.combinations(lemmas, i):
                 lemm = " ".join(lemma)
-                if lemm in courses:
-                    result[wt.courseID] += (courses[lemm])
+                if lemm in self.courses:
+                    result[wt.courseID] += (self.courses[lemm])
                     coursesWords += lemma
                 elif i == 1 and lemm not in coursesWords and lemm in otherWords:
                     result[wordCounter] = lemm
                     wordCounter += 1
             i -= 1
 
-        #for searching single words
 
 
         return result

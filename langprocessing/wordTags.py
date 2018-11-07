@@ -11,6 +11,7 @@ class WordTag(Enum):
     pronoun = 3
     verb = 4
     whatIsQuestionTargetWord = 5
+    keywords = 6
 
     #courses
     courses = 20
@@ -18,6 +19,13 @@ class WordTag(Enum):
     ects = 22
     preReqs = 23
     courseCodeMentioned = 24
+    language = 25
+    website = 26
+    lecturers = 27
+    description = 28
+    objective = 29
+    courseCodeWords = 30
+
 
     #Structure Units
     structureUnits = 40
