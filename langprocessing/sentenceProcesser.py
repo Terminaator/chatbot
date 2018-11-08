@@ -13,6 +13,7 @@ class SentenceProcessor:
     def __init__(self):
         self.courses = self._getCourses()
         self.structuralUnits = self._getStructuralUnits()
+        self.structuralUnitCodes = self._getStructuralUnitCodes()
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel('DEBUG')
 
@@ -41,14 +42,16 @@ class SentenceProcessor:
         keywords[wt.language] = ['keel']
         keywords[wt.description] = ['kirjeldus']
         keywords[wt.objective] = ['eesmärk']
-        keywords[wt.website] = ['koduleht', 'leht', 'veeb', 'veebileht']
+        keywords[wt.website] = ['koduleht', 'leht', 'veeb', 'veebileht', 'link']
         keywords[wt.lecturers] = ['õppejõud']
         keywords[wt.ects] = ['eap', 'eapd']
+
 
         # Keywords what needs string in frame
         keywordsString = defaultdict(list)
         keywordsString[wt.questionWord] = ['kes', 'mis', 'kus', 'mitu']
         keywordsString[wt.pronoun] = ['mina', 'sina', 'tema', 'teie', 'meie', 'nemad']
+        keywordsString[wt.websiteName] = ['course', 'moodle', 'õis', 'õppeinfosüsteem', 'raamatukogu', 'ester', 'esileht']
 
         result = defaultdict(list)
         inputText.tag_layer(['morph_analysis'])
@@ -57,6 +60,7 @@ class SentenceProcessor:
         words = inputText.morph_analysis
         i = len(words)
         coursesWords = []
+        sUnitWords = []
         otherWords = []
         counter = 0
         wordCounter = 0
@@ -74,8 +78,8 @@ class SentenceProcessor:
                     result[key] = lemma
                     break
             # Structural units
-            if lemma in self.structuralUnits:
-                result[wt.structureUnitCode] = lemma
+            if lemma in self.structuralUnitCodes:
+                result[wt.structureUnitCode] = [lemma]
             else:
                 if 'V' in word.partofspeech:
                     result[wt.verb] += [lemma]
@@ -91,7 +95,10 @@ class SentenceProcessor:
                 if lemm in self.courses:
                     result[wt.courseID] += (self.courses[lemm])
                     coursesWords += lemma
-                elif i == 1 and lemm not in coursesWords and lemm in otherWords:
+                if lemm in self.structuralUnits:
+                    result[wt.structureUnitCode] += (self.structuralUnits[lemm])
+                    sUnitWords += lemma
+                elif i == 1 and lemm not in coursesWords and lemm not in sUnitWords and lemm in otherWords:
                     result[wordCounter] = lemm
                     wordCounter += 1
             i -= 1
@@ -124,6 +131,14 @@ class SentenceProcessor:
             for line in reader:
                 sUnits[line[0].strip()].append(line[1].strip())
             return sUnits
+
+    def _getStructuralUnitCodes(self):
+        sUnits = []
+        with open(os.path.join(os.path.dirname(__file__), 'structuralUnits.csv'), encoding="UTF-8") as file:
+            reader = csv.reader(file)
+            for line in reader:
+                sUnits.append(line[1].strip())
+            return set(sUnits)
 
     def updateCourses(self):
         self.updateCourses()
@@ -165,11 +180,7 @@ def updateStructuralUnitsCSV():
                 if 'et' in c['name']:
                     t = Text(c['name']['et'].lower())
                     t.tag_layer(['morph_analysis'])
-                    writer.writerow([c['code'].lower(), " ".join([x[0] for x in t.morph_analysis.lemma])])
-
-
-
-
+                    writer.writerow([" ".join([x[0] for x in t.morph_analysis.lemma]), c['code'].lower()])
 
 
 

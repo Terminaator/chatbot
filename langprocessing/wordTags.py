@@ -12,6 +12,7 @@ class WordTag(Enum):
     verb = 4
     whatIsQuestionTargetWord = 5
     keywords = 6
+    websiteName = 7
 
     #courses
     courses = 20

@@ -14,8 +14,6 @@ class chatbot():
         self.sentenceProcessor = sentProc.SentenceProcessor()
         self.askedQuestion = 0
 
-
-
     def getResponse(self, inputSentence):
         """
         fills the frame and returns an answer
@@ -25,7 +23,6 @@ class chatbot():
         words = self.sentenceProcessor.getWords(inputSentence)
         self.addFrameLayer(words)
         return self.putTogetherAnAnswer()
-
 
     def putTogetherAnAnswer(self):
         """
@@ -39,15 +36,8 @@ class chatbot():
         possibleTopics = []
         subject = ""
 
-        #WHAT IS questions
-        if self.isWhatIsQuestionAsked(currentLayer):
-            if sUnits[wt.structureUnitCode] != "":
-                self.askedQuestion = False
-                return self.answerWhatIsStructureCode(sUnits[wt.structureUnitCode])
-            if courses[wt.courseID] != "":
-                return self.answerWhatIsCourseCode(courses[wt.courseID])
 
-        #COURSES questions
+        # COURSES questions
         if len(courses[wt.courseID]) != 0:
             if wt.ects in misc[wt.keywords]:
                 self.askedQuestion = 0
@@ -76,13 +66,33 @@ class chatbot():
 
             # If doesn't know what to answer
             subject = "kursuse"  # todo käänamine või panna kõik juba sobivasse käändesse
-            possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi", "õpetamiskeelt", "kodulehte", "õppejõude", "kirjeldust", "eesmärki"]  # todo add words if you add questions
+            possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi", "õpetamiskeelt", "kodulehte", "õppejõude",
+                              "kirjeldust", "eesmärki"]  # todo add words if you add questions
 
+        # Structure Units
+        if len(sUnits[wt.structureUnitCode]) != 0:
+            if wt.website in misc[wt.keywords]:
+                self.askedQuestion = 0
+                return self.answerStructeUnitWebsite(sUnits[wt.structureUnitCode])
+
+        # Other Important Uni websites
+        print(misc)
+        if wt.website in misc[wt.keywords] and len(misc[wt.websiteName]) != 0:
+            self.askedQuestion = 0
+            return self.answerImportantUniWebsites(misc[wt.websiteName])
 
         # Greeting
         if wt.greeting in misc[wt.keywords]:
             self.askedQuestion = 0
             return self.sayHello()
+
+        # WHAT IS questions
+        if self.isWhatIsQuestionAsked(currentLayer):
+            if sUnits[wt.structureUnitCode] != "":
+                self.askedQuestion = False
+                return self.answerWhatIsStructureCode(sUnits[wt.structureUnitCode])
+            if courses[wt.courseID] != "":
+                return self.answerWhatIsCourseCode(courses[wt.courseID])
 
         # Who you are
         if misc[wt.questionWord] in ['mis', 'kes'] and misc[wt.pronoun] == 'sina' and 'olema' in misc[wt.verb]:
@@ -146,7 +156,6 @@ class chatbot():
             layer[wt.sentence].append(k)
         return layer
 
-
     def createEmptyLayer(self):
         """
         Creates a layer for frame
@@ -154,14 +163,14 @@ class chatbot():
         frame = {
             layer 0: {
                 sentence : [words]
-                misc : {questionWord: String, pronoun: String, verb: String, keywords: list}
+                misc : {questionWord: String, pronoun: String, verb: String, websiteName: String, keywords: list}
                 courses : {courseID: String}
                 structuralUnits: {structuralUnitCode: String}
             }
         }
         """
         # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
-        misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.keywords: []}
+        misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.keywords: []}
         courses = {wt.courseID: ""}
         sUnit = {wt.structureUnitCode: ""}
         layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
@@ -180,7 +189,9 @@ class chatbot():
         if sentence[1] != wt.verb or sentence[0] != wt.questionWord:
             return False
 
-        return (misc[wt.questionWord] in ["mis"] and len(set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID)
+        return (misc[wt.questionWord] in ["mis"] and len(
+            set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (
+                           sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID)
 
     def askExtraInfo(self, subject, possibleTopics):
         """
@@ -223,7 +234,9 @@ class chatbot():
         results = []
         for id in courseIds:
             json = oisCourses.coursesId(id)
-            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " kirjeldus:\n" + json['overview']['description']['et'])
+            results.append(
+                "Aine " + json['title']['et'] + "(" + id + ")" + " kirjeldus:\n" + json['overview']['description'][
+                    'et'])
         return "\n".join(results)
 
     def answerObjective(self, courseIds):
@@ -235,7 +248,9 @@ class chatbot():
         results = []
         for id in courseIds:
             json = oisCourses.coursesId(id)
-            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " eesmärk:\n" + json['overview']['objectives'][0]['et'])
+            results.append(
+                "Aine " + json['title']['et'] + "(" + id + ")" + " eesmärk:\n" + json['overview']['objectives'][0][
+                    'et'])
         return "\n".join(results)
 
     def answerWebsite(self, courseIds):
@@ -247,8 +262,52 @@ class chatbot():
         results = []
         for id in courseIds:
             json = oisCourses.coursesId(id)
-            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " veebileht on " + json['resources']['website_url'])
+            results.append(
+                "Aine " + json['title']['et'] + "(" + id + ")" + " veebileht on " + json['resources']['website_url'])
         return "\n".join(results)
+
+    def answerStructeUnitWebsite(self, StructUnit):
+        """
+        finds and gives possible links as an answer to the asked question
+        :param StructUnit: Structure units, that were in the question
+        :return: Structure unit websites
+        """
+        possibleLinks = set()
+        linkMap = {}
+        for unit in StructUnit:
+            json = oisStructuralUnits.getStructuralUnit(unit)
+            if "webpage_url" in json:
+                link = json["webpage_url"]
+                if link not in possibleLinks:
+                    possibleLinks.add(link)
+                    linkMap[json["name"]["et"]] = link
+
+        if len(possibleLinks) == 0:
+            return "Sain küsimusest valesti aru või küsitud struktuuriüksusel ei ole veebilehte."
+        elif len(possibleLinks) == 1:
+            return "Selle struktuuriüksuse veebileht asub aadressil " + linkMap.popitem()[1]
+        return "Leidsin mitu erinevat veebilehte. Need on: " + ', '.join(possibleLinks)
+
+    def answerImportantUniWebsites(self, siteName):
+        """
+        Returns commonly used university's webpage links
+        :param siteName: webpage name, that was in the question
+        :return: answer with link to asked site
+        """
+        if siteName == "course":
+            return "Courses asub aadressil https://courses.cs.ut.ee/"
+        elif siteName == "moodle":
+            return "Moodle asub aadressil https://moodle.ut.ee/"
+        elif siteName == "õis" or siteName == "õppeinfosüsteem":
+            return "Tartu ülikooli ÕIS asub aadressil https://www.is.ut.ee/pls/ois_sso/tere.tulemast"
+        elif siteName == "raamatukogu":
+            return "Tartu ülikooli raamatukogu asub aadressil https://utlib.ut.ee/"
+        elif siteName == "ester":
+            return "Ester asub aadressil https://www.ester.ee/"
+        elif siteName == "esileht":
+            return "Tartu ülikooli esileht asub aadressil https://www.ut.ee/"
+        return "Arendajad unustasid antud veebilehe lingi lisada või midagi läks valesti."
+
 
     def answerLecturers(self, courseIds):
         """
@@ -278,14 +337,13 @@ class chatbot():
             results.append(result)
         return "\n".join(results)
 
-
     def answerWhatIsStructureCode(self, structureCode):
         """
         Creates an answer for a what is structure code question
         :param structureCode: structure code, that the client wants to know about
         :return: answer about the structure unit
         """
-        json = oisStructuralUnits.getStructuralUnit(structureCode)
+        json = oisStructuralUnits.getStructuralUnit(structureCode[0])
         return "Antud koodi kasutab struktuuriüksus: " + json["name"]["et"] + "."
 
     def answerWhatIsCourseCode(self, courseCode):
@@ -380,9 +438,9 @@ class chatbot():
         return result + "."
 
     def sayHello(self):
-        greetings = ['Tere!', 'Hello!', 'Ahoi!', 'Tervitus!', 'Ära ehmata! Hommikust sullegi!', '01010100 01100101 01110010 01100101 00001010', 'Tsau tsau!']
+        greetings = ['Tere!', 'Hello!', 'Ahoi!', 'Tervitus!', 'Ära ehmata! Hommikust sullegi!',
+                     '01010100 01100101 01110010 01100101 00001010', 'Tsau tsau!']
         return greetings[randint(0, len(greetings) - 1)]
-
 
     def synthesizeWord(self, word, f):
         """

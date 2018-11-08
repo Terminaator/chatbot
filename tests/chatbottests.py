@@ -98,14 +98,28 @@ class TestSimpleRequests(unittest.TestCase):
         self.assertEqual("Selle nimega on 2 erinevat kursust. Nende ainekoodid on LTAT.05.004 ja P2NC.01.094.",
                          bot.getResponse(sentence))
 
+    def test_structureUnitWebSite(self):
+        bot = cbot.chatbot()
+        sentence = "mis on matemaatika instituudi veebileht"
+        self.assertEqual(
+            "Selle struktuuriüksuse veebileht asub aadressil http://www.math.ut.ee/mm",
+            bot.getResponse(sentence))
+        sentence = "mis on KKKE veebileht"
+        self.assertEqual(
+            "Sain küsimusest valesti aru või küsitud struktuuriüksusel ei ole veebilehte.",
+            bot.getResponse(sentence))
+
+
     def test_simpleGetWords(self):
         sentProcessor = sentProc.SentenceProcessor()
         print(sentProcessor.getWords("ainekood eeldusained"))
         self.assertEqual(
-            {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine", wt.courseID: ["LTAT.05.005"]},
+            {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
+             wt.courseID: ["LTAT.05.005"]},
             sentProcessor.getWords("Mitu eap'd on aine Tarkvaraprojekt"))
         self.assertEqual(
-            {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine", wt.courseID: ["MTAT.03.263"]},
+            {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
+             wt.courseID: ["MTAT.03.263"]},
             sentProcessor.getWords("Mitu eap'd on aine Arvutimängude loomine ja disain"))
         self.assertEqual(
             {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
@@ -114,6 +128,12 @@ class TestSimpleRequests(unittest.TestCase):
 
         self.assertEqual({wt.keywords: [wt.courseCodeMentioned, wt.preReqs], 0: 'ainekood', 1: 'eeldusaine'},
                          sentProcessor.getWords("ainekood eeldusained"))
+
+    def test_getStructureUnitCodes(self):
+        sentProcessor = sentProc.SentenceProcessor()
+        self.assertEqual({wt.structureUnitCode: ['ltat']}, sentProcessor.getWords("LTAT"))
+        self.assertEqual({wt.structureUnitCode: ['bgom01', 'loom01', 'ltom01']},
+                         sentProcessor.getWords("Botaanika osakond"))
 
     def test_ExtraQuestions(self):
         bot = cbot.chatbot()
@@ -150,22 +170,38 @@ class TestSimpleRequests(unittest.TestCase):
     def test_websiteQuestion(self):
         bot = cbot.chatbot()
         sentence = "Mis on tarkvaraprojekti koduleht?"
-        self.assertEqual("Aine Tarkvaraprojekt(LTAT.05.005) veebileht on https://courses.cs.ut.ee/", bot.getResponse(sentence))
+        self.assertEqual("Aine Tarkvaraprojekt(LTAT.05.005) veebileht on https://courses.cs.ut.ee/",
+                         bot.getResponse(sentence))
+
+    def test_importantUniWebSite(self):
+        #NOTE: This question doesn't require ÕIS 2.0 API
+        bot = cbot.chatbot()
+        sentence = "Mis on moodle link?"
+        self.assertEqual("Moodle asub aadressil https://moodle.ut.ee/", bot.getResponse(sentence))
+        sentence = "Mis on estri link?"
+        self.assertEqual("Ester asub aadressil https://www.ester.ee/", bot.getResponse(sentence))
+        sentence = "Mis on courses link?"
+        self.assertEqual("Courses asub aadressil https://courses.cs.ut.ee/", bot.getResponse(sentence))
+
 
     def test_lecturersQuestion(self):
         bot = cbot.chatbot()
         sentence = "Kes on tarkvaraprojekti õppejõud?"
-        self.assertEqual("Aine Tarkvaraprojekt(LTAT.05.005) vastutav õppejõud on Marlon Gerardo Dumas Menjivar.\nTeised õppejõud on Jaanus Jaggo, Mykhailo Dorokhov", bot.getResponse(sentence))
+        self.assertEqual(
+            "Aine Tarkvaraprojekt(LTAT.05.005) vastutav õppejõud on Marlon Gerardo Dumas Menjivar.\nTeised õppejõud on Jaanus Jaggo, Mykhailo Dorokhov",
+            bot.getResponse(sentence))
 
     def test_descriptionQuestion(self):
         bot = cbot.chatbot()
         sentence = "Mis on tarkvaraprojekti kirjeldus?"
-        self.assertTrue(bot.getResponse(sentence).startswith("Aine Tarkvaraprojekt(LTAT.05.005) kirjeldus:\nTarkvara arendustöö"))
+        self.assertTrue(
+            bot.getResponse(sentence).startswith("Aine Tarkvaraprojekt(LTAT.05.005) kirjeldus:\nTarkvara arendustöö"))
 
     def test_objectiveQuestion(self):
         bot = cbot.chatbot()
         sentence = "Mis on tarkvaraprojekti eesmärk?"
-        self.assertTrue(bot.getResponse(sentence).startswith("Aine Tarkvaraprojekt(LTAT.05.005) eesmärk:\nKursuse eesmärgiks"))
+        self.assertTrue(
+            bot.getResponse(sentence).startswith("Aine Tarkvaraprojekt(LTAT.05.005) eesmärk:\nKursuse eesmärgiks"))
 
 
 if __name__ == '__main__':

@@ -1,2238 +1,2226 @@
-ar01,arstiteaduskond emeriitdotsent
-fl01,filosoofiateaduskond emeriitdotsent
-bg01,bioloogia-geograafiateaduskond emeriitdotsent
-fk01,füüsika-keemiateaduskond emeriitdotsent
-ht01,haridusteaduskond emeriitdotsent
-kk01,kehakultuuriteaduskond emeriitdotsent
-mj01,majandusteaduskond emeriitdotsent
-mt01,matemaatika-informaatikateaduskond emeriitdotsent
-so01,sotsiaalteaduskond emeriitdotsent
-p1gv,eesti geenivaramu
-htkd,kõrgkoolididaktika keskus
-htkk,praktika ja kutseaasta keskus
-dhum03bm,botaanika ja mükoloogiamuuseum
-flgr02,klassikaline filoloogia osakond
-flgr08,saksa filoloogia osakond
-flgr06,skandinavistika osakond
-flgr05ve,vene keel õppetool
-flgr05vk,vene kirjandus õppetool
-flgr05sf,slaavi filoloogia õppetool
-flku06,maailmakirjandus osakond
-flku07,eesti kirjandus osakond
-flku08,teatriteadus ja kirjandusteooria osakond
-fkkt,tartu ülikool keemia instituut
-bgom,tartu ülikool ökoloogia ja maateadus instituut
-bgom01,botaanika osakond
-bgom02,geograafia osakond
-bgom03,geoloogia osakond
-bgom04,zooloogia osakond
-flku01mk,maalikunst õppetool
-flku01mu,muusika õppetool
-flku05ek,eesti kirjandus õppetool
-flku05ma,maailmakirjandus õppetool
-flku05tt,teatriteadus õppetool
-dhhb05,struktuurifond talitus
-bgom01bo,botaanika õppetool
-bgom01mk,mükoloogia õppetool
-bgom01ta,taimeökoloogia õppetool
-bgom01of,ökofüsioloogia õppetool
-bgom02gk,geoinformaatika ja kartograafia õppetool
-bgom02gr,inimgeograafia ja regionaalplaneerimine õppetool
-bgom02lm,loodusgeograafia ja maastikuökoloogia õppetool
-bgom02ce,väliseesti uuring keskus
-bgom03gm,geoloogia ja mineraloogia õppetool
-bgom03ps,paleontoloogia ja stratigraafia õppetool
-bgom03pr,pinnakate ja rakendusgeoloogia õppetool
-bgom04ab,arengubioloogia õppetool
-bgom04hb,hüdrobioloogia õppetool
-bgom04lo,loomaökoloogia õppetool
-bgom04zo,zooloogia õppetool
-mtmm01,puhas matemaatika osakond
-mtmm02,rakendusmatemaatika osakond
-mtmm01pm,algebra uurimisrühm
-mtmm01gt,geomeetria ja topoloogia uurimisrühm
-mtmm01fa,funktsionaalanalüüs uurimisrühm
-mtmm01md,matemaatika didaktika uurimisrühm
-mtmm01ma,matemaatiline analüüs uurimisrühm
-mtmm01ua,universaalalgebra uurimisrühm
-mtmm02am,arvutusmatemaatika töörühm
-mtmm02tm,teoreetiline mehaanika töörühm
-fkkt01,anorgaaniline keemia õppetool
-fkkt02,füüsikaline keemia õppetool
-fkkt03,keemiaharidus õppetool
-fkkt04,kolloid-ja keskkonnakeemia õppetool
-fkkt05,rakenduselektrokeemia õppetool
-fkkt06,analüütiline keemia õppetool
-fkkt07,keemiline füüsika õppetool
-fkkt08,molekulaartehnoloogia õppetool
-fkkt09,orgaaniline keemia õppetool
-fkkt10,bioorgaaniline keemia õppetool
-p1mi09,kaugseire ja mereoptika osakond
-p1mi10,ökodünaamika osakond
-p2ec01,rakendusuuring keskus socialia
-p2ec02,koolituskeskus
-lo,loodus ja tehnoloogiateaduskond
-lolo,loodus ja tehnoloogiateaduskond dekanaat
-lomi,tartu ülikool eesti mereinstituut
-lofy,tartu ülikool füüsika instituut
-loti,tartu ülikool tehnoloogiainstituut
-lokt,tartu ülikool keemia instituut
-lomr,tartu ülikool molekulaar ja rakubioloogia instituut
-loom,tartu ülikool ökoloogia ja maateadus instituut
-lo00,loodus ja tehnoloogiateaduskond emeriitprofessor
-lo01,loodus ja tehnoloogiateaduskond emeriitdotsent
-sorg,riigiteadus instituut
-lomr01,biotehnoloogia õppetool
-lomr02,evolutsiooniline bioloogia õppetool
-lomr03,geneetika õppetool
-lomr04,mikrobioloogia ja viroloogia õppetool
-lomr05,molekulaarbioloogia õppetool
-lomr06,rakubioloogia õppetool
-lomr07,biofüüsika ja taimefüsioloogia õppetool
-lomr08,üldine ja mikroobibiokeemia õppetool
-lomr09,arengubioloogia õppetool
-loom01,botaanika osakond
-loom02,geograafia osakond
-loom03,geoloogia osakond
-loom04,zooloogia osakond
-loom01bo,botaanika õppetool
-loom01mk,mükoloogia õppetool
-loom01ta,taimeökoloogia õppetool
-loom01of,ökofüsioloogia õppetool
-loom02gk,geoinformaatika ja kartograafia õppetool
-loom02gr,inimgeograafia ja regionaalplaneerimine õppetool
-loom02lm,loodusgeograafia ja maastikuökoloogia õppetool
-loom02ce,väliseesti uuring keskus
-loom03gm,geoloogia ja mineraloogia õppetool
-loom03ps,paleontoloogia ja stratigraafia õppetool
-loom03pr,pinnakate ja rakendusgeoloogia õppetool
-loom04hb,hüdrobioloogia õppetool
-loom04lo,loomaökoloogia õppetool
-loom04zo,zooloogia õppetool
-lomi01,kalabioloogia ja kalandus osakond
-lomi02,merebioloogia osakond
-lomi03,meresüsteem osakond
-lomi04,ökosüsteem dünaamika töörühm
-lomi05,mereoptika töörühm
-lomi06,pärnu osakond
-lomi07,kaugseire ja mereoptika osakond
-lomi08,ökodünaamika osakond
-lomi03ml,meresüsteem modelleerimine labor
-lokt01,anorgaaniline keemia õppetool
-lokt02,füüsikaline keemia õppetool
-lokt03,keemiaharidus õppetool
-lokt04,kolloid-ja keskkonnakeemia õppetool
-lokt05,rakenduselektrokeemia õppetool
-lokt06,analüütiline keemia õppetool
-lokt07,keemiline füüsika õppetool
-lokt08,molekulaartehnoloogia õppetool
-lokt09,orgaaniline keemia õppetool
-lokt10,bioorgaaniline keemia õppetool
-loti01,innovatsioonikeskus
-loti02,biomeditsiinitehnoloogia arenduskeskus
-loti03,keemia ja materjalitehnoloogia arenduskeskus
-loti04,keskkonnatehnika arenduskeskus
-loti05,info ja kommunikatsioonitehnoloogia arenduskeskus
-loti06,psühhofarmakoloogiline ravimiarendus labor
-loti07,õigus ja intellektuaalomand osakond
-lomr10,bioinformaatika õppetool
-lotd,materjaliteadus ja materjal tehnoloogia doktorikool
-lofy01,füüsikaharidus osakond
-lofy01os,optika ja spektroskoopia õppetool
-lofy01rf,rakendusfüüsika õppetool
-lofy01lo,laineoptika õppetool
-lofy01kf,koolifüüsika keskus
-lofy01bf,biomeditsiinitehnika ja meditsiinifüüsika teadus ja koolituskeskus
-lofy02,materjaliteadus osakond
-lofy03,eksperimentaalfüüsika osakond
-lofy04,teoreetiline füüsika osakond
-lofy05,bio ja keskkonnafüüsika osakond
-lofy06,materjaliteadus instituut
-lofy07,administratsioon
-lofy17,raamatupidamine
-lofy18,raamatukogu
-lofy19,majandusgrupp
-lofy20,krüogeenijaam
-lofy21,töökoda
-sorg01,avalik haldus õppetool
-sorg02,haldusjuhtimine õppetool
-sorg03,võrdlev poliitika õppetool
-sorg04,rahvusvaheline suhe õppetool
-sorg05,balti poliitika õppetool
-mjjv10,rahandus õppetool
-lofy02if,ioonkristall füüsika labor
-lofy02ls,laserspektroskoopia labor
-lofy02mt,nanostruktuur füüsika labor
-lofy02kt,kiletehnoloogia labor
-lofy02rs,röntgenspektroskoopia labor
-lofy03ks,füüsikaline optika labor
-lofy03mt,nanostruktuur füüsika labor
-lofy03ls,lasertehnika labor
-lofy03gl,gaaslahenduslabor
-lofy04tt,tahkiseteooria labor
-lofy04tf,teoreetiline füüsika labor
-lofy04st,väljateooria labor
-lofy05sk,biofüüsika laboratoorium
-lofy05kf,keskkonnafüüsika labor
-lofy05af,atmosfäärifüüsika labor
-lolo01,loodusteaduslik haridus keskus
-lofy01ek,elektron paramagneetiline resonants ja luminofooritehnoloogia töörühm
-lofy01js,juhatus ja sekretariaat
-lofy01kk,kosmos ja militaartehnoloogia töörühm
-lofy01pk,põhiõpe keskus
-lofy01ot,õppetöö tugiteenistus
-lokt11,katsekoda
-lolo02,ökoloogia ja keskkonnateadus doktorikool
-lolo03,biomeditsiin ja biotehnoloogia doktorikool
-lolo04,materjaliteadus ja materjal tehnoloogia doktorikool
-htht07,eripedagoogika osakond
-htht09,praktika ja kutseaasta keskus
-htht10,haridusuuring ja õppekavaarendus keskus
-htht11,kõrgkoolididaktika keskus
-flfi05,tartu ülikool eetikakeskus
-mjri05,majandusteooria õppetool
-mjri06,riigimajandus õppetool
-flaj02,arhiivindus osakond
-flaj03,eesti ajalugu osakond
-flaj05,kunstiajalugu osakond
-flaj06,uusim aeg osakond
-flaj07,üldajalugu osakond
-flku09,kultuur ja kommunikatsiooniteadus keskus ( konsortsium )
-lofy08,teenindusgrupp
-lofy08rp,raamatupidamine
-lofy08rk,raamatukogu
-lofy08kj,krüojaam
-lofy08tk,töökoda
-dako,kommunikatsiooniosakond
-us,usuteaduskond
-oi,õigusteaduskond
-ar,arstiteaduskond
-fl,filosoofiateaduskond
-bg,bioloogia - geograafiateaduskond
-fk,füüsika - keemiateaduskond
-kk,kehakultuuriteaduskond
-mj,majandusteaduskond
-mt,matemaatika - informaatikateaduskond
-dako01,teabetalitus
-so,sotsiaalteaduskond
-dako02,ajakiri universitt tartuensima
-ht,haridusteaduskond
-dako03,multimeedia talitus
-re,rektor tegevusvaldkond
-p2,õppeprorektor tegevusvaldkond
-p1,teadusprorektor tegevusvaldkond
-p4,avatud ülikool prorektor
-da,administratsioonidirektor vastutusala
-df,finantsjuht tegevusvaldkond
-dh,haldusdirektor vastutusala
-p3,haldusprorektor vastutusala
-fa,filosoofiateaduskond ( ajalugu )
-yk,üleülikooliline kateeder
-fl1,filosoofiateaduskond
-usus,usuteaduskond dekanaat
-usut,uus testament oppetool
-usvt,vana testament oppetool
-usvu,vordleva usuteadus oppetool
-oiao,avalik õigus instituut
-oieo,eraõigus instituut
-oikk,kodanik kaitse oppetsükkel
-mtmm03,koolimatemaatika keskus
-oikp,kriminoigus ja protsess kateeder
-oioi,õigusteaduskond dekanaat
-oiol,oigusloome labor
-oira,riigioigusteooria ja ajalugu kateeder
-oirh,riigi-ja haldusoigus kateeder
-oitp,tsiviiloigus ja protsess kateder
-oits,tsiviilkaitse tsükkel
-oivl,välissuhtlemine oigusprobl . labor
-araf,"arst , stom . ja farm täiend tk"
-arai,anestesioloogia ja intensiivravi kliinik
-arak,anatoomia kateeder
-aran,anatoomia instituut
-arap,arst ja prov . täienduskeskus
-arar,arstiteaduskond dekanaat
-arat,att teraapia kateeder
-arbi,bioloogiline keemia kateeder
-arbk,biokeemia instituut
-arca,füüsiline antropoloogia keskus
-arfa,farmaatsia instituut
-arff,farmakoloogia ja farm.org kateeder
-dhit06,õppetehnika talitus
-arfk,füsioloogia kateeder
-arfm,farmaatsia kateeder
-arfo,farmakoloogia kateeder
-arfr,farmakoloogia instituut
-arfs,füsioloogia instituut
-arfy,füsioloogia oppelabor
-arhh,hospitaalsiseh ja tuberkul . kateeder
-arhi,histoloogia ja embrüoloogia kateeder
-arhk,hospitaalkirurgia kateeder
-arhl,hematoloogia labor
-arhm,stomatoloogia kateeder
-arho,hematoloogia-onkoloogia kliinik
-arht,hügieen ja tervishoid organiseerimine k
-arig,inimene bioloogia ja geneetika kateeder
-arir,internatuur ja residentuur osakond
-arka,kardioloogia kliinik
-arkd,kardiovaskulaar-ja torakaalkirurgia kliinik
-arki,kirurgiakliinik
-arkr,kõrvakliinik
-arks,kopsukliinik
-oirr,riik ja rahvusvaheline õigus instituut
-arla,lastekliinik
-armb,mikrobioloogia instituut
-armp,biomeditsiin instituut
-armr,mikrobioloogia kateeder
-arnd,"nakkush , dermat . ja venerol . kateeder"
-arnh,nahahaigus kliinik
-arnk,nakkushaigus kliinik
-arnn,neurol . ja neurokirurgia kateeder
-arnr,närvikliinik
-arns,naistekliinik
-arnt,nägemine tervishoid labor
-arok,otorinolar . ja oftamol . kateeder
-arot,õendusteadus osakond
-arou,op-kirurgia ja uroloogia kateeder
-arpa,patoloogiline anatoomia ja kohtuarstiteadus instituut
-arpd,pediaatria kateeder
-arpf,patoloogiline füsioloogia kateeder
-arph,psühhiaatria kateeder
-arpk,patol . anat . ja kohtuarst kateeder
-arpo,peremeditsiin kliinik
-p2pc11,arendusosakond
-arps,psühhiaatriakliinik
-arra,radioloogia ja onkoloogia kateeder
-arrd,radioloogiakliinik
-arrt,ravim tehnol . ja keemia kateeder
-arrv,ravimtaim oppelabor
-arsg,sünnitusabi ja günekoloog kateeder
-arsi,silmakliinik
-arsk,sisekliinik
-arsm,spordimeditsiin ja taastusravi kliinik
-arsp,sisehaigus propedeutika kateeder
-arsr,spordimeditsiin ja ravikehakultuur kat
-arst,stomatoloogia kliinik
-arta,teaduskonnakirurgia kateeder
-arth,tervishoid instituut
-artk,arstiteaduskond täienduskeskus
-arto,traumatoloogia ja ortopeedia kliinik
-artr,trauma . ortop . ja valik . kateeder
-arts,teaduskonnasisehaigus kateeder
-arvi,vivaarium
-aryk,"üldkirurgia , anest ja rean . kateeder"
-flke05,euraasia keel lektoraat
-flaj,ajalugu ja arheoloogia instituut
-flal,ajalugu ja semiootika labor
-flar,arheoloogia labor
-fldl,didaktika labor
-flee,eesti ja üldkeeleteadus instituut
-flek,eesti keel kateeder
-flel,eesti keel labor
-flep,eripedagoogika labor
-fler,eripedagoogika osakond
-flet,tartu ülikool eetikakeskus
-flfi,filosoofia ja semiootika instituut
-flfl,filosoofiateaduskond dekanaat
-flfu,fennougristika labor
-flgr,"germaani , romaani ja slaavi filoloogia instituut"
-flif,inglise filoloogia kateeder
-flke,keelekeskus
-flkf,praktiline eesti keel kateeder
-flkk,kultuurikeskus
-flkl,klassikaline ja romaan filo . kateeder
-flkn,kirjandus ja rahvaluule osakond
-p2av06,õppimine ja õpetamine arenduskeskus
-flkp,koolipsühholoogia labor
-flku,kultuuriteadus ja kunst instituut
-flle,lõuna-eesti keel ja kultuuriuuring keskus
-flmk,maailmakirjandus kateeder
-floa,orientalistikakesk aeg . osakond
-flpe,pedagoogika keskus
-flpk,pedagoogika osakond
-flpl,psühhodiagnostika labor
-flpp,psühhomeetria ja psühhofüüsika labor
-flps,psühholoogia osakond
-flrl,eesti kirjandus ja rahvaluule kateeder
-flrp,rakenduspsühholoogia labor
-flse,semiootika osakond
-flsf,saksa filoloogia kateeder
-flso,sotsioloogia osakond
-flsu,soome-ugri keel kateeder
-flzo,zurnalistikk osakond
-flzu,zurnalistikk kateeder
-flta,tartu l areng kompleksuur . labor
-flve,vene ja slaavi filoloogia osakond
-loom05,bioloogiline mitmekesisus tippkeskus
-flvk,vene keel kateeder
-flvm,vene keel metoodika kateeder
-flvo,voorkeel kateeder
-flvv,vene kirjandus kateeder
-bgal,algoloogia oppelabor
-bgba,botaanikaaed
-bgbe,botaanika ja ökoloogia kateeder
-bgbg,bioloogia-geograafiateaduskond dekanaat
-bgbl,bioindikatsioon labor
-bgbo,botaanika ja ökoloogia instituut
-bgce,väliseesti uuring keskus
-bgeh,embrüonaalne histogen . sektor
-bgfg,füüsiline geograafia kateeder
-bgge,geneetika ja tsütoloogia kateeder
-bggg,geograafia instituut
-bggi,geoinformaatika labor
-bggk,geoloogia kateeder
-bggl,geoloogia instituut
-bggm,geoloogia muuseum
-bgma,majandusgeograafia kateeder
-dfrh01,arveldus talitus
-bgmi,molekulaar ja rakubioloogia kat
-dfrh02,isikumakse talitus
-bgmk,mineroloogia kabinet
-dfrh03,sihtfinantseerimine talitus
-bgmr,tartu ülikool molekulaar ja rakubioloogia instituut
-dfrh04,eelarvetalitus
-bgoj,ökoloogiajaam
-bgzh,zooloogia ja hüdrobioloogia instituut
-bgzk,zooloogia kateeder
-bgzm,zooloogia muuseum
-bgtb,"taimefüsioloogia , biokeemia kateeder"
-fkab,analüütiline biokeemia labor
-fkae,aeroelekter labor
-fkak,anorgaaniline keemia kateeder
-fkan,analüütiline keemia kateeder
-fkbf,biofüüsika labor
-fkbm,tartu ülikool biomeditsiinitehnika ja meditsiinifüüsika teadus ja koolituskeskus
-fkbo,bioorgaaniline keemia labor
-fkef,eksperimentaalfüüsika ja tehnoloogia instituut
-fkek,elektrokeemia labor
-fkel,epl mikroprotsessortehnika sektor
-fkem,elektromeetria labor
-fkep,"elektroluminitsents , pooljuht labor"
-flaj13,ajalugu ja ühiskonnaõpetus didaktika keskus
-fkex,eksperimentaalfüüsika kateeder
-flaj14,nõukogu periood ajalugu uurimine keskus
-fkfd,füüsika didaktika instituut
-flaj15,orientalistikk keskus
-fkfe,füüsikaline keemia instituut
-flaj16,arheoloogia kabinet
-fkfk,füüsika-keemiateaduskond dekanaat
-flee11,lõuna-eesti keel ja kultuuriuuring keskus
-fkft,tartu ülikool katsekoda
-flee12,pau arine soome-ugri põlisrahvas keskus
-fkfy,füüsikaosakond
-flee13,foneetika labor
-fkgk,geofüüsika kateeder
-flgr09,briti uuring keskus
-fkha,happelis-aluseline tasak . labor
-flgr10,kanada uuring keskus
-fkke,keskonnakaitse füüsika labor
-flgr11,kultuuridevaheline kommunikatsioon keskus
-fkkf,keskkonnafüüsika instituut
-flgr12,põhja-ameerika uuring keskus
-fkki,kinesioloogia labor
-flgr13,robert schum prantsuse uuring keskus
-fkkk,keemiline kineet ja katalüüs labor
-flgr14,tõlkekeskus
-fkkl,keskkonnakeemia labor
-flgr15,vene keel testimiskeskus
-fkkm,keemiline füüsika instituut
-fkko,keemiaosakond
-fklk,laseroptika kateeder
-fkll,lihastalitlus labor
-fkmf,materjaliteadus instituut
-fkok,orgaaniline ja bioorgaaniline keemia instituut
-fkor,orgaaniline keemia kateeder
-p1rt14,sisukirjeldus osakond
-fkos,orgaaniline süntees labor
-fkro,rakendusoptika labor
-fksk,semiokeemia labor
-fkta,teor . füüsika ja astrofüüsika kateeder
-fktf,teoreetiline füüsika instituut
-fktp,täppisteadus kool
-fkyf,üldfüüsika kateeder
-kkam,auto - motokabinet
-kkke,kergejoustik kateeder
-kkkk,kehakultuuriteaduskond dekanaat
-kkko,keh-kasv oppej . kvalif . tostm tk
-kkks,keha . kasvatus ja sport kateeder
-kkmk,kk tk . metoodikakabinet
-kkrk,raskejoustik kateeder
-kkrv,raskejoustik ja veesport kateeder
-kksb,spordibioloogia ja füsioteraapia instituut
-kksd,spordikeskus
-kksk,spordifüsioloogia kateeder
-kkso,sportmäng kateeder
-kksp,spordipedagoogika ja treeninguõpetus instituut
-p1rt16,kogu arendus osakond
-kkst,sporditeooria kateeder
-kksu,suusasport kateeder
-kktg,sp . teooria ja treeninguop . instituut
-kktu,treeningprotsess uurimine labor
-kkvk,voimlemine kateeder
-kkvs,veesport kateeder
-mjjv,ettevõttemajandus instituut
-mjka,kaubandus kateeder
-mjko,kaubandusökonoomika labor
-mjks,majandusküberneetika ja statistika katee
-mjme,mehh . arvestus ja masink . kabinet
-mjmj,majandusteaduskond dekanaat
-mjmm,majandusinformaatika ja modelleerimisins
-mjmr,majanduspol . ja riigimaj . instituut
-mjmt,majandusteooria kateeder
-mjra,rahandus ja arvestus instituut
-mjre,rahvamaj . ja ettev . üldd . ins .
-mjrh,rahandus ja krediit kateeder
-mjri,rahvamajandus instituut
-mjrk,raamatupidamine ja analüüs kateeder
-repg,pedagogicum
-mjrv,rahvamajandusharu ökon . kateeder
-mjtj,turundus ja juhtimine instituut
-mjtr,turundus kateeder
-mtag,algebra ja geomeetria kateeder
-mtal,arvutustehnika labor
-mtam,arvutusmatemaatika kateeder
-mtat,arvutiteadus instituut
-mtma,matemaatiline analüüs kateeder
-mtmm,matemaatika instituut
-mtms,matemaatiline statistika instituut
-mtmt,matemaatika-informaatikateaduskond dekanaat
-mtpk,programmeerimine kateeder
-mtpm,puhas matemaatika instituut
-mtrl,rakendusmatemaatika labor
-mtrm,rakendusmatemaatika instituut
-mtst,matemaatiline statistika kateeder
-mttk,teoreetiline mehhaanika kateeder
-soah,avalik haldus osakond
-soai,avalik haldus ja sotsiaaltöö osakond
-socc,balti õping keskus
-soph04,isiksus ja sotsiaalpsühholoogia osakond
-soep,eripedagoogika osakond
-soph,psühholoogia instituut
-sopl,politoloogia osakond
-sose,semiootika osakond
-soso,sotsiaalteaduskond dekanaat
-soss,sotsioloogia ja sotsiaalpoliitika instituut
-sozu,ajakirjandus ja kommunikatsioon instituut
-soyo,üldsotsiaalteadus osakond
-htep,eripedagoogika osakond
-htht,haridusteaduskond dekanaat
-htoa,haridusuuring ja õppekavaarendus keskus
-htos,õpetaja seminar
-htpk,pedagoogika osakond
-reaa,rektoraat büroo
-ream,tartu ülikool ajalugu muuseum
-reka,kaadriosakond
-rekl,tartu ülikool kunstimuuseum
-reks,klassikaline muinasteadus muuseum
-rekt,tü kirjastus
-repr,personaliosakond
-dhkv03ho,"halduspiirkond : välisterritoorium ülikool 18 , jakobi 1 , kuningaplats ; kinnistuma ravila 17 , lunini 16 , tulikas 1 , noorus 3 , viljandi mnt 42 ( v.a ravila 14. )"
-rere,regionaalprojekt
-rerr,rektor reserv
-rert,tartu ülikool raamatukogu
-resh,ülikool sihtasutus
-resl,sisekontrolliosakond
-retk,töö-ja kodanikukaitse osakond
-rett,teabetalitus
-reuk,ülikool kantselei
-reut,"ajaleht "" ut """
-p2ag,multimeediakeskus
-p2av,elukestev õpe keskus
-p2ec,tartu ülikool euroopa kolledž
-p2nc,tartu ülikool narva kolledž
-p2oo,õppeosakond
-p2ov,üliõpilasesindus
-p2pc,tartu ülikool pärnu kolledž
-p2tc,tartu ülikool tür kolledž
-p2te,tervishoiuprojekt
-p2tk,täienduskoolituskeskus
-p2tp,teaduskool
-k1,kantsler tegevusvaldkond
-p1ak,arvutuskeskus
-k1hb,planeering ja hange osakond
-p1fy,tartu ülikool füüsika instituut
-k1kv,kinnisvaraosakond
-p1mi,tartu ülikool eesti mereinstituut
-k1it,infotehnoloogia osakond
-p1ml,metrolabor
-k1hb01,ohutustalitus
-p1op,oppe-ja teadustöö arenduskoda
-k1hb02,planeerimistalitus
-p1pf,plaan - finantsosakond
-k1hb03,struktuurifond talitus
-p1rh,rahandusosakond
-k1kv01,arvestustalitus
-p1rt,raamatukogu
-k1kv02,ehitustalitus
-p1ta,teadus ja arendusosakond
-k1kv03,haldustalitus
-p1tk,täienduskeskus
-k1kv04,tehnovõrk ja elektripaigaldis talitus
-p1tl,tartu ülikool tehnoloogiakeskus
-k1kv02pt,puidugrupp
-p1tt,teabetalitus
-k1kv02rt,remondigrupp
-p4ag,multimeediakeskus
-k1kv03bm,"halduspiirkond : w . ostwald tn 1 , ravila 19"
-p4av,kaugkoolituskeskus
-k1kv03fh,"halduspiirkond : salm 1a , salm 1b ( katlamaja )"
-p4nc,tü narva kolledzh
-k1kv03kh,"halduspiirkond : jakobi 2 , jakobi 4 , loss 3 , loss 36 , ülikool 16 , näitus 2"
-p4tp,täppisteadus kool
-k1kv03mj,"halduspiirkond : lai 34 , lai 36 , lai 38 , lai 40 , uba tn 4 / 6 , uba tn 10. , rada 32 , salm 1a , salm 1b ( katlamaja ) , liivi 4 ( rendipind )"
-dait,infotehnoloogia osakond
-k1kv03mr,"halduspiirkond : riia 23 , riia 23b , vanemuis 46 , vanemuis 46. , vanemuis 21 ( rendipind )"
-dakt,tü kirjastus
-k1kv03oi,"halduspiirkond : näitus 13. , näitus 20 , uppsala 4 , uppsala 6 , uppsala 8 , uppsala 10 , liivi 2"
-dapr,personaliosakond
-k1kv03ph,"halduspiirkond : ülikool 17 , ülikool 18 , ülikool 18. , ülikool 18b , ülikool 20 , jakobi 1 , jakobi 5 , munk 4 , luts 1 , kuningaplats"
-datt,teabetalitus
-k1kv03ti,"halduspiirkond : tiik 78 , j . liivi 2 , loss 36 , kinnistu kastan 43 , elamu tiik 80 välisterritoorium korrashoid"
-dauk,üldosakond
-k1kv03tl,"halduspiirkond : kaarel pst 3 , teater väljak 3"
-dfrh,rahandusosakond
-k1kv03ho,"halduspiirkond : ravila 17 , tulikas 1 , viljandi mnt 42 , riia 191 , riia 191a , riia 191b kinnistuma"
-dhab,tü tamm apteek
-k1kv04ep,elektripaigaldis remondigrupp
-dhad,tü kesklinn apteek
-k1kv04tv,tehnovõrk remondigrupp
-dhau,transpordiosakond
-k1it01,infrastruktuur talitus
-dhba,tartu ülikool botaanikaaed
-k1it02,infosüsteem talitus
-dhek,ehituskorraldus osakond
-k1it03,kasutajatugi talitus
-dhhb,haldusdirektor büroo
-k1it04,foto ja videotalitus
-dhkb,tü kääriku spordi-ja puhkekeskus
-k1it05,õppetehnika talitus
-dhkh,tü kohvik
-k1it01sg,server grupp
-dhko,kommunikatsioonitehnika osakond
-k1ko,turundus ja kommunikatsiooniosakond
-dhkv,haldusosakond
-dhls,tartu ülikool spordibaas
-dhpi,peainseneriosakond
-dhrk,tü raamatupood
-p3ab,"tü apteek "" tamm """
-p3ad,"tü apteek "" kesklinn """
-p3au,transpordiosakond
-p3ek,ehituskorraldus osakond
-p3gb,gaudeamus büroo
-k1ko01,teabetalitus
-p3kb,käärik spordibaas
-k1ko02,ajakiri universitt tartuensima
-p3kh,ülikool kohvik
-k1ko03,multimeedia talitus
-p3ko,kommunikatsioonitehnika osakond
-k1pr,personaliosakond
-p3kv,kinnisvara osakond
-k1uk,kantselei
-p3ls,linn spordibaas
-k1uk01,arhiiv
-p3pi,peainseneriosakond
-p3rk,tartu ülikool raamatupood
-p3rp,raamatupidamine osakond
-p3sm,sobrama maja
-p3vr,varustusosakond
-faea,eesti ajalugu kateeder
-faek,eripedagoogika kateeder
-faeo,eripedagoogika oppekabinet
-faep,eksperimentaalpsühhol . oppelabor
-falk,lähiajalugu kateeder
-fans,nsvl ajalugu kateeder
-fapk,psühholoogia kateeder
-faps,psühholoogia oppelabor
-fask,sotsioloogia kateeder
-fast,skandinaavia kogumik toimetus
-p1um,muuseum
-fayk,üldajalugu kateeder
-p1um01,ülikool ajalugu muuseum
-ykek,ettevalmistuskursus
-p1um02,kunstimuuseum
-ykfp,filosoofia ja pol . teadus kateeder
-p1um03,loodusmuuseum
-ykka,kultuur kateeder
-p1um03gm,geoloogiamuuseum
-ykkf,kvalifikatsioonitostmiskursus
-p1um03zm,zooloogiamuuseum
-ykkk,kultuur kabinet
-p1um03lk,näitus ja loodusharidus osakond
-ykkn,kunst kabinet
-p1um03bm,botaanika ja mükoloogiamuuseum
-ykko,kodundus kabinet
-p1ba,tartu ülikool botaanikaaed
-ykku,kodukultuur kabinet
-ykmk,muusika kabinet
-ykml,mootelabor
-yknl,nlkp ajalugu kateeder
-ykpe,pedagoogika oppelabor
-ykpm,pedagoogika ja metoodika kateeder
-ykpo,poliitiline ökonoomika kateeder
-yksa,sotsialism ajalugu kateeder
-yksk,sojandus kateeder
-yktk,teaduslik kommunism kateeder
-ykto,tulekaitse ja ohutustehnika labor
-ykyo,ühiskonnateadus oppekabinet
-k1kv05,ohutustalitus
-muud,muu osakond ( vananenud )
-armp1,üld-ja molek . patol . instit .
-armp2,üld-ja molekulaarpatoloogia inst
-armp3,üld-ja molekulaarpat . instit .
-flso1,sotsioloogia osakond
-dhmaj,haldusprorektor maj kulu
-p3kv1,kinnisvara osakond ( vana )
-p3maj,haldusprorektor maj kulu
-usus01,kirikulugu õppetool
-usus02,süstemaatiline usuteadus õppetool
-usus03,praktiline usuteadus õppetool
-usus04,uus testament õppetool
-usus05,vana testament ja semitistikk õppetool
-usus06,võrdlev usuteadus õppetool
-usus07,luterlik usuteadus õppetool
-oiao01,"kriminaalõigus , kriminoloogia ja kognitiivne psühholoogia õppetool"
-oiao02,kriminoloogia õppetool
-oiao03,protsessiõigus õppetool
-oiao05,riik ja haldusõigus õppetool
-oiao06,võrdlev õigusteadus õppetool
-htht12,õpetaja täienduskoolitus ja kutseaasta keskus
-oiaokk,kriminalistika ja kriminoloogia oppetool
-oiaokr,kriminaaloigus oppetool
-oiaopr,protsessioigus oppetool
-oiaorh,riik ja haldusoigus oppetool
-oiaovo,vordleva oigusteadus oppetool
-oieo01,õigus ajalugu õppetool
-oieo02,keskkonnaõigus õppetool
-oieo03,rahvusvaheline eraõigus õppetool
-oieo04,tsiviilõigus õppetool
-oieo05,töö-ja sotsiaalhooldusõigus õppetool
-oieoeo,eesti riik ja oigus ajalugu oppetool
-oieore,rahvusvaheline eraoigus oppetool
-oieotk,tsiviil-ja kaubandusoigus oppetool
-oieots,töö-ja sotsiaalhooldusoigus oppetool
-arai01,anestesioloogia ja intensiivravi õppetool
-aran01,inimene anatoomia õppetool
-aran02,histoloogia ja embrüoloogia õppetool
-aran03,kirurgiline anatoomia õppetool
-arbk01,meditsiiniline biokeemia õppetool
-arfa01,farmakognoosia ja farmaatsia organisatsioon õppetool
-arth07,terviseinfo analüüsigrupp
-arfa02,ravim tehnoloogia ja biofarmaatsia õppetool
-arfr01,farmakoloogia õppetool
-arfr02,farmakoloogia ja toksikoloogia õppetool
-arfr03,kliiniline farmakoloogia õppetool
-arfs01,füsioloogia õppetool
-arho01,radioloogia õppetool
-arho02,hematoloogia-onkoloogia õppetool
-arho03,eksperimentaalne onkoloogia õppetool
-arka01,kardioloogia õppetool
-arka02,kardiotorakaalkirurgia õppetool
-arkd01,kardiovaskulaar-ja torakaalkirurgia õppetool
-arki01,üldkirurgia õppetool
-arki02,kirurgiline haigus õppetool
-arkr01,otorinolarüngoloogia õppetool
-arks01,pulmonoloogia õppetool
-arla01,pediaatria õppetool
-armb01,meditsiiniline mikrobioloogia ja viroloogia õppetool
-armp01,inimene bioloogia ja geneetika õppetool
-armp02,immunoloogia õppetool
-armp03,patoloogiline füsioloogia õppetool
-lolo05,funktsionaalne materjal ja tehnoloogia doktorikool
-armpad,adaptatsioon labor
-armpag,adaptatsioon uurimisgrupp
-armpaj,ajuvereringehaigus labor
-armpau,ajuvereringehaigus uurimisgrupp
-armpbf,biofüüsika labor
-armpbm,biomeditsiin ins . uurimisgrupp
-armpbt,bakterioloogia töörühm
-armpbu,biofüüsika uurimisgrupp
-armpel,enteroloogia labor
-armpen,ensumoloogia labor
-armpes,ensümoloogia ja endokr . uurimisgrupp
-armpeu,enteroloogia uurimisgrupp
-armphg,hormonaalgeulatsioon labor
-armphl,hematoloogia labor
-armphu,hematoloogia uurimisgrupp
-armpia,armp immunoanalüüs uurimisgrupp
-armpig,armp inimene geneetika uurimisgrupp
-armpil,immunoanalüüs labor
-armpin,inimene geneetika labor
-armpio,immunoloogia labor
-lolo06,maateadus ja ökoloogia doktorikool
-armpiu,armp immunoloogia uurimisgrupp
-armpkb,armp katsebaas
-armpkf,kliin . füsioloogia labor
-armpkg,kuulmine füsiol . uurimisgrupp
-armpki,kliin . bakteriol . uurimisgrupp
-armpkl,kardioloogia labor
-armpkt,kuulmima tasakaal füs . labor
-armpku,kardioloogia uurimisgrupp
-armpky,kliiniline füsioloogia uurimisgrupp
-armpla,laseranalüüs sektor
-armplb,laserbioloogia-meditsiin labor
-armplt,ümp lisatasu
-armpme,med . optika sektor
-armpmi,mikroobiokoloogia labor
-armpmm,molek . modelleerimine labor
-armpmo,ümp mikroobiökoloogia uurimisgrupp
-armpmu,molek . modelleerimine uurimisgrupp
-armpou,organtransplantats . uurimisgrupp
-armpph,psühho-farm-farmkokin . labor
-armpps,psühhofarmako . uurimisgrupp
-loom06,maateadus ja ökoloogia doktorikool
-armppu,armp patoloogiline füsioloogia uurimisgr
-armprb,armp rakubioloogia uurimisgrupp
-armpre,reumatoloogia labor
-armprl,rakubioloogia labor
-armpru,reumatoloogia uurimisgrupp
-armptk,tehnokeskus
-arnh01,dermatoloogia ja veneroloogia õppetool
-arnk01,infektsioonihaigus õppetool
-arnr01,neuroloogia õppetool
-arnr02,neurokirurgia õppetool
-arns01,sünnitusabi ja günekoloogia õppetool
-arpa01,patoloogiline anatoomia õppetool
-arpa02,kohtuarstiteadus õppetool
-arpo01,polikliinik ja peremeditsiin õppetool
-arps01,psühhiaatria õppetool
-arrd01,radioloogia õppetool
-arrd02,onkoloogia õppetool
-arrd03,eksperimentaalne onkoloogia õppetool
-arsi01,oftalmoloogia õppetool
-arsk01,sisehaigus õppetool
-aj,ajalooteaduskond
-arsk02,reumatoloogia õppetool
-fi,filoloogiateaduskond
-arsk03,laboratoorne meditsiin õppetool
-arsk04,infektsioonhaigus õppetool
-arsk05,sisehaigus propedeutika õppetool
-arsm01,spordimeditsiin ja taastusravi õppetool
-arst01,stomatoloogia õppetool
-arth01,keskkond ja töötervishoid õppetool
-arth02,tervishoiukorraldus õppetool
-arth03,epidemioloogia ja biostatistika õppetool
-arth04,tervis edendamine õppetool
-arth05,tervishoiuökonoomika õppetool
-arto01,traumatoloogia ja ortopeedia õppetool
-flaj01,arheoloogia osakond
-flaj08,ajalugu eriala
-flaj09,eesti ajalugu õppetool
-flku03,etnoloogia osakond
-flaj10,kunstiajalugu õppetool
-flaj11,lähiajalugu õppetool
-flaj12,üldajalugu õppetool
-flee01,eesti ja võrdlev rahvaluule õppetool
-sh,sotsiaal ja haridusteaduskond
-flee02,eesti keel osakond
-shsh,sotsiaal ja haridusteaduskond dekanaat
-flee03,eesti kirjandus õppetool
-shzu,"ajakirjandus , kommunikatsioon ja infoteadus instituut"
-flee04,eesti keel võõrkeel osakond
-shzu01,ajakirjandus õppetool
-flee05,kirjandusteooria õppetool
-shzu02,meediauuring õppetool
-flee06,soome-ugri osakond
-shzu03,sotsiaalne kommunikatsioon õppetool
-flee07,uurali keel õppetool
-shrg,riigiteadus instituut
-flee08,üldkeeleteadus osakond
-shrg01,avalik haldus õppetool
-flee09,eesti keel ajalugu ja murre õppetool
-shrg02,võrdlev poliitika õppetool
-flerho,hälvikpedagoogika oppetool
-shrg03,rahvusvaheline suhe õppetool
-flerle,logopeedia ja emakeel did . oppetool
-shph,psühholoogia instituut
-flfi01,filosoofia osakond
-shph01,arengupsühholoogia osakond
-flfi02,praktiline filosoofia õppetool
-shph02,eksperimentaalpsühholoogia osakond
-flfi03,teadusfilosoofia õppetool
-shph03,neuropsühhofarmakoloogia osakond
-flgr04,saksa filoloogia osakond
-shph04,isiksus ja sotsiaalpsühholoogia osakond
-flgr03,romanistika osakond
-shss,sotsioloogia ja sotsiaalpoliitika instituut
-flgr01,inglise filoloogia osakond
-shss01,sotsioloogia osakond
-flgr07,saksa filoloogia õppetool
-shss02,sotsiaaltöö ja sotsiaalpoliitika osakond
-flgryk,üldkeeleteadus oppetool
-shhi,haridusteadus instituut
-flke03,eesti keel lektoraat
-shhi01,pedagoogika osakond
-flke01,inglise keel lektoraat
-shhi02,õpetaja seminar
-flkekt,keelekeskus tehniline grupp
-shhi03,eripedagoogika osakond
-flke02,saksa ja prantsuse keel lektoraat
-shhi04,haridusuuring ja õppekavaarendus keskus
-flke04,vene keel lektoraat
-shhi05,õpetaja täienduskoolitus ja kutseaasta keskus
-flkkmo,maalikunst oppetool
-sh00,sotsiaal ja haridusteaduskond emeriitprofessor
-flkkvo,vaba kunst oppetool
-sh01,sotsiaal ja haridusteaduskond emeriitdotsent
-flku04,eesti ja võrdlev rahvaluule osakond
-flku05,kirjandus ja teatriteadus osakond
-flkn03,eesti kirjandus õppetool
-flkn05,teatriteadus ja kirjandusteooria õppetool
-flku01,kunst osakond
-flku02,muusika osakond
-flpk01,hariduskorraldus õppetool
-flpk02,haridusteooria õppetool
-flpsao,arengupsühholoogia õppetool
-flpspo,psühhofüüsika õppetool
-flsese,semiootika oppetool
-flsoaa,ajakirj . avalik arvamus labor
-flsoak,ajakirjandus ajalugu labor
-flsoar,ajalugu ja rahvastikutead . labor
-flsofy,filos . ühiskonnatead . dial . labor
-p2pg,pedagogicum
-flsohl,haridussotsioloogia labor
-flsohv,haridusinnovaatika labor
-flsokl,kutsesuunitlus labor
-flsokp,korgkoolipedagoogika labor
-flsoks,käitumishälve sotsio . labor
-flsook,orientalistikk kabinet
-flsool,orientalistikk labor
-flsops,praktiline sotsioloogia oppetool
-flsopu,perekonnauurimine labor
-flsosl,semiootika labor
-flsoso,sotsiaaltöö oppetool
-flsoti,tehisintellekt labor
-flsotk,teadus ja korgkool ajalugu labor
-flsoto,teadusökonoomika labor
-flsovk,vene kirjandus labor
-flgr05,slaavi filoloogia osakond
-flve02,vene keel õppetool
-flve03,vene kirjandus õppetool
-bgbo01,botaanika õppetool
-bgbo02,mükoloogia õppetool
-k1it06,multimeedia talitus
-bgbo03,taimeökoloogia õppetool
-bgbo04,ökofüsioloogia õppetool
-bggg01,geoinformaatika ja kartograafia õppetool
-bggg02,inimgeograafia ja regionaalplaneerimine õppetool
-bggg03,loodusgeograafia ja maastikuökoloogia õppetool
-bggl01,geoloogia ja mineraloogia õppetool
-bggl02,paleontoloogia ja stratigraafia õppetool
-bggl03,pinnakate ja rakendusgeoloogia õppetool
-bgmr01,biotehnoloogia õppetool
-bgmr02,evolutsiooniline bioloogia õppetool
-bgmr03,geneetika õppetool
-bgmr04,mikrobioloogia ja viroloogia õppetool
-bgmr05,molekulaarbioloogia õppetool
-bgmr06,rakubioloogia õppetool
-bgmr07,biofüüsika ja taimefüsioloogia õppetool
-bgmr08,üldine ja mikroobibiokeemia õppetool
-bgmrlt,tymr lisatasu
-bgzh01,zooloogia õppetool
-bgzh02,hüdrobioloogia õppetool
-bgzh03,loomaökoloogia õppetool
-k1kv03tn,"halduspiirkond : noorus 1 , ravila 14. , ravila 14b"
-bgzh04,arengubioloogia õppetool
-k1kv06,hange ja arendustalitus
-fkakao,anorgaaniline keemia oppelabor
-k1kv07,sisevalvetalitu
-fkanao,analüütiline keemia oppelabor
-fkef01,optika ja spektroskoopia õppetool
-fkef02,rakendusfüüsika õppetool
-fkef04,laineoptika õppetool
-fkexeo,eksperimentaalfüüsika oppelabor
-fkfe01,anorgaaniline keemia õppetool
-fkfe03,füüsikaline keemia õppetool
-fkfe05,kolloid-ja keskkonnakeemia õppetool
-fkfe06,elektrokeemia õppetool
-fkfykr,krüogeenijaam
-fkgkgo,geofüüsika oppelabor
-fkkf01,biogeofüüsika õppetool
-fkkf02,meteoroloogia õppetool
-fkkf03,keskkonnafüüsika õppetool
-fkkfkf,keskkonnafüüsika ja meteor . õp
-fkkm01,analüütiline keemia õppetool
-fkkm02,bioorgaaniline keemia õppetool
-fkkm03,keemiline füüsika õppetool
-k1it01tk,tartu ülikool teadusarvutus keskus
-fkkm04,molekulaartehnoloogia õppetool
-fkmf01,korrastamata süsteem füüsika õppetool
-fkmf02,tahkisefüüsika õppetool
-fkok01,orgaaniline keemia õppetool
-fkok02,bioorgaaniline keemia õppetool
-fkoroo,orgaaniline keemia oppelabor
-fktf01,astrofüüsika õppetool
-fktf02,kosmoloogia õppetool
-fktf03,statistiline füüsika ja kvantteooria õppetool
-fktf04,väljateooria õppetool
-fkyfdk,üldfüüsika kat . demonstr . kabinet
-fkyffk,f-k tk kat . vaheline oppelabor
-fkyfyo,üldfüüsika oppelabor
-kksb01,funktsionaalne morfoloogia õppetool
-kksb02,spordifüsioloogia õppetool
-kksb03,kinesioloogia õppetool
-kksp02,kehaline kasvatus õppetool
-kksp03,spordipsühholoogia õppetool
-kksp04,spordipedagoogika õppetool
-kkspvl,voimlemine lektoraat
-p1rt32,infosüsteem osakond
-kktgkl,kergejoustik lektoraat
-kktgrl,raskejoustik lektoraat
-kktgsl,sportmäng lektoraat
-kktgss,suusasport lektoraat
-kktgto,treeningopetus oppetool
-kktgvl,veesport lektoraat
-mjjv02,turundus õppetool
-mjjv03,juhtimine õppetool
-mjjv04,välismajandus õppetool
-mjjv07,rahvusvaheline ettevõtlus ja innovatsioon õppetool
-mjkako,kaubatundmine ja org . oppelabor
-mjksal,majandusteaduskond arvutuslabor
-mjmmmi,majandusinformaatika oppetool
-mjmmok,ökonomeetria oppetool
-mjmmso,statistika oppetool
-mjra01,majandusarvestus suund
-mjra02,rahandus suund
-mjra03,ärirahandus ja investeering õppetool
-mjraak,analüüs ja kontroll oppetool
-mjrafo,finantsarvestus oppetool
-flfi01aj,filosoofia ajalugu õppetool
-mjrarr,riigirahandus oppetool
-flfi01pf,praktiline filosoofia õppetool
-mjreem,ettevottete majandus oppetool
-flfi01tf,teadusfilosoofia õppetool
-mjremo,majandusteooria oppetool
-flfi01te,teoreetiline filosoofia õppetool
-mjrero,rahvamajandus oppetool
-mjrevo,välismajandus oppetool
-mjrhrk,rahandus ja arvestus kabinet
-mjri01,majandus modelleerimine õppetool
-mjri02,ökonomeetria õppetool
-mjri03,mikroökonoomika ja - poliitika suund
-mjri04,majanduspoliitika õppetool
-mjri07,majandusteooria õppetool
-mjri08,makroökonoomika ja - poliitika suund
-mjrvvk,välismajandussuhted kabinet
-mjtjjo,juhtimine oppetool
-mjtjko,kaubandus oppetool
-mjtjto,turundus oppetool
-mtat01,tehisintellekt õppetool
-mtat02,diskreetne matemaatika õppetool
-mtat03,tarkvarasüsteem õppetool
-mtat04,informaatika didaktika õppetool
-flku10,orientalistikk keskus
-mtat05,teoreetiline informaatika õppetool
-mtms01,matemaatiline statistika õppetool
-mtms02,tõenäosusteooria õppetool
-mtpm01,algebra uurimisrühm
-mtpm02,geomeetria ja topoloogia uurimisrühm
-mtpm03,funktsionaalanalüüs uurimisrühm
-mtpm04,funktsiooniteooria õppetool
-mtpm05,matemaatika didaktika uurimisrühm
-mtpm06,matemaatiline analüüs uurimisrühm
-mtpm07,universaalalgebra uurimisrühm
-mtrm01,arvutusmatemaatika töörühm
-mtrm02,diferentsiaal ja integraalvõrrand õppetool
-mtrm03,optimaalne juhtimine õppetool
-mtrm04,teoreetiline mehaanika töörühm
-mttklb,teor . meh kateeder oppelabor
-soah01,avalik haldus õppetool
-soah02,sotsiaalpoliitika õppetool
-soep01,hälvikupedagoogika õppetool
-soep02,logopeedia ja emakeel didaktika õp
-soph01,arengupsühholoogia osakond
-p2av07,täiendusõppekeskus
-soph02,eksperimentaalpsühholoogia osakond
-soph03,psühhofüsioloogia osakond
-sopl01,võrdlev poliitika õppetool
-sopl02,rahvusvaheline suhe teooria õppetool
-flfi04,semiootika osakond
-soss01,sotsioloogia osakond
-soss02,sotsiaalne analüüs meetod õppetool
-soss03,praktiline sotsioloogia õppetool
-sozu01,ajakirjandus õppetool
-sozu03,meediauuring õppetool
-htep01,erivajadus pedagoogika õppetool
-htep02,logopeedia ja õpiraskus teooria õppetool
-htpk01,hariduskorraldus õppetool
-htpk02,üldpedagoogika õppetool
-reaaaa,arhiiv
-reaajo,juriidiline osakond
-reaakn,kantselei
-reaark,rektor kantselei
-reaats,tsiviilkaitse staap
-reaavo,välissuhe osakond
-p1um03dt,elurikkus informaatika ja digiarhiiv töörühm
-rert01,administratsioon
-rertan,rt andmetöötlusosakond
-rertav,rt avalik suhe osakond
-rert03,bibliograafiaosakond
-rert17,biomeedikum raamatukogu
-rert04,ennistuskeskus
-rertfo,rt muusika ja keeleôppekeskus
-rert18,füüsikaraamatukogu
-rertho,rt hoiuosakond
-rerthr,rt hügieeni-ja restaureermisosakond
-rert13,säilitus ja hooldusteenistus
-rert19,humanitaarraamatukogu
-rertie,rt informatsiooni-ja eurodok . osakond
-rert05,infosüsteem teenistus
-rertka,rt kataloogimisosakond
-rert08,käsikiri ja haruldane raamat osakond
-rert06,kodumaine kirjandus osakond
-rertko,rt komplekteerimisosakond
-rert20,keemiaraamatukogu
-rert07,köitekoda
-arfs02,kliiniline genoomika tuumiklabor
-rert09,liigitamisosakond
-rertls,rt teaduskirjandus lugemissaal
-rert10,muusika ja keeleõppekeskus
-rert21,majandusraamatukogu
-rert25,majandusteenistus
-rert22,nato teabekeskus
-rert16,õppekirjandus osakond
-rertpa,rt põhja-am . ülikool teabekeskus
-rertpo,rt perioodikaosakond
-rert24,peainseneriteenistus
-rert12,retrokataloogimine osakond
-rert11,raamatukogu vaheline laenutus osakond
-rertst,rt statistikateenistus
-rerttb,rt teatmebibliograafiaosakond
-rertte,rt teadusbibliograafiaosakond
-rert14,teaduskirjandus osakond
-rertto,rt teadusosakond
-rert23,tehniline teenistus
-rert15,väliskirjandus osakond
-rertvr,rt vanaraamat osakond
-flee14,suuline ja arvutisuhtlus labor
-p2ooww,vastuvotu kulg
-p1fy01,administratsioon
-p1fy08,ioonkristall füüsika labor
-p1fy17,krüogeenijaam
-p1fy10,kristall spektroskoopia labor
-p1fy06,kiletehnoloogia töörühm
-p1fy13,laseroptika sektor
-p1fy09,laserspektroskoopia labor
-p1fy05,lasertehnika labor
-p1fy16,majandusosakond
-p1fy04,madal temperatuur labor
-p1fy15,raamatukogu
-p1fy14,raamatupidamine
-p1fy02,röntgenspektroskoopia labor
-p1fy11,biofüüsika laboratoorium
-p1fy03,teoreetiline füüsika labor
-p1fy18,töökoda
-p1fy07,keskkonnafüüsika labor
-p1fy12,tahkiseteooria labor
-p1mi02,kalabioloogia ja kalandus osakond
-p1um01ny,näitus ja üritus osakond
-p1mi03,merebioloogia osakond
-p1um01ko,kogu osakond
-p1mi04,merefüüsika sektor
-p1um01tt,tartu tähetorn osakond
-p1mi05,meresüsteem osakond
-p1oppo,plastitehnoloogia osakond
-p1rtrb,raamatukogundus labor
-p1tl01,tl geenitehnoloogia osakond
-p1tl02,tl infotehnoloogia osakond
-p1tl03,tl keskkonnatehnoloogia osakond
-p1tl04,tl materjaliteadus osakond
-dhhb01,riigihange talitus
-dhkhsy,kh söökla ülikool 20
-dhkhvk,kh vana kohvik ( ülikool 20 )
-dhkv01,arvestustalitus
-dhkv02,ehitustalitus
-dhkv03,hooldustalitus
-dhkvht,kv hange teenistus
-dhkv04,ho turvateenistus
-dhkvpt,kv puidutöökoda
-dhkvrt,kv ehitus-ja remonditeenistus
-dhls01,sb emajõgi spordibaas
-lomi01kt,kalandus teabekeskus töörühm
-dhls02,sb spordihoone
-dhls03,sb staadion
-dhls04,sb tennisepaviljon
-dhpi01,elektriseade hooldus ja remonditeenistus
-dhpi02,küte ventilatsioon ja santehniline seade hooldus ja remonditeenistus
-p3ekej,ehitusjaoskond
-p3ekep,ehitusprorektoriteenistus
-p3eket,ehitusteenistus
-p3ekit,ehitusjaoskond itp
-p3ekrt,remonditeenistus
-p3khke,kh keemiahoone einelaud
-p3khkn,kh kohvik narva mnt 27
-p3khks,"kh kohvik "" sophokle """
-p3khsa,kh söökla narva mnt 27
-p3khsn,kh söökla noorus 9
-p3khst,kh söökla täht 4
-p3khsy,kh söökla ülikool 20
-p3khve,kh van . 46 einelaud
-p3khvk,kh vana kohvik ( ülikool 20 )
-p3kvat,kv arvestusteenistus
-flke06,akadeemiline väljendusoskus keskus
-p3kvet,kv elamuteenistus
-p3kvhh,kv hoone hooldus teenistus
-p3kvht,kv hange teenistus
-p3kvkt,kv keskkonnakaitse tulet . ja turvateen .
-p3kvpt,kv puidutöökoda
-p3kvrt,kv remonditeenistus
-p3lsem,ls emajoe spordibaas
-p3lsls,linn spordibaas
-p3lsrv,raskej . ja veesport kompleks
-p3lssp,ls spordihoone
-p3lsst,ls staadion
-p3lste,ls tennisepaviljon
-p3rpso,sotsiaalkindlustus osakond
-muudao,aspirantuuriosakond
-muudar,arenduskoda
-muudet,eksperimentaaltootmisbaas
-muudio,i osakond
-muudkl,klubi
-muudko,kaugoppeosakond
-muudmo,majandusosakond
-k1ko04,kommunikatsioonitalitus
-muudom,oppetehnika ja metoodika teenistus
-k1ko05,turundustalitus
-muudoo,oppeosakond
-k1ko06,protokoll ja rahvusvaheline suhe talitus
-muudsk,tü südamekeskus
-muudtk,töökaitse osakond
-muudvt,varustusteenistus
-muudye,üliopilaste edustus
-muudyk,üliopilane komplekteerimine teadma büroo
-muudyn,üliopilaste noustamiskeskus
-armpkb1,katsebaas
-bgmrmax,tymr ty arvelt
-p3kvpt1,puidutöökoda
-p3kvrt1,remonditeenistus ( vana )
-dhkv02pt,puidugrupp
-dhkvhhak,hh arvutuskeskus piirkond
-dhkvhham,hh ajaloomuuseum piirkond
-dhkvhhan,hh anatoomikum piirkond
-dhkvhhau,hh garaazh majajuhataja piirkond
-dhkvhhay,hh avatud ülikool tallinna esindus
-dhkv03bg,halduspiirkond : bg õppebaas
-dhkv03bm,"halduspiirkond : ravila 19 , 14. ; puusepp 8 d - korpus"
-shrg04,balti õping keskus
-dhkvhhbo,hh botaanikaaed piirkond
-dhkv03fh,"halduspiirkond : täht 4 , salm 1a , 1b"
-dhkvhhkb,hh rada 32 piirkond
-dhkv03kh,"halduspiirkond : jakobi 2,4 , 5 ; loss 3,24 ; munk 4 ; ülikool 16 ; luts 5 ( ülikool käsutus olev ruum ) ; raekoda plats 9 ( ülikool käsutus olev ruum )"
-dhkvhhkm,hh keeltemaja piirkond
-dhkv03mj,"halduspiirkond : narva mnt 4 ; lai 34 , 36 , 40 ; noorus 9 ; viljandi mnt 48 ; pühajärv residents"
-dhkvhhmp,hh ümp ja haigla majajuhataja piirk .
-dhkv03mr,"halduspiirkond : riia 23 ; pirn 2 ; vanemuis 21 hoone , 46 , 46. ; rajama 32"
-dhkv03no,"halduspiirkond : noorus 1,9 ; puusepp 8 ; rada 32"
-dhkv03oi,"halduspiirkond : näitus 2 , 13. , 20 ; loss 38"
-dhkv03ph,"halduspiirkond : ülikool 17 , 18 hoone , 18. , 18b , 20 ; jakobi 1 hoone ; küütri 2"
-dhkvhhsm,hh sõber maja majajuhataja piirkond
-dhkv03ti,"halduspiirkond : tiik 78 , 80 ; j . liivi 2 ; loss 36 ; kinnistu kastan 43"
-dhkvhhva,hh vanemuis 46 piirkond
-p3kvhhak,hh arvutuskeskus piirkond
-p3kvhham,hh ajaloomuuseum piirkond
-p3kvhhan,hh anatoomikum majajuhataja piirkond
-p3kvhhau,hh garaazh majajuhataja piirkond
-p3kvhhay,hh avatud ülikool tallinna esindus
-p3kvhhbg,hh bg oppebaas piirkond
-flee15,"keeleteadus , filosoofia ja semiootika doktorikool"
-p3kvhhbo,hh botaanikaaed majajuhataja piirkond
-p3kvhhfh,hh täht 4 majajuhataja piirkond
-p3kvhhkb,hh rada 32 piirkond
-p3kvhhkh,hh keemiahoone majajuhataja piirkond
-p3kvhhkm,hh keeltemaja majajuhataja piirkond
-p3kvhhmj,hh narva 4 / 6 majajuhataja piirkond
-p3kvhhmp,hh ümp ja haigla majajuhataja piirk .
-p3kvhhmr,hh riia 23 piirkond
-p3kvhhno,hh noorus 9 majajuhataja piirkond
-p3kvhhoi,hh näitus 20 majajuhataja piirkond
-p3kvhhph,hh peahoone majajuhataja piirkond
-p3kvhhpi,peahoone intendant piirkond
-p3kvhhti,hh tiik 78 majajuhataja piirkond
-p3kvhhva,hh vanemuis 46 majajuhataj piirkond
-p3kvhhvt,hh valveteenistus ( midaveelpo )
-muudarok,ar oppetöökoda
-muudarpo,to plastitehnoloogia osakond
-muudfond,tü fond
-muudinpr,tü innovatsioon projekt
-muudioii,ii osakond
-lomi01pk,pelaagiline kala töörühm
-muudkotk,tallinna konsultatsioonipunkt
-lomi01mf,lõhe ja meriforell töörühm
-muudmoak,mo arvutuskeskus
-lomi01pt,peipsi kalandus töörühm
-muudmoam,mo ajaloomuuseum
-muudmoan,mo anatoomikum
-muudmoba,mo botaanikaaed
-muudmoco,mo komandant ja valveteenistus
-muudmoes,mo emajoe spordibaas
-muudmoet,elamuteenistus
-muudmohk,"mo haigla , klubi , kopu"
-muudmoka,mo kääriku
-muudmokh,mo keemiahoone
-muudmokp,"mo kaunase pst 44 , välgi"
-muudmolb,mo laboratoorium
-muudmomm,mo maarjamoisa auditoorium
-muudmono,mo noorus 9
-muudmooh,mo oppehoone
-muudmoph,mo peahoone
-muudmori,mo riia 23
-muudmork,mo raamatukogu
-muudmosh,mo spordihoone
-flaj17,looduslik pühapaik riiklik arengukava rakenduskeskus
-muudmost,mo staadion
-p2vk07kp,kommunikatsioon ja projektitalitus
-muudmota,mo täht 4
-p2vk08ek,e - keskus
-muudmoti,mo tiik 78 / 80
-p2vk08ht,haldustalitus
-muudmotp,mo tennisepaviljon
-p2vk08hs,helistuudio
-muudmout,mo uus tänav 1
-p2vk08ol,õppelava
-muudmova,mo vanemuis 46
-p2vk08ue,ühiselamu
-muudmovo,mo voor ökoloogia jaam
-p2vk10,õppedirektor haldusala
-muudmoyh,ühiselamu
-p2vk10rt,raamatukogu
-muudmoyl,"mo ühiselamu , ladu"
-p2vk10tt,täiendusõppetalitus
-muudomeo,omt ekspluatatsioon osakond
-p2vk10ot,õppetalitus
-muudomik,informaatika kateeder
-p2vk11,raamatupidamine
-muudomjo,omt juurutusosakond
-muudommt,omt metoodika kabinet
-muudomot,omt oppetehnika osakond
-muudomse,omt side-ja elektrograafia osakond
-muudomtf,omt tele ja fotolabor
-muudooeo,ettevalmistusosakond
-muudooev,ettevalm . ja vastuvotu osakond
-muudp1li,i prorektor lisa
-muudp1si,i prorektor siht
-muudp3li,iii prorektor lisa
-p2oo11,tartu ülikool pedagogicum
-muudtoel,to ensümoloogia labor
-muudtoge,to geen ekspresslabor
-muudtohr,to hormonaalne regulats . labor
-muudtoit,to infotöö
-muudtoka,to kaadriosakond
-muudtoke,to konstrueerimine eksperimenteerimiso
-muudtokf,"to kl . füsiol . , biokeemia labor"
-muudtokr,to kap . ehit . ja rem . osakond
-muudtooj,to org ja juur osakond
-muudtool,to onkogenees labor
-muudtopg,to plasmiid geneetika labor
-muudtopo,to patendiosakond
-muudtorp,to teadusosakond raamatupidamine
-muudtost,to standari . ja metroloogia os
-muudtout,to uus tehnika näit osakond
-muudtovo,to välissuhe osakond
-muudvtel,ehitusmaterjal ladu
-lomi01rm,rannikumeri kalandus töörühm
-oiao07,rahvusvaheline ja euroopa õigus õppetool
-p1tp,tartu ülikool teaduskool
-p2rt,tartu ülikool raamatukogu
-p2rt01,administratsioon
-p2rt02,sisukirjeldus osakond
-p2rt03,erialainfotalitus
-p2rt04,eurodokumentatsioon keskus
-p2rt05,infosüsteem osakond
-p2rt06,kogu arendus osakond
-p2rt07,käsikiri ja haruldane raamat osakond
-p2rt08,fonoteek
-p2rt09,raamatukogu vaheline laenutus keskus
-htos01,koolimuusika lektoraat
-p2rt10,säilitus ja konserveerimisosakond
-htos02,alus ja algharidus õppetool
-p2rt11,teaduskeskus
-p2rt12,teenindusosakond
-p2rt13,põhja-ameerika ülikool teabekeskus
-p2rt14,haldustalitus
-p2rt15,peainseneritalitus
-shph05,kliiniline psühholoogia osakond
-mtat06,keeletehnoloogia õppetool
-armp10,vähibioloogia uurimisgrupp
-p2pc01,ettevõtlusosakond
-p2pc02,turismiosakond
-p2pc03,sotsiaaltöö korraldus osakond
-shsh01,tartu ülikool pedagogicum
-mjjv08,majandusprotsess juhtimine ja infosüsteem lektoraat
-kksb06,tervisekasvatus lektoraat
-kksb05,füsioteraapia õppetool
-sozu02,massikommunikatsioon ja ajakirjandus õppetool
-p1ta08,teadus ja arendusprojekt talitus
-p1ta09,intellektuaalomand talitus
-p1ta10,ettevõtlussuhe talitus
-bgmr09,loodusteadus didaktika lektoraat
-p1ta11,karjääritalitus
-rert02,üld ja arendusosakond
-p1mi01,üldosakond
-mjri11,riigimajandus ja majanduspoliitika õppetool
-armp04,immunoanalüüs uurimisgrupp
-mtmt01,tartu ülikool koolimatemaatika ja - informaatika keskus
-armp05,immunoloogia uurimisgrupp
-armp06,inimesegeneetika uurimisgrupp
-armp07,patoloogiline füsioloogia uurimisgrupp
-armp08,rakubioloogia ja elektronmikroskoopia uurimisgrupp
-flaj01ao,arheoloogia õppetool
-flaj01la,laboratoorne arheoloogia õppetool
-flaj01lo,looduslik pühapaik keskus
-flaj01ak,arheoloogia kabinet
-kksp99,kehaline kasvatus lektoraat
-arbs,bio ja siirdemeditsiin instituut
-arbs01,biokeemia osakond
-arbs02,farmakoloogia osakond
-arbs03,füsioloogia osakond
-arbs04,biomeditsiin osakond
-arbs05,vivaarium
-arbs01mk,meditsiiniline biokeemia õppetool
-arbs02ft,farmakoloogia ja toksikoloogia õppetool
-arbs02kf,kliiniline farmakoloogia õppetool
-arbs03fo,füsioloogia õppetool
-arbs03kg,kliiniline genoomika tuumiklabor
-arbs04ib,inimene bioloogia ja geneetika õppetool
-arbs04ig,inimesegeneetika uurimisgrupp
-arbs04im,immunoanalüüs uurimisgrupp
-aran04,füüsiline antropoloogia keskus
-arbs04rb,rakubioloogia ja elektronmikroskoopia uurimisgrupp
-arbs04io,immunoloogia õppetool
-arbs04pf,patoloogiline füsioloogia õppetool
-arbs04pu,patoloogiline füsioloogia uurimisgrupp
-arbs04mp,molekulaarpatoloogia uurimisgrupp
-arbs04vb,vähibioloogia uurimisgrupp
-shzu04,infokorraldus õppetool
-shzu05,infoteadus õppetool
-soss04,sotsiaaltöö ja sotsiaalpoliitika osakond
-soah03,haldusjuhtimine õppetool
-sopl03,balti poliitika õppetool
-k1ko04aj,ajakiri universitt tartuensima toimetus
-k1ko04an,portaal novaator toimetus
-oioi04,tartu osakond
-oioi05,tallinna osakond
-oiao09,tartu osakond
-oiao10,tallinna osakond
-oiao01tr,tartu osakond
-oiao01tl,tallinna osakond
-oiao07tr,tartu osakond
-oiao07tl,tallinna osakond
-oiao05tr,tartu osakond
-oiao05tl,tallinna osakond
-oiao06tr,tartu osakond
-oiao06tl,tallinna osakond
-dhhb03,ohutustalitus
-oieo07,tartu osakond
-oieo08,tallinna osakond
-oieo04tr,tartu osakond
-oieo04tl,tallinna osakond
-oieo01tr,tartu osakond
-oieo01tl,tallinna osakond
-oieo06tr,tartu osakond
-oieo06tl,tallinna osakond
-oirr01,tartu osakond
-oirr02,tallinna osakond
-p2og,tartu ülikool õigusinstituut
-reaa01,rahvusvaheline koostöö talitus
-flke07,vene keel testimiskeskus
-oioi05vo,dekanaat tallinna osakond võõrkeel õpe
-bgmr10,bioinformaatika õppetool
-loom04lr,loodusressurss õppetool
-arbs04rn,rna bioloogia uurimisgrupp
-p2og01,intellektuaalne omand õppetool
-p2og02,mereõigus õppetool
-p2og03,kognitiiv ja õiguspsühholoogia õppetool
-arbs06,katseloomakeskus
-kksp05,spordiala didaktika lektoraat
-p2vk12,haldustalitus
-p2vk12ue,ühiselamu
-p2vk13,e - keskus
-p2vk01pk,pärandtehnoloogia keskus
-dait01,arvutivõrk rühm
-p1ta02,teadustalitus
-p2oo01,õppetalitus
-p2oo02,vastuvõtutalitus
-p2oo03,tasemeõppetalitus
-p2oo04,rahvusvaheline õpiränne keskus
-p2oo05,põhja-ameerika ülikool teabekeskus
-p2pc12,uurimiskeskus
-p2oo06,õppeinfosüsteem ja analüüsitalitus
-p2pc12kl,kurortoloogia labor
-p2oo07,karjäär ja psühholoogiline nõustamine talitus
-p2pc12nt,noor teaduskeskus
-p1ta01,arendustalitus
-p1ta03,välissuhe talitus
-dauk01,teabetalitus
-dauk02,ajaleht universitt tartuensima
-dauk03,sekretariaat
-dauk04,arhiiv
-dait02,keskserver töörühm
-dait03,kasutajatugi
-dait04,infosüsteem projekt
-p1ta04,keskkonnaseire projekt
-p1ta05,"projekt "" teaduskeskus ahhaa """
-p2og04,keelelektoraat
-p1ti,tartu ülikool tehnoloogiainstituut
-k1kv08,riigihange talitus
-k1kv09,arendustalitus
-p2pc04,kurortoloogia labor
-arbs04pfkg,kliiniline genoomika tuumiklabor
-p2nc01,ühiskonnateadus lektoraat
-p2nc02,psühholoogia ja pedagoogika lektoraat
-p2nc03,eesti keel ja kirjandus lektoraat
-p2nc04,vene keel ja kirjandus lektoraat
-p2nc05,võõrkeel lektoraat
-p1lm,loodusmuuseum ja botaanikaaed
-p1lm01,loodusmuuseum
-p1lm01gm,geoloogiamuuseum
-p1lm01zm,zooloogiamuuseum
-p1lm01lk,näitus ja loodusharidus osakond
-p1lm01bm,botaanika ja mükoloogiamuuseum
-p1lm01dt,elurikkus informaatika ja digiarhiiv töörühm
-p1lm02,tartu ülikool botaanikaaed
-armd,meditsiinitehnoloogia keskus
-armc,molekulaarne ja kliiniline meditsiin keskus
-flcb,briti uuring keskus
-flci,kultuuridevaheline kommunikatsioon keskus
-flco,orientalistikakeskus
-flcp,pau arine soome-ugri põlisrahvas keskus
-flcn,põhja-ameerika uuring keskus
-shuh,ühiskonnateadus instituut
-flcr,robert schum prantsuse uuring keskus
-lolh,loodusteaduslik haridus keskus
-socs,eesti kognitiivne sotsiaalteadus keskus
-shuh01,ajakirjandus õppetool
-sosa,eesti sotsiaalteaduslik andmearhiiv
-shuh02,meediauuring õppetool
-sock,eesti käitumis ja terviseteadus keskus
-shuh03,sotsiaalne kommunikatsioon õppetool
-shuh04,infokorraldus õppetool
-shuh05,infoteadus õppetool
-shuh06,sotsioloogia õppetool
-shuh07,sotsiaaltöö õppetool
-shuh08,sotsiaalpoliitika õppetool
-arbs06vi,vivaarium
-p1um04,kogu osakond
-p1um05,kommunikatsiooniosakond
-p1um06,tartu tähetorn
-us00,usuteaduskond emeriitprofessor
-oi00,õigusteaduskond emeriitprofessor
-ar00,arstiteaduskond emeriitprofessor
-fl00,filosoofiateaduskond emeriitprofessor
-bg00,bioloogia-geograafiateaduskond emeriitprofessor
-fk00,füüsika-keemiateaduskond emeriitprofessor
-kk00,kehakultuuriteaduskond emeriitprofessor
-p2rt16,haldusosakond
-ht00,haridusteaduskond emeriitprofessor
-mjjv11,ettevõtlus õppetool
-mj00,majandusteaduskond emeriitprofessor
-mt00,matemaatika-informaatikateaduskond emeriitprofessor
-so00,sotsiaalteaduskond emeriitprofessor
-rert26,eurodokumentatsioon keskus
-mjmj02,ettevõtlus ja innovatsioonikeskus
-usus08,lähis-ida vana keel ja kultuur õppetool
-mjjv12,rahandus ja majandusarvestus õppetool
-sozu04,sotsiaalne kommunikatsioon õppetool
-flfl02,humanitaarvaldkond didaktikakeskus
-usus03rp,religioonipedagoogika kabinet
-arbs07,immunoloogia osakond
-arbs08,patofüsioloogia osakond
-arbs08kg,kliiniline genoomika tuumiklabor
-rertbo,rt bibliograafiaosakond
-shhi06,haridustehnoloogia keskus
-rertek,rt ennistuskeskus
-rertht,rt säilitus ja hooldusteenistus
-rertit,rt infosüsteem teenistus
-rertkk,rt kodumaine kirjandus osakond
-rertkt,rt köitekoda
-rertli,rt liigitamisosakond
-rertmk,rt muusika ja keeleõppekeskus
-rertna,rt nato teabekeskus
-rertre,rt retrokataloogimine osakond
-rerttk,rt teaduskirjandus osakond
-k1kv10,analüüs ja arvestustalitus
-rertvk,rt väliskirjandus osakond
-k1it03kk,kõnekeskus grupp
-k1it03rt,riia tn grupp
-k1it03mv,maarjaväli grupp
-k1it03kl,kesklinn grupp
-dhhb02,tehniline koordineerimiskeskus
-dhhbrh,hb riigihange teenistus
-dhkvat,kv kinnisvara arvestusteenistus
-dhkvet,kv ehitusteenistus
-dhkvetpt,kv et puidutöökoda
-dhkvhh,kv kinnisvara hooldusteenistus
-dhkvhhbg,hh bg õppebaas piirkond
-dhkvhhbm,hh biomeedikum piirkond
-dhkvhhfh,hh täht 4 ja õpetaja sem . piirkond
-dhkvhhkh,hh keemiahoone piirkond
-dhkvhhmj,hh narva 4 piirkond
-dhkvhhmr,hh riia 23 piirkond
-dhkvhhno,hh noorus 9 piirkond
-dhkvhhoi,hh näitus 20 piirkond
-dhkvhhph,hh peahoone piirkond
-dhkvhhti,hh tiik 78 piirkond
-dhkvkt,kv turvateenistus
-kksp06,liikumisharrastus käitumuslik probleemlabor
-dhlsem,ls emajõgi spordibaas
-dhlssp,ls spordihoone
-dhlsst,ls staadion
-dhlste,ls tennisepaviljon
-dhpiet,pi elektrisiga . hooldus-ja rem . teenistus
-dhpikt,pi küte venti . - ja san . teenistus
-loom04en,entomoloogia õppetool
-loom04tr,terioloogia õppetool
-p1ta12,tehnoloogiasiire talitus
-p5,prorektor tegevusvaldkond
-p5am,tartu ülikool ajalugu muuseum
-p5kl,tartu ülikool kunstimuuseum
-fllc,maailm keel ja kultuur kolledž
-dhkv05,tehnovõrk ja elektripaigaldis talitus
-p2pc13,turismikompetentsikeskus
-rert27,teenindusosakond
-dhkv05ep,elektripaigaldis remondigrupp
-dhkv05tv,tehnovõrk remondigrupp
-rerb,rektoraat büroo
-rerb01,rahvusvaheline koostöö talitus
-dhkv02rt,remondigrupp
-mjmj03,ettevõtlus õppetool
-mjmj04,juhtimine õppetool
-mjmj05,majandus modelleerimine õppetool
-mjmj06,majandusteooria õppetool
-mjmj07,rahandus ja majandusarvestus õppetool
-mjmj08,rahvusvaheline ettevõtlus ja innovatsioon õppetool
-mjmj09,riigimajandus ja majanduspoliitika õppetool
-mjmj10,turundus õppetool
-k1kv03rt,"halduspiirkond : w . struve 1 , veski 32 ( rendipind )"
-fllc01,anglistika osakond
-fllc04,germanistika osakond
-fllc02,klassikaline filoloogia osakond
-fllc03,romanistika osakond
-fllc06,skandinavistika osakond
-fllc05,slavistika osakond
-fllc07,tõlkeõpetus ja - uuring osakond
-fllc08,aasia regioon keel osakond
-fllc09,balti regioon keel osakond
-fllc10,akadeemiline väljendusoskus keskus
-fllc11,testimiskeskus
-k1it07,infrastruktuur ja kasutajatugi talitus
-k1it07sg,server grupp
-k1it07tk,tartu ülikool teadusarvutus keskus
-k1it07mv,maarjaväli grupp
-k1it07kl,kesklinn grupp
-k1it07kk,kõnekeskus grupp
-lofy02st,sensortehnoloogia töörühm
-p2ag01,arvutigraafikateenistus
-p2ag02,õppetehnikateenistus
-p2ag03,fototeenistus
-p2pc05,raamatukogu
-p2og05,õppeosakond
-p2og06,raamatukogu
-k1kv03ld,"halduspiirkond : uppsala 10 ladu , sanatoorium 18 kaarhall"
-arth06,töökeskkond labor
-p2nc06,üldosakond
-p2nc07,majandusosakond
-p2nc06rp,raamatupidamine
-p2nc06ot,õppetalitus
-p2nc06rk,raamatukogu
-p2nc06ak,arvutiklass
-p2vk00,tartu ülikool viljandi kultuuriakadeemia emeriitdotsent
-bgzh05,zooloogiamuuseum
-p1ta06,juriidiline nõustamine
-resu,siseaudit büroo
-p1rt33,säilitus ja konserveerimisosakond
-p1rt34,haldusosakond
-flgr03pk,prantsuse keel ja kirjandus
-flgr03hk,hispaania keel ja kirjandus
-flgr03ik,itaalia keel ja kirjandus
-flgr07sk,skandinavistika
-p1ta07,teaduskorraldus talitus
-p1mi06,pärnu osakond
-hv,humanitaarteadus ja kunst valdkond
-hvhv,humanitaarteadus ja kunst valdkond dekanaat
-hvus,usuteaduskond
-hvaj,ajalugu ja arheoloogia instituut
-hvee,eesti ja üldkeeleteadus instituut
-hvfi,filosoofia ja semiootika instituut
-hvku,kultuuriteadus instituut
-hvlc,maailm keel ja kultuur kolledž
-hvvk,viljandi kultuuriakadeemia
-sv,sotsiaalteadus valdkond
-svoi,õigusteaduskond
-svsv,sotsiaalteadus valdkond dekanaat
-svmj,majandusteaduskond
-bgcl,alus ja rakendusökoloogia keskus
-svuh,ühiskonnateadus instituut
-svhi,haridusteadus instituut
-svph,psühholoogia instituut
-svjs,johan skytte poliitikauuring instituut
-svnc,narva kolledž
-svpc,pärnu kolledž
-svoi02,avalik õigus osakond
-svoi04,eraõigus osakond
-svoi03,karistusõigus osakond
-svoi01,üldosakond
-shhi07,haridusuuenduskeskus
-mv,meditsiiniteadus valdkond
-mvmv,meditsiiniteadus valdkond dekanaat
-mvbs,bio ja siirdemeditsiin instituut
-mvpt,peremeditsiin ja rahvatervishoid instituut
-mvfa,farmaatsia instituut
-mvcm,kliiniline meditsiin instituut
-mvst,hambaarstiteadus instituut
-mvsf,sporditeadus ja füsioteraapia instituut
-lt,loodus ja täppisteadus valdkond
-mtat07,krüptograafia õppetool
-ltlt,loodus ja täppisteadus valdkond dekanaat
-armp09,molekulaarpatoloogia uurimisgrupp
-ltmi,eesti mereinstituut
-ltfy,füüsika instituut
-ltkt,keemia instituut
-ltmr,molekulaar ja rakubioloogia instituut
-ltti,tehnoloogiainstituut
-ltom,ökoloogia ja maateadus instituut
-ltat,arvutiteadus instituut
-ltms,matemaatika ja statistika instituut
-ltom01,botaanika osakond
-ltom02,geograafia osakond
-ltom03,geoloogia osakond
-ltom04,zooloogia osakond
-ltom05,loodusteaduslik haridus keskus
-bggl04,geoloogiamuuseum
-flct,tõlkekeskus
-hv00,humanitaarteadus ja kunst valdkond emeriitprofessor
-hv01,humanitaarteadus ja kunst valdkond emeriitdotsent
-sv00,sotsiaalteadus valdkond emeriitprofessor
-sv01,sotsiaalteadus valdkond emeriitdotsent
-mv00,meditsiiniteadus valdkond emeriitprofessor
-mv01,meditsiiniteadus valdkond emeriitdotsent
-lt00,loodus ja täppisteadus valdkond emeriitprofessor
-lt01,loodus ja täppisteadus valdkond emeriitdotsent
-hvlc01,anglistika osakond
-hvlc02,klassikaline filoloogia osakond
-hvlc03,romanistika osakond
-hvlc04,germanistika osakond
-hvlc05,slavistika osakond
-hvlc06,skandinavistika osakond
-p1mi07,ökosüsteem dünaamika töörühm
-hvlc07,tõlkeõpetus ja - uuring osakond
-p1mi08,mereoptika töörühm
-hvlc08,aasia regioon keel osakond
-p1mi05ml,meresüsteem modelleerimine labor
-hvlc09,balti regioon keel osakond
-hvhv01,humanitaarvaldkond didaktikakeskus
-flch,nõukogu periood ajalugu uurimiskeskus
-rertmt,rt majandusteenistus
-ltkt01,anorgaaniline keemia õppetool
-ltkt02,füüsikaline keemia õppetool
-ltkt03,keemiaharidus õppetool
-ltkt04,kolloid ja keskkonnakeemia õppetool
-ltkt05,rakenduselektrokeemia õppetool
-ltkt06,analüütiline keemia õppetool
-ltkt07,keemiline füüsika õppetool
-ltkt08,molekulaartehnoloogia õppetool
-ltkt09,orgaaniline keemia õppetool
-ltkt10,bioorgaaniline keemia õppetool
-ltkt11,katsekoda
-svpc01,ettevõtlusosakond
-svpc02,turismiosakond
-svpc03,sotsiaaltöö korraldus osakond
-svpc04,keelekeskus
-svpc05,turismikompetentsikeskus
-svpc06,uurimiskeskus
-svpc07,raamatukogu
-svpc06kl,kurortoloogia labor
-svpc06nt,noor teaduskeskus
-p1fyrk,fy raamatukogu
-p1fyrp,fy raamatupidamine
-p1fyrs,fy röngtenspektroskoopia labor
-p1fysk,fy spektronograafia sektor
-p1fytf,fy teoreetiline füüsika labor
-p1fytk,fy töökoda
-p1fyts,fy tuumaspektroskoopia labor
-p1fytt,fy tahkiseteooria labor
-svnc01,ühiskonnateadus lektoraat
-p1tlgt,tl geenitehnoloogia osakond
-svnc02,psühholoogia ja pedagoogika lektoraat
-p1tlit,tl infotehnoloogia osakond
-svnc03,eesti keel lektoraat
-p1tlkt,tl keskkonnatehnoloogia osakond
-svnc04,vene keel lektoraat
-p1tlmt,tl materjaliteadus osakond
-svnc05,võõrkeel lektoraat
-p1fyad,fy administratsioon
-svnc06,üldosakond
-p1fyif,fy ioonkristall füüsika labor
-svnc07,keskus eesti kodu narva
-p1fykj,fy krüojaam
-svnc08,majandusosakond
-p1fyks,fy kristall spektroskoopia labor
-svnc06rp,raamatupidamine
-p1fykt,fy kiletehnoloogia töörühm
-svnc06ot,õppetalitus
-p1fylo,fy laseroptika sektor
-svnc06rk,raamatukogu
-p1fyls,fy laserspektroskoopia labor
-svnc06ak,arvutiklass
-p1fylt,fy lasertehnika labor
-ltmr01,biotehnoloogia õppetool
-p1fymo,fy majandusosakond
-ltmr02,evolutsiooniline bioloogia õppetool
-p1fymt,fy madal temperatuur labor
-ltmr03,geneetika õppetool
-rertad,rt administratsioon
-ltmr04,mikrobioloogia ja viroloogia õppetool
-rertbr,rt biomeedikum raamatukogu
-ltmr05,molekulaarbioloogia õppetool
-rertfy,rt füüsikaraamatukogu
-ltmr06,rakubioloogia õppetool
-rerthu,rt humanitaarraamatukogu
-ltmr07,biofüüsika ja taimefüsioloogia õppetool
-rertkh,rt käsikiri ja haruld . raamat osak
-ltmr08,üldine ja mikroobibiokeemia õppetool
-rertkr,rt keemiaraamatukogu
-ltmr09,arengubioloogia õppetool
-rertmr,rt majandusraamatukogu
-ltmr10,bioinformaatika õppetool
-rertop,rt õppekirjandus osakond
-svhi01,pedagoogika osakond
-rertpt,rt peainseneriteenistus
-svhi02,õpetaja seminar
-rertrl,rt raamatukogu vaheline laenutus osak
-svhi03,eripedagoogika osakond
-rerttt,rt tehniline teenistus
-svhi04,haridusuuenduskeskus
-flkeee,eesti keel sektsioon
-svhi05,õpetaja täienduskoolitus ja kutseaasta keskus
-flkein,inglise keel sektsioon
-svhi06,haridustehnoloogia keskus
-flkesp,saksa / prantsuse keel sektsioon
-svph01,arengupsühholoogia osakond
-flkeve,vene keel sektsioon
-svph02,eksperimentaalpsühholoogia osakond
-svph03,neuropsühhofarmakoloogia osakond
-svph04,isiksus ja sotsiaalpsühholoogia osakond
-svph05,kliiniline psühholoogia osakond
-svjs01,sotsiaalteaduslik rakendusuuring keskus ( rake )
-dhit,infotehnoloogia osakond
-svsv01,ettevõtlus ja innovatsioonikeskus
-svmj02,ettevõtlus õppetool
-svmj03,juhtimine õppetool
-svmj04,majandus modelleerimine õppetool
-svmj05,majandusteooria õppetool
-svmj06,rahandus ja majandusarvestus õppetool
-svmj07,rahvusvaheline ettevõtlus ja innovatsioon õppetool
-svmj08,riigimajandus ja majanduspoliitika õppetool
-svmj09,turundus õppetool
-svoi01tr,üldosakond tartu osakond
-svoi01tl,üldosakond tallinna osakond
-svoi02tr,tartu osakond
-svoi02tl,tallinna osakond
-svoi03tr,tartu osakond
-svoi03tl,tallinna osakond
-svoi04tr,tartu osakond
-svoi04tl,tallinna osakond
-mvcm01,anestesioloogia ja intensiivravi kliinik
-mvcm02,hematoloogia-onkoloogia kliinik
-mvcm03,kirurgiakliinik
-dhit01,infrastruktuur talitus
-mvcm04,kopsukliinik
-dhit01sg,server grupp
-mvcm05,kõrvakliinik
-dhit02,infosüsteem talitus
-mvcm06,lastekliinik
-dhit03,multimeedia talitus
-mvcm07,nahahaigus kliinik
-dhit03ag,arvutigraafika grupp
-mvcm08,naistekliinik
-dhit03og,õppetehnika grupp
-mvcm09,närvikliinik
-dhit04,kasutajatugi talitus
-mvcm10,psühhiaatriakliinik
-mvcm11,radioloogiakliinik
-mvcm12,silmakliinik
-mvcm13,sisekliinik
-mvcm14,spordimeditsiin ja taastusravi kliinik
-mvcm15,südamekliinik
-mvcm16,traumatoloogia ja ortopeedia kliinik
-mvcm17,täienduskeskus
-hvlc10,akadeemiline väljendusoskus keskus
-hvlc11,testimiskeskus
-ltms01,koolimatemaatika ja - informaatika keskus
-hvus01,kirikulugu õppetool
-hvus02,süstemaatiline usuteadus õppetool
-hvus03,praktiline usuteadus õppetool
-htht01,pedagoogika osakond
-hvus04,uus testament õppetool
-hvus05,vana testament ja semitistikk õppetool
-hvus06,võrdlev usuteadus õppetool
-hvaj01,arheoloogia osakond
-hvaj02,arhiivindus osakond
-hvaj03,eesti ajalugu osakond
-hvaj05,kunstiajalugu osakond
-hvaj06,uusim aeg osakond
-hvaj07,üldajalugu osakond
-hvee01,eesti keel osakond
-hvee02,eesti keel võõrkeel osakond
-hvee03,soome-ugri osakond
-hvee04,üldkeeleteadus osakond
-hvee01lk,lõuna-eesti keel ja kultuuriuuring keskus
-k1it07ts,turvasüsteem grupp
-mvbs01,biokeemia osakond
-mvbs02,farmakoloogia osakond
-mvbs03,füsioloogia osakond
-mvbs04,biomeditsiin osakond
-mvbs05,katseloomakeskus
-htht02,õpetaja seminar
-mvbs06,immunoloogia osakond
-mvbs07,patofüsioloogia osakond
-mvbs08,anatoomia osakond
-mvbs09,mikrobioloogia osakond
-mvbs10,patoloogiline anatoomia ja kohtuarstiteadus osakond
-mvbs01mk,meditsiiniline biokeemia õppetool
-mvbs02ft,farmakoloogia ja toksikoloogia õppetool
-mvbs02kf,kliiniline farmakoloogia õppetool
-mvbs03fo,füsioloogia õppetool
-mvbs04ib,inimene bioloogia ja geneetika õppetool
-mvbs04mp,molekulaarpatoloogia uurimisgrupp
-mvbs04vb,vähibioloogia uurimisgrupp
-mvbs04rn,rna bioloogia uurimisgrupp
-mvbs07kg,kliiniline genoomika tuumiklabor
-mvbs08ia,inimene anatoomia õppetool
-mvbs08he,histoloogia ja embrüoloogia õppetool
-mvbs08ka,kirurgiline anatoomia õppetool
-ltat01,keeletehnoloogia õppetool
-hvfi01,filosoofia osakond
-p1vs,välissuhe osakond
-hvfi04,semiootika osakond
-htht03,arenduskeskus
-hvfi05,tartu ülikool eetikakeskus
-hvfi01aj,filosoofia ajalugu õppetool
-hvfi01pf,praktiline filosoofia õppetool
-hvfi01te,teoreetiline filosoofia õppetool
-hvfi01tf,teadusfilosoofia õppetool
-mvbs09mv,meditsiiniline mikrobioloogia ja viroloogia õppetool
-mvbs10pa,patoloogiline anatoomia õppetool
-mvbs10ka,kohtuarstiteadus õppetool
-k1it07ig,infrastruktuur grupp
-hvku09,kultuur ja kommunikatsiooniteadus keskus ( konsortsium )
-hvku05,kirjandus ja teatriteadus osakond
-hvku04,eesti ja võrdlev rahvaluule osakond
-hvku03,etnoloogia osakond
-hvku01,kunst osakond
-hvku10,orientalistikakeskus
-hvku05ek,eesti kirjandus õppetool
-hvku05ma,maailmakirjandus õppetool
-hvku05tt,teatriteadus õppetool
-hvku01mk,maalikunst õppetool
-hvku01mu,muusika õppetool
-ltmi01,kalabioloogia ja kalandus osakond
-ltmi02,merebioloogia osakond
-ltmi03,meresüsteem osakond
-oieo06,äriõigus ja intellektuaalne omand õppetool
-ltmi06,pärnu osakond
-mjri09,mikroökonoomika õppetool
-ltmi07,kaugseire ja mereoptika osakond
-mjri10,makroökonoomika õppetool
-ltmi08,ökodünaamika osakond
-ltmi01kt,kalandus teabekeskus töörühm
-ltmi01mf,lõhe ja meriforell töörühm
-ltmi01pk,pelaagiline kala töörühm
-ltmi01pt,peipsi kalandus töörühm
-ltmi01rm,rannikumeri kalandus töörühm
-ltfy07,administratsioon
-ltfy02,materjaliteadus osakond
-ltfy03,eksperimentaalfüüsika osakond
-ltfy04,teoreetiline füüsika osakond
-ltfy05,bio ja keskkonnafüüsika osakond
-ltfy01,füüsikaharidus osakond
-ltfy08,teenindusgrupp
-ltfy09,majandusgrupp
-ltfy02if,ioonkristall füüsika labor
-p2nc08,keskus eesti kodu narva
-ltfy02ls,laserspektroskoopia labor
-ltfy02rs,röntgenspektroskoopia labor
-ltfy02kt,kiletehnoloogia labor
-ltfy02mt,nanostruktuur füüsika labor
-ltfy02st,sensortehnoloogia labor
-ltfy03ks,füüsikaline optika labor
-ltfy03mt,nanostruktuur füüsika labor
-ltfy03ls,lasertehnika labor
-ltfy03gl,plasmafüüsika labor
-ltfy04tt,tahkiseteooria labor
-ltfy04tf,teoreetiline füüsika labor
-ltfy04st,väljateooria labor
-ltfy05sk,biofüüsika laboratoorium
-ltfy05kf,keskkonnafüüsika labor
-ltfy05af,atmosfäärifüüsika labor
-ltfy01kk,kosmos ja militaartehnoloogia töörühm
-ltfy01ek,elektron paramagneetiline resonants ja luminofooritehnoloogia töörühm
-ltfy01pk,põhiõpe keskus
-ltfy01ot,õppetöö tugiteenistus
-ltfy01kf,koolifüüsika keskus
-p2pc06,ökosüsteem majandamine osakond
-ltfy01bf,biomeditsiinitehnika ja meditsiinifüüsika teadus ja koolituskeskus
-p2pc07,keelekeskus
-ltfy08rp,raamatupidamine
-p2pc08,teenus kompetentsikeskus
-ltfy08rk,raamatukogu
-p2pc09,õppeosakond
-svuh01,ajakirjandus õppetool
-p2pc10,haldusosakond
-svuh02,meediauuring õppetool
-svuh03,sotsiaalne kommunikatsioon õppetool
-svuh04,infoteadus õppetool
-svuh06,sotsioloogia õppetool
-svuh07,sotsiaaltöö õppetool
-svuh08,sotsiaalpoliitika õppetool
-svuh09,tugiosakond
-mvbs08fa,füüsiline antropoloogia keskus
-mvpt01,peremeditsiin õppetool
-mvpt02,õendusteadus õppetool
-ltom01bo,botaanika õppetool
-ltom01mk,mükoloogia õppetool
-ltom01ta,taimeökoloogia õppetool
-ltom01of,ökofüsioloogia õppetool
-ltom02gk,geoinformaatika ja kartograafia õppetool
-ltom02gr,inimgeograafia ja regionaalplaneerimine õppetool
-dhhb04,planeerimistalitus
-ltom02lm,loodusgeograafia ja maastikuökoloogia õppetool
-ltom02ce,väliseesti uuring keskus
-ltom03gm,geoloogia ja mineraloogia õppetool
-ltom03ps,paleontoloogia ja stratigraafia õppetool
-hvaj13,ajalugu ja ühiskonnaõpetus didaktika keskus
-ltom03pr,pinnakate ja rakendusgeoloogia õppetool
-ltom04lr,loodusressurss õppetool
-ltom04lo,loomaökoloogia õppetool
-ltom04en,entomoloogia õppetool
-ltom04tr,terioloogia õppetool
-mtat08,hajussüsteem õppetool
-mvpt03,epidemioloogia ja biostatistika õppetool
-mvpt04,rahvatervishoid õppetool
-mvpt05,terviseinfo analüüsigrupp
-hvaj01ao,arheoloogia õppetool
-hvaj01la,laboratoorne arheoloogia õppetool
-hvaj01ak,arheoloogia kabinet
-hvaj01lo,looduslik pühapaik keskus
-hvee03pa,pau arine soome-ugri põlisrahvas keskus
-hvee01fl,foneetika labor
-hvee01sl,suuline ja arvutisuhtlus labor
-p2oo08,õppekorraldus ja kvaliteeditalitus
-p2oo09,avatud ülikool talitus
-p2oo10,regionaaltalitus
-svhi07,tartu ülikool pedagogicum
-hvvk04,etenduskunst osakond
-hvvk03,kultuurharidus osakond
-hvvk02,muusikaosakond
-hvvk01,rahvuslik käsitöö osakond
-p5um,tartu ülikool muuseum
-p5um01,ülikool ajalugu muuseum
-p5um02,kunstimuuseum
-p5um03,loodusmuuseum
-shuh09,tugiosakond
-shuh10,infoteadus õppetool
-hvvk12,õppeosakond
-hvvk13,avalik suhe talitus
-hvvk11,raamatukogu
-hvvk08,haldustalitus
-hvvk09,multimeediakeskus
-hvvk10,projektitalitus
-hvvk07,it talitus
-p1rt01,administratsioon
-hvvk06,raamatupidamine
-p1rt02,üld ja arendusosakond
-p1rt03,bibliograafiaosakond
-p1rt04,ennistuskeskus
-p1rt05,infosüsteem talitus
-p1rt06,kodumaine kirjandus osakond
-p1rt07,köitekoda
-p1rt08,käsikiri ja haruldane raamat osakond
-p1rt09,liigitamisosakond
-p1rt10,fonoteek
-p1rt11,raamatukogu vaheline laenutus keskus
-p1rt12,retrokataloogimine osakond
-p1rt13,säilitus ja hooldustalitus
-p1rt15,väliskirjandus osakond
-p1rt17,biomeedikum raamatukogu
-p1rt18,füüsikaraamatukogu
-p1rt19,humanitaarraamatukogu
-p1rt20,keemiaraamatukogu
-p1rt21,majandusraamatukogu
-p1rt22,nato teabekeskus
-p1rt23,tehniline teenistus
-p1rt24,peainseneritalitus
-p1rt25,haldustalitus
-p1rt26,eurodokumentatsioon keskus
-p1rt27,teenindusosakond
-dhit05,foto ja videotalitus
-mjcv,ettevõtluskeskus
-rerb02,tõuketoetus talitus
-p1ta13,teadustalitus
-hvee01ek,eesti keel väljendusõpetus keskus
-oiao08,euroopa õigus õppetool
-hvvk05,kantselei
-hvvk09vs,videostuudio
-hvvk09hs,helistuudio
-hvvk12ot,õppetalitus
-hvvk12uo,üldaine osakond
-hvvk12tt,täiendusõpe talitus
-htht04,kõrgharidus õppetool
-svsv02,õppekorraldustalitus
-flfl01,keeleteadus ja - tehnoloogia doktorikool
-soso01,käitumis ja terviseteadus doktorikool
-fkfk01,materjaliteadus ja materjal tehnoloogia doktorikool
-bgbg01,ökoloogia ja keskkonnateadus doktorikool
-bgbg02,biomeditsiin ja biotehnoloogia doktorikool
-mjmj01,majandusteadus ja innovatsioon doktorikool
-ltat02,andmeteadus õppetool
-ltat03,programmeerimiskeel ja - süsteem õppetool
-ltat04,andmeturve ja teoreetiline arvutiteadus õppetool
-ltat05,tarkvaratehnika õppetool
-ltat06,hajussüsteem õppetool
-ltat07,teadusarvutus keskus
-ltat08,kantselei
-ltom06,maapõueressurss arenduskeskus
-p2vk,tartu ülikool viljandi kultuuriakadeemia
-svhi08,õpetaja ja kõrgharidus keskus
-htht04th,täiskasvanuharidus keskus
-htht05,haridus ja arengu-uuring keskus
-mvsf01,spordibioloogia osakond
-mvsf02,kehaline kasvatus ja spordididaktika osakond
-mvsf02ll,liikumislabor
-htht08,õpetaja täiendkoolitustalitus
-htht04thpt,praktika ja kutseaasta talitus
-svnc09,õppeosakond
-svnc10,raamatukogu
-svnc11,it - tugi
-p2vk01,rahvuslik käsitöö osakond
-p2vk02,muusikaosakond
-p2vk03,infoharidus osakond
-p2vk04,etenduskunst osakond
-p2vk05,kultuurharidus osakond
-p2vk06,täiendõpe osakond
-p2vk07,arendus ja välissuhe osakond
-p2vk08,haldusdirektor haldusala
-p2vk08ok,hostel oma kodu
-p2vk08it,infotehnoloogia osakond
-k1pr01,personaliarenduskeskus
-htht06,haridustehnoloogia õppetool
-hvus07,tartu ülikool aasia keskus
-flee10,antropoloogiline ja etnolingvistika õppetool
-svuh10,meedia ja kommunikatsioon õppetool
-p1rt28,erialainfotalitus
-mvcm18,kliiniline geneetika keskus
-p2oo12,nõustamiskeskus
-p2oo13,elukestev õpe keskus
-p2oo14,õpe ja arendusprojekt talitus
-p5um03gm,geoloogiamuuseum
-p5um03zm,zooloogiamuuseum
-p5um03lk,loodusteaduslik koguma
-hvvk12ua,üldaine talitus
-hvvk12et,ettevõtlusõpe talitus
-hvvk14,kunst keskus
-fkef05,biomeditsiinitehnika ja meditsiinifüüsika teadus ja koolituskeskus
-p1lm01bt,bioloogiline interaktsioon ökoloogia töörühm
-hvee05,rakenduslingvistika osakond
-fkef06,koolifüüsika keskus
-p6,arendusprorektor tegevusvaldkond
-p6um,muuseum
-hthk,haridusuuring keskus
-p6lm,loodusmuuseum ja botaanikaaed
-p6lm02,tartu ülikool botaanikaaed
-p6lm01,tartu ülikool loodusmuuseum
-p6lm01gm,geoloogiamuuseum
-p6lm01zm,zooloogiamuuseum
-p6lm01lk,näitus ja loodusharidus osakond
-p6lm01bm,botaanika ja mükoloogiamuuseum
-p6lm01dt,elurikkus informaatika ja digiarhiiv töörühm
-p6lm01bt,bioloogiline interaktsioon ökoloogia töörühm
-p6um02,kunstimuuseum
-p6um04,kogu osakond
-p6um05,kommunikatsiooniosakond
-p6um06,tartu tähetorn
-p6rb,rektoraat büroo
-p6rb01,rahvusvaheline koostöö talitus
-mvbs04ig,inimene geneetika uurimisgrupp
-mvbs04rm,reproduktiivmeditsiin uurimisgrupp
-p2or,õppearendus ja täienduskoolitus keskus
-mvbs04rm,reproduktiivmeditsiin uurimisgrupp
-mvbs04gõ,inimene geneetika õppetool
-mvbs04bõ,inimene bioloogia õppetool
-mvbs09im,inimene mikroobiökoloogia uurimisgrupp
-mvbs09km,kliiniline mikrobioloogia uurimisgrupp
-mvbs09hu,hiv uurimisgrupp
-mvbs09ku,kliiniline uuring töögrupp
-p1gi,genoomika instituut
-p2or01,täienduskoolitustalitus
-p1gy,grandikeskus
-p2or02,õppekavaarendus talitus
-p6ik,ettevõtlus ja innovatsioonikeskus
-p2or03,karjääritalitus
-p2or04,haridustehnoloogia talitus
-p2or05,regionaaltalitus
-p1gi01,eesti geenivaramu teaduskeskus
-p1gi02,eesti biokeskus
-p1rt29,rekataloogimine osakond
-p1gi03,tuumiklabor
-p1gi04,eesti geenivaramu
-ltto,tartu observatoorium
-p2av01,haridustehnoloogiakeskus
-p2av02,karjäär ja psühholoogiline nõustamine talitus
-p2av03,täienduskoolitustalitus
-p2av04,tartu ülikool tallinna esindus
-p2av05,õppekavaarendustalitus
-p1ta*,usuteaduskond
-sokc,kultuur ja kommunikatsiooniteadus keskus
-ltto01,tähefüüsika osakond
-ltto02,galaktika füüsika ja kosmoloogia osakond
-p2vk08rk,raamatukogu
-ltto03,kaugseire osakond
-ltto04,kosmosetehnoloogia osakond
-ltto05,tugiteenus osakond
-ltto06,külastuskeskus
-k1hr,hankeosakond
-svhi09,tugitalitus
-dhum,tartu ülikool muuseum
-dhum01,ülikool ajalugu muuseum
-dhum02,kunstimuuseum
-dhum03,loodusmuuseum
-dhum03gm,geoloogiamuuseum
-dhum03zm,zooloogiamuuseum
-dhum03lk,näitus ja loodusharidus osakond
-hvee06,digihumanitaaria ja infoühiskond keskus
-p2vk09,üldaine osakond
-hvaj14,"arheoloogia , geneetika ja lingvistika sidusuuring kolleegium"
-p1ti01,innovatsioonikeskus
-p1ti02,biomeditsiinitehnoloogia arenduskeskus
-p1ti03,keemia ja materjalitehnoloogia arenduskeskus
-p1ti04,keskkonnatehnika arenduskeskus
-p1ti05,info ja kommunikatsioonitehnoloogia arenduskeskus
-p1gi02pe,populatsioonigeneetika ja evolutsiooniline bioloogia töögrupp
-p1gi02ot,onkogenees töögrupp
-kkkk01,sport ja füsioteraapia täiendkoolituskeskus
-mjjv09,majandusarvestus õppetool
-p1gy01,statistika ja analüüs
-p1gy02,projektikirjutamine
-bgbg03,loodusteaduslik haridus lektoraat
-p1gy03,rahastusmeede koordineerimine
-p6lm03,näitus ja loodusharidus osakond
-p6lm01bk,botaaniline koguma
-p6lm01gk,geoloogiline koguma
-p6lm01zk,zooloogiline koguma
-p6lm01mk,mükoloogiline koguma
-p6lm01mi,mikrobioloogiline koguma
-p6lm0dn,dna ja keskkonnaproov koguma
-p6lm01dn,dna ja keskkonnaproov koguma
-p6lm01et,elurikkus digiarhiiv töörühm
-kksp01,treeninguteadus õppetool
-bgbg04,alus ja rakendusökoloogia keskus
-bgbg05,ökoloogia ja keskkonnateadus doktorikool
-bgbg06,biotehnoloogia ja biomeditsiin doktorikool
-oioi01,õppeosakond
-oioi02,teabekeskus
-oioi03,keelelektoraat
-fkef03,gaaslahenduslabor
-p1rt30,teaduskeskus
-dhkv03tl,halduspiirkond : kaarel pst 3 ; teater väljak 3 ( ülikool kasutus olev ruum )
-p1ti06,psühhofarmakoloogiline ravimiarendus labor
-p1rt31,põhja-ameerika ülikool teabekeskus
-p1ti07,õigus ja intellektuaalomand osakond
-us01,usuteaduskond emeriitdotsent
-oi01,õigusteaduskond emeriitdotsent
+arstiteaduskond emeriitdotsent,ar01
+filosoofiateaduskond emeriitdotsent,fl01
+bioloogia-geograafiateaduskond emeriitdotsent,bg01
+füüsika-keemiateaduskond emeriitdotsent,fk01
+haridusteaduskond emeriitdotsent,ht01
+kehakultuuriteaduskond emeriitdotsent,kk01
+majandusteaduskond emeriitdotsent,mj01
+matemaatika-informaatikateaduskond emeriitdotsent,mt01
+sotsiaalteaduskond emeriitdotsent,so01
+eesti geenivaramu,p1gv
+kõrgkoolididaktika keskus,htkd
+praktika ja kutseaasta keskus,htkk
+botaanika ja mükoloogiamuuseum,dhum03bm
+klassikaline filoloogia osakond,flgr02
+saksa filoloogia osakond,flgr08
+skandinavistika osakond,flgr06
+vene keel õppetool,flgr05ve
+vene kirjandus õppetool,flgr05vk
+slaavi filoloogia õppetool,flgr05sf
+maailmakirjandus osakond,flku06
+eesti kirjandus osakond,flku07
+teatriteadus ja kirjandusteooria osakond,flku08
+tartu ülikool keemia instituut,fkkt
+tartu ülikool ökoloogia ja maateadus instituut,bgom
+botaanika osakond,bgom01
+geograafia osakond,bgom02
+geoloogia osakond,bgom03
+zooloogia osakond,bgom04
+maalikunst õppetool,flku01mk
+muusika õppetool,flku01mu
+eesti kirjandus õppetool,flku05ek
+maailmakirjandus õppetool,flku05ma
+teatriteadus õppetool,flku05tt
+struktuurifond talitus,dhhb05
+botaanika õppetool,bgom01bo
+mükoloogia õppetool,bgom01mk
+taimeökoloogia õppetool,bgom01ta
+ökofüsioloogia õppetool,bgom01of
+geoinformaatika ja kartograafia õppetool,bgom02gk
+inimgeograafia ja regionaalplaneerimine õppetool,bgom02gr
+loodusgeograafia ja maastikuökoloogia õppetool,bgom02lm
+väliseesti uuring keskus,bgom02ce
+geoloogia ja mineraloogia õppetool,bgom03gm
+paleontoloogia ja stratigraafia õppetool,bgom03ps
+pinnakate ja rakendusgeoloogia õppetool,bgom03pr
+arengubioloogia õppetool,bgom04ab
+hüdrobioloogia õppetool,bgom04hb
+loomaökoloogia õppetool,bgom04lo
+zooloogia õppetool,bgom04zo
+puhas matemaatika osakond,mtmm01
+rakendusmatemaatika osakond,mtmm02
+algebra uurimisrühm,mtmm01pm
+geomeetria ja topoloogia uurimisrühm,mtmm01gt
+funktsionaalanalüüs uurimisrühm,mtmm01fa
+matemaatika didaktika uurimisrühm,mtmm01md
+matemaatiline analüüs uurimisrühm,mtmm01ma
+universaalalgebra uurimisrühm,mtmm01ua
+arvutusmatemaatika töörühm,mtmm02am
+teoreetiline mehaanika töörühm,mtmm02tm
+anorgaaniline keemia õppetool,fkkt01
+füüsikaline keemia õppetool,fkkt02
+keemiaharidus õppetool,fkkt03
+kolloid-ja keskkonnakeemia õppetool,fkkt04
+rakenduselektrokeemia õppetool,fkkt05
+analüütiline keemia õppetool,fkkt06
+keemiline füüsika õppetool,fkkt07
+molekulaartehnoloogia õppetool,fkkt08
+orgaaniline keemia õppetool,fkkt09
+bioorgaaniline keemia õppetool,fkkt10
+kaugseire ja mereoptika osakond,p1mi09
+ökodünaamika osakond,p1mi10
+rakendusuuring keskus socialia,p2ec01
+koolituskeskus,p2ec02
+loodus ja tehnoloogiateaduskond,lo
+loodus ja tehnoloogiateaduskond dekanaat,lolo
+tartu ülikool eesti mereinstituut,lomi
+tartu ülikool füüsika instituut,lofy
+tartu ülikool tehnoloogiainstituut,loti
+tartu ülikool keemia instituut,lokt
+tartu ülikool molekulaar ja rakubioloogia instituut,lomr
+tartu ülikool ökoloogia ja maateadus instituut,loom
+loodus ja tehnoloogiateaduskond emeriitprofessor,lo00
+loodus ja tehnoloogiateaduskond emeriitdotsent,lo01
+riigiteadus instituut,sorg
+biotehnoloogia õppetool,lomr01
+evolutsiooniline bioloogia õppetool,lomr02
+geneetika õppetool,lomr03
+mikrobioloogia ja viroloogia õppetool,lomr04
+molekulaarbioloogia õppetool,lomr05
+rakubioloogia õppetool,lomr06
+biofüüsika ja taimefüsioloogia õppetool,lomr07
+üldine ja mikroobibiokeemia õppetool,lomr08
+arengubioloogia õppetool,lomr09
+botaanika osakond,loom01
+geograafia osakond,loom02
+geoloogia osakond,loom03
+zooloogia osakond,loom04
+botaanika õppetool,loom01bo
+mükoloogia õppetool,loom01mk
+taimeökoloogia õppetool,loom01ta
+ökofüsioloogia õppetool,loom01of
+geoinformaatika ja kartograafia õppetool,loom02gk
+inimgeograafia ja regionaalplaneerimine õppetool,loom02gr
+loodusgeograafia ja maastikuökoloogia õppetool,loom02lm
+väliseesti uuring keskus,loom02ce
+geoloogia ja mineraloogia õppetool,loom03gm
+paleontoloogia ja stratigraafia õppetool,loom03ps
+pinnakate ja rakendusgeoloogia õppetool,loom03pr
+hüdrobioloogia õppetool,loom04hb
+loomaökoloogia õppetool,loom04lo
+zooloogia õppetool,loom04zo
+kalabioloogia ja kalandus osakond,lomi01
+merebioloogia osakond,lomi02
+meresüsteem osakond,lomi03
+ökosüsteem dünaamika töörühm,lomi04
+mereoptika töörühm,lomi05
+pärnu osakond,lomi06
+kaugseire ja mereoptika osakond,lomi07
+ökodünaamika osakond,lomi08
+meresüsteem modelleerimine labor,lomi03ml
+anorgaaniline keemia õppetool,lokt01
+füüsikaline keemia õppetool,lokt02
+keemiaharidus õppetool,lokt03
+kolloid-ja keskkonnakeemia õppetool,lokt04
+rakenduselektrokeemia õppetool,lokt05
+analüütiline keemia õppetool,lokt06
+keemiline füüsika õppetool,lokt07
+molekulaartehnoloogia õppetool,lokt08
+orgaaniline keemia õppetool,lokt09
+bioorgaaniline keemia õppetool,lokt10
+innovatsioonikeskus,loti01
+biomeditsiinitehnoloogia arenduskeskus,loti02
+keemia ja materjalitehnoloogia arenduskeskus,loti03
+keskkonnatehnika arenduskeskus,loti04
+info ja kommunikatsioonitehnoloogia arenduskeskus,loti05
+psühhofarmakoloogiline ravimiarendus labor,loti06
+õigus ja intellektuaalomand osakond,loti07
+bioinformaatika õppetool,lomr10
+materjaliteadus ja materjal tehnoloogia doktorikool,lotd
+füüsikaharidus osakond,lofy01
+optika ja spektroskoopia õppetool,lofy01os
+rakendusfüüsika õppetool,lofy01rf
+laineoptika õppetool,lofy01lo
+koolifüüsika keskus,lofy01kf
+biomeditsiinitehnika ja meditsiinifüüsika teadus ja koolituskeskus,lofy01bf
+materjaliteadus osakond,lofy02
+eksperimentaalfüüsika osakond,lofy03
+teoreetiline füüsika osakond,lofy04
+bio ja keskkonnafüüsika osakond,lofy05
+materjaliteadus instituut,lofy06
+administratsioon,lofy07
+raamatupidamine,lofy17
+raamatukogu,lofy18
+majandusgrupp,lofy19
+krüogeenijaam,lofy20
+töökoda,lofy21
+avalik haldus õppetool,sorg01
+haldusjuhtimine õppetool,sorg02
+võrdlev poliitika õppetool,sorg03
+rahvusvaheline suhe õppetool,sorg04
+balti poliitika õppetool,sorg05
+rahandus õppetool,mjjv10
+ioonkristall füüsika labor,lofy02if
+laserspektroskoopia labor,lofy02ls
+nanostruktuur füüsika labor,lofy02mt
+kiletehnoloogia labor,lofy02kt
+röntgenspektroskoopia labor,lofy02rs
+füüsikaline optika labor,lofy03ks
+nanostruktuur füüsika labor,lofy03mt
+lasertehnika labor,lofy03ls
+gaaslahenduslabor,lofy03gl
+tahkiseteooria labor,lofy04tt
+teoreetiline füüsika labor,lofy04tf
+väljateooria labor,lofy04st
+biofüüsika laboratoorium,lofy05sk
+keskkonnafüüsika labor,lofy05kf
+atmosfäärifüüsika labor,lofy05af
+loodusteaduslik haridus keskus,lolo01
+elektron paramagneetiline resonants ja luminofooritehnoloogia töörühm,lofy01ek
+juhatus ja sekretariaat,lofy01js
+kosmos ja militaartehnoloogia töörühm,lofy01kk
+põhiõpe keskus,lofy01pk
+õppetöö tugiteenistus,lofy01ot
+katsekoda,lokt11
+ökoloogia ja keskkonnateadus doktorikool,lolo02
+biomeditsiin ja biotehnoloogia doktorikool,lolo03
+materjaliteadus ja materjal tehnoloogia doktorikool,lolo04
+eripedagoogika osakond,htht07
+praktika ja kutseaasta keskus,htht09
+haridusuuring ja õppekavaarendus keskus,htht10
+kõrgkoolididaktika keskus,htht11
+tartu ülikool eetikakeskus,flfi05
+majandusteooria õppetool,mjri05
+riigimajandus õppetool,mjri06
+arhiivindus osakond,flaj02
+eesti ajalugu osakond,flaj03
+kunstiajalugu osakond,flaj05
+uusim aeg osakond,flaj06
+üldajalugu osakond,flaj07
+kultuur ja kommunikatsiooniteadus keskus ( konsortsium ),flku09
+teenindusgrupp,lofy08
+raamatupidamine,lofy08rp
+raamatukogu,lofy08rk
+krüojaam,lofy08kj
+töökoda,lofy08tk
+kommunikatsiooniosakond,dako
+usuteaduskond,us
+õigusteaduskond,oi
+arstiteaduskond,ar
+filosoofiateaduskond,fl
+bioloogia - geograafiateaduskond,bg
+füüsika - keemiateaduskond,fk
+kehakultuuriteaduskond,kk
+majandusteaduskond,mj
+matemaatika - informaatikateaduskond,mt
+teabetalitus,dako01
+sotsiaalteaduskond,so
+ajakiri universitt tartuensima,dako02
+haridusteaduskond,ht
+multimeedia talitus,dako03
+rektor tegevusvaldkond,re
+õppeprorektor tegevusvaldkond,p2
+teadusprorektor tegevusvaldkond,p1
+avatud ülikool prorektor,p4
+administratsioonidirektor vastutusala,da
+finantsjuht tegevusvaldkond,df
+haldusdirektor vastutusala,dh
+haldusprorektor vastutusala,p3
+filosoofiateaduskond ( ajalugu ),fa
+üleülikooliline kateeder,yk
+filosoofiateaduskond,fl1
+usuteaduskond dekanaat,usus
+uus testament oppetool,usut
+vana testament oppetool,usvt
+vordleva usuteadus oppetool,usvu
+avalik õigus instituut,oiao
+eraõigus instituut,oieo
+kodanik kaitse oppetsükkel,oikk
+koolimatemaatika keskus,mtmm03
+kriminoigus ja protsess kateeder,oikp
+õigusteaduskond dekanaat,oioi
+oigusloome labor,oiol
+riigioigusteooria ja ajalugu kateeder,oira
+riigi-ja haldusoigus kateeder,oirh
+tsiviiloigus ja protsess kateder,oitp
+tsiviilkaitse tsükkel,oits
+välissuhtlemine oigusprobl . labor,oivl
+"arst , stom . ja farm täiend tk",araf
+anestesioloogia ja intensiivravi kliinik,arai
+anatoomia kateeder,arak
+anatoomia instituut,aran
+arst ja prov . täienduskeskus,arap
+arstiteaduskond dekanaat,arar
+att teraapia kateeder,arat
+bioloogiline keemia kateeder,arbi
+biokeemia instituut,arbk
+füüsiline antropoloogia keskus,arca
+farmaatsia instituut,arfa
+farmakoloogia ja farm.org kateeder,arff
+õppetehnika talitus,dhit06
+füsioloogia kateeder,arfk
+farmaatsia kateeder,arfm
+farmakoloogia kateeder,arfo
+farmakoloogia instituut,arfr
+füsioloogia instituut,arfs
+füsioloogia oppelabor,arfy
+hospitaalsiseh ja tuberkul . kateeder,arhh
+histoloogia ja embrüoloogia kateeder,arhi
+hospitaalkirurgia kateeder,arhk
+hematoloogia labor,arhl
+stomatoloogia kateeder,arhm
+hematoloogia-onkoloogia kliinik,arho
+hügieen ja tervishoid organiseerimine k,arht
+inimene bioloogia ja geneetika kateeder,arig
+internatuur ja residentuur osakond,arir
+kardioloogia kliinik,arka
+kardiovaskulaar-ja torakaalkirurgia kliinik,arkd
+kirurgiakliinik,arki
+kõrvakliinik,arkr
+kopsukliinik,arks
+riik ja rahvusvaheline õigus instituut,oirr
+lastekliinik,arla
+mikrobioloogia instituut,armb
+biomeditsiin instituut,armp
+mikrobioloogia kateeder,armr
+"nakkush , dermat . ja venerol . kateeder",arnd
+nahahaigus kliinik,arnh
+nakkushaigus kliinik,arnk
+neurol . ja neurokirurgia kateeder,arnn
+närvikliinik,arnr
+naistekliinik,arns
+nägemine tervishoid labor,arnt
+otorinolar . ja oftamol . kateeder,arok
+õendusteadus osakond,arot
+op-kirurgia ja uroloogia kateeder,arou
+patoloogiline anatoomia ja kohtuarstiteadus instituut,arpa
+pediaatria kateeder,arpd
+patoloogiline füsioloogia kateeder,arpf
+psühhiaatria kateeder,arph
+patol . anat . ja kohtuarst kateeder,arpk
+peremeditsiin kliinik,arpo
+arendusosakond,p2pc11
+psühhiaatriakliinik,arps
+radioloogia ja onkoloogia kateeder,arra
+radioloogiakliinik,arrd
+ravim tehnol . ja keemia kateeder,arrt
+ravimtaim oppelabor,arrv
+sünnitusabi ja günekoloog kateeder,arsg
+silmakliinik,arsi
+sisekliinik,arsk
+spordimeditsiin ja taastusravi kliinik,arsm
+sisehaigus propedeutika kateeder,arsp
+spordimeditsiin ja ravikehakultuur kat,arsr
+stomatoloogia kliinik,arst
+teaduskonnakirurgia kateeder,arta
+tervishoid instituut,arth
+arstiteaduskond täienduskeskus,artk
+traumatoloogia ja ortopeedia kliinik,arto
+trauma . ortop . ja valik . kateeder,artr
+teaduskonnasisehaigus kateeder,arts
+vivaarium,arvi
+"üldkirurgia , anest ja rean . kateeder",aryk
+euraasia keel lektoraat,flke05
+ajalugu ja arheoloogia instituut,flaj
+ajalugu ja semiootika labor,flal
+arheoloogia labor,flar
+didaktika labor,fldl
+eesti ja üldkeeleteadus instituut,flee
+eesti keel kateeder,flek
+eesti keel labor,flel
+eripedagoogika labor,flep
+eripedagoogika osakond,fler
+tartu ülikool eetikakeskus,flet
+filosoofia ja semiootika instituut,flfi
+filosoofiateaduskond dekanaat,flfl
+fennougristika labor,flfu
+"germaani , romaani ja slaavi filoloogia instituut",flgr
+inglise filoloogia kateeder,flif
+keelekeskus,flke
+praktiline eesti keel kateeder,flkf
+kultuurikeskus,flkk
+klassikaline ja romaan filo . kateeder,flkl
+kirjandus ja rahvaluule osakond,flkn
+õppimine ja õpetamine arenduskeskus,p2av06
+koolipsühholoogia labor,flkp
+kultuuriteadus ja kunst instituut,flku
+lõuna-eesti keel ja kultuuriuuring keskus,flle
+maailmakirjandus kateeder,flmk
+orientalistikakesk aeg . osakond,floa
+pedagoogika keskus,flpe
+pedagoogika osakond,flpk
+psühhodiagnostika labor,flpl
+psühhomeetria ja psühhofüüsika labor,flpp
+psühholoogia osakond,flps
+eesti kirjandus ja rahvaluule kateeder,flrl
+rakenduspsühholoogia labor,flrp
+semiootika osakond,flse
+saksa filoloogia kateeder,flsf
+sotsioloogia osakond,flso
+soome-ugri keel kateeder,flsu
+zurnalistikk osakond,flzo
+zurnalistikk kateeder,flzu
+tartu l areng kompleksuur . labor,flta
+vene ja slaavi filoloogia osakond,flve
+bioloogiline mitmekesisus tippkeskus,loom05
+vene keel kateeder,flvk
+vene keel metoodika kateeder,flvm
+voorkeel kateeder,flvo
+vene kirjandus kateeder,flvv
+algoloogia oppelabor,bgal
+botaanikaaed,bgba
+botaanika ja ökoloogia kateeder,bgbe
+bioloogia-geograafiateaduskond dekanaat,bgbg
+bioindikatsioon labor,bgbl
+botaanika ja ökoloogia instituut,bgbo
+väliseesti uuring keskus,bgce
+embrüonaalne histogen . sektor,bgeh
+füüsiline geograafia kateeder,bgfg
+geneetika ja tsütoloogia kateeder,bgge
+geograafia instituut,bggg
+geoinformaatika labor,bggi
+geoloogia kateeder,bggk
+geoloogia instituut,bggl
+geoloogia muuseum,bggm
+majandusgeograafia kateeder,bgma
+arveldus talitus,dfrh01
+molekulaar ja rakubioloogia kat,bgmi
+isikumakse talitus,dfrh02
+mineroloogia kabinet,bgmk
+sihtfinantseerimine talitus,dfrh03
+tartu ülikool molekulaar ja rakubioloogia instituut,bgmr
+eelarvetalitus,dfrh04
+ökoloogiajaam,bgoj
+zooloogia ja hüdrobioloogia instituut,bgzh
+zooloogia kateeder,bgzk
+zooloogia muuseum,bgzm
+"taimefüsioloogia , biokeemia kateeder",bgtb
+analüütiline biokeemia labor,fkab
+aeroelekter labor,fkae
+anorgaaniline keemia kateeder,fkak
+analüütiline keemia kateeder,fkan
+biofüüsika labor,fkbf
+tartu ülikool biomeditsiinitehnika ja meditsiinifüüsika teadus ja koolituskeskus,fkbm
+bioorgaaniline keemia labor,fkbo
+eksperimentaalfüüsika ja tehnoloogia instituut,fkef
+elektrokeemia labor,fkek
+epl mikroprotsessortehnika sektor,fkel
+elektromeetria labor,fkem
+"elektroluminitsents , pooljuht labor",fkep
+ajalugu ja ühiskonnaõpetus didaktika keskus,flaj13
+eksperimentaalfüüsika kateeder,fkex
+nõukogu periood ajalugu uurimine keskus,flaj14
+füüsika didaktika instituut,fkfd
+orientalistikk keskus,flaj15
+füüsikaline keemia instituut,fkfe
+arheoloogia kabinet,flaj16
+füüsika-keemiateaduskond dekanaat,fkfk
+lõuna-eesti keel ja kultuuriuuring keskus,flee11
+tartu ülikool katsekoda,fkft
+pau arine soome-ugri põlisrahvas keskus,flee12
+füüsikaosakond,fkfy
+foneetika labor,flee13
+geofüüsika kateeder,fkgk
+briti uuring keskus,flgr09
+happelis-aluseline tasak . labor,fkha
+kanada uuring keskus,flgr10
+keskonnakaitse füüsika labor,fkke
+kultuuridevaheline kommunikatsioon keskus,flgr11
+keskkonnafüüsika instituut,fkkf
+põhja-ameerika uuring keskus,flgr12
+kinesioloogia labor,fkki
+robert schum prantsuse uuring keskus,flgr13
+keemiline kineet ja katalüüs labor,fkkk
+tõlkekeskus,flgr14
+keskkonnakeemia labor,fkkl
+vene keel testimiskeskus,flgr15
+keemiline füüsika instituut,fkkm
+keemiaosakond,fkko
+laseroptika kateeder,fklk
+lihastalitlus labor,fkll
+materjaliteadus instituut,fkmf
+orgaaniline ja bioorgaaniline keemia instituut,fkok
+orgaaniline keemia kateeder,fkor
+sisukirjeldus osakond,p1rt14
+orgaaniline süntees labor,fkos
+rakendusoptika labor,fkro
+semiokeemia labor,fksk
+teor . füüsika ja astrofüüsika kateeder,fkta
+teoreetiline füüsika instituut,fktf
+täppisteadus kool,fktp
+üldfüüsika kateeder,fkyf
+auto - motokabinet,kkam
+kergejoustik kateeder,kkke
+kehakultuuriteaduskond dekanaat,kkkk
+keh-kasv oppej . kvalif . tostm tk,kkko
+keha . kasvatus ja sport kateeder,kkks
+kk tk . metoodikakabinet,kkmk
+raskejoustik kateeder,kkrk
+raskejoustik ja veesport kateeder,kkrv
+spordibioloogia ja füsioteraapia instituut,kksb
+spordikeskus,kksd
+spordifüsioloogia kateeder,kksk
+sportmäng kateeder,kkso
+spordipedagoogika ja treeninguõpetus instituut,kksp
+kogu arendus osakond,p1rt16
+sporditeooria kateeder,kkst
+suusasport kateeder,kksu
+sp . teooria ja treeninguop . instituut,kktg
+treeningprotsess uurimine labor,kktu
+voimlemine kateeder,kkvk
+veesport kateeder,kkvs
+ettevõttemajandus instituut,mjjv
+kaubandus kateeder,mjka
+kaubandusökonoomika labor,mjko
+majandusküberneetika ja statistika katee,mjks
+mehh . arvestus ja masink . kabinet,mjme
+majandusteaduskond dekanaat,mjmj
+majandusinformaatika ja modelleerimisins,mjmm
+majanduspol . ja riigimaj . instituut,mjmr
+majandusteooria kateeder,mjmt
+rahandus ja arvestus instituut,mjra
+rahvamaj . ja ettev . üldd . ins .,mjre
+rahandus ja krediit kateeder,mjrh
+rahvamajandus instituut,mjri
+raamatupidamine ja analüüs kateeder,mjrk
+pedagogicum,repg
+rahvamajandusharu ökon . kateeder,mjrv
+turundus ja juhtimine instituut,mjtj
+turundus kateeder,mjtr
+algebra ja geomeetria kateeder,mtag
+arvutustehnika labor,mtal
+arvutusmatemaatika kateeder,mtam
+arvutiteadus instituut,mtat
+matemaatiline analüüs kateeder,mtma
+matemaatika instituut,mtmm
+matemaatiline statistika instituut,mtms
+matemaatika-informaatikateaduskond dekanaat,mtmt
+programmeerimine kateeder,mtpk
+puhas matemaatika instituut,mtpm
+rakendusmatemaatika labor,mtrl
+rakendusmatemaatika instituut,mtrm
+matemaatiline statistika kateeder,mtst
+teoreetiline mehhaanika kateeder,mttk
+avalik haldus osakond,soah
+avalik haldus ja sotsiaaltöö osakond,soai
+balti õping keskus,socc
+isiksus ja sotsiaalpsühholoogia osakond,soph04
+eripedagoogika osakond,soep
+psühholoogia instituut,soph
+politoloogia osakond,sopl
+semiootika osakond,sose
+sotsiaalteaduskond dekanaat,soso
+sotsioloogia ja sotsiaalpoliitika instituut,soss
+ajakirjandus ja kommunikatsioon instituut,sozu
+üldsotsiaalteadus osakond,soyo
+eripedagoogika osakond,htep
+haridusteaduskond dekanaat,htht
+haridusuuring ja õppekavaarendus keskus,htoa
+õpetaja seminar,htos
+pedagoogika osakond,htpk
+rektoraat büroo,reaa
+tartu ülikool ajalugu muuseum,ream
+kaadriosakond,reka
+tartu ülikool kunstimuuseum,rekl
+klassikaline muinasteadus muuseum,reks
+tü kirjastus,rekt
+personaliosakond,repr
+"halduspiirkond : välisterritoorium ülikool 18 , jakobi 1 , kuningaplats ; kinnistuma ravila 17 , lunini 16 , tulikas 1 , noorus 3 , viljandi mnt 42 ( v.a ravila 14. )",dhkv03ho
+regionaalprojekt,rere
+rektor reserv,rerr
+tartu ülikool raamatukogu,rert
+ülikool sihtasutus,resh
+sisekontrolliosakond,resl
+töö-ja kodanikukaitse osakond,retk
+teabetalitus,rett
+ülikool kantselei,reuk
+"ajaleht "" ut """,reut
+multimeediakeskus,p2ag
+elukestev õpe keskus,p2av
+tartu ülikool euroopa kolledž,p2ec
+tartu ülikool narva kolledž,p2nc
+õppeosakond,p2oo
+üliõpilasesindus,p2ov
+tartu ülikool pärnu kolledž,p2pc
+tartu ülikool tür kolledž,p2tc
+tervishoiuprojekt,p2te
+täienduskoolituskeskus,p2tk
+teaduskool,p2tp
+kantsler tegevusvaldkond,k1
+arvutuskeskus,p1ak
+planeering ja hange osakond,k1hb
+tartu ülikool füüsika instituut,p1fy
+kinnisvaraosakond,k1kv
+tartu ülikool eesti mereinstituut,p1mi
+infotehnoloogia osakond,k1it
+metrolabor,p1ml
+ohutustalitus,k1hb01
+oppe-ja teadustöö arenduskoda,p1op
+planeerimistalitus,k1hb02
+plaan - finantsosakond,p1pf
+struktuurifond talitus,k1hb03
+rahandusosakond,p1rh
+arvestustalitus,k1kv01
+raamatukogu,p1rt
+ehitustalitus,k1kv02
+teadus ja arendusosakond,p1ta
+haldustalitus,k1kv03
+täienduskeskus,p1tk
+tehnovõrk ja elektripaigaldis talitus,k1kv04
+tartu ülikool tehnoloogiakeskus,p1tl
+puidugrupp,k1kv02pt
+teabetalitus,p1tt
+remondigrupp,k1kv02rt
+multimeediakeskus,p4ag
+"halduspiirkond : w . ostwald tn 1 , ravila 19",k1kv03bm
+kaugkoolituskeskus,p4av
+"halduspiirkond : salm 1a , salm 1b ( katlamaja )",k1kv03fh
+tü narva kolledzh,p4nc
+"halduspiirkond : jakobi 2 , jakobi 4 , loss 3 , loss 36 , ülikool 16 , näitus 2",k1kv03kh
+täppisteadus kool,p4tp
+"halduspiirkond : lai 34 , lai 36 , lai 38 , lai 40 , uba tn 4 / 6 , uba tn 10. , rada 32 , salm 1a , salm 1b ( katlamaja ) , liivi 4 ( rendipind )",k1kv03mj
+infotehnoloogia osakond,dait
+"halduspiirkond : riia 23 , riia 23b , vanemuis 46 , vanemuis 46. , vanemuis 21 ( rendipind )",k1kv03mr
+tü kirjastus,dakt
+"halduspiirkond : näitus 13. , näitus 20 , uppsala 4 , uppsala 6 , uppsala 8 , uppsala 10 , liivi 2",k1kv03oi
+personaliosakond,dapr
+"halduspiirkond : ülikool 17 , ülikool 18 , ülikool 18. , ülikool 18b , ülikool 20 , jakobi 1 , jakobi 5 , munk 4 , luts 1 , kuningaplats",k1kv03ph
+teabetalitus,datt
+"halduspiirkond : tiik 78 , j . liivi 2 , loss 36 , kinnistu kastan 43 , elamu tiik 80 välisterritoorium korrashoid",k1kv03ti
+üldosakond,dauk
+"halduspiirkond : kaarel pst 3 , teater väljak 3",k1kv03tl
+rahandusosakond,dfrh
+"halduspiirkond : ravila 17 , tulikas 1 , viljandi mnt 42 , riia 191 , riia 191a , riia 191b kinnistuma",k1kv03ho
+tü tamm apteek,dhab
+elektripaigaldis remondigrupp,k1kv04ep
+tü kesklinn apteek,dhad
+tehnovõrk remondigrupp,k1kv04tv
+transpordiosakond,dhau
+infrastruktuur talitus,k1it01
+tartu ülikool botaanikaaed,dhba
+infosüsteem talitus,k1it02
+ehituskorraldus osakond,dhek
+kasutajatugi talitus,k1it03
+haldusdirektor büroo,dhhb
+foto ja videotalitus,k1it04
+tü kääriku spordi-ja puhkekeskus,dhkb
+õppetehnika talitus,k1it05
+tü kohvik,dhkh
+server grupp,k1it01sg
+kommunikatsioonitehnika osakond,dhko
+turundus ja kommunikatsiooniosakond,k1ko
+haldusosakond,dhkv
+tartu ülikool spordibaas,dhls
+peainseneriosakond,dhpi
+tü raamatupood,dhrk
+"tü apteek "" tamm """,p3ab
+"tü apteek "" kesklinn """,p3ad
+transpordiosakond,p3au
+ehituskorraldus osakond,p3ek
+gaudeamus büroo,p3gb
+teabetalitus,k1ko01
+käärik spordibaas,p3kb
+ajakiri universitt tartuensima,k1ko02
+ülikool kohvik,p3kh
+multimeedia talitus,k1ko03
+kommunikatsioonitehnika osakond,p3ko
+personaliosakond,k1pr
+kinnisvara osakond,p3kv
+kantselei,k1uk
+linn spordibaas,p3ls
+arhiiv,k1uk01
+peainseneriosakond,p3pi
+tartu ülikool raamatupood,p3rk
+raamatupidamine osakond,p3rp
+sobrama maja,p3sm
+varustusosakond,p3vr
+eesti ajalugu kateeder,faea
+eripedagoogika kateeder,faek
+eripedagoogika oppekabinet,faeo
+eksperimentaalpsühhol . oppelabor,faep
+lähiajalugu kateeder,falk
+nsvl ajalugu kateeder,fans
+psühholoogia kateeder,fapk
+psühholoogia oppelabor,faps
+sotsioloogia kateeder,fask
+skandinaavia kogumik toimetus,fast
+muuseum,p1um
+üldajalugu kateeder,fayk
+ülikool ajalugu muuseum,p1um01
+ettevalmistuskursus,ykek
+kunstimuuseum,p1um02
+filosoofia ja pol . teadus kateeder,ykfp
+loodusmuuseum,p1um03
+kultuur kateeder,ykka
+geoloogiamuuseum,p1um03gm
+kvalifikatsioonitostmiskursus,ykkf
+zooloogiamuuseum,p1um03zm
+kultuur kabinet,ykkk
+näitus ja loodusharidus osakond,p1um03lk
+kunst kabinet,ykkn
+botaanika ja mükoloogiamuuseum,p1um03bm
+kodundus kabinet,ykko
+tartu ülikool botaanikaaed,p1ba
+kodukultuur kabinet,ykku
+muusika kabinet,ykmk
+mootelabor,ykml
+nlkp ajalugu kateeder,yknl
+pedagoogika oppelabor,ykpe
+pedagoogika ja metoodika kateeder,ykpm
+poliitiline ökonoomika kateeder,ykpo
+sotsialism ajalugu kateeder,yksa
+sojandus kateeder,yksk
+teaduslik kommunism kateeder,yktk
+tulekaitse ja ohutustehnika labor,ykto
+ühiskonnateadus oppekabinet,ykyo
+ohutustalitus,k1kv05
+muu osakond ( vananenud ),muud
+üld-ja molek . patol . instit .,armp1
+üld-ja molekulaarpatoloogia inst,armp2
+üld-ja molekulaarpat . instit .,armp3
+sotsioloogia osakond,flso1
+haldusprorektor maj kulu,dhmaj
+kinnisvara osakond ( vana ),p3kv1
+haldusprorektor maj kulu,p3maj
+kirikulugu õppetool,usus01
+süstemaatiline usuteadus õppetool,usus02
+praktiline usuteadus õppetool,usus03
+uus testament õppetool,usus04
+vana testament ja semitistikk õppetool,usus05
+võrdlev usuteadus õppetool,usus06
+luterlik usuteadus õppetool,usus07
+"kriminaalõigus , kriminoloogia ja kognitiivne psühholoogia õppetool",oiao01
+kriminoloogia õppetool,oiao02
+protsessiõigus õppetool,oiao03
+riik ja haldusõigus õppetool,oiao05
+võrdlev õigusteadus õppetool,oiao06
+õpetaja täienduskoolitus ja kutseaasta keskus,htht12
+kriminalistika ja kriminoloogia oppetool,oiaokk
+kriminaaloigus oppetool,oiaokr
+protsessioigus oppetool,oiaopr
+riik ja haldusoigus oppetool,oiaorh
+vordleva oigusteadus oppetool,oiaovo
+õigus ajalugu õppetool,oieo01
+keskkonnaõigus õppetool,oieo02
+rahvusvaheline eraõigus õppetool,oieo03
+tsiviilõigus õppetool,oieo04
+töö-ja sotsiaalhooldusõigus õppetool,oieo05
+eesti riik ja oigus ajalugu oppetool,oieoeo
+rahvusvaheline eraoigus oppetool,oieore
+tsiviil-ja kaubandusoigus oppetool,oieotk
+töö-ja sotsiaalhooldusoigus oppetool,oieots
+anestesioloogia ja intensiivravi õppetool,arai01
+inimene anatoomia õppetool,aran01
+histoloogia ja embrüoloogia õppetool,aran02
+kirurgiline anatoomia õppetool,aran03
+meditsiiniline biokeemia õppetool,arbk01
+farmakognoosia ja farmaatsia organisatsioon õppetool,arfa01
+terviseinfo analüüsigrupp,arth07
+ravim tehnoloogia ja biofarmaatsia õppetool,arfa02
+farmakoloogia õppetool,arfr01
+farmakoloogia ja toksikoloogia õppetool,arfr02
+kliiniline farmakoloogia õppetool,arfr03
+füsioloogia õppetool,arfs01
+radioloogia õppetool,arho01
+hematoloogia-onkoloogia õppetool,arho02
+eksperimentaalne onkoloogia õppetool,arho03
+kardioloogia õppetool,arka01
+kardiotorakaalkirurgia õppetool,arka02
+kardiovaskulaar-ja torakaalkirurgia õppetool,arkd01
+üldkirurgia õppetool,arki01
+kirurgiline haigus õppetool,arki02
+otorinolarüngoloogia õppetool,arkr01
+pulmonoloogia õppetool,arks01
+pediaatria õppetool,arla01
+meditsiiniline mikrobioloogia ja viroloogia õppetool,armb01
+inimene bioloogia ja geneetika õppetool,armp01
+immunoloogia õppetool,armp02
+patoloogiline füsioloogia õppetool,armp03
+funktsionaalne materjal ja tehnoloogia doktorikool,lolo05
+adaptatsioon labor,armpad
+adaptatsioon uurimisgrupp,armpag
+ajuvereringehaigus labor,armpaj
+ajuvereringehaigus uurimisgrupp,armpau
+biofüüsika labor,armpbf
+biomeditsiin ins . uurimisgrupp,armpbm
+bakterioloogia töörühm,armpbt
+biofüüsika uurimisgrupp,armpbu
+enteroloogia labor,armpel
+ensumoloogia labor,armpen
+ensümoloogia ja endokr . uurimisgrupp,armpes
+enteroloogia uurimisgrupp,armpeu
+hormonaalgeulatsioon labor,armphg
+hematoloogia labor,armphl
+hematoloogia uurimisgrupp,armphu
+armp immunoanalüüs uurimisgrupp,armpia
+armp inimene geneetika uurimisgrupp,armpig
+immunoanalüüs labor,armpil
+inimene geneetika labor,armpin
+immunoloogia labor,armpio
+maateadus ja ökoloogia doktorikool,lolo06
+armp immunoloogia uurimisgrupp,armpiu
+armp katsebaas,armpkb
+kliin . füsioloogia labor,armpkf
+kuulmine füsiol . uurimisgrupp,armpkg
+kliin . bakteriol . uurimisgrupp,armpki
+kardioloogia labor,armpkl
+kuulmima tasakaal füs . labor,armpkt
+kardioloogia uurimisgrupp,armpku
+kliiniline füsioloogia uurimisgrupp,armpky
+laseranalüüs sektor,armpla
+laserbioloogia-meditsiin labor,armplb
+ümp lisatasu,armplt
+med . optika sektor,armpme
+mikroobiokoloogia labor,armpmi
+molek . modelleerimine labor,armpmm
+ümp mikroobiökoloogia uurimisgrupp,armpmo
+molek . modelleerimine uurimisgrupp,armpmu
+organtransplantats . uurimisgrupp,armpou
+psühho-farm-farmkokin . labor,armpph
+psühhofarmako . uurimisgrupp,armpps
+maateadus ja ökoloogia doktorikool,loom06
+armp patoloogiline füsioloogia uurimisgr,armppu
+armp rakubioloogia uurimisgrupp,armprb
+reumatoloogia labor,armpre
+rakubioloogia labor,armprl
+reumatoloogia uurimisgrupp,armpru
+tehnokeskus,armptk
+dermatoloogia ja veneroloogia õppetool,arnh01
+infektsioonihaigus õppetool,arnk01
+neuroloogia õppetool,arnr01
+neurokirurgia õppetool,arnr02
+sünnitusabi ja günekoloogia õppetool,arns01
+patoloogiline anatoomia õppetool,arpa01
+kohtuarstiteadus õppetool,arpa02
+polikliinik ja peremeditsiin õppetool,arpo01
+psühhiaatria õppetool,arps01
+radioloogia õppetool,arrd01
+onkoloogia õppetool,arrd02
+eksperimentaalne onkoloogia õppetool,arrd03
+oftalmoloogia õppetool,arsi01
+sisehaigus õppetool,arsk01
+ajalooteaduskond,aj
+reumatoloogia õppetool,arsk02
+filoloogiateaduskond,fi
+laboratoorne meditsiin õppetool,arsk03
+infektsioonhaigus õppetool,arsk04
+sisehaigus propedeutika õppetool,arsk05
+spordimeditsiin ja taastusravi õppetool,arsm01
+stomatoloogia õppetool,arst01
+keskkond ja töötervishoid õppetool,arth01
+tervishoiukorraldus õppetool,arth02
+epidemioloogia ja biostatistika õppetool,arth03
+tervis edendamine õppetool,arth04
+tervishoiuökonoomika õppetool,arth05
+traumatoloogia ja ortopeedia õppetool,arto01
+arheoloogia osakond,flaj01
+ajalugu eriala,flaj08
+eesti ajalugu õppetool,flaj09
+etnoloogia osakond,flku03
+kunstiajalugu õppetool,flaj10
+lähiajalugu õppetool,flaj11
+üldajalugu õppetool,flaj12
+eesti ja võrdlev rahvaluule õppetool,flee01
+sotsiaal ja haridusteaduskond,sh
+eesti keel osakond,flee02
+sotsiaal ja haridusteaduskond dekanaat,shsh
+eesti kirjandus õppetool,flee03
+"ajakirjandus , kommunikatsioon ja infoteadus instituut",shzu
+eesti keel võõrkeel osakond,flee04
+ajakirjandus õppetool,shzu01
+kirjandusteooria õppetool,flee05
+meediauuring õppetool,shzu02
+soome-ugri osakond,flee06
+sotsiaalne kommunikatsioon õppetool,shzu03
+uurali keel õppetool,flee07
+riigiteadus instituut,shrg
+üldkeeleteadus osakond,flee08
+avalik haldus õppetool,shrg01
+eesti keel ajalugu ja murre õppetool,flee09
+võrdlev poliitika õppetool,shrg02
+hälvikpedagoogika oppetool,flerho
+rahvusvaheline suhe õppetool,shrg03
+logopeedia ja emakeel did . oppetool,flerle
+psühholoogia instituut,shph
+filosoofia osakond,flfi01
+arengupsühholoogia osakond,shph01
+praktiline filosoofia õppetool,flfi02
+eksperimentaalpsühholoogia osakond,shph02
+teadusfilosoofia õppetool,flfi03
+neuropsühhofarmakoloogia osakond,shph03
+saksa filoloogia osakond,flgr04
+isiksus ja sotsiaalpsühholoogia osakond,shph04
+romanistika osakond,flgr03
+sotsioloogia ja sotsiaalpoliitika instituut,shss
+inglise filoloogia osakond,flgr01
+sotsioloogia osakond,shss01
+saksa filoloogia õppetool,flgr07
+sotsiaaltöö ja sotsiaalpoliitika osakond,shss02
+üldkeeleteadus oppetool,flgryk
+haridusteadus instituut,shhi
+eesti keel lektoraat,flke03
+pedagoogika osakond,shhi01
+inglise keel lektoraat,flke01
+õpetaja seminar,shhi02
+keelekeskus tehniline grupp,flkekt
+eripedagoogika osakond,shhi03
+saksa ja prantsuse keel lektoraat,flke02
+haridusuuring ja õppekavaarendus keskus,shhi04
+vene keel lektoraat,flke04
+õpetaja täienduskoolitus ja kutseaasta keskus,shhi05
+maalikunst oppetool,flkkmo
+sotsiaal ja haridusteaduskond emeriitprofessor,sh00
+vaba kunst oppetool,flkkvo
+sotsiaal ja haridusteaduskond emeriitdotsent,sh01
+eesti ja võrdlev rahvaluule osakond,flku04
+kirjandus ja teatriteadus osakond,flku05
+eesti kirjandus õppetool,flkn03
+teatriteadus ja kirjandusteooria õppetool,flkn05
+kunst osakond,flku01
+muusika osakond,flku02
+hariduskorraldus õppetool,flpk01
+haridusteooria õppetool,flpk02
+arengupsühholoogia õppetool,flpsao
+psühhofüüsika õppetool,flpspo
+semiootika oppetool,flsese
+ajakirj . avalik arvamus labor,flsoaa
+ajakirjandus ajalugu labor,flsoak
+ajalugu ja rahvastikutead . labor,flsoar
+filos . ühiskonnatead . dial . labor,flsofy
+pedagogicum,p2pg
+haridussotsioloogia labor,flsohl
+haridusinnovaatika labor,flsohv
+kutsesuunitlus labor,flsokl
+korgkoolipedagoogika labor,flsokp
+käitumishälve sotsio . labor,flsoks
+orientalistikk kabinet,flsook
+orientalistikk labor,flsool
+praktiline sotsioloogia oppetool,flsops
+perekonnauurimine labor,flsopu
+semiootika labor,flsosl
+sotsiaaltöö oppetool,flsoso
+tehisintellekt labor,flsoti
+teadus ja korgkool ajalugu labor,flsotk
+teadusökonoomika labor,flsoto
+vene kirjandus labor,flsovk
+slaavi filoloogia osakond,flgr05
+vene keel õppetool,flve02
+vene kirjandus õppetool,flve03
+botaanika õppetool,bgbo01
+mükoloogia õppetool,bgbo02
+multimeedia talitus,k1it06
+taimeökoloogia õppetool,bgbo03
+ökofüsioloogia õppetool,bgbo04
+geoinformaatika ja kartograafia õppetool,bggg01
+inimgeograafia ja regionaalplaneerimine õppetool,bggg02
+loodusgeograafia ja maastikuökoloogia õppetool,bggg03
+geoloogia ja mineraloogia õppetool,bggl01
+paleontoloogia ja stratigraafia õppetool,bggl02
+pinnakate ja rakendusgeoloogia õppetool,bggl03
+biotehnoloogia õppetool,bgmr01
+evolutsiooniline bioloogia õppetool,bgmr02
+geneetika õppetool,bgmr03
+mikrobioloogia ja viroloogia õppetool,bgmr04
+molekulaarbioloogia õppetool,bgmr05
+rakubioloogia õppetool,bgmr06
+biofüüsika ja taimefüsioloogia õppetool,bgmr07
+üldine ja mikroobibiokeemia õppetool,bgmr08
+tymr lisatasu,bgmrlt
+zooloogia õppetool,bgzh01
+hüdrobioloogia õppetool,bgzh02
+loomaökoloogia õppetool,bgzh03
+"halduspiirkond : noorus 1 , ravila 14. , ravila 14b",k1kv03tn
+arengubioloogia õppetool,bgzh04
+hange ja arendustalitus,k1kv06
+anorgaaniline keemia oppelabor,fkakao
+sisevalvetalitu,k1kv07
+analüütiline keemia oppelabor,fkanao
+optika ja spektroskoopia õppetool,fkef01
+rakendusfüüsika õppetool,fkef02
+laineoptika õppetool,fkef04
+eksperimentaalfüüsika oppelabor,fkexeo
+anorgaaniline keemia õppetool,fkfe01
+füüsikaline keemia õppetool,fkfe03
+kolloid-ja keskkonnakeemia õppetool,fkfe05
+elektrokeemia õppetool,fkfe06
+krüogeenijaam,fkfykr
+geofüüsika oppelabor,fkgkgo
+biogeofüüsika õppetool,fkkf01
+meteoroloogia õppetool,fkkf02
+keskkonnafüüsika õppetool,fkkf03
+keskkonnafüüsika ja meteor . õp,fkkfkf
+analüütiline keemia õppetool,fkkm01
+bioorgaaniline keemia õppetool,fkkm02
+keemiline füüsika õppetool,fkkm03
+tartu ülikool teadusarvutus keskus,k1it01tk
+molekulaartehnoloogia õppetool,fkkm04
+korrastamata süsteem füüsika õppetool,fkmf01
+tahkisefüüsika õppetool,fkmf02
+orgaaniline keemia õppetool,fkok01
+bioorgaaniline keemia õppetool,fkok02
+orgaaniline keemia oppelabor,fkoroo
+astrofüüsika õppetool,fktf01
+kosmoloogia õppetool,fktf02
+statistiline füüsika ja kvantteooria õppetool,fktf03
+väljateooria õppetool,fktf04
+üldfüüsika kat . demonstr . kabinet,fkyfdk
+f-k tk kat . vaheline oppelabor,fkyffk
+üldfüüsika oppelabor,fkyfyo
+funktsionaalne morfoloogia õppetool,kksb01
+spordifüsioloogia õppetool,kksb02
+kinesioloogia õppetool,kksb03
+kehaline kasvatus õppetool,kksp02
+spordipsühholoogia õppetool,kksp03
+spordipedagoogika õppetool,kksp04
+voimlemine lektoraat,kkspvl
+infosüsteem osakond,p1rt32
+kergejoustik lektoraat,kktgkl
+raskejoustik lektoraat,kktgrl
+sportmäng lektoraat,kktgsl
+suusasport lektoraat,kktgss
+treeningopetus oppetool,kktgto
+veesport lektoraat,kktgvl
+turundus õppetool,mjjv02
+juhtimine õppetool,mjjv03
+välismajandus õppetool,mjjv04
+rahvusvaheline ettevõtlus ja innovatsioon õppetool,mjjv07
+kaubatundmine ja org . oppelabor,mjkako
+majandusteaduskond arvutuslabor,mjksal
+majandusinformaatika oppetool,mjmmmi
+ökonomeetria oppetool,mjmmok
+statistika oppetool,mjmmso
+majandusarvestus suund,mjra01
+rahandus suund,mjra02
+ärirahandus ja investeering õppetool,mjra03
+analüüs ja kontroll oppetool,mjraak
+finantsarvestus oppetool,mjrafo
+filosoofia ajalugu õppetool,flfi01aj
+riigirahandus oppetool,mjrarr
+praktiline filosoofia õppetool,flfi01pf
+ettevottete majandus oppetool,mjreem
+teadusfilosoofia õppetool,flfi01tf
+majandusteooria oppetool,mjremo
+teoreetiline filosoofia õppetool,flfi01te
+rahvamajandus oppetool,mjrero
+välismajandus oppetool,mjrevo
+rahandus ja arvestus kabinet,mjrhrk
+majandus modelleerimine õppetool,mjri01
+ökonomeetria õppetool,mjri02
+mikroökonoomika ja - poliitika suund,mjri03
+majanduspoliitika õppetool,mjri04
+majandusteooria õppetool,mjri07
+makroökonoomika ja - poliitika suund,mjri08
+välismajandussuhted kabinet,mjrvvk
+juhtimine oppetool,mjtjjo
+kaubandus oppetool,mjtjko
+turundus oppetool,mjtjto
+tehisintellekt õppetool,mtat01
+diskreetne matemaatika õppetool,mtat02
+tarkvarasüsteem õppetool,mtat03
+informaatika didaktika õppetool,mtat04
+orientalistikk keskus,flku10
+teoreetiline informaatika õppetool,mtat05
+matemaatiline statistika õppetool,mtms01
+tõenäosusteooria õppetool,mtms02
+algebra uurimisrühm,mtpm01
+geomeetria ja topoloogia uurimisrühm,mtpm02
+funktsionaalanalüüs uurimisrühm,mtpm03
+funktsiooniteooria õppetool,mtpm04
+matemaatika didaktika uurimisrühm,mtpm05
+matemaatiline analüüs uurimisrühm,mtpm06
+universaalalgebra uurimisrühm,mtpm07
+arvutusmatemaatika töörühm,mtrm01
+diferentsiaal ja integraalvõrrand õppetool,mtrm02
+optimaalne juhtimine õppetool,mtrm03
+teoreetiline mehaanika töörühm,mtrm04
+teor . meh kateeder oppelabor,mttklb
+avalik haldus õppetool,soah01
+sotsiaalpoliitika õppetool,soah02
+hälvikupedagoogika õppetool,soep01
+logopeedia ja emakeel didaktika õp,soep02
+arengupsühholoogia osakond,soph01
+täiendusõppekeskus,p2av07
+eksperimentaalpsühholoogia osakond,soph02
+psühhofüsioloogia osakond,soph03
+võrdlev poliitika õppetool,sopl01
+rahvusvaheline suhe teooria õppetool,sopl02
+semiootika osakond,flfi04
+sotsioloogia osakond,soss01
+sotsiaalne analüüs meetod õppetool,soss02
+praktiline sotsioloogia õppetool,soss03
+ajakirjandus õppetool,sozu01
+meediauuring õppetool,sozu03
+erivajadus pedagoogika õppetool,htep01
+logopeedia ja õpiraskus teooria õppetool,htep02
+hariduskorraldus õppetool,htpk01
+üldpedagoogika õppetool,htpk02
+arhiiv,reaaaa
+juriidiline osakond,reaajo
+kantselei,reaakn
+rektor kantselei,reaark
+tsiviilkaitse staap,reaats
+välissuhe osakond,reaavo
+elurikkus informaatika ja digiarhiiv töörühm,p1um03dt
+administratsioon,rert01
+rt andmetöötlusosakond,rertan
+rt avalik suhe osakond,rertav
+bibliograafiaosakond,rert03
+biomeedikum raamatukogu,rert17
+ennistuskeskus,rert04
+rt muusika ja keeleôppekeskus,rertfo
+füüsikaraamatukogu,rert18
+rt hoiuosakond,rertho
+rt hügieeni-ja restaureermisosakond,rerthr
+säilitus ja hooldusteenistus,rert13
+humanitaarraamatukogu,rert19
+rt informatsiooni-ja eurodok . osakond,rertie
+infosüsteem teenistus,rert05
+rt kataloogimisosakond,rertka
+käsikiri ja haruldane raamat osakond,rert08
+kodumaine kirjandus osakond,rert06
+rt komplekteerimisosakond,rertko
+keemiaraamatukogu,rert20
+köitekoda,rert07
+kliiniline genoomika tuumiklabor,arfs02
+liigitamisosakond,rert09
+rt teaduskirjandus lugemissaal,rertls
+muusika ja keeleõppekeskus,rert10
+majandusraamatukogu,rert21
+majandusteenistus,rert25
+nato teabekeskus,rert22
+õppekirjandus osakond,rert16
+rt põhja-am . ülikool teabekeskus,rertpa
+rt perioodikaosakond,rertpo
+peainseneriteenistus,rert24
+retrokataloogimine osakond,rert12
+raamatukogu vaheline laenutus osakond,rert11
+rt statistikateenistus,rertst
+rt teatmebibliograafiaosakond,rerttb
+rt teadusbibliograafiaosakond,rertte
+teaduskirjandus osakond,rert14
+rt teadusosakond,rertto
+tehniline teenistus,rert23
+väliskirjandus osakond,rert15
+rt vanaraamat osakond,rertvr
+suuline ja arvutisuhtlus labor,flee14
+vastuvotu kulg,p2ooww
+administratsioon,p1fy01
+ioonkristall füüsika labor,p1fy08
+krüogeenijaam,p1fy17
+kristall spektroskoopia labor,p1fy10
+kiletehnoloogia töörühm,p1fy06
+laseroptika sektor,p1fy13
+laserspektroskoopia labor,p1fy09
+lasertehnika labor,p1fy05
+majandusosakond,p1fy16
+madal temperatuur labor,p1fy04
+raamatukogu,p1fy15
+raamatupidamine,p1fy14
+röntgenspektroskoopia labor,p1fy02
+biofüüsika laboratoorium,p1fy11
+teoreetiline füüsika labor,p1fy03
+töökoda,p1fy18
+keskkonnafüüsika labor,p1fy07
+tahkiseteooria labor,p1fy12
+kalabioloogia ja kalandus osakond,p1mi02
+näitus ja üritus osakond,p1um01ny
+merebioloogia osakond,p1mi03
+kogu osakond,p1um01ko
+merefüüsika sektor,p1mi04
+tartu tähetorn osakond,p1um01tt
+meresüsteem osakond,p1mi05
+plastitehnoloogia osakond,p1oppo
+raamatukogundus labor,p1rtrb
+tl geenitehnoloogia osakond,p1tl01
+tl infotehnoloogia osakond,p1tl02
+tl keskkonnatehnoloogia osakond,p1tl03
+tl materjaliteadus osakond,p1tl04
+riigihange talitus,dhhb01
+kh söökla ülikool 20,dhkhsy
+kh vana kohvik ( ülikool 20 ),dhkhvk
+arvestustalitus,dhkv01
+ehitustalitus,dhkv02
+hooldustalitus,dhkv03
+kv hange teenistus,dhkvht
+ho turvateenistus,dhkv04
+kv puidutöökoda,dhkvpt
+kv ehitus-ja remonditeenistus,dhkvrt
+sb emajõgi spordibaas,dhls01
+kalandus teabekeskus töörühm,lomi01kt
+sb spordihoone,dhls02
+sb staadion,dhls03
+sb tennisepaviljon,dhls04
+elektriseade hooldus ja remonditeenistus,dhpi01
+küte ventilatsioon ja santehniline seade hooldus ja remonditeenistus,dhpi02
+ehitusjaoskond,p3ekej
+ehitusprorektoriteenistus,p3ekep
+ehitusteenistus,p3eket
+ehitusjaoskond itp,p3ekit
+remonditeenistus,p3ekrt
+kh keemiahoone einelaud,p3khke
+kh kohvik narva mnt 27,p3khkn
+"kh kohvik "" sophokle """,p3khks
+kh söökla narva mnt 27,p3khsa
+kh söökla noorus 9,p3khsn
+kh söökla täht 4,p3khst
+kh söökla ülikool 20,p3khsy
+kh van . 46 einelaud,p3khve
+kh vana kohvik ( ülikool 20 ),p3khvk
+kv arvestusteenistus,p3kvat
+akadeemiline väljendusoskus keskus,flke06
+kv elamuteenistus,p3kvet
+kv hoone hooldus teenistus,p3kvhh
+kv hange teenistus,p3kvht
+kv keskkonnakaitse tulet . ja turvateen .,p3kvkt
+kv puidutöökoda,p3kvpt
+kv remonditeenistus,p3kvrt
+ls emajoe spordibaas,p3lsem
+linn spordibaas,p3lsls
+raskej . ja veesport kompleks,p3lsrv
+ls spordihoone,p3lssp
+ls staadion,p3lsst
+ls tennisepaviljon,p3lste
+sotsiaalkindlustus osakond,p3rpso
+aspirantuuriosakond,muudao
+arenduskoda,muudar
+eksperimentaaltootmisbaas,muudet
+i osakond,muudio
+klubi,muudkl
+kaugoppeosakond,muudko
+majandusosakond,muudmo
+kommunikatsioonitalitus,k1ko04
+oppetehnika ja metoodika teenistus,muudom
+turundustalitus,k1ko05
+oppeosakond,muudoo
+protokoll ja rahvusvaheline suhe talitus,k1ko06
+tü südamekeskus,muudsk
+töökaitse osakond,muudtk
+varustusteenistus,muudvt
+üliopilaste edustus,muudye
+üliopilane komplekteerimine teadma büroo,muudyk
+üliopilaste noustamiskeskus,muudyn
+katsebaas,armpkb1
+tymr ty arvelt,bgmrmax
+puidutöökoda,p3kvpt1
+remonditeenistus ( vana ),p3kvrt1
+puidugrupp,dhkv02pt
+hh arvutuskeskus piirkond,dhkvhhak
+hh ajaloomuuseum piirkond,dhkvhham
+hh anatoomikum piirkond,dhkvhhan
+hh garaazh majajuhataja piirkond,dhkvhhau
+hh avatud ülikool tallinna esindus,dhkvhhay
+halduspiirkond : bg õppebaas,dhkv03bg
+"halduspiirkond : ravila 19 , 14. ; puusepp 8 d - korpus",dhkv03bm
+balti õping keskus,shrg04
+hh botaanikaaed piirkond,dhkvhhbo
+"halduspiirkond : täht 4 , salm 1a , 1b",dhkv03fh
+hh rada 32 piirkond,dhkvhhkb
+"halduspiirkond : jakobi 2,4 , 5 ; loss 3,24 ; munk 4 ; ülikool 16 ; luts 5 ( ülikool käsutus olev ruum ) ; raekoda plats 9 ( ülikool käsutus olev ruum )",dhkv03kh
+hh keeltemaja piirkond,dhkvhhkm
+"halduspiirkond : narva mnt 4 ; lai 34 , 36 , 40 ; noorus 9 ; viljandi mnt 48 ; pühajärv residents",dhkv03mj
+hh ümp ja haigla majajuhataja piirk .,dhkvhhmp
+"halduspiirkond : riia 23 ; pirn 2 ; vanemuis 21 hoone , 46 , 46. ; rajama 32",dhkv03mr
+"halduspiirkond : noorus 1,9 ; puusepp 8 ; rada 32",dhkv03no
+"halduspiirkond : näitus 2 , 13. , 20 ; loss 38",dhkv03oi
+"halduspiirkond : ülikool 17 , 18 hoone , 18. , 18b , 20 ; jakobi 1 hoone ; küütri 2",dhkv03ph
+hh sõber maja majajuhataja piirkond,dhkvhhsm
+"halduspiirkond : tiik 78 , 80 ; j . liivi 2 ; loss 36 ; kinnistu kastan 43",dhkv03ti
+hh vanemuis 46 piirkond,dhkvhhva
+hh arvutuskeskus piirkond,p3kvhhak
+hh ajaloomuuseum piirkond,p3kvhham
+hh anatoomikum majajuhataja piirkond,p3kvhhan
+hh garaazh majajuhataja piirkond,p3kvhhau
+hh avatud ülikool tallinna esindus,p3kvhhay
+hh bg oppebaas piirkond,p3kvhhbg
+"keeleteadus , filosoofia ja semiootika doktorikool",flee15
+hh botaanikaaed majajuhataja piirkond,p3kvhhbo
+hh täht 4 majajuhataja piirkond,p3kvhhfh
+hh rada 32 piirkond,p3kvhhkb
+hh keemiahoone majajuhataja piirkond,p3kvhhkh
+hh keeltemaja majajuhataja piirkond,p3kvhhkm
+hh narva 4 / 6 majajuhataja piirkond,p3kvhhmj
+hh ümp ja haigla majajuhataja piirk .,p3kvhhmp
+hh riia 23 piirkond,p3kvhhmr
+hh noorus 9 majajuhataja piirkond,p3kvhhno
+hh näitus 20 majajuhataja piirkond,p3kvhhoi
+hh peahoone majajuhataja piirkond,p3kvhhph
+peahoone intendant piirkond,p3kvhhpi
+hh tiik 78 majajuhataja piirkond,p3kvhhti
+hh vanemuis 46 majajuhataj piirkond,p3kvhhva
+hh valveteenistus ( midaveelpo ),p3kvhhvt
+ar oppetöökoda,muudarok
+to plastitehnoloogia osakond,muudarpo
+tü fond,muudfond
+tü innovatsioon projekt,muudinpr
+ii osakond,muudioii
+pelaagiline kala töörühm,lomi01pk
+tallinna konsultatsioonipunkt,muudkotk
+lõhe ja meriforell töörühm,lomi01mf
+mo arvutuskeskus,muudmoak
+peipsi kalandus töörühm,lomi01pt
+mo ajaloomuuseum,muudmoam
+mo anatoomikum,muudmoan
+mo botaanikaaed,muudmoba
+mo komandant ja valveteenistus,muudmoco
+mo emajoe spordibaas,muudmoes
+elamuteenistus,muudmoet
+"mo haigla , klubi , kopu",muudmohk
+mo kääriku,muudmoka
+mo keemiahoone,muudmokh
+"mo kaunase pst 44 , välgi",muudmokp
+mo laboratoorium,muudmolb
+mo maarjamoisa auditoorium,muudmomm
+mo noorus 9,muudmono
+mo oppehoone,muudmooh
+mo peahoone,muudmoph
+mo riia 23,muudmori
+mo raamatukogu,muudmork
+mo spordihoone,muudmosh
+looduslik pühapaik riiklik arengukava rakenduskeskus,flaj17
+mo staadion,muudmost
+kommunikatsioon ja projektitalitus,p2vk07kp
+mo täht 4,muudmota
+e - keskus,p2vk08ek
+mo tiik 78 / 80,muudmoti
+haldustalitus,p2vk08ht
+mo tennisepaviljon,muudmotp
+helistuudio,p2vk08hs
+mo uus tänav 1,muudmout
+õppelava,p2vk08ol
+mo vanemuis 46,muudmova
+ühiselamu,p2vk08ue
+mo voor ökoloogia jaam,muudmovo
+õppedirektor haldusala,p2vk10
+ühiselamu,muudmoyh
+raamatukogu,p2vk10rt
+"mo ühiselamu , ladu",muudmoyl
+täiendusõppetalitus,p2vk10tt
+omt ekspluatatsioon osakond,muudomeo
+õppetalitus,p2vk10ot
+informaatika kateeder,muudomik
+raamatupidamine,p2vk11
+omt juurutusosakond,muudomjo
+omt metoodika kabinet,muudommt
+omt oppetehnika osakond,muudomot
+omt side-ja elektrograafia osakond,muudomse
+omt tele ja fotolabor,muudomtf
+ettevalmistusosakond,muudooeo
+ettevalm . ja vastuvotu osakond,muudooev
+i prorektor lisa,muudp1li
+i prorektor siht,muudp1si
+iii prorektor lisa,muudp3li
+tartu ülikool pedagogicum,p2oo11
+to ensümoloogia labor,muudtoel
+to geen ekspresslabor,muudtoge
+to hormonaalne regulats . labor,muudtohr
+to infotöö,muudtoit
+to kaadriosakond,muudtoka
+to konstrueerimine eksperimenteerimiso,muudtoke
+"to kl . füsiol . , biokeemia labor",muudtokf
+to kap . ehit . ja rem . osakond,muudtokr
+to org ja juur osakond,muudtooj
+to onkogenees labor,muudtool
+to plasmiid geneetika labor,muudtopg
+to patendiosakond,muudtopo
+to teadusosakond raamatupidamine,muudtorp
+to standari . ja metroloogia os,muudtost
+to uus tehnika näit osakond,muudtout
+to välissuhe osakond,muudtovo
+ehitusmaterjal ladu,muudvtel
+rannikumeri kalandus töörühm,lomi01rm
+rahvusvaheline ja euroopa õigus õppetool,oiao07
+tartu ülikool teaduskool,p1tp
+tartu ülikool raamatukogu,p2rt
+administratsioon,p2rt01
+sisukirjeldus osakond,p2rt02
+erialainfotalitus,p2rt03
+eurodokumentatsioon keskus,p2rt04
+infosüsteem osakond,p2rt05
+kogu arendus osakond,p2rt06
+käsikiri ja haruldane raamat osakond,p2rt07
+fonoteek,p2rt08
+raamatukogu vaheline laenutus keskus,p2rt09
+koolimuusika lektoraat,htos01
+säilitus ja konserveerimisosakond,p2rt10
+alus ja algharidus õppetool,htos02
+teaduskeskus,p2rt11
+teenindusosakond,p2rt12
+põhja-ameerika ülikool teabekeskus,p2rt13
+haldustalitus,p2rt14
+peainseneritalitus,p2rt15
+kliiniline psühholoogia osakond,shph05
+keeletehnoloogia õppetool,mtat06
+vähibioloogia uurimisgrupp,armp10
+ettevõtlusosakond,p2pc01
+turismiosakond,p2pc02
+sotsiaaltöö korraldus osakond,p2pc03
+tartu ülikool pedagogicum,shsh01
+majandusprotsess juhtimine ja infosüsteem lektoraat,mjjv08
+tervisekasvatus lektoraat,kksb06
+füsioteraapia õppetool,kksb05
+massikommunikatsioon ja ajakirjandus õppetool,sozu02
+teadus ja arendusprojekt talitus,p1ta08
+intellektuaalomand talitus,p1ta09
+ettevõtlussuhe talitus,p1ta10
+loodusteadus didaktika lektoraat,bgmr09
+karjääritalitus,p1ta11
+üld ja arendusosakond,rert02
+üldosakond,p1mi01
+riigimajandus ja majanduspoliitika õppetool,mjri11
+immunoanalüüs uurimisgrupp,armp04
+tartu ülikool koolimatemaatika ja - informaatika keskus,mtmt01
+immunoloogia uurimisgrupp,armp05
+inimesegeneetika uurimisgrupp,armp06
+patoloogiline füsioloogia uurimisgrupp,armp07
+rakubioloogia ja elektronmikroskoopia uurimisgrupp,armp08
+arheoloogia õppetool,flaj01ao
+laboratoorne arheoloogia õppetool,flaj01la
+looduslik pühapaik keskus,flaj01lo
+arheoloogia kabinet,flaj01ak
+kehaline kasvatus lektoraat,kksp99
+bio ja siirdemeditsiin instituut,arbs
+biokeemia osakond,arbs01
+farmakoloogia osakond,arbs02
+füsioloogia osakond,arbs03
+biomeditsiin osakond,arbs04
+vivaarium,arbs05
+meditsiiniline biokeemia õppetool,arbs01mk
+farmakoloogia ja toksikoloogia õppetool,arbs02ft
+kliiniline farmakoloogia õppetool,arbs02kf
+füsioloogia õppetool,arbs03fo
+kliiniline genoomika tuumiklabor,arbs03kg
+inimene bioloogia ja geneetika õppetool,arbs04ib
+inimesegeneetika uurimisgrupp,arbs04ig
+immunoanalüüs uurimisgrupp,arbs04im
+füüsiline antropoloogia keskus,aran04
+rakubioloogia ja elektronmikroskoopia uurimisgrupp,arbs04rb
+immunoloogia õppetool,arbs04io
+patoloogiline füsioloogia õppetool,arbs04pf
+patoloogiline füsioloogia uurimisgrupp,arbs04pu
+molekulaarpatoloogia uurimisgrupp,arbs04mp
+vähibioloogia uurimisgrupp,arbs04vb
+infokorraldus õppetool,shzu04
+infoteadus õppetool,shzu05
+sotsiaaltöö ja sotsiaalpoliitika osakond,soss04
+haldusjuhtimine õppetool,soah03
+balti poliitika õppetool,sopl03
+ajakiri universitt tartuensima toimetus,k1ko04aj
+portaal novaator toimetus,k1ko04an
+tartu osakond,oioi04
+tallinna osakond,oioi05
+tartu osakond,oiao09
+tallinna osakond,oiao10
+tartu osakond,oiao01tr
+tallinna osakond,oiao01tl
+tartu osakond,oiao07tr
+tallinna osakond,oiao07tl
+tartu osakond,oiao05tr
+tallinna osakond,oiao05tl
+tartu osakond,oiao06tr
+tallinna osakond,oiao06tl
+ohutustalitus,dhhb03
+tartu osakond,oieo07
+tallinna osakond,oieo08
+tartu osakond,oieo04tr
+tallinna osakond,oieo04tl
+tartu osakond,oieo01tr
+tallinna osakond,oieo01tl
+tartu osakond,oieo06tr
+tallinna osakond,oieo06tl
+tartu osakond,oirr01
+tallinna osakond,oirr02
+tartu ülikool õigusinstituut,p2og
+rahvusvaheline koostöö talitus,reaa01
+vene keel testimiskeskus,flke07
+dekanaat tallinna osakond võõrkeel õpe,oioi05vo
+bioinformaatika õppetool,bgmr10
+loodusressurss õppetool,loom04lr
+rna bioloogia uurimisgrupp,arbs04rn
+intellektuaalne omand õppetool,p2og01
+mereõigus õppetool,p2og02
+kognitiiv ja õiguspsühholoogia õppetool,p2og03
+katseloomakeskus,arbs06
+spordiala didaktika lektoraat,kksp05
+haldustalitus,p2vk12
+ühiselamu,p2vk12ue
+e - keskus,p2vk13
+pärandtehnoloogia keskus,p2vk01pk
+arvutivõrk rühm,dait01
+teadustalitus,p1ta02
+õppetalitus,p2oo01
+vastuvõtutalitus,p2oo02
+tasemeõppetalitus,p2oo03
+rahvusvaheline õpiränne keskus,p2oo04
+põhja-ameerika ülikool teabekeskus,p2oo05
+uurimiskeskus,p2pc12
+õppeinfosüsteem ja analüüsitalitus,p2oo06
+kurortoloogia labor,p2pc12kl
+karjäär ja psühholoogiline nõustamine talitus,p2oo07
+noor teaduskeskus,p2pc12nt
+arendustalitus,p1ta01
+välissuhe talitus,p1ta03
+teabetalitus,dauk01
+ajaleht universitt tartuensima,dauk02
+sekretariaat,dauk03
+arhiiv,dauk04
+keskserver töörühm,dait02
+kasutajatugi,dait03
+infosüsteem projekt,dait04
+keskkonnaseire projekt,p1ta04
+"projekt "" teaduskeskus ahhaa """,p1ta05
+keelelektoraat,p2og04
+tartu ülikool tehnoloogiainstituut,p1ti
+riigihange talitus,k1kv08
+arendustalitus,k1kv09
+kurortoloogia labor,p2pc04
+kliiniline genoomika tuumiklabor,arbs04pfkg
+ühiskonnateadus lektoraat,p2nc01
+psühholoogia ja pedagoogika lektoraat,p2nc02
+eesti keel ja kirjandus lektoraat,p2nc03
+vene keel ja kirjandus lektoraat,p2nc04
+võõrkeel lektoraat,p2nc05
+loodusmuuseum ja botaanikaaed,p1lm
+loodusmuuseum,p1lm01
+geoloogiamuuseum,p1lm01gm
+zooloogiamuuseum,p1lm01zm
+näitus ja loodusharidus osakond,p1lm01lk
+botaanika ja mükoloogiamuuseum,p1lm01bm
+elurikkus informaatika ja digiarhiiv töörühm,p1lm01dt
+tartu ülikool botaanikaaed,p1lm02
+meditsiinitehnoloogia keskus,armd
+molekulaarne ja kliiniline meditsiin keskus,armc
+briti uuring keskus,flcb
+kultuuridevaheline kommunikatsioon keskus,flci
+orientalistikakeskus,flco
+pau arine soome-ugri põlisrahvas keskus,flcp
+põhja-ameerika uuring keskus,flcn
+ühiskonnateadus instituut,shuh
+robert schum prantsuse uuring keskus,flcr
+loodusteaduslik haridus keskus,lolh
+eesti kognitiivne sotsiaalteadus keskus,socs
+ajakirjandus õppetool,shuh01
+eesti sotsiaalteaduslik andmearhiiv,sosa
+meediauuring õppetool,shuh02
+eesti käitumis ja terviseteadus keskus,sock
+sotsiaalne kommunikatsioon õppetool,shuh03
+infokorraldus õppetool,shuh04
+infoteadus õppetool,shuh05
+sotsioloogia õppetool,shuh06
+sotsiaaltöö õppetool,shuh07
+sotsiaalpoliitika õppetool,shuh08
+vivaarium,arbs06vi
+kogu osakond,p1um04
+kommunikatsiooniosakond,p1um05
+tartu tähetorn,p1um06
+usuteaduskond emeriitprofessor,us00
+õigusteaduskond emeriitprofessor,oi00
+arstiteaduskond emeriitprofessor,ar00
+filosoofiateaduskond emeriitprofessor,fl00
+bioloogia-geograafiateaduskond emeriitprofessor,bg00
+füüsika-keemiateaduskond emeriitprofessor,fk00
+kehakultuuriteaduskond emeriitprofessor,kk00
+haldusosakond,p2rt16
+haridusteaduskond emeriitprofessor,ht00
+ettevõtlus õppetool,mjjv11
+majandusteaduskond emeriitprofessor,mj00
+matemaatika-informaatikateaduskond emeriitprofessor,mt00
+sotsiaalteaduskond emeriitprofessor,so00
+eurodokumentatsioon keskus,rert26
+ettevõtlus ja innovatsioonikeskus,mjmj02
+lähis-ida vana keel ja kultuur õppetool,usus08
+rahandus ja majandusarvestus õppetool,mjjv12
+sotsiaalne kommunikatsioon õppetool,sozu04
+humanitaarvaldkond didaktikakeskus,flfl02
+religioonipedagoogika kabinet,usus03rp
+immunoloogia osakond,arbs07
+patofüsioloogia osakond,arbs08
+kliiniline genoomika tuumiklabor,arbs08kg
+rt bibliograafiaosakond,rertbo
+haridustehnoloogia keskus,shhi06
+rt ennistuskeskus,rertek
+rt säilitus ja hooldusteenistus,rertht
+rt infosüsteem teenistus,rertit
+rt kodumaine kirjandus osakond,rertkk
+rt köitekoda,rertkt
+rt liigitamisosakond,rertli
+rt muusika ja keeleõppekeskus,rertmk
+rt nato teabekeskus,rertna
+rt retrokataloogimine osakond,rertre
+rt teaduskirjandus osakond,rerttk
+analüüs ja arvestustalitus,k1kv10
+rt väliskirjandus osakond,rertvk
+kõnekeskus grupp,k1it03kk
+riia tn grupp,k1it03rt
+maarjaväli grupp,k1it03mv
+kesklinn grupp,k1it03kl
+tehniline koordineerimiskeskus,dhhb02
+hb riigihange teenistus,dhhbrh
+kv kinnisvara arvestusteenistus,dhkvat
+kv ehitusteenistus,dhkvet
+kv et puidutöökoda,dhkvetpt
+kv kinnisvara hooldusteenistus,dhkvhh
+hh bg õppebaas piirkond,dhkvhhbg
+hh biomeedikum piirkond,dhkvhhbm
+hh täht 4 ja õpetaja sem . piirkond,dhkvhhfh
+hh keemiahoone piirkond,dhkvhhkh
+hh narva 4 piirkond,dhkvhhmj
+hh riia 23 piirkond,dhkvhhmr
+hh noorus 9 piirkond,dhkvhhno
+hh näitus 20 piirkond,dhkvhhoi
+hh peahoone piirkond,dhkvhhph
+hh tiik 78 piirkond,dhkvhhti
+kv turvateenistus,dhkvkt
+liikumisharrastus käitumuslik probleemlabor,kksp06
+ls emajõgi spordibaas,dhlsem
+ls spordihoone,dhlssp
+ls staadion,dhlsst
+ls tennisepaviljon,dhlste
+pi elektrisiga . hooldus-ja rem . teenistus,dhpiet
+pi küte venti . - ja san . teenistus,dhpikt
+entomoloogia õppetool,loom04en
+terioloogia õppetool,loom04tr
+tehnoloogiasiire talitus,p1ta12
+prorektor tegevusvaldkond,p5
+tartu ülikool ajalugu muuseum,p5am
+tartu ülikool kunstimuuseum,p5kl
+maailm keel ja kultuur kolledž,fllc
+tehnovõrk ja elektripaigaldis talitus,dhkv05
+turismikompetentsikeskus,p2pc13
+teenindusosakond,rert27
+elektripaigaldis remondigrupp,dhkv05ep
+tehnovõrk remondigrupp,dhkv05tv
+rektoraat büroo,rerb
+rahvusvaheline koostöö talitus,rerb01
+remondigrupp,dhkv02rt
+ettevõtlus õppetool,mjmj03
+juhtimine õppetool,mjmj04
+majandus modelleerimine õppetool,mjmj05
+majandusteooria õppetool,mjmj06
+rahandus ja majandusarvestus õppetool,mjmj07
+rahvusvaheline ettevõtlus ja innovatsioon õppetool,mjmj08
+riigimajandus ja majanduspoliitika õppetool,mjmj09
+turundus õppetool,mjmj10
+"halduspiirkond : w . struve 1 , veski 32 ( rendipind )",k1kv03rt
+anglistika osakond,fllc01
+germanistika osakond,fllc04
+klassikaline filoloogia osakond,fllc02
+romanistika osakond,fllc03
+skandinavistika osakond,fllc06
+slavistika osakond,fllc05
+tõlkeõpetus ja - uuring osakond,fllc07
+aasia regioon keel osakond,fllc08
+balti regioon keel osakond,fllc09
+akadeemiline väljendusoskus keskus,fllc10
+testimiskeskus,fllc11
+infrastruktuur ja kasutajatugi talitus,k1it07
+server grupp,k1it07sg
+tartu ülikool teadusarvutus keskus,k1it07tk
+maarjaväli grupp,k1it07mv
+kesklinn grupp,k1it07kl
+kõnekeskus grupp,k1it07kk
+sensortehnoloogia töörühm,lofy02st
+arvutigraafikateenistus,p2ag01
+õppetehnikateenistus,p2ag02
+fototeenistus,p2ag03
+raamatukogu,p2pc05
+õppeosakond,p2og05
+raamatukogu,p2og06
+"halduspiirkond : uppsala 10 ladu , sanatoorium 18 kaarhall",k1kv03ld
+töökeskkond labor,arth06
+üldosakond,p2nc06
+majandusosakond,p2nc07
+raamatupidamine,p2nc06rp
+õppetalitus,p2nc06ot
+raamatukogu,p2nc06rk
+arvutiklass,p2nc06ak
+tartu ülikool viljandi kultuuriakadeemia emeriitdotsent,p2vk00
+zooloogiamuuseum,bgzh05
+juriidiline nõustamine,p1ta06
+siseaudit büroo,resu
+säilitus ja konserveerimisosakond,p1rt33
+haldusosakond,p1rt34
+prantsuse keel ja kirjandus,flgr03pk
+hispaania keel ja kirjandus,flgr03hk
+itaalia keel ja kirjandus,flgr03ik
+skandinavistika,flgr07sk
+teaduskorraldus talitus,p1ta07
+pärnu osakond,p1mi06
+humanitaarteadus ja kunst valdkond,hv
+humanitaarteadus ja kunst valdkond dekanaat,hvhv
+usuteaduskond,hvus
+ajalugu ja arheoloogia instituut,hvaj
+eesti ja üldkeeleteadus instituut,hvee
+filosoofia ja semiootika instituut,hvfi
+kultuuriteadus instituut,hvku
+maailm keel ja kultuur kolledž,hvlc
+viljandi kultuuriakadeemia,hvvk
+sotsiaalteadus valdkond,sv
+õigusteaduskond,svoi
+sotsiaalteadus valdkond dekanaat,svsv
+majandusteaduskond,svmj
+alus ja rakendusökoloogia keskus,bgcl
+ühiskonnateadus instituut,svuh
+haridusteadus instituut,svhi
+psühholoogia instituut,svph
+johan skytte poliitikauuring instituut,svjs
+narva kolledž,svnc
+pärnu kolledž,svpc
+avalik õigus osakond,svoi02
+eraõigus osakond,svoi04
+karistusõigus osakond,svoi03
+üldosakond,svoi01
+haridusuuenduskeskus,shhi07
+meditsiiniteadus valdkond,mv
+meditsiiniteadus valdkond dekanaat,mvmv
+bio ja siirdemeditsiin instituut,mvbs
+peremeditsiin ja rahvatervishoid instituut,mvpt
+farmaatsia instituut,mvfa
+kliiniline meditsiin instituut,mvcm
+hambaarstiteadus instituut,mvst
+sporditeadus ja füsioteraapia instituut,mvsf
+loodus ja täppisteadus valdkond,lt
+krüptograafia õppetool,mtat07
+loodus ja täppisteadus valdkond dekanaat,ltlt
+molekulaarpatoloogia uurimisgrupp,armp09
+eesti mereinstituut,ltmi
+füüsika instituut,ltfy
+keemia instituut,ltkt
+molekulaar ja rakubioloogia instituut,ltmr
+tehnoloogiainstituut,ltti
+ökoloogia ja maateadus instituut,ltom
+arvutiteadus instituut,ltat
+matemaatika ja statistika instituut,ltms
+botaanika osakond,ltom01
+geograafia osakond,ltom02
+geoloogia osakond,ltom03
+zooloogia osakond,ltom04
+loodusteaduslik haridus keskus,ltom05
+geoloogiamuuseum,bggl04
+tõlkekeskus,flct
+humanitaarteadus ja kunst valdkond emeriitprofessor,hv00
+humanitaarteadus ja kunst valdkond emeriitdotsent,hv01
+sotsiaalteadus valdkond emeriitprofessor,sv00
+sotsiaalteadus valdkond emeriitdotsent,sv01
+meditsiiniteadus valdkond emeriitprofessor,mv00
+meditsiiniteadus valdkond emeriitdotsent,mv01
+loodus ja täppisteadus valdkond emeriitprofessor,lt00
+loodus ja täppisteadus valdkond emeriitdotsent,lt01
+anglistika osakond,hvlc01
+klassikaline filoloogia osakond,hvlc02
+romanistika osakond,hvlc03
+germanistika osakond,hvlc04
+slavistika osakond,hvlc05
+skandinavistika osakond,hvlc06
+ökosüsteem dünaamika töörühm,p1mi07
+tõlkeõpetus ja - uuring osakond,hvlc07
+mereoptika töörühm,p1mi08
+aasia regioon keel osakond,hvlc08
+meresüsteem modelleerimine labor,p1mi05ml
+balti regioon keel osakond,hvlc09
+humanitaarvaldkond didaktikakeskus,hvhv01
+nõukogu periood ajalugu uurimiskeskus,flch
+rt majandusteenistus,rertmt
+anorgaaniline keemia õppetool,ltkt01
+füüsikaline keemia õppetool,ltkt02
+keemiaharidus õppetool,ltkt03
+kolloid ja keskkonnakeemia õppetool,ltkt04
+rakenduselektrokeemia õppetool,ltkt05
+analüütiline keemia õppetool,ltkt06
+keemiline füüsika õppetool,ltkt07
+molekulaartehnoloogia õppetool,ltkt08
+orgaaniline keemia õppetool,ltkt09
+bioorgaaniline keemia õppetool,ltkt10
+katsekoda,ltkt11
+ettevõtlusosakond,svpc01
+turismiosakond,svpc02
+sotsiaaltöö korraldus osakond,svpc03
+keelekeskus,svpc04
+turismikompetentsikeskus,svpc05
+uurimiskeskus,svpc06
+raamatukogu,svpc07
+kurortoloogia labor,svpc06kl
+noor teaduskeskus,svpc06nt
+fy raamatukogu,p1fyrk
+fy raamatupidamine,p1fyrp
+fy röngtenspektroskoopia labor,p1fyrs
+fy spektronograafia sektor,p1fysk
+fy teoreetiline füüsika labor,p1fytf
+fy töökoda,p1fytk
+fy tuumaspektroskoopia labor,p1fyts
+fy tahkiseteooria labor,p1fytt
+ühiskonnateadus lektoraat,svnc01
+tl geenitehnoloogia osakond,p1tlgt
+psühholoogia ja pedagoogika lektoraat,svnc02
+tl infotehnoloogia osakond,p1tlit
+eesti keel lektoraat,svnc03
+tl keskkonnatehnoloogia osakond,p1tlkt
+vene keel lektoraat,svnc04
+tl materjaliteadus osakond,p1tlmt
+võõrkeel lektoraat,svnc05
+fy administratsioon,p1fyad
+üldosakond,svnc06
+fy ioonkristall füüsika labor,p1fyif
+keskus eesti kodu narva,svnc07
+fy krüojaam,p1fykj
+majandusosakond,svnc08
+fy kristall spektroskoopia labor,p1fyks
+raamatupidamine,svnc06rp
+fy kiletehnoloogia töörühm,p1fykt
+õppetalitus,svnc06ot
+fy laseroptika sektor,p1fylo
+raamatukogu,svnc06rk
+fy laserspektroskoopia labor,p1fyls
+arvutiklass,svnc06ak
+fy lasertehnika labor,p1fylt
+biotehnoloogia õppetool,ltmr01
+fy majandusosakond,p1fymo
+evolutsiooniline bioloogia õppetool,ltmr02
+fy madal temperatuur labor,p1fymt
+geneetika õppetool,ltmr03
+rt administratsioon,rertad
+mikrobioloogia ja viroloogia õppetool,ltmr04
+rt biomeedikum raamatukogu,rertbr
+molekulaarbioloogia õppetool,ltmr05
+rt füüsikaraamatukogu,rertfy
+rakubioloogia õppetool,ltmr06
+rt humanitaarraamatukogu,rerthu
+biofüüsika ja taimefüsioloogia õppetool,ltmr07
+rt käsikiri ja haruld . raamat osak,rertkh
+üldine ja mikroobibiokeemia õppetool,ltmr08
+rt keemiaraamatukogu,rertkr
+arengubioloogia õppetool,ltmr09
+rt majandusraamatukogu,rertmr
+bioinformaatika õppetool,ltmr10
+rt õppekirjandus osakond,rertop
+pedagoogika osakond,svhi01
+rt peainseneriteenistus,rertpt
+õpetaja seminar,svhi02
+rt raamatukogu vaheline laenutus osak,rertrl
+eripedagoogika osakond,svhi03
+rt tehniline teenistus,rerttt
+haridusuuenduskeskus,svhi04
+eesti keel sektsioon,flkeee
+õpetaja täienduskoolitus ja kutseaasta keskus,svhi05
+inglise keel sektsioon,flkein
+haridustehnoloogia keskus,svhi06
+saksa / prantsuse keel sektsioon,flkesp
+arengupsühholoogia osakond,svph01
+vene keel sektsioon,flkeve
+eksperimentaalpsühholoogia osakond,svph02
+neuropsühhofarmakoloogia osakond,svph03
+isiksus ja sotsiaalpsühholoogia osakond,svph04
+kliiniline psühholoogia osakond,svph05
+sotsiaalteaduslik rakendusuuring keskus ( rake ),svjs01
+infotehnoloogia osakond,dhit
+ettevõtlus ja innovatsioonikeskus,svsv01
+ettevõtlus õppetool,svmj02
+juhtimine õppetool,svmj03
+majandus modelleerimine õppetool,svmj04
+majandusteooria õppetool,svmj05
+rahandus ja majandusarvestus õppetool,svmj06
+rahvusvaheline ettevõtlus ja innovatsioon õppetool,svmj07
+riigimajandus ja majanduspoliitika õppetool,svmj08
+turundus õppetool,svmj09
+üldosakond tartu osakond,svoi01tr
+üldosakond tallinna osakond,svoi01tl
+tartu osakond,svoi02tr
+tallinna osakond,svoi02tl
+tartu osakond,svoi03tr
+tallinna osakond,svoi03tl
+tartu osakond,svoi04tr
+tallinna osakond,svoi04tl
+anestesioloogia ja intensiivravi kliinik,mvcm01
+hematoloogia-onkoloogia kliinik,mvcm02
+kirurgiakliinik,mvcm03
+infrastruktuur talitus,dhit01
+kopsukliinik,mvcm04
+server grupp,dhit01sg
+kõrvakliinik,mvcm05
+infosüsteem talitus,dhit02
+lastekliinik,mvcm06
+multimeedia talitus,dhit03
+nahahaigus kliinik,mvcm07
+arvutigraafika grupp,dhit03ag
+naistekliinik,mvcm08
+õppetehnika grupp,dhit03og
+närvikliinik,mvcm09
+kasutajatugi talitus,dhit04
+psühhiaatriakliinik,mvcm10
+radioloogiakliinik,mvcm11
+silmakliinik,mvcm12
+sisekliinik,mvcm13
+spordimeditsiin ja taastusravi kliinik,mvcm14
+südamekliinik,mvcm15
+traumatoloogia ja ortopeedia kliinik,mvcm16
+täienduskeskus,mvcm17
+akadeemiline väljendusoskus keskus,hvlc10
+testimiskeskus,hvlc11
+koolimatemaatika ja - informaatika keskus,ltms01
+kirikulugu õppetool,hvus01
+süstemaatiline usuteadus õppetool,hvus02
+praktiline usuteadus õppetool,hvus03
+pedagoogika osakond,htht01
+uus testament õppetool,hvus04
+vana testament ja semitistikk õppetool,hvus05
+võrdlev usuteadus õppetool,hvus06
+arheoloogia osakond,hvaj01
+arhiivindus osakond,hvaj02
+eesti ajalugu osakond,hvaj03
+kunstiajalugu osakond,hvaj05
+uusim aeg osakond,hvaj06
+üldajalugu osakond,hvaj07
+eesti keel osakond,hvee01
+eesti keel võõrkeel osakond,hvee02
+soome-ugri osakond,hvee03
+üldkeeleteadus osakond,hvee04
+lõuna-eesti keel ja kultuuriuuring keskus,hvee01lk
+turvasüsteem grupp,k1it07ts
+biokeemia osakond,mvbs01
+farmakoloogia osakond,mvbs02
+füsioloogia osakond,mvbs03
+biomeditsiin osakond,mvbs04
+katseloomakeskus,mvbs05
+õpetaja seminar,htht02
+immunoloogia osakond,mvbs06
+patofüsioloogia osakond,mvbs07
+anatoomia osakond,mvbs08
+mikrobioloogia osakond,mvbs09
+patoloogiline anatoomia ja kohtuarstiteadus osakond,mvbs10
+meditsiiniline biokeemia õppetool,mvbs01mk
+farmakoloogia ja toksikoloogia õppetool,mvbs02ft
+kliiniline farmakoloogia õppetool,mvbs02kf
+füsioloogia õppetool,mvbs03fo
+inimene bioloogia ja geneetika õppetool,mvbs04ib
+molekulaarpatoloogia uurimisgrupp,mvbs04mp
+vähibioloogia uurimisgrupp,mvbs04vb
+rna bioloogia uurimisgrupp,mvbs04rn
+kliiniline genoomika tuumiklabor,mvbs07kg
+inimene anatoomia õppetool,mvbs08ia
+histoloogia ja embrüoloogia õppetool,mvbs08he
+kirurgiline anatoomia õppetool,mvbs08ka
+keeletehnoloogia õppetool,ltat01
+filosoofia osakond,hvfi01
+välissuhe osakond,p1vs
+semiootika osakond,hvfi04
+arenduskeskus,htht03
+tartu ülikool eetikakeskus,hvfi05
+filosoofia ajalugu õppetool,hvfi01aj
+praktiline filosoofia õppetool,hvfi01pf
+teoreetiline filosoofia õppetool,hvfi01te
+teadusfilosoofia õppetool,hvfi01tf
+meditsiiniline mikrobioloogia ja viroloogia õppetool,mvbs09mv
+patoloogiline anatoomia õppetool,mvbs10pa
+kohtuarstiteadus õppetool,mvbs10ka
+infrastruktuur grupp,k1it07ig
+kultuur ja kommunikatsiooniteadus keskus ( konsortsium ),hvku09
+kirjandus ja teatriteadus osakond,hvku05
+eesti ja võrdlev rahvaluule osakond,hvku04
+etnoloogia osakond,hvku03
+kunst osakond,hvku01
+orientalistikakeskus,hvku10
+eesti kirjandus õppetool,hvku05ek
+maailmakirjandus õppetool,hvku05ma
+teatriteadus õppetool,hvku05tt
+maalikunst õppetool,hvku01mk
+muusika õppetool,hvku01mu
+kalabioloogia ja kalandus osakond,ltmi01
+merebioloogia osakond,ltmi02
+meresüsteem osakond,ltmi03
+äriõigus ja intellektuaalne omand õppetool,oieo06
+pärnu osakond,ltmi06
+mikroökonoomika õppetool,mjri09
+kaugseire ja mereoptika osakond,ltmi07
+makroökonoomika õppetool,mjri10
+ökodünaamika osakond,ltmi08
+kalandus teabekeskus töörühm,ltmi01kt
+lõhe ja meriforell töörühm,ltmi01mf
+pelaagiline kala töörühm,ltmi01pk
+peipsi kalandus töörühm,ltmi01pt
+rannikumeri kalandus töörühm,ltmi01rm
+administratsioon,ltfy07
+materjaliteadus osakond,ltfy02
+eksperimentaalfüüsika osakond,ltfy03
+teoreetiline füüsika osakond,ltfy04
+bio ja keskkonnafüüsika osakond,ltfy05
+füüsikaharidus osakond,ltfy01
+teenindusgrupp,ltfy08
+majandusgrupp,ltfy09
+ioonkristall füüsika labor,ltfy02if
+keskus eesti kodu narva,p2nc08
+laserspektroskoopia labor,ltfy02ls
+röntgenspektroskoopia labor,ltfy02rs
+kiletehnoloogia labor,ltfy02kt
+nanostruktuur füüsika labor,ltfy02mt
+sensortehnoloogia labor,ltfy02st
+füüsikaline optika labor,ltfy03ks
+nanostruktuur füüsika labor,ltfy03mt
+lasertehnika labor,ltfy03ls
+plasmafüüsika labor,ltfy03gl
+tahkiseteooria labor,ltfy04tt
+teoreetiline füüsika labor,ltfy04tf
+väljateooria labor,ltfy04st
+biofüüsika laboratoorium,ltfy05sk
+keskkonnafüüsika labor,ltfy05kf
+atmosfäärifüüsika labor,ltfy05af
+kosmos ja militaartehnoloogia töörühm,ltfy01kk
+elektron paramagneetiline resonants ja luminofooritehnoloogia töörühm,ltfy01ek
+põhiõpe keskus,ltfy01pk
+õppetöö tugiteenistus,ltfy01ot
+koolifüüsika keskus,ltfy01kf
+ökosüsteem majandamine osakond,p2pc06
+biomeditsiinitehnika ja meditsiinifüüsika teadus ja koolituskeskus,ltfy01bf
+keelekeskus,p2pc07
+raamatupidamine,ltfy08rp
+teenus kompetentsikeskus,p2pc08
+raamatukogu,ltfy08rk
+õppeosakond,p2pc09
+ajakirjandus õppetool,svuh01
+haldusosakond,p2pc10
+meediauuring õppetool,svuh02
+sotsiaalne kommunikatsioon õppetool,svuh03
+infoteadus õppetool,svuh04
+sotsioloogia õppetool,svuh06
+sotsiaaltöö õppetool,svuh07
+sotsiaalpoliitika õppetool,svuh08
+tugiosakond,svuh09
+füüsiline antropoloogia keskus,mvbs08fa
+peremeditsiin õppetool,mvpt01
+õendusteadus õppetool,mvpt02
+botaanika õppetool,ltom01bo
+mükoloogia õppetool,ltom01mk
+taimeökoloogia õppetool,ltom01ta
+ökofüsioloogia õppetool,ltom01of
+geoinformaatika ja kartograafia õppetool,ltom02gk
+inimgeograafia ja regionaalplaneerimine õppetool,ltom02gr
+planeerimistalitus,dhhb04
+loodusgeograafia ja maastikuökoloogia õppetool,ltom02lm
+väliseesti uuring keskus,ltom02ce
+geoloogia ja mineraloogia õppetool,ltom03gm
+paleontoloogia ja stratigraafia õppetool,ltom03ps
+ajalugu ja ühiskonnaõpetus didaktika keskus,hvaj13
+pinnakate ja rakendusgeoloogia õppetool,ltom03pr
+loodusressurss õppetool,ltom04lr
+loomaökoloogia õppetool,ltom04lo
+entomoloogia õppetool,ltom04en
+terioloogia õppetool,ltom04tr
+hajussüsteem õppetool,mtat08
+epidemioloogia ja biostatistika õppetool,mvpt03
+rahvatervishoid õppetool,mvpt04
+terviseinfo analüüsigrupp,mvpt05
+arheoloogia õppetool,hvaj01ao
+laboratoorne arheoloogia õppetool,hvaj01la
+arheoloogia kabinet,hvaj01ak
+looduslik pühapaik keskus,hvaj01lo
+pau arine soome-ugri põlisrahvas keskus,hvee03pa
+foneetika labor,hvee01fl
+suuline ja arvutisuhtlus labor,hvee01sl
+õppekorraldus ja kvaliteeditalitus,p2oo08
+avatud ülikool talitus,p2oo09
+regionaaltalitus,p2oo10
+tartu ülikool pedagogicum,svhi07
+etenduskunst osakond,hvvk04
+kultuurharidus osakond,hvvk03
+muusikaosakond,hvvk02
+rahvuslik käsitöö osakond,hvvk01
+tartu ülikool muuseum,p5um
+ülikool ajalugu muuseum,p5um01
+kunstimuuseum,p5um02
+loodusmuuseum,p5um03
+tugiosakond,shuh09
+infoteadus õppetool,shuh10
+õppeosakond,hvvk12
+avalik suhe talitus,hvvk13
+raamatukogu,hvvk11
+haldustalitus,hvvk08
+multimeediakeskus,hvvk09
+projektitalitus,hvvk10
+it talitus,hvvk07
+administratsioon,p1rt01
+raamatupidamine,hvvk06
+üld ja arendusosakond,p1rt02
+bibliograafiaosakond,p1rt03
+ennistuskeskus,p1rt04
+infosüsteem talitus,p1rt05
+kodumaine kirjandus osakond,p1rt06
+köitekoda,p1rt07
+käsikiri ja haruldane raamat osakond,p1rt08
+liigitamisosakond,p1rt09
+fonoteek,p1rt10
+raamatukogu vaheline laenutus keskus,p1rt11
+retrokataloogimine osakond,p1rt12
+säilitus ja hooldustalitus,p1rt13
+väliskirjandus osakond,p1rt15
+biomeedikum raamatukogu,p1rt17
+füüsikaraamatukogu,p1rt18
+humanitaarraamatukogu,p1rt19
+keemiaraamatukogu,p1rt20
+majandusraamatukogu,p1rt21
+nato teabekeskus,p1rt22
+tehniline teenistus,p1rt23
+peainseneritalitus,p1rt24
+haldustalitus,p1rt25
+eurodokumentatsioon keskus,p1rt26
+teenindusosakond,p1rt27
+foto ja videotalitus,dhit05
+ettevõtluskeskus,mjcv
+tõuketoetus talitus,rerb02
+teadustalitus,p1ta13
+eesti keel väljendusõpetus keskus,hvee01ek
+euroopa õigus õppetool,oiao08
+kantselei,hvvk05
+videostuudio,hvvk09vs
+helistuudio,hvvk09hs
+õppetalitus,hvvk12ot
+üldaine osakond,hvvk12uo
+täiendusõpe talitus,hvvk12tt
+kõrgharidus õppetool,htht04
+õppekorraldustalitus,svsv02
+keeleteadus ja - tehnoloogia doktorikool,flfl01
+käitumis ja terviseteadus doktorikool,soso01
+materjaliteadus ja materjal tehnoloogia doktorikool,fkfk01
+ökoloogia ja keskkonnateadus doktorikool,bgbg01
+biomeditsiin ja biotehnoloogia doktorikool,bgbg02
+majandusteadus ja innovatsioon doktorikool,mjmj01
+andmeteadus õppetool,ltat02
+programmeerimiskeel ja - süsteem õppetool,ltat03
+andmeturve ja teoreetiline arvutiteadus õppetool,ltat04
+tarkvaratehnika õppetool,ltat05
+hajussüsteem õppetool,ltat06
+teadusarvutus keskus,ltat07
+kantselei,ltat08
+maapõueressurss arenduskeskus,ltom06
+tartu ülikool viljandi kultuuriakadeemia,p2vk
+õpetaja ja kõrgharidus keskus,svhi08
+täiskasvanuharidus keskus,htht04th
+haridus ja arengu-uuring keskus,htht05
+spordibioloogia osakond,mvsf01
+kehaline kasvatus ja spordididaktika osakond,mvsf02
+liikumislabor,mvsf02ll
+õpetaja täiendkoolitustalitus,htht08
+praktika ja kutseaasta talitus,htht04thpt
+õppeosakond,svnc09
+raamatukogu,svnc10
+it - tugi,svnc11
+rahvuslik käsitöö osakond,p2vk01
+muusikaosakond,p2vk02
+infoharidus osakond,p2vk03
+etenduskunst osakond,p2vk04
+kultuurharidus osakond,p2vk05
+täiendõpe osakond,p2vk06
+arendus ja välissuhe osakond,p2vk07
+haldusdirektor haldusala,p2vk08
+hostel oma kodu,p2vk08ok
+infotehnoloogia osakond,p2vk08it
+personaliarenduskeskus,k1pr01
+haridustehnoloogia õppetool,htht06
+tartu ülikool aasia keskus,hvus07
+antropoloogiline ja etnolingvistika õppetool,flee10
+meedia ja kommunikatsioon õppetool,svuh10
+erialainfotalitus,p1rt28
+kliiniline geneetika keskus,mvcm18
+nõustamiskeskus,p2oo12
+elukestev õpe keskus,p2oo13
+õpe ja arendusprojekt talitus,p2oo14
+geoloogiamuuseum,p5um03gm
+zooloogiamuuseum,p5um03zm
+loodusteaduslik koguma,p5um03lk
+üldaine talitus,hvvk12ua
+ettevõtlusõpe talitus,hvvk12et
+kunst keskus,hvvk14
+biomeditsiinitehnika ja meditsiinifüüsika teadus ja koolituskeskus,fkef05
+bioloogiline interaktsioon ökoloogia töörühm,p1lm01bt
+rakenduslingvistika osakond,hvee05
+koolifüüsika keskus,fkef06
+arendusprorektor tegevusvaldkond,p6
+muuseum,p6um
+haridusuuring keskus,hthk
+loodusmuuseum ja botaanikaaed,p6lm
+tartu ülikool botaanikaaed,p6lm02
+loodusmuuseum,p6lm01
+geoloogiamuuseum,p6lm01gm
+zooloogiamuuseum,p6lm01zm
+näitus ja loodusharidus osakond,p6lm01lk
+botaanika ja mükoloogiamuuseum,p6lm01bm
+elurikkus informaatika ja digiarhiiv töörühm,p6lm01dt
+bioloogiline interaktsioon ökoloogia töörühm,p6lm01bt
+kunstimuuseum,p6um02
+kogu osakond,p6um04
+kommunikatsiooniosakond,p6um05
+tartu tähetorn,p6um06
+rektoraat büroo,p6rb
+rahvusvaheline koostöö talitus,p6rb01
+inimene geneetika uurimisgrupp,mvbs04ig
+reproduktiivmeditsiin uurimisgrupp,mvbs04rm
+õppearendus ja täienduskoolitus keskus,p2or
+reproduktiivmeditsiin uurimisgrupp,mvbs04rm
+inimene geneetika õppetool,mvbs04gõ
+inimene bioloogia õppetool,mvbs04bõ
+inimene mikroobiökoloogia uurimisgrupp,mvbs09im
+kliiniline mikrobioloogia uurimisgrupp,mvbs09km
+hiv uurimisgrupp,mvbs09hu
+kliiniline uuring töögrupp,mvbs09ku
+genoomika instituut,p1gi
+täienduskoolitustalitus,p2or01
+grandikeskus,p1gy
+õppekavaarendus talitus,p2or02
+ettevõtlus ja innovatsioonikeskus,p6ik
+karjääritalitus,p2or03
+haridustehnoloogia talitus,p2or04
+regionaaltalitus,p2or05
+eesti geenivaramu teaduskeskus,p1gi01
+eesti biokeskus,p1gi02
+rekataloogimine osakond,p1rt29
+tuumiklabor,p1gi03
+eesti geenivaramu,p1gi04
+tartu observatoorium,ltto
+haridustehnoloogiakeskus,p2av01
+karjäär ja psühholoogiline nõustamine talitus,p2av02
+täienduskoolitustalitus,p2av03
+tartu ülikool tallinna esindus,p2av04
+õppekavaarendustalitus,p2av05
+usuteaduskond,p1ta*
+kultuur ja kommunikatsiooniteadus keskus,sokc
+tähefüüsika osakond,ltto01
+galaktika füüsika ja kosmoloogia osakond,ltto02
+raamatukogu,p2vk08rk
+kaugseire osakond,ltto03
+kosmosetehnoloogia osakond,ltto04
+tugiteenus osakond,ltto05
+külastuskeskus,ltto06
+hankeosakond,k1hr
+tugitalitus,svhi09
+tartu ülikool muuseum,dhum
+ülikool ajalugu muuseum,dhum01
+kunstimuuseum,dhum02
+loodusmuuseum,dhum03
+geoloogiamuuseum,dhum03gm
+zooloogiamuuseum,dhum03zm
+näitus ja loodusharidus osakond,dhum03lk
+digihumanitaaria ja infoühiskond keskus,hvee06
+üldaine osakond,p2vk09
+"arheoloogia , geneetika ja lingvistika sidusuuring kolleegium",hvaj14
+innovatsioonikeskus,p1ti01
+biomeditsiinitehnoloogia arenduskeskus,p1ti02
+keemia ja materjalitehnoloogia arenduskeskus,p1ti03
+keskkonnatehnika arenduskeskus,p1ti04
+info ja kommunikatsioonitehnoloogia arenduskeskus,p1ti05
+populatsioonigeneetika ja evolutsiooniline bioloogia töögrupp,p1gi02pe
+onkogenees töögrupp,p1gi02ot
+sport ja füsioteraapia täiendkoolituskeskus,kkkk01
+majandusarvestus õppetool,mjjv09
+loodusteaduslik haridus lektoraat,bgbg03
+treeninguteadus õppetool,kksp01
+alus ja rakendusökoloogia keskus,bgbg04
+ökoloogia ja keskkonnateadus doktorikool,bgbg05
+biotehnoloogia ja biomeditsiin doktorikool,bgbg06
+õppeosakond,oioi01
+teabekeskus,oioi02
+keelelektoraat,oioi03
+gaaslahenduslabor,fkef03
+teaduskeskus,p1rt30
+halduspiirkond : kaarel pst 3 ; teater väljak 3 ( ülikool kasutus olev ruum ),dhkv03tl
+psühhofarmakoloogiline ravimiarendus labor,p1ti06
+põhja-ameerika ülikool teabekeskus,p1rt31
+õigus ja intellektuaalomand osakond,p1ti07
+usuteaduskond emeriitdotsent,us01
+õigusteaduskond emeriitdotsent,oi01
