@@ -33,8 +33,10 @@ class SentenceProcessor:
         :param inputText: Text object with morph_analysis layer
         :return: tagged words in dictionary
         """
+
+        # keywords
         keywords = defaultdict(list)
-        keywords[wt.courseCodeWords] = ['ainekood', 'kood']
+        keywords[wt.courseCodeMentioned] = ['ainekood', 'kood']
         keywords[wt.preReqs] = ['eeldusaine', 'eeldus']
         keywords[wt.greeting] = ['tere', 'hei', 'hommikust', 'hommik', 'õhtust', 'tsau', 'ahoi']
         keywords[wt.language] = ['keel']
@@ -44,6 +46,7 @@ class SentenceProcessor:
         keywords[wt.lecturers] = ['õppejõud']
         keywords[wt.ects] = ['eap', 'eapd']
 
+        # Keywords what needs string in frame
         keywordsString = defaultdict(list)
         keywordsString[wt.questionWord] = ['kes', 'mis', 'kus', 'mitu']
         keywordsString[wt.pronoun] = ['mina', 'sina', 'tema', 'teie', 'meie', 'nemad']
@@ -62,31 +65,17 @@ class SentenceProcessor:
         for word in words:
             lemma = word.lemma[0].lower()
             # courses
-            if lemma in keywords[wt.ects]:
-                result[wt.keywords].append(wt.ects)
-            elif lemma in keywords[wt.courseCodeWords]:
-                result[wt.keywords].append(wt.courseCodeMentioned)
-            elif lemma in keywords[wt.preReqs]:
-                result[wt.keywords].append(wt.preReqs)
-            elif lemma in keywords[wt.language]:
-                result[wt.keywords].append(wt.language)
-            elif lemma in keywords[wt.description]:
-                result[wt.keywords].append(wt.description)
-            elif lemma in keywords[wt.objective]:
-                result[wt.keywords].append(wt.objective)
-            elif lemma in keywords[wt.website]:
-                result[wt.keywords].append(wt.website)
-            elif lemma in keywords[wt.lecturers]:
-                result[wt.keywords].append(wt.lecturers)
+            for key in keywords:
+                if lemma in keywords[key]:
+                    result[wt.keywords].append(key)
+                    break
             # Misc
-            elif lemma in keywords[wt.questionWord]:
-                result[wt.questionWord] = lemma
-            elif lemma in keywords[wt.greeting]:
-                result[wt.keywords].append(wt.greeting)
-            elif lemma in keywords[wt.pronoun]:
-                result[wt.pronoun] = lemma
+            for key in keywordsString:
+                if lemma in keywordsString[key]:
+                    result[key] = lemma
+                    break
             # Structural units
-            elif lemma in self.structuralUnits:
+            if lemma in self.structuralUnits:
                 result[wt.structureUnitCode] = lemma
             else:
                 if 'V' in word.partofspeech:

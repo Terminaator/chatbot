@@ -39,8 +39,6 @@ class chatbot():
         possibleTopics = []
         subject = ""
 
-
-
         #WHAT IS questions
         if self.isWhatIsQuestionAsked(currentLayer):
             if sUnits[wt.structureUnitCode] != "":
@@ -48,9 +46,6 @@ class chatbot():
                 return self.answerWhatIsStructureCode(sUnits[wt.structureUnitCode])
             if courses[wt.courseID] != "":
                 return self.answerWhatIsCourseCode(courses[wt.courseID])
-
-
-
 
         #COURSES questions
         if len(courses[wt.courseID]) != 0:
@@ -63,6 +58,9 @@ class chatbot():
             if wt.preReqs in misc[wt.keywords]:
                 self.askedQuestion = 0
                 return self.answerCoursePreReqs(courses[wt.courseID])
+            if wt.language in misc[wt.keywords]:
+                self.askedQuestion = 0
+                return self.answerLanguage(courses[wt.courseID])
 
             # If doesn't know what to answer
             subject = "kursuse"  # todo käänamine või panna kõik juba sobivasse käändesse
@@ -189,6 +187,14 @@ class chatbot():
             result += possibleTopics[-1] + "."
         result += "\nPalun täpsusta!"
         return result
+
+    def answerLanguage(self, courseIds):
+        results = []
+        for id in courseIds:
+            json = oisCourses.coursesId(id)
+            print(synthesize("kelse", "sg in", "S"))
+            results.append("Aine " + json['title']['et'] + " on "  )
+        return ", ".join(results) + "."
 
 
     def answerWhatIsStructureCode(self, structureCode):
