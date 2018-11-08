@@ -61,10 +61,22 @@ class chatbot():
             if wt.language in misc[wt.keywords]:
                 self.askedQuestion = 0
                 return self.answerLanguage(courses[wt.courseID])
+            if wt.description in misc[wt.keywords]:
+                self.askedQuestion = 0
+                return self.answerDescription(courses[wt.courseID])
+            if wt.objective in misc[wt.keywords]:
+                self.askedQuestion = 0
+                return self.answerObjective(courses[wt.courseID])
+            if wt.website in misc[wt.keywords]:
+                self.askedQuestion = 0
+                return self.answerWebsite(courses[wt.courseID])
+            if wt.lecturers in misc[wt.keywords]:
+                self.askedQuestion = 0
+                return self.answerLecturers(courses[wt.courseID])
 
             # If doesn't know what to answer
             subject = "kursuse"  # todo käänamine või panna kõik juba sobivasse käändesse
-            possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi"]  # todo add words if you add questions
+            possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi", "õpetamiskeelt", "kodulehte", "õppejõude", "kirjeldust", "eesmärki"]  # todo add words if you add questions
 
 
         # Greeting
@@ -189,12 +201,82 @@ class chatbot():
         return result
 
     def answerLanguage(self, courseIds):
+        """
+        Creates answer for language question
+        :param courseIds: asked courses
+        :return: courses language
+        """
         results = []
         for id in courseIds:
             json = oisCourses.coursesId(id)
-            print(synthesize("kelse", "sg in", "S"))
-            results.append("Aine " + json['title']['et'] + " on "  )
-        return ", ".join(results) + "."
+            lang = json['target']['language']['et'].split(" ")
+            lang[-1] = synthesize(lang[-1], "sg in", "S")[0]
+            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " on " + " ".join(lang))
+        return "\n".join(results) + "."
+
+    def answerDescription(self, courseIds):
+        """
+        Creates answer for description question
+        :param courseIds: asked courses
+        :return: courses description
+        """
+        results = []
+        for id in courseIds:
+            json = oisCourses.coursesId(id)
+            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " kirjeldus:\n" + json['overview']['description']['et'])
+        return "\n".join(results)
+
+    def answerObjective(self, courseIds):
+        """
+        Creates answer for objectives question
+        :param courseIds: asked courses
+        :return: courses objective
+        """
+        results = []
+        for id in courseIds:
+            json = oisCourses.coursesId(id)
+            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " eesmärk:\n" + json['overview']['objectives'][0]['et'])
+        return "\n".join(results)
+
+    def answerWebsite(self, courseIds):
+        """
+        Creates answer for website question
+        :param courseIds: asked courses
+        :return: courses website
+        """
+        results = []
+        for id in courseIds:
+            json = oisCourses.coursesId(id)
+            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " veebileht on " + json['resources']['website_url'])
+        return "\n".join(results)
+
+    def answerLecturers(self, courseIds):
+        """
+        Creates answer for lecturers question
+        :param courseIds: asked courses
+        :return: courses lecturers
+        """
+        results = []
+        for id in courseIds:
+            json = oisCourses.coursesId(id)
+            lecturers = json['participants']['lecturers']
+            result = ""
+            result += "Aine " + json['title']['et'] + "(" + id + ") "
+            responsible = []
+            otherLecturers = []
+            for lecturer in lecturers:
+                if lecturer['is_responsible']:
+                    responsible.append(lecturer['person_name'])
+                else:
+                    otherLecturers.append(lecturer['person_name'])
+            if len(responsible) == 1:
+                result += "vastutav õppejõud on " + responsible[0] + "."
+            else:
+                result += "vastutavad õppejõud on " + ", ".join(responsible) + "."
+            if len(otherLecturers) != 0:
+                result += "\nTeised õppejõud on " + ", ".join(otherLecturers)
+            results.append(result)
+        return "\n".join(results)
 
 
     def answerWhatIsStructureCode(self, structureCode):

@@ -2,7 +2,6 @@
 import views.ois.courses as oisCourses
 import views.ois.structuralUnits as oisStrucUnits
 from collections import defaultdict
-import estnltk as enl
 from estnltk import Text
 import itertools
 import logging
