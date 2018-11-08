@@ -54,13 +54,13 @@ class chatbot():
 
         #COURSES questions
         if len(courses[wt.courseID]) != 0:
-            if courses[wt.ects]:
+            if wt.ects in misc[wt.keywords]:
                 self.askedQuestion = 0
                 return self.answerCourseEcts(courses[wt.courseID])
-            if courses[wt.courseCodeMentioned]:
+            if wt.courseCodeMentioned in misc[wt.keywords]:
                 self.askedQuestion = 0
                 return self.answerCourseCode(courses[wt.courseID])
-            if courses[wt.preReqs]:
+            if wt.preReqs in misc[wt.keywords]:
                 self.askedQuestion = 0
                 return self.answerCoursePreReqs(courses[wt.courseID])
 
@@ -70,7 +70,7 @@ class chatbot():
 
 
         # Greeting
-        if misc[wt.greeting]:
+        if wt.greeting in misc[wt.keywords]:
             self.askedQuestion = 0
             return self.sayHello()
 
@@ -144,14 +144,15 @@ class chatbot():
         frame = {
             layer 0: {
                 sentence : [words]
-                misc : {questionWord: String, greeting: boolean, pronoun: String, verb: String}
-                courses : {courseID: String, ects : boolean, preReqs : boolean, CourseCodeMentioned: boolean}
+                misc : {questionWord: String, pronoun: String, verb: String, keywords: list}
+                courses : {courseID: String}
                 structuralUnits: {structuralUnitCode: String}
             }
         }
         """
-        misc = {wt.questionWord: "", wt.greeting: False, wt.pronoun: "", wt.verb: ""}
-        courses = {wt.courseID: "", wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False}
+        # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
+        misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.keywords: []}
+        courses = {wt.courseID: ""}
         sUnit = {wt.structureUnitCode: ""}
         layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
         return layer
