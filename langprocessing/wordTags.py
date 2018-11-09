@@ -13,6 +13,7 @@ class WordTag(Enum):
     whatIsQuestionTargetWord = 5
     keywords = 6
     websiteName = 7
+    timeWord = 8
 
     #courses
     courses = 20
@@ -27,6 +28,8 @@ class WordTag(Enum):
     objective = 29
     courseCodeWords = 30
     grade = 31
+    course = 32 # if course word has been mentioned
+
 
 
     #Structure Units

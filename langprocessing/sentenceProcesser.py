@@ -49,12 +49,14 @@ class SentenceProcessor:
         keywords[wt.email] = ['email', 'mail', 'meil']
         keywords[wt.address] = ['aadress', 'asukoht']
         keywords[wt.grade] = ['hindamine', 'hinne']
+        keywords[wt.course] = ['aine', 'kursus']
 
 
         # Keywords what needs string in frame
         keywordsString = defaultdict(list)
-        keywordsString[wt.questionWord] = ['kes', 'mis', 'kus', 'mitu']
+        keywordsString[wt.questionWord] = ['kes', 'mis', 'kus', 'mitu', 'kuna']
         keywordsString[wt.pronoun] = ['mina', 'sina', 'tema', 'teie', 'meie', 'nemad']
+        keywordsString[wt.timeWord] = ['järgmine']
         keywordsString[wt.websiteName] = ['course', 'moodle', 'õis', 'õppeinfosüsteem', 'raamatukogu', 'ester', 'esileht']
 
         result = defaultdict(list)

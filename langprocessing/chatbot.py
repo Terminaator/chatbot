@@ -95,6 +95,11 @@ class chatbot():
             self.askedQuestion = 0
             return self.answerImportantUniWebsites(misc[wt.websiteName])
 
+        # Authentication required questions
+        if misc[wt.pronoun] == "mina" and misc[wt.timeWord] == "järgmine" and wt.course in misc[wt.keywords] and misc[wt.questionWord]:
+            self.askedQuestion = 0
+            return self.answerAuthMyNextCourse(misc[wt.questionWord])
+
         # Greeting
         if wt.greeting in misc[wt.keywords]:
             self.askedQuestion = 0
@@ -177,14 +182,14 @@ class chatbot():
         frame = {
             layer 0: {
                 sentence : [words]
-                misc : {questionWord: String, pronoun: String, verb: String, websiteName: String, keywords: list}
+                misc : {questionWord: String, pronoun: String, verb: String, timeWord; String, websiteName: String, keywords: list}
                 courses : {courseID: String}
                 structuralUnits: {structuralUnitCode: String}
             }
         }
         """
         # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
-        misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.keywords: []}
+        misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.keywords: []}
         courses = {wt.courseID: ""}
         sUnit = {wt.structureUnitCode: ""}
         layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
@@ -508,6 +513,15 @@ class chatbot():
             else:
                 return "Sellel kursusel pole eeldusaineid."
         return result + "."
+
+    def answerAuthMyNextCourse(self, questionWord):
+        """
+        answers a question about users next course
+        :param questionWord: word we use to distinguish what the user wants
+        :return: question to the question
+        """
+        return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
+
 
     def sayHello(self):
         greetings = ['Tere!', 'Hello!', 'Ahoi!', 'Tervitus!', 'Ära ehmata! Hommikust sullegi!',
