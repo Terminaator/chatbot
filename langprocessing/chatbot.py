@@ -74,9 +74,20 @@ class chatbot():
             if wt.website in misc[wt.keywords]:
                 self.askedQuestion = 0
                 return self.answerStructeUnitWebsite(sUnits[wt.structureUnitCode])
+            if wt.phone in misc[wt.keywords]:
+                self.askedQuestion = 0
+                return self.answerPhoneStructUnit(sUnits[wt.structureUnitCode])
+            if wt.email in misc[wt.keywords]:
+                self.askedQuestion = 0
+                return self.answerEmailStructUnit(sUnits[wt.structureUnitCode])
+            if wt.address in misc[wt.keywords] or misc[wt.questionWord] in ['kus'] and ('olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
+                self.askedQuestion = 0
+                return self.answerAddressStructUnit(sUnits[wt.structureUnitCode])
+
+            subject = "struktuuriüksuse"
+            possibleTopics = ['kodulehte', 'telefoninumbrit', 'asukohta', 'emaili']
 
         # Other Important Uni websites
-        print(misc)
         if wt.website in misc[wt.keywords] and len(misc[wt.websiteName]) != 0:
             self.askedQuestion = 0
             return self.answerImportantUniWebsites(misc[wt.websiteName])
@@ -89,7 +100,7 @@ class chatbot():
         # WHAT IS questions
         if self.isWhatIsQuestionAsked(currentLayer):
             if sUnits[wt.structureUnitCode] != "":
-                self.askedQuestion = False
+                self.askedQuestion = 0
                 return self.answerWhatIsStructureCode(sUnits[wt.structureUnitCode])
             if courses[wt.courseID] != "":
                 return self.answerWhatIsCourseCode(courses[wt.courseID])
@@ -210,6 +221,48 @@ class chatbot():
             result += possibleTopics[-1] + "."
         result += "\nPalun täpsusta!"
         return result
+
+    def answerPhoneStructUnit(self, structUnits):
+        """
+        Creates answer for phone question
+        :param structUnits: asked structuralunits
+        :return: structuralunits phonenumber
+        """
+        results = []
+        for id in structUnits:
+            json = oisStructuralUnits.getStructuralUnit(id)
+            name = json['name']['et'].split(" ")
+            name[-1] = synthesize(name[-1], 'sg g')[0]
+            results.append(" ".join(name).capitalize() + " telefoni number on " + json['phone'])
+        return "\n".join(results) + "."
+
+    def answerEmailStructUnit(self, structUnits):
+        """
+        Creates answer for email question
+        :param structUnits: asked structuralunits
+        :return: structuralunits email
+        """
+        results = []
+        for id in structUnits:
+            json = oisStructuralUnits.getStructuralUnit(id)
+            name = json['name']['et'].split(" ")
+            name[-1] = synthesize(name[-1], 'sg g')[0]
+            results.append(" ".join(name).capitalize() + " email on " + json['email'])
+        return "\n".join(results) + "."
+
+    def answerAddressStructUnit(self, structUnits):
+        """
+        Creates answer for address question
+        :param structUnits: asked structuralunits
+        :return: structuralunits address
+        """
+        results = []
+        for id in structUnits:
+            json = oisStructuralUnits.getStructuralUnit(id)
+            name = json['name']['et'].split(" ")
+            name[-1] = synthesize(name[-1], 'sg g')[0]
+            results.append(" ".join(name).capitalize() + " aadress on " + json['street'] + ", " + json['city'])
+        return "\n".join(results) + "."
 
     def answerLanguage(self, courseIds):
         """

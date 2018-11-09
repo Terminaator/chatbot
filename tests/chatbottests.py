@@ -203,6 +203,27 @@ class TestSimpleRequests(unittest.TestCase):
         self.assertTrue(
             bot.getResponse(sentence).startswith("Aine Tarkvaraprojekt(LTAT.05.005) eesmärk:\nKursuse eesmärgiks"))
 
+    def test_phoneSUQuestion(self):
+        bot = cbot.chatbot()
+        sentence = "Mis on LTAT telefoninumber?"
+        self.assertEqual(
+            "Arvutiteaduse instituudi telefoni number on (+372) 737 5445.",
+            bot.getResponse(sentence))
+
+    def test_emailSUQuestion(self):
+        bot = cbot.chatbot()
+        sentence = "Mis on LTAT email?"
+        self.assertEqual(
+            "Arvutiteaduse instituudi email on ics@ut.ee.",
+            bot.getResponse(sentence))
+
+    def test_addressSUQuestion(self):
+        bot = cbot.chatbot()
+        sentence = "Kus asub LTAT?"
+        self.assertEqual(
+            "Arvutiteaduse instituudi aadress on J. Liivi 2, Tartu linn.",
+            bot.getResponse(sentence))
+
 
 if __name__ == '__main__':
     unittest.main()

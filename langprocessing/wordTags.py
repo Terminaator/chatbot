@@ -31,4 +31,7 @@ class WordTag(Enum):
     #Structure Units
     structureUnits = 40
     structureUnitCode = 41
+    phone = 42
+    email = 43
+    address = 44
 
