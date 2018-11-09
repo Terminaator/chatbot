@@ -26,6 +26,7 @@ class WordTag(Enum):
     description = 28
     objective = 29
     courseCodeWords = 30
+    grade = 31
 
 
     #Structure Units

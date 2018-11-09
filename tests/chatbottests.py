@@ -112,7 +112,6 @@ class TestSimpleRequests(unittest.TestCase):
 
     def test_simpleGetWords(self):
         sentProcessor = sentProc.SentenceProcessor()
-        print(sentProcessor.getWords("ainekood eeldusained"))
         self.assertEqual(
             {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
              wt.courseID: ["LTAT.05.005"]},
@@ -138,25 +137,21 @@ class TestSimpleRequests(unittest.TestCase):
     def test_ExtraQuestions(self):
         bot = cbot.chatbot()
         sentence = "Anna infot tarkvaraprojekti kohta?"
-        self.assertEqual(
-            "Mulle tundub, et sa tahtsid küsida infot kursuse kohta. Kursuse kohta saad küsida eelduaineid, eapde arvu, ainekoodi, õpetamiskeelt, kodulehte, õppejõude, kirjeldust ja eesmärki.\nPalun täpsusta!",
-            bot.getResponse(sentence))
+        self.assertTrue(bot.getResponse(sentence).startswith("Mulle tundub, et sa tahtsid küsida infot kursuse kohta. Kursuse kohta saad küsida"))
         sentence = "eap"
         self.assertEqual("Tarkvaraprojekti maht on 6 eap.", bot.getResponse(sentence))
 
         sentence = "Anna infot tarkvaraprojekti kohta?"
-        self.assertEqual(
-            "Mulle tundub, et sa tahtsid küsida infot kursuse kohta. Kursuse kohta saad küsida eelduaineid, eapde arvu, ainekoodi, õpetamiskeelt, kodulehte, õppejõude, kirjeldust ja eesmärki.\nPalun täpsusta!",
-            bot.getResponse(sentence))
+        self.assertTrue(bot.getResponse(sentence).startswith(
+            "Mulle tundub, et sa tahtsid küsida infot kursuse kohta. Kursuse kohta saad küsida"))
         sentence = "django on jama"
         self.assertEqual("Kahjuks ma ei saanud teist aru.", bot.getResponse(sentence))
 
     def test_ExtraQuestions2(self):
         bot = cbot.chatbot()
         sentence = "Anna infot tarkvaraprojekti kohta?"
-        self.assertEqual(
-            "Mulle tundub, et sa tahtsid küsida infot kursuse kohta. Kursuse kohta saad küsida eelduaineid, eapde arvu, ainekoodi, õpetamiskeelt, kodulehte, õppejõude, kirjeldust ja eesmärki.\nPalun täpsusta!",
-            bot.getResponse(sentence))
+        self.assertTrue(bot.getResponse(sentence).startswith(
+            "Mulle tundub, et sa tahtsid küsida infot kursuse kohta. Kursuse kohta saad küsida"))
         sentence = "Mitu eap'd annab veebirakenduste loomise läbimine?"
         self.assertEqual(
             "Selle nimega on 2 erinevat kursust. LTAT.05.004 mille maht on 6 eap ja P2NC.01.094 mille maht on 5 eap.",
@@ -224,6 +219,11 @@ class TestSimpleRequests(unittest.TestCase):
             "Arvutiteaduse instituudi aadress on J. Liivi 2, Tartu linn.",
             bot.getResponse(sentence))
 
+    def test_gradeQuestion(self):
+        bot = cbot.chatbot()
+        sentence = "Milline on Tarkvaratehnika hindamine?"
+        self.assertTrue(
+            bot.getResponse(sentence).startswith("Aine Tarkvaratehnika(LTAT.05.003) hindamine on Eristav (A, B, C, D, E, F, mi)"))
 
 if __name__ == '__main__':
     unittest.main()

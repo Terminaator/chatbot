@@ -36,7 +36,6 @@ class chatbot():
         possibleTopics = []
         subject = ""
 
-
         # COURSES questions
         if len(courses[wt.courseID]) != 0:
             if wt.ects in misc[wt.keywords]:
@@ -63,11 +62,14 @@ class chatbot():
             if wt.lecturers in misc[wt.keywords]:
                 self.askedQuestion = 0
                 return self.answerLecturers(courses[wt.courseID])
+            if wt.grade in misc[wt.keywords]:
+                self.askedQuestion = 0
+                return self.answerGrade(courses[wt.courseID])
 
             # If doesn't know what to answer
             subject = "kursuse"  # todo käänamine või panna kõik juba sobivasse käändesse
             possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi", "õpetamiskeelt", "kodulehte", "õppejõude",
-                              "kirjeldust", "eesmärki"]  # todo add words if you add questions
+                              "kirjeldust", "eesmärki", "hindamist"]  # todo add words if you add questions
 
         # Structure Units
         if len(sUnits[wt.structureUnitCode]) != 0:
@@ -80,7 +82,8 @@ class chatbot():
             if wt.email in misc[wt.keywords]:
                 self.askedQuestion = 0
                 return self.answerEmailStructUnit(sUnits[wt.structureUnitCode])
-            if wt.address in misc[wt.keywords] or misc[wt.questionWord] in ['kus'] and ('olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
+            if wt.address in misc[wt.keywords] or misc[wt.questionWord] in ['kus'] and (
+                    'olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
                 self.askedQuestion = 0
                 return self.answerAddressStructUnit(sUnits[wt.structureUnitCode])
 
@@ -202,7 +205,7 @@ class chatbot():
 
         return (misc[wt.questionWord] in ["mis"] and len(
             set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (
-                           sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID)
+                   sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID)
 
     def askExtraInfo(self, subject, possibleTopics):
         """
@@ -221,6 +224,23 @@ class chatbot():
             result += possibleTopics[-1] + "."
         result += "\nPalun täpsusta!"
         return result
+
+    def answerGrade(self, courseIds):
+        """
+        Creates answer for grade question
+        :param courseIds: asked courses
+        :return: courses grading
+        """
+        results = []
+        for id in courseIds:
+            json = oisCourses.coursesId(id)
+            result = "Aine " + json['title']['et'] + "(" + id + ")" + " hindamine on " + json['grading']['assessment_scale']['et']
+            if "et" in json['grading']['grade_evaluation']:
+                result += ".\nLõpphinne:\n" + json['grading']['grade_evaluation']['et']
+            if "et" in json['grading']['debt_elimination']:
+                result += "\nVõlgnevuste likvideerimine:\n" + json['grading']['debt_elimination']['et']
+            results.append(result)
+        return "\n".join(results)
 
     def answerPhoneStructUnit(self, structUnits):
         """
@@ -360,7 +380,6 @@ class chatbot():
         elif siteName == "esileht":
             return "Tartu ülikooli esileht asub aadressil https://www.ut.ee/"
         return "Arendajad unustasid antud veebilehe lingi lisada või midagi läks valesti."
-
 
     def answerLecturers(self, courseIds):
         """

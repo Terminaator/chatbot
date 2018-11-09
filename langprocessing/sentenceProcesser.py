@@ -48,6 +48,7 @@ class SentenceProcessor:
         keywords[wt.phone] = ['telefon', 'mobiil', 'number', 'telefoninumber']
         keywords[wt.email] = ['email', 'mail', 'meil']
         keywords[wt.address] = ['aadress', 'asukoht']
+        keywords[wt.grade] = ['hindamine', 'hinne']
 
 
         # Keywords what needs string in frame
