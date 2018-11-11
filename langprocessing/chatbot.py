@@ -587,11 +587,19 @@ class chatbot():
 
     def answerGeneralWhatQuestion(self, word, verbs):
         answer = wa.Answers
-        return answer.__getattribute__(answer, word)
+        try:
+            a = answer.__getattribute__(answer, word)
+        except AttributeError:
+            a = "Ma ei tea mis " + word + " on."
+        return a
 
     def answerWhoQuestion(self, word):
         answer = wha.Answers
-        return answer.__getattribute__(answer, word)
+        try:
+            a = answer.__getattribute__(answer, word)
+        except AttributeError:
+            a = "Ma ei tea kes " + word + " on."
+        return a
 
     def synthesizeWord(self, word, f):
         """

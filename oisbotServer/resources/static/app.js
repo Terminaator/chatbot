@@ -28,12 +28,19 @@ function clearfield() {
 
                }
             }).then(function(response){
-                $scope.answer = response.data;
+                var preanswer = response.data;
+                var a = preanswer.split("\n");
+                var f = "";
+                for (let l in a){
+                    f +='<div>'+ l + '<br/>'+'</div>'
+                     }
+                $scope.answer = f;
+
                 $scope.questions.push([response.data,'False']);
 
             },
             function(response){
-                var answer = {"answer":"Ei tea"};
+                var answer = {"answer":"Ma tõesti ei tea. "};
                 $scope.questions.push([answer,'False']);
             }
             );
