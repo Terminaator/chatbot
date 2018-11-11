@@ -4,6 +4,7 @@ from langprocessing import chatbot as cbot
 from langprocessing import sentenceProcesser as sentProc
 from langprocessing.wordTags import WordTag as wt
 
+
 class TestSimpleRequests(unittest.TestCase):
 
     def test_fillFrameLayer(self):
