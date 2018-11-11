@@ -18,4 +18,4 @@ install:
   - pip install djangorestframework
   - pip install requests
   - pip install estnltk==1.6.0b0 --quiet
-script: python testsWithoutÕis2.py
+script: python tests/testsWithoutÕis2.py
