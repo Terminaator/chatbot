@@ -224,6 +224,8 @@ class chatbot():
         """
         misc = currenLayer[wt.misc]
         sentence = currenLayer[wt.sentence]
+        if len(sentence) < 2:
+            return False
         if sentence[1] != wt.verb or sentence[0] != wt.questionWord:
             return False
         return (misc[wt.questionWord] in ["kes", "keda"] and len(
