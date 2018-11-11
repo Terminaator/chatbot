@@ -8,8 +8,13 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 """
 
 import os
-from django.core.wsgi import get_wsgi_application
+import sys
+
+path = '/var/www/ois2chatbot'
+if path not in sys.path:
+    sys.path.append(path)
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oisbotServer.settings')
 
+from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

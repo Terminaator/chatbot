@@ -25,7 +25,7 @@ SECRET_KEY = '0wrfr)==%pg9o9^bntkonl##6w1-tu++1l(337fz0jfgh2o%$e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -97,4 +97,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+STATIC_ROOT = '/var/www/ois2chatbot/chatbot/'
 STATIC_URL = '/static/'
