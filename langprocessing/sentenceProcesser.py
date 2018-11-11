@@ -36,6 +36,7 @@ class SentenceProcessor:
 
         # keywords
         keywords = defaultdict(list)
+        keywords[wt.help] = ['aitama', 'help', 'abi']
         keywords[wt.courseCodeMentioned] = ['ainekood', 'kood']
         keywords[wt.preReqs] = ['eeldusaine', 'eeldus']
         keywords[wt.greeting] = ['tere', 'hei', 'hommikust', 'hommik', 'õhtust', 'tsau', 'ahoi']

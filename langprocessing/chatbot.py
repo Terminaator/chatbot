@@ -2,6 +2,7 @@
 import views.ois.courses as oisCourses
 import views.ois.structuralUnits as oisStructuralUnits
 from estnltk.vabamorf.morf import synthesize, analyze
+from collections import defaultdict
 import langprocessing.sentenceProcesser as sentProc
 from random import randint
 from langprocessing.wordTags import WordTag as wt
@@ -35,6 +36,10 @@ class chatbot():
         sUnits = currentLayer[wt.structureUnits]
         possibleTopics = []
         subject = ""
+
+        #HELP command
+        if wt.help in misc[wt.keywords]:
+            return self.answerHelp()
 
         # COURSES questions
         if len(courses[wt.courseID]) != 0:
@@ -229,6 +234,24 @@ class chatbot():
             result += possibleTopics[-1] + "."
         result += "\nPalun täpsusta!"
         return result
+
+    def answerHelp(self):
+        """
+        Creates answer for help command
+        :return: help
+        """
+        topics = defaultdict(list)
+        topics["Kursused:"] = ['Eap\'de', 'Kursuse kood', 'Eeldusained', 'Õpetamiskeel', 'Kirjeldus', 'Eesmärk', 'Koduleht', 'Õppejõud', 'Hindamine']
+        topics["Struktuuriüksused:"] = ['Koodi tähendus', 'Koduleht', 'Telefoninumber', 'Email', 'Aadress']
+        topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link']
+
+        result = "Mina olen sõbralik(enamasti) õis2 chatbot. Mult saab küsida järgmiste teemade kohta."
+        for topic in topics:
+            result += "\n" + topic
+            for t in topics[topic]:
+                result += "\n\t" + t
+        return result
+
 
     def answerGrade(self, courseIds):
         """

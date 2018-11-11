@@ -14,6 +14,7 @@ class WordTag(Enum):
     keywords = 6
     websiteName = 7
     timeWord = 8
+    help = 9
 
     #courses
     courses = 20
