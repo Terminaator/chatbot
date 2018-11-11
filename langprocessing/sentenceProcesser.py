@@ -9,6 +9,7 @@ import csv
 import os
 from langprocessing.wordTags import WordTag as wt
 
+
 class SentenceProcessor:
     def __init__(self):
         self.courses = self._getCourses()
@@ -52,13 +53,25 @@ class SentenceProcessor:
         keywords[wt.grade] = ['hindamine', 'hinne']
         keywords[wt.course] = ['aine', 'kursus']
 
-
         # Keywords what needs string in frame
         keywordsString = defaultdict(list)
         keywordsString[wt.questionWord] = ['kes', 'mis', 'kus', 'mitu', 'kuna']
         keywordsString[wt.pronoun] = ['mina', 'sina', 'tema', 'teie', 'meie', 'nemad']
         keywordsString[wt.timeWord] = ['järgmine']
-        keywordsString[wt.websiteName] = ['course', 'moodle', 'õis', 'õppeinfosüsteem', 'raamatukogu', 'ester', 'esileht']
+        keywordsString[wt.websiteName] = ['course', 'moodle', 'õis', 'õppeinfosüsteem', 'raamatukogu', 'ester',
+                                          'esileht']
+        keywordsString[wt.about] = ['õppekava', 'õppeaine', 'valikaine', 'vabaaine', 'ainepunkt', 'EAP', 'moodul',
+                                    'alusmoodul', 'suunamoodul', 'erialamoodul', 'valikmoodul', 'vabaaine',
+                                    'bakalaureusetöö', 'bakalaureus', 'peaeriala', 'kõrvaleriala',
+                                    'rakenduskõrgharidus', 'akrediteerimine', 'diplom', 'eksmatrikuleerimine',
+                                    'ekstern', 'hindamine', 'immatrikuleerimine', 'kratt', 'urkund', 'külalisõppejõud',
+                                    'õpiväljund', 'õppekavagrupp', 'õppekoht', 'õppekoormus', 'õppekorralduseeskiri',
+                                    'õppeplaan', 'õppesuund', 'õppevaldkond', 'õppevorm', 'päevaõpe', 'sessioonõpe',
+                                    'petturlus', 'praktika', 'võta', 'valdkond', 'reimmatrikuleerimine', 'täiskoormus',
+                                    'osakoormus', 'akadeemilinekalender', 'eksam', 'korduseksam',
+                                    'akadeemilinepuhkus', 'plagiaat', 'õppeprorektor', 'teadusprorektor',
+                                    'arendusprorektor','kantsler', 'looja', 'rektor','tuutor'
+                                    ]
 
         result = defaultdict(list)
         inputText.tag_layer(['morph_analysis'])
@@ -110,10 +123,7 @@ class SentenceProcessor:
                     wordCounter += 1
             i -= 1
 
-
-
         return result
-
 
     def _getCourses(self):
         """
@@ -175,11 +185,13 @@ def updateCoursesCSV():
             i += n
             courses = oisCourses.getNCourses(n, i)
 
+
 def updateStructuralUnitsCSV():
     """
     Updates csv file where are all the university structure units
     """
-    with open(os.path.join(os.path.dirname(__file__), 'structuralUnits.csv'), 'w', newline='', encoding="UTF-8") as file:
+    with open(os.path.join(os.path.dirname(__file__), 'structuralUnits.csv'), 'w', newline='',
+              encoding="UTF-8") as file:
         writer = csv.writer(file, delimiter=',')
         sUnits = oisStrucUnits.getAllStructuralUnits()
         for c in sUnits:
@@ -188,7 +200,3 @@ def updateStructuralUnitsCSV():
                     t = Text(c['name']['et'].lower())
                     t.tag_layer(['morph_analysis'])
                     writer.writerow([" ".join([x[0] for x in t.morph_analysis.lemma]), c['code'].lower()])
-
-
-
-

@@ -6,6 +6,8 @@ from collections import defaultdict
 import langprocessing.sentenceProcesser as sentProc
 from random import randint
 from langprocessing.wordTags import WordTag as wt
+import langprocessing.whatAnswers as wa
+import langprocessing.whoAnswers as wha
 
 
 class chatbot():
@@ -36,8 +38,8 @@ class chatbot():
         sUnits = currentLayer[wt.structureUnits]
         possibleTopics = []
         subject = ""
-
-        #HELP command
+        print(misc)
+        # HELP command
         if wt.help in misc[wt.keywords]:
             return self.answerHelp()
 
@@ -101,7 +103,8 @@ class chatbot():
             return self.answerImportantUniWebsites(misc[wt.websiteName])
 
         # Authentication required questions
-        if misc[wt.pronoun] == "mina" and misc[wt.timeWord] == "järgmine" and wt.course in misc[wt.keywords] and misc[wt.questionWord]:
+        if misc[wt.pronoun] == "mina" and misc[wt.timeWord] == "järgmine" and wt.course in misc[wt.keywords] and misc[
+            wt.questionWord]:
             self.askedQuestion = 0
             return self.answerAuthMyNextCourse(misc[wt.questionWord])
 
@@ -110,8 +113,15 @@ class chatbot():
             self.askedQuestion = 0
             return self.sayHello()
 
+        # WHO IS questions
+        if self.isWHoQuestionAsked(currentLayer):
+            return self.answerWhoQuestion(misc[wt.about])
+
         # WHAT IS questions
         if self.isWhatIsQuestionAsked(currentLayer):
+            if misc[wt.about] != "":
+                self.askedQuestion = 0
+                return self.answerGeneralWhatQuestion(misc[wt.about], misc[wt.verb])
             if sUnits[wt.structureUnitCode] != "":
                 self.askedQuestion = 0
                 return self.answerWhatIsStructureCode(sUnits[wt.structureUnitCode])
@@ -122,6 +132,10 @@ class chatbot():
         if misc[wt.questionWord] in ['mis', 'kes'] and misc[wt.pronoun] == 'sina' and 'olema' in misc[wt.verb]:
             self.askedQuestion = 0
             return self.answerWhoYouAre()
+        # Whats up
+        if 'mis' in misc[wt.questionWord] and 'tegema' in misc[wt.verb] :
+            self.askedQuestion = 0
+            return "Hetkel vastan küsimustele, aga hiljem lähen ATV-ga sõitma."
 
         # Questions with memory
         if self.askedQuestion == 1:
@@ -187,18 +201,36 @@ class chatbot():
         frame = {
             layer 0: {
                 sentence : [words]
-                misc : {questionWord: String, pronoun: String, verb: String, timeWord; String, websiteName: String, keywords: list}
+                misc : {questionWord: String, pronoun: String, verb: String, timeWord; String, websiteName: String,
+                keywords: list}
                 courses : {courseID: String}
                 structuralUnits: {structuralUnitCode: String}
             }
         }
         """
         # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
-        misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.keywords: []}
+        misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.about: "",
+                wt.keywords: []}
         courses = {wt.courseID: ""}
         sUnit = {wt.structureUnitCode: ""}
         layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
         return layer
+
+    def isWHoQuestionAsked(self, currenLayer):
+        """
+        checks if user asked WHO IS question
+        :param currenLayer:
+        :return:
+        """
+        misc = currenLayer[wt.misc]
+        sentence = currenLayer[wt.sentence]
+        if sentence[1] != wt.verb or sentence[0] != wt.questionWord:
+            return False
+        return (misc[wt.questionWord] in ["kes", "keda"] and len(
+            set(misc[wt.verb]).intersection({"olema", "valima"})
+        )) != 0 and (
+                       sentence[2] == wt.about
+               )
 
     def isWhatIsQuestionAsked(self, currentLayer):
         """
@@ -212,10 +244,10 @@ class chatbot():
             return False
         if sentence[1] != wt.verb or sentence[0] != wt.questionWord:
             return False
-
-        return (misc[wt.questionWord] in ["mis"] and len(
+        return (misc[wt.questionWord] in ["mis", "mida"] and len(
             set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (
-                   sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID)
+                       sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID or sentence[2] == wt.about or
+                       sentence[2] == wt.verb)
 
     def askExtraInfo(self, subject, possibleTopics):
         """
@@ -224,7 +256,9 @@ class chatbot():
         :param possibleTopics: What user can ask about that subject
         :return: response
         """
-        result = "Mulle tundub, et sa tahtsid küsida infot " + subject + " kohta. " + subject.capitalize() + " kohta saad küsida "
+        result = "Mulle tundub, et sa tahtsid küsida infot " + subject + " kohta. " + subject.capitalize() + " kohta " \
+                                                                                                             "saad " \
+                                                                                                             "küsida "
         if len(possibleTopics) == 1:
             result += possibleTopics[0] + "."
         else:
@@ -241,7 +275,8 @@ class chatbot():
         :return: help
         """
         topics = defaultdict(list)
-        topics["Kursused:"] = ['Eap\'de', 'Kursuse kood', 'Eeldusained', 'Õpetamiskeel', 'Kirjeldus', 'Eesmärk', 'Koduleht', 'Õppejõud', 'Hindamine']
+        topics["Kursused:"] = ['Eap\'de', 'Kursuse kood', 'Eeldusained', 'Õpetamiskeel', 'Kirjeldus', 'Eesmärk',
+                               'Koduleht', 'Õppejõud', 'Hindamine']
         topics["Struktuuriüksused:"] = ['Koodi tähendus', 'Koduleht', 'Telefoninumber', 'Email', 'Aadress']
         topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link']
 
@@ -252,7 +287,6 @@ class chatbot():
                 result += "\n\t" + t
         return result
 
-
     def answerGrade(self, courseIds):
         """
         Creates answer for grade question
@@ -262,7 +296,8 @@ class chatbot():
         results = []
         for id in courseIds:
             json = oisCourses.coursesId(id)
-            result = "Aine " + json['title']['et'] + "(" + id + ")" + " hindamine on " + json['grading']['assessment_scale']['et']
+            result = "Aine " + json['title']['et'] + "(" + id + ")" + " hindamine on " + \
+                     json['grading']['assessment_scale']['et']
             if "et" in json['grading']['grade_evaluation']:
                 result += ".\nLõpphinne:\n" + json['grading']['grade_evaluation']['et']
             if "et" in json['grading']['debt_elimination']:
@@ -545,11 +580,18 @@ class chatbot():
         """
         return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
 
-
     def sayHello(self):
         greetings = ['Tere!', 'Hello!', 'Ahoi!', 'Tervitus!', 'Ära ehmata! Hommikust sullegi!',
                      '01010100 01100101 01110010 01100101 00001010', 'Tsau tsau!']
         return greetings[randint(0, len(greetings) - 1)]
+
+    def answerGeneralWhatQuestion(self, word, verbs):
+        answer = wa.Answers
+        return answer.__getattribute__(answer, word)
+
+    def answerWhoQuestion(self, word):
+        answer = wha.Answers
+        return answer.__getattribute__(answer, word)
 
     def synthesizeWord(self, word, f):
         """

@@ -15,6 +15,7 @@ class WordTag(Enum):
     websiteName = 7
     timeWord = 8
     help = 9
+    about = 10
 
     #courses
     courses = 20
@@ -39,4 +40,5 @@ class WordTag(Enum):
     phone = 42
     email = 43
     address = 44
+
 
