@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.http import JsonResponse
 import langprocessing.chatbot as cbot
-from views.json.requestJson import RequestJson
+from oisbotServer.views.json.requestJson import RequestJson
 
 bot = cbot.chatbot()
 @method_decorator(csrf_exempt, name='dispatch') #Võimalik, et me eemaldame selle ära

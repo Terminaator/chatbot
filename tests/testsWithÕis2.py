@@ -67,24 +67,6 @@ class TestSimpleRequests(unittest.TestCase):
             bot.getResponse(sentence))
 
 
-    def test_simpleGetWords(self):
-        sentProcessor = sentProc.SentenceProcessor()
-        self.assertEqual(
-            {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
-             wt.courseID: ["LTAT.05.005"]},
-            sentProcessor.getWords("Mitu eap'd on aine Tarkvaraprojekt"))
-        self.assertEqual(
-            {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
-             wt.courseID: ["MTAT.03.263"]},
-            sentProcessor.getWords("Mitu eap'd on aine Arvutimängude loomine ja disain"))
-        self.assertEqual(
-            {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
-             wt.courseID: ["LTAT.05.004", "P2NC.01.094"]},
-            sentProcessor.getWords("Mitu eap'd on aine Veebirakenduste loomine"))
-
-        self.assertEqual({wt.keywords: [wt.courseCodeMentioned, wt.preReqs], 0: 'ainekood', 1: 'eeldusaine'},
-                         sentProcessor.getWords("ainekood eeldusained"))
-
     def test_getStructureUnitCodes(self):
         sentProcessor = sentProc.SentenceProcessor()
         self.assertEqual({wt.structureUnitCode: ['ltat']}, sentProcessor.getWords("LTAT"))

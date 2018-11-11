@@ -7,7 +7,7 @@ function clearfield() {
 
         var MainController = function($scope, $http,){
             $scope.message = "kana";
-            var answer = {"answer":"Tere, mina olen ÕIS2 chatbot! Abi saamiseks kirjuta help"};
+            var answer = {"answer":"Tere, mina olen ÕIS2 resources! Abi saamiseks kirjuta help"};
             $scope.questions = [];
             $scope.questions.push([answer, "False"]);
 

@@ -1,6 +1,6 @@
 # coding: utf-8
-import views.ois.courses as oisCourses
-import views.ois.structuralUnits as oisStructuralUnits
+import oisbotServer.views.ois.courses as oisCourses
+import oisbotServer.views.ois.structuralUnits as oisStructuralUnits
 from estnltk.vabamorf.morf import synthesize, analyze
 from collections import defaultdict
 import langprocessing.sentenceProcesser as sentProc
@@ -245,7 +245,7 @@ class chatbot():
         topics["Struktuuriüksused:"] = ['Koodi tähendus', 'Koduleht', 'Telefoninumber', 'Email', 'Aadress']
         topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link']
 
-        result = "Mina olen sõbralik(enamasti) õis2 chatbot. Mult saab küsida järgmiste teemade kohta."
+        result = "Mina olen sõbralik(enamasti) õis2 resources. Mult saab küsida järgmiste teemade kohta."
         for topic in topics:
             result += "\n" + topic
             for t in topics[topic]:

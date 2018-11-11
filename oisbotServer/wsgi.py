@@ -1,5 +1,5 @@
 """
-WSGI config for ois2chatbot project.
+WSGI config for oisbotServer project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -10,6 +10,6 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 import os
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ois2chatbot.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oisbotServer.settings')
 
 application = get_wsgi_application()
