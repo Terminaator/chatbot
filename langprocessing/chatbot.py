@@ -38,7 +38,6 @@ class chatbot():
         sUnits = currentLayer[wt.structureUnits]
         possibleTopics = []
         subject = ""
-        print(misc)
         # HELP command
         if wt.help in misc[wt.keywords]:
             return self.answerHelp()
