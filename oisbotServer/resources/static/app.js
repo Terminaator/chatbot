@@ -28,11 +28,11 @@ function clearfield() {
 
                }
             }).then(function(response){
-                var preanswer = response.data;
-                var a = preanswer.split("\n");
+                var preanswer = response;
+                var a = preanswer.toString().split("\n");
                 var f = "";
                 for (let l in a){
-                    f +='<div>'+ l + '<br/>'+'</div>'
+                    f +=l + "<br>"
                      }
                 $scope.answer = f;
 
