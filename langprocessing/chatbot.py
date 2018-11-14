@@ -41,7 +41,7 @@ class chatbot():
         # HELP command
         if wt.help in misc[wt.keywords]:
             return self.answerHelp()
-
+        print(misc[wt.numbers])
         # COURSES questions
         if len(courses[wt.courseID]) != 0:
             if wt.ects in misc[wt.keywords]:
@@ -89,7 +89,7 @@ class chatbot():
                 self.askedQuestion = 0
                 return self.answerEmailStructUnit(sUnits[wt.structureUnitCode])
             if wt.address in misc[wt.keywords] or misc[wt.questionWord] in ['kus'] and (
-                    'olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
+                            'olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
                 self.askedQuestion = 0
                 return self.answerAddressStructUnit(sUnits[wt.structureUnitCode])
 
@@ -106,6 +106,9 @@ class chatbot():
             wt.questionWord]:
             self.askedQuestion = 0
             return self.answerAuthMyNextCourse(misc[wt.questionWord])
+        if wt.notifications in misc[wt.keywords] and wt.wordNew in misc[wt.keywords]:
+            self.askedQuestion = 0
+            return self.answerAuthMyNewNotifications()
 
         # Greeting
         if wt.greeting in misc[wt.keywords]:
@@ -132,7 +135,7 @@ class chatbot():
             self.askedQuestion = 0
             return self.answerWhoYouAre()
         # Whats up
-        if 'mis' in misc[wt.questionWord] and 'tegema' in misc[wt.verb] :
+        if 'mis' in misc[wt.questionWord] and 'tegema' in misc[wt.verb]:
             self.askedQuestion = 0
             return "Hetkel vastan küsimustele, aga hiljem lähen ATV-ga sõitma."
 
@@ -201,7 +204,7 @@ class chatbot():
             layer 0: {
                 sentence : [words]
                 misc : {questionWord: String, pronoun: String, verb: String, timeWord; String, websiteName: String,
-                keywords: list}
+                keywords: list, numbers: [Int]}
                 courses : {courseID: String}
                 structuralUnits: {structuralUnitCode: String}
             }
@@ -209,7 +212,7 @@ class chatbot():
         """
         # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
         misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.about: "",
-                wt.keywords: []}
+                wt.keywords: [], wt.numbers: []}
         courses = {wt.courseID: ""}
         sUnit = {wt.structureUnitCode: ""}
         layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
@@ -230,7 +233,7 @@ class chatbot():
         return (misc[wt.questionWord] in ["kes", "keda"] and len(
             set(misc[wt.verb]).intersection({"olema", "valima"})
         )) != 0 and (
-                       sentence[2] == wt.about
+                   sentence[2] == wt.about
                )
 
     def isWhatIsQuestionAsked(self, currentLayer):
@@ -247,8 +250,8 @@ class chatbot():
             return False
         return (misc[wt.questionWord] in ["mis", "mida"] and len(
             set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (
-                       sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID or sentence[2] == wt.about or
-                       sentence[2] == wt.verb)
+                   sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID or sentence[2] == wt.about or
+                   sentence[2] == wt.verb)
 
     def askExtraInfo(self, subject, possibleTopics):
         """
@@ -583,6 +586,13 @@ class chatbot():
         answers a question about users next course
         :param questionWord: word we use to distinguish what the user wants
         :return: question to the question
+        """
+        return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
+
+    def answerAuthMyNewNotifications(self):
+        """
+        shows notifications. If the user should have more than 5, then it asks to show all or n
+        :return: notifications or not authenticated message or specifying question
         """
         return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
 
