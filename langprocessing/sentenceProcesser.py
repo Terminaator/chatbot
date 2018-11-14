@@ -37,7 +37,7 @@ class SentenceProcessor:
         """
 
         # keywords
-        keywords = defaultdict(list)
+        keywords = defaultdict(set)
         keywords[wt.help] = {'aitama', 'help', 'abi'}
         keywords[wt.courseCodeMentioned] = {'ainekood', 'kood'}
         keywords[wt.preReqs] = {'eeldusaine', 'eeldus'}
@@ -57,7 +57,7 @@ class SentenceProcessor:
         keywords[wt.notifications] = {'teade'}
 
         # Keywords what needs string in frame
-        keywordsString = defaultdict(list)
+        keywordsString = defaultdict(set)
         keywordsString[wt.questionWord] = {'kes', 'mis', 'kus', 'mitu', 'kuna'}
         keywordsString[wt.pronoun] = {'mina', 'sina', 'tema', 'teie', 'meie', 'nemad'}
         keywordsString[wt.timeWord] = {'järgmine'}

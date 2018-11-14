@@ -69,8 +69,8 @@ class TestSimpleRequests(unittest.TestCase):
 
     def test_getStructureUnitCodes(self):
         sentProcessor = sentProc.SentenceProcessor()
-        self.assertEqual({wt.structureUnitCode: ['ltat']}, sentProcessor.getWords("LTAT"))
-        self.assertEqual({wt.structureUnitCode: ['bgom01', 'loom01', 'ltom01']},
+        self.assertEqual({wt.structureUnitCode: ['ltat'], wt.numbers: []}, sentProcessor.getWords("LTAT"))
+        self.assertEqual({wt.structureUnitCode: ['bgom01', 'loom01', 'ltom01'], wt.numbers: []},
                          sentProcessor.getWords("Botaanika osakond"))
 
     def test_ExtraQuestions(self):
