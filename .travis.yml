@@ -6,9 +6,13 @@ matrix:
       sudo: true
 env:
   - DJANGO_VERSION=2.1.2
+
 addons:
   apt_packages:
     - swig
+  ssh_known_hosts:
+    - 193.40.33.98:22
+
 before_install:
   - export DJANGO_SETTINGS_MODULE=oisbotServer.settings
   - export PYTHONPATH=$HOME/builds/diffusa/djangoapp
