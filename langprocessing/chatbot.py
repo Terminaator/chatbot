@@ -281,7 +281,7 @@ class chatbot():
         topics["Struktuuriüksused:"] = ['Koodi tähendus', 'Koduleht', 'Telefoninumber', 'Email', 'Aadress']
         topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link']
 
-        result = "Mina olen sõbralik(enamasti) õis2 resources. Mult saab küsida järgmiste teemade kohta."
+        result = "Mina olen sõbralik(enamasti) õis2 chatbot. Mult saab küsida järgmiste teemade kohta."
         for topic in topics:
             result += "\n" + topic
             for t in topics[topic]:

@@ -7,7 +7,7 @@ function clearfield() {
 
         var MainController = function($scope, $http,){
             $scope.message = "kana";
-            var answer = {"answer":"Tere, mina olen ÕIS2 resources! Abi saamiseks kirjuta help"};
+            var answer = {"answer":"Tere, mina olen ÕIS2 chatbot! Abi saamiseks kirjuta help"};
             $scope.questions = [];
             $scope.questions.push([answer, "False"]);
 
@@ -28,14 +28,6 @@ function clearfield() {
 
                }
             }).then(function(response){
-                var preanswer = response;
-                var a = preanswer.toString().split("\n");
-                var f = "";
-                for (let l in a){
-                    f +=l + "<br>"
-                     }
-                $scope.answer = f;
-
                 $scope.questions.push([response.data,'False']);
 
             },
