@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 import os
 import sys
 
-path = '/var/www/ois2chatbot'
+path = '/var/www/chatbot'
 if path not in sys.path:
     sys.path.append(path)
 

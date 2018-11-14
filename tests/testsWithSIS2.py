@@ -69,8 +69,8 @@ class TestSimpleRequests(unittest.TestCase):
 
     def test_getStructureUnitCodes(self):
         sentProcessor = sentProc.SentenceProcessor()
-        self.assertEqual({wt.structureUnitCode: ['ltat']}, sentProcessor.getWords("LTAT"))
-        self.assertEqual({wt.structureUnitCode: ['bgom01', 'loom01', 'ltom01']},
+        self.assertEqual({wt.structureUnitCode: ['ltat'], wt.numbers: []}, sentProcessor.getWords("LTAT"))
+        self.assertEqual({wt.structureUnitCode: ['bgom01', 'loom01', 'ltom01'], wt.numbers: []},
                          sentProcessor.getWords("Botaanika osakond"))
 
     def test_ExtraQuestions(self):
@@ -131,21 +131,21 @@ class TestSimpleRequests(unittest.TestCase):
         bot = cbot.chatbot()
         sentence = "Mis on LTAT telefoninumber?"
         self.assertEqual(
-            "Arvutiteaduse instituudi telefoni number on (+372) 737 5445.",
+            "Arvutiteaduse instituudi(LTAT) telefoni number on (+372) 737 5445.",
             bot.getResponse(sentence))
 
     def test_emailSUQuestion(self):
         bot = cbot.chatbot()
         sentence = "Mis on LTAT email?"
         self.assertEqual(
-            "Arvutiteaduse instituudi email on ics@ut.ee.",
+            "Arvutiteaduse instituudi(LTAT) email on ics@ut.ee.",
             bot.getResponse(sentence))
 
     def test_addressSUQuestion(self):
         bot = cbot.chatbot()
         sentence = "Kus asub LTAT?"
         self.assertEqual(
-            "Arvutiteaduse instituudi aadress on J. Liivi 2, Tartu linn.",
+            "Arvutiteaduse instituudi(LTAT) aadress on J. Liivi 2, Tartu linn.",
             bot.getResponse(sentence))
 
     def test_gradeQuestion(self):

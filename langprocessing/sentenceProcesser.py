@@ -26,6 +26,7 @@ class SentenceProcessor:
         text = Text(sentence)
         result = self._tagWords(text)
         self.logger.debug('Founded words: ' + str(result))
+        result[wt.numbers] = self._getNumbersFromText(sentence)
         return result
 
     def _tagWords(self, inputText: Text):
@@ -36,31 +37,33 @@ class SentenceProcessor:
         """
 
         # keywords
-        keywords = defaultdict(list)
-        keywords[wt.help] = ['aitama', 'help', 'abi']
-        keywords[wt.courseCodeMentioned] = ['ainekood', 'kood']
-        keywords[wt.preReqs] = ['eeldusaine', 'eeldus']
-        keywords[wt.greeting] = ['tere', 'hei', 'hommikust', 'hommik', 'õhtust', 'tsau', 'ahoi']
-        keywords[wt.language] = ['keel']
-        keywords[wt.description] = ['kirjeldus']
-        keywords[wt.objective] = ['eesmärk']
-        keywords[wt.website] = ['koduleht', 'leht', 'veeb', 'veebileht', 'link']
-        keywords[wt.lecturers] = ['õppejõud']
-        keywords[wt.ects] = ['eap', 'eapd']
-        keywords[wt.phone] = ['telefon', 'mobiil', 'number', 'telefoninumber']
-        keywords[wt.email] = ['email', 'mail', 'meil']
-        keywords[wt.address] = ['aadress', 'asukoht']
-        keywords[wt.grade] = ['hindamine', 'hinne']
-        keywords[wt.course] = ['aine', 'kursus']
+        keywords = defaultdict(set)
+        keywords[wt.help] = {'aitama', 'help', 'abi'}
+        keywords[wt.courseCodeMentioned] = {'ainekood', 'kood'}
+        keywords[wt.preReqs] = {'eeldusaine', 'eeldus'}
+        keywords[wt.greeting] = {'tere', 'hei', 'hommikust', 'hommik', 'õhtust', 'tsau', 'ahoi'}
+        keywords[wt.language] = {'keel'}
+        keywords[wt.description] = {'kirjeldus'}
+        keywords[wt.objective] = {'eesmärk'}
+        keywords[wt.website] = {'koduleht', 'leht', 'veeb', 'veebileht', 'link'}
+        keywords[wt.lecturers] = {'õppejõud'}
+        keywords[wt.ects] = {'eap', 'eapd'}
+        keywords[wt.phone] = {'telefon', 'mobiil', 'number', 'telefoninumber'}
+        keywords[wt.email] = {'email', 'mail', 'meil'}
+        keywords[wt.address] = {'aadress', 'asukoht'}
+        keywords[wt.grade] = {'hindamine', 'hinne'}
+        keywords[wt.course] = {'aine', 'kursus'}
+        keywords[wt.wordNew] = {'uus'}
+        keywords[wt.notifications] = {'teade'}
 
         # Keywords what needs string in frame
-        keywordsString = defaultdict(list)
-        keywordsString[wt.questionWord] = ['kes', 'mis', 'kus', 'mitu', 'kuna']
-        keywordsString[wt.pronoun] = ['mina', 'sina', 'tema', 'teie', 'meie', 'nemad']
-        keywordsString[wt.timeWord] = ['järgmine']
-        keywordsString[wt.websiteName] = ['course', 'moodle', 'õis', 'õppeinfosüsteem', 'raamatukogu', 'ester',
-                                          'esileht']
-        keywordsString[wt.about] = ['õppekava', 'õppeaine', 'valikaine', 'vabaaine', 'ainepunkt', 'EAP', 'moodul',
+        keywordsString = defaultdict(set)
+        keywordsString[wt.questionWord] = {'kes', 'mis', 'kus', 'mitu', 'kuna'}
+        keywordsString[wt.pronoun] = {'mina', 'sina', 'tema', 'teie', 'meie', 'nemad'}
+        keywordsString[wt.timeWord] = {'järgmine'}
+        keywordsString[wt.websiteName] = {'course', 'moodle', 'õis', 'õppeinfosüsteem', 'raamatukogu', 'ester',
+                                          'esileht'}
+        keywordsString[wt.about] = {'õppekava', 'õppeaine', 'valikaine', 'vabaaine', 'ainepunkt', 'EAP', 'moodul',
                                     'alusmoodul', 'suunamoodul', 'erialamoodul', 'valikmoodul', 'vabaaine',
                                     'bakalaureusetöö', 'bakalaureus', 'peaeriala', 'kõrvaleriala',
                                     'rakenduskõrgharidus', 'akrediteerimine', 'diplom', 'eksmatrikuleerimine',
@@ -71,7 +74,7 @@ class SentenceProcessor:
                                     'osakoormus', 'akadeemilinekalender', 'eksam', 'korduseksam',
                                     'akadeemilinepuhkus', 'plagiaat', 'õppeprorektor', 'teadusprorektor',
                                     'arendusprorektor','kantsler', 'looja', 'rektor','tuutor'
-                                    ]
+                                    }
 
         result = defaultdict(list)
         inputText.tag_layer(['morph_analysis'])
@@ -123,7 +126,11 @@ class SentenceProcessor:
                     wordCounter += 1
             i -= 1
 
+
         return result
+
+    def _getNumbersFromText(self, text):
+        return [int(s) for s in text.split() if s.isdigit()]
 
     def _getCourses(self):
         """

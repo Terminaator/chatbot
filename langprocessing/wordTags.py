@@ -16,6 +16,8 @@ class WordTag(Enum):
     timeWord = 8
     help = 9
     about = 10
+    wordNew = 11 # word "uus" has been mentioned
+    numbers = 12
 
     #courses
     courses = 20
@@ -41,4 +43,6 @@ class WordTag(Enum):
     email = 43
     address = 44
 
-
+    #User
+    user = 60
+    notifications = 61

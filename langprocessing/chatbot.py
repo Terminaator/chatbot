@@ -41,7 +41,7 @@ class chatbot():
         # HELP command
         if wt.help in misc[wt.keywords]:
             return self.answerHelp()
-
+        print(misc[wt.numbers])
         # COURSES questions
         if len(courses[wt.courseID]) != 0:
             if wt.ects in misc[wt.keywords]:
@@ -89,7 +89,7 @@ class chatbot():
                 self.askedQuestion = 0
                 return self.answerEmailStructUnit(sUnits[wt.structureUnitCode])
             if wt.address in misc[wt.keywords] or misc[wt.questionWord] in ['kus'] and (
-                    'olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
+                            'olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
                 self.askedQuestion = 0
                 return self.answerAddressStructUnit(sUnits[wt.structureUnitCode])
 
@@ -106,6 +106,9 @@ class chatbot():
             wt.questionWord]:
             self.askedQuestion = 0
             return self.answerAuthMyNextCourse(misc[wt.questionWord])
+        if wt.notifications in misc[wt.keywords] and wt.wordNew in misc[wt.keywords]:
+            self.askedQuestion = 0
+            return self.answerAuthMyNewNotifications()
 
         # Greeting
         if wt.greeting in misc[wt.keywords]:
@@ -132,7 +135,7 @@ class chatbot():
             self.askedQuestion = 0
             return self.answerWhoYouAre()
         # Whats up
-        if 'mis' in misc[wt.questionWord] and 'tegema' in misc[wt.verb] :
+        if 'mis' in misc[wt.questionWord] and 'tegema' in misc[wt.verb]:
             self.askedQuestion = 0
             return "Hetkel vastan küsimustele, aga hiljem lähen ATV-ga sõitma."
 
@@ -201,7 +204,7 @@ class chatbot():
             layer 0: {
                 sentence : [words]
                 misc : {questionWord: String, pronoun: String, verb: String, timeWord; String, websiteName: String,
-                keywords: list}
+                keywords: list, numbers: [Int]}
                 courses : {courseID: String}
                 structuralUnits: {structuralUnitCode: String}
             }
@@ -209,7 +212,7 @@ class chatbot():
         """
         # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
         misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.about: "",
-                wt.keywords: []}
+                wt.keywords: [], wt.numbers: []}
         courses = {wt.courseID: ""}
         sUnit = {wt.structureUnitCode: ""}
         layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
@@ -218,8 +221,8 @@ class chatbot():
     def isWHoQuestionAsked(self, currenLayer):
         """
         checks if user asked WHO IS question
-        :param currenLayer:
-        :return:
+        :param currenLayer: currently used layer
+        :return:return if client asked who question
         """
         misc = currenLayer[wt.misc]
         sentence = currenLayer[wt.sentence]
@@ -230,7 +233,7 @@ class chatbot():
         return (misc[wt.questionWord] in ["kes", "keda"] and len(
             set(misc[wt.verb]).intersection({"olema", "valima"})
         )) != 0 and (
-                       sentence[2] == wt.about
+                   sentence[2] == wt.about
                )
 
     def isWhatIsQuestionAsked(self, currentLayer):
@@ -247,8 +250,8 @@ class chatbot():
             return False
         return (misc[wt.questionWord] in ["mis", "mida"] and len(
             set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (
-                       sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID or sentence[2] == wt.about or
-                       sentence[2] == wt.verb)
+                   sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID or sentence[2] == wt.about or
+                   sentence[2] == wt.verb)
 
     def askExtraInfo(self, subject, possibleTopics):
         """
@@ -281,7 +284,7 @@ class chatbot():
         topics["Struktuuriüksused:"] = ['Koodi tähendus', 'Koduleht', 'Telefoninumber', 'Email', 'Aadress']
         topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link']
 
-        result = "Mina olen sõbralik(enamasti) õis2 resources. Mult saab küsida järgmiste teemade kohta."
+        result = "Mina olen sõbralik(enamasti) õis2 chatbot. Mult saab küsida järgmiste teemade kohta."
         for topic in topics:
             result += "\n" + topic
             for t in topics[topic]:
@@ -317,7 +320,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + " telefoni number on " + json['phone'])
+            results.append(" ".join(name).capitalize() + "(" + id.upper() +")" + " telefoni number on " + json['phone'])
         return "\n".join(results) + "."
 
     def answerEmailStructUnit(self, structUnits):
@@ -331,7 +334,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + " email on " + json['email'])
+            results.append(" ".join(name).capitalize() + "(" + id.upper() +")" + " email on " + json['email'])
         return "\n".join(results) + "."
 
     def answerAddressStructUnit(self, structUnits):
@@ -345,7 +348,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + " aadress on " + json['street'] + ", " + json['city'])
+            results.append(" ".join(name).capitalize() + "(" + id.upper() +")" +  " aadress on " + json['street'] + ", " + json['city'])
         return "\n".join(results) + "."
 
     def answerLanguage(self, courseIds):
@@ -359,7 +362,7 @@ class chatbot():
             json = oisCourses.coursesId(id)
             lang = json['target']['language']['et'].split(" ")
             lang[-1] = synthesize(lang[-1], "sg in", "S")[0]
-            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " on " + " ".join(lang))
+            results.append("Aine " + json['title']['et'] + "(" + id.upper() + ")" + " on " + " ".join(lang))
         return "\n".join(results) + "."
 
     def answerDescription(self, courseIds):
@@ -483,6 +486,11 @@ class chatbot():
         return "Antud koodi kasutab struktuuriüksus: " + json["name"]["et"] + "."
 
     def answerWhatIsCourseCode(self, courseCode):
+        """
+        Creates an answer for what course has this structure code
+        :param courseCode:
+        :return:
+        """
         json = oisCourses.coursesId(courseCode)
         return "Antud koodi kasutab kursus: " + json["name"]["et"] + "."
 
@@ -581,12 +589,25 @@ class chatbot():
         """
         return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
 
+    def answerAuthMyNewNotifications(self):
+        """
+        shows notifications. If the user should have more than 5, then it asks to show all or n
+        :return: notifications or not authenticated message or specifying question
+        """
+        return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
+
     def sayHello(self):
         greetings = ['Tere!', 'Hello!', 'Ahoi!', 'Tervitus!', 'Ära ehmata! Hommikust sullegi!',
                      '01010100 01100101 01110010 01100101 00001010', 'Tsau tsau!']
         return greetings[randint(0, len(greetings) - 1)]
 
     def answerGeneralWhatQuestion(self, word, verbs):
+        """
+        Answers general what questions about UT
+        :param word: Job title that user asks from chatbot
+        :param verbs: at the moment for later development
+        :return: return answer if chatbot knows the answer, otherwise says that it does not know.
+        """
         answer = wa.Answers
         try:
             a = answer.__getattribute__(answer, word)
@@ -595,6 +616,11 @@ class chatbot():
         return a
 
     def answerWhoQuestion(self, word):
+        """
+        Answers general who questions about UT
+        :param word: Noun that the user asks the meaning of
+        :return: If chatbot knows the answer then it returns the answer, otherwise it will return that it does not know
+        """
         answer = wha.Answers
         try:
             a = answer.__getattribute__(answer, word)
