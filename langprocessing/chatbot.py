@@ -317,7 +317,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + " telefoni number on " + json['phone'])
+            results.append(" ".join(name).capitalize() + "(" + id.upper() +")" + " telefoni number on " + json['phone'])
         return "\n".join(results) + "."
 
     def answerEmailStructUnit(self, structUnits):
@@ -331,7 +331,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + " email on " + json['email'])
+            results.append(" ".join(name).capitalize() + "(" + id.upper() +")" + " email on " + json['email'])
         return "\n".join(results) + "."
 
     def answerAddressStructUnit(self, structUnits):
@@ -345,7 +345,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + " aadress on " + json['street'] + ", " + json['city'])
+            results.append(" ".join(name).capitalize() + "(" + id +")" +  " aadress on " + json['street'] + ", " + json['city'])
         return "\n".join(results) + "."
 
     def answerLanguage(self, courseIds):
@@ -359,7 +359,7 @@ class chatbot():
             json = oisCourses.coursesId(id)
             lang = json['target']['language']['et'].split(" ")
             lang[-1] = synthesize(lang[-1], "sg in", "S")[0]
-            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " on " + " ".join(lang))
+            results.append("Aine " + json['title']['et'] + "(" + id.upper() + ")" + " on " + " ".join(lang))
         return "\n".join(results) + "."
 
     def answerDescription(self, courseIds):
