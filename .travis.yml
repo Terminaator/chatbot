@@ -13,9 +13,18 @@ before_install:
   - export DJANGO_SETTINGS_MODULE=oisbotServer.settings
   - export PYTHONPATH=$HOME/builds/diffusa/djangoapp
   - export PIP_USE_MIRRORS=true
+  - openssl aes-256-cbc -K $encrypted_017d05814229_key -iv $encrypted_017d05814229_iv -in tvp2017-dumas.pem.enc -out tvp2017-dumas.pem -d
 install:
   - pip install -q Django==$2.1.2
   - pip install djangorestframework
   - pip install requests
   - pip install estnltk==1.6.0b0 --quiet
 script: python -m unittest tests/testsWithoutSIS2.py
+after_success:
+  - eval "$(ssh-agent -s)" # Start ssh-agent cache
+  - chmod 600 .travis/tvp2017-dumas.pem # Allow read access to the private key
+  - ssh-add .travis/tvp2017-dumas.pem # Add the private key to SSH
+
+  - git config --global push.default matching
+  - git remote add deploy ssh://git@193.40.33.98:22/var/www/chatbot2
+  - git push deploy master
