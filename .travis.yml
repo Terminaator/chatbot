@@ -30,5 +30,5 @@ after_success:
   - ssh-add .travis/tvp2017-dumas.pem # Add the private key to SSH
 
   - git config --global push.default matching
-  - git remote add deploy ssh://git@$193.40.33.98:$22$/var/www/chatbot2
+  - git remote add deploy https://github.com/Terminaator/chatbot.git@$193.40.33.98:$22$/var/www/chatbot2/chatbot
   - git push deploy master
