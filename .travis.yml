@@ -13,7 +13,7 @@ before_install:
   - export DJANGO_SETTINGS_MODULE=oisbotServer.settings
   - export PYTHONPATH=$HOME/builds/diffusa/djangoapp
   - export PIP_USE_MIRRORS=true
-  - openssl aes-256-cbc -K $encrypted_017d05814229_key -iv $encrypted_017d05814229_iv -in tvp2017-dumas.pem.enc -out tvp2017-dumas.pem -d
+  - openssl aes-256-cbc -K $encrypted_7b06b256cd59_key -iv $encrypted_7b06b256cd59_iv -in tvp2017-dumas.pem.enc -out tvp2017-dumas.pem -d
 install:
   - pip install -q Django==$2.1.2
   - pip install djangorestframework
