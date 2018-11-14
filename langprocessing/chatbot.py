@@ -218,8 +218,8 @@ class chatbot():
     def isWHoQuestionAsked(self, currenLayer):
         """
         checks if user asked WHO IS question
-        :param currenLayer:
-        :return:
+        :param currenLayer: currently used layer
+        :return:return if client asked who question
         """
         misc = currenLayer[wt.misc]
         sentence = currenLayer[wt.sentence]
@@ -483,6 +483,11 @@ class chatbot():
         return "Antud koodi kasutab struktuuriüksus: " + json["name"]["et"] + "."
 
     def answerWhatIsCourseCode(self, courseCode):
+        """
+        Creates an answer for what course has this structure code
+        :param courseCode:
+        :return:
+        """
         json = oisCourses.coursesId(courseCode)
         return "Antud koodi kasutab kursus: " + json["name"]["et"] + "."
 
@@ -587,6 +592,12 @@ class chatbot():
         return greetings[randint(0, len(greetings) - 1)]
 
     def answerGeneralWhatQuestion(self, word, verbs):
+        """
+        Answers general what questions about UT
+        :param word: Job title that user asks from chatbot
+        :param verbs: at the moment for later development
+        :return: return answer if chatbot knows the answer, otherwise says that it does not know.
+        """
         answer = wa.Answers
         try:
             a = answer.__getattribute__(answer, word)
@@ -595,6 +606,11 @@ class chatbot():
         return a
 
     def answerWhoQuestion(self, word):
+        """
+        Answers general who questions about UT
+        :param word: Noun that the user asks the meaning of
+        :return: If chatbot knows the answer then it returns the answer, otherwise it will return that it does not know
+        """
         answer = wha.Answers
         try:
             a = answer.__getattribute__(answer, word)
