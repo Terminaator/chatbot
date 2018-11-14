@@ -345,7 +345,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + "(" + id +")" +  " aadress on " + json['street'] + ", " + json['city'])
+            results.append(" ".join(name).capitalize() + "(" + id.upper() +")" +  " aadress on " + json['street'] + ", " + json['city'])
         return "\n".join(results) + "."
 
     def answerLanguage(self, courseIds):
