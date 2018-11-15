@@ -1,15 +1,7 @@
 # coding: utf-8
-import oisbotServer.views.ois.courses as oisCourses
-import oisbotServer.views.ois.structuralUnits as oisStructuralUnits
-from estnltk.vabamorf.morf import synthesize, analyze
-from collections import defaultdict
 import langprocessing.sentenceProcesser as sentProc
-from random import randint
 from langprocessing.wordTags import WordTag as wt
-import langprocessing.whatAnswers as wa
-import langprocessing.whoAnswers as wha
-import oisbotServer.views.weather.weather as weather
-
+from langprocessing.questions import *
 
 class chatbot():
     def __init__(self):
@@ -17,6 +9,18 @@ class chatbot():
         self.currentFrame = -1
         self.sentenceProcessor = sentProc.SentenceProcessor()
         self.askedQuestion = 0
+        self.possibleQuestions = [
+            Courses.CourseQuestions(),
+            StructureUnits.StructureUnitQuestions(),
+            AuthenticationReqQuestions.AuthReqQuestions(),
+            ImportantUniWebsites.ImportantUniWebsites(),
+            HelpCommand.HelpCommand(),
+            Greeting.Greeting(),
+            Weather.Weather(),
+            WhoAreYou.WhoAreYou(),
+            WhatUp.WhatUp(),
+            WhatIsQuestion.WhatIs()
+        ]
 
     def getResponse(self, inputSentence):
         """
@@ -30,122 +34,30 @@ class chatbot():
 
     def putTogetherAnAnswer(self):
         """
-        looks at the frame and answers based on that.
+        looks at the frame and questions based on that.
         :return: A response for the client
         """
         currentLayer = self.frames["layer " + str(self.currentFrame)]
-        misc = currentLayer[wt.misc]
-        print(misc)
-        courses = currentLayer[wt.courses]
-        sUnits = currentLayer[wt.structureUnits]
+
         possibleTopics = []
         subject = ""
-        # HELP command
-        if wt.help in misc[wt.keywords]:
-            return self.answerHelp()
 
-        # COURSES questions
-        if len(courses[wt.courseID]) != 0:
-            if wt.ects in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerCourseEcts(courses[wt.courseID])
-            if wt.courseCodeMentioned in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerCourseCode(courses[wt.courseID])
-            if wt.preReqs in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerCoursePreReqs(courses[wt.courseID])
-            if wt.language in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerLanguage(courses[wt.courseID])
-            if wt.description in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerDescription(courses[wt.courseID])
-            if wt.objective in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerObjective(courses[wt.courseID])
-            if wt.website in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerWebsite(courses[wt.courseID])
-            if wt.lecturers in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerLecturers(courses[wt.courseID])
-            if wt.grade in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerGrade(courses[wt.courseID])
+        # Simple questions
+        for question in self.possibleQuestions:
+            if question.canAnswer(currentLayer):
+                answer = question.answer(currentLayer)
+                if answer is not None:
+                    self.askedQuestion = 0
+                    return answer
 
-            # If doesn't know what to answer
-            subject = "kursuse"  # todo käänamine või panna kõik juba sobivasse käändesse
-            possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi", "õpetamiskeelt", "kodulehte", "õppejõude",
-                              "kirjeldust", "eesmärki", "hindamist"]  # todo add words if you add questions
 
-        # Structure Units
-        if len(sUnits[wt.structureUnitCode]) != 0:
-            if wt.website in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerStructeUnitWebsite(sUnits[wt.structureUnitCode])
-            if wt.phone in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerPhoneStructUnit(sUnits[wt.structureUnitCode])
-            if wt.email in misc[wt.keywords]:
-                self.askedQuestion = 0
-                return self.answerEmailStructUnit(sUnits[wt.structureUnitCode])
-            if wt.address in misc[wt.keywords] or misc[wt.questionWord] in ['kus'] and (
-                    'olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
-                self.askedQuestion = 0
-                return self.answerAddressStructUnit(sUnits[wt.structureUnitCode])
-
-            subject = "struktuuriüksuse"
-            possibleTopics = ['kodulehte', 'telefoninumbrit', 'asukohta', 'emaili']
-
-        # Other Important Uni websites
-        if wt.website in misc[wt.keywords] and len(misc[wt.websiteName]) != 0:
-            self.askedQuestion = 0
-            return self.answerImportantUniWebsites(misc[wt.websiteName])
-
-        # Authentication required questions
-        if misc[wt.pronoun] == "mina" and misc[wt.timeWord] == "järgmine" and wt.course in misc[wt.keywords] and misc[
-            wt.questionWord]:
-            self.askedQuestion = 0
-            return self.answerAuthMyNextCourse(misc[wt.questionWord])
-
-        # Greeting
-        if wt.greeting in misc[wt.keywords]:
-            self.askedQuestion = 0
-            return self.sayHello()
-
-        # weather question
-        if misc[wt.weather] != "":
-            self.askedQuestion = 0
-            if misc[wt.when] != "":
-                return self.answerWhenWeather(misc[wt.when])
-            return self.answerWeather()
-
-        # WHO IS questions
-        if self.isWHoQuestionAsked(currentLayer):
-            return self.answerWhoQuestion(misc[wt.about])
-
-        # WHAT IS questions
-        if self.isWhatIsQuestionAsked(currentLayer):
-            if misc[wt.about] != "":
-                self.askedQuestion = 0
-                return self.answerGeneralWhatQuestion(misc[wt.about], misc[wt.verb])
-            if sUnits[wt.structureUnitCode] != "":
-                self.askedQuestion = 0
-                return self.answerWhatIsStructureCode(sUnits[wt.structureUnitCode])
-            if courses[wt.courseID] != "":
-                return self.answerWhatIsCourseCode(courses[wt.courseID])
-
-        # Who you are
-        if misc[wt.questionWord] in ['mis', 'kes'] and misc[wt.pronoun] == 'sina' and 'olema' in misc[wt.verb]:
-            self.askedQuestion = 0
-            return self.answerWhoYouAre()
-        # Whats up
-        if 'mis' in misc[wt.questionWord] and 'tegema' in misc[wt.verb]:
-            self.askedQuestion = 0
-            return "Hetkel vastan küsimustele, aga hiljem lähen ATV-ga sõitma."
 
         # Questions with memory
+        for question in [Courses.CourseQuestions(), StructureUnits.StructureUnitQuestions()]:
+            if question.canAnswer(currentLayer):
+                possibleTopics = question.possibleTopics
+                subject = question.subject
+
         if self.askedQuestion == 1:
             self.askedQuestion = 2
             temp = self.currentFrame
@@ -180,9 +92,8 @@ class chatbot():
         layer = self.frames["layer " + str(self.currentFrame - 1)]
         for key in layer:
             if key != wt.sentence:
-                for k in layer[key]:
-                    if k in words:
-                        layer[key][k] = words[k]
+                if key in words:
+                    layer[key] = words[key]
         for k in words:
             layer[wt.sentence].append(k)
         return layer
@@ -195,9 +106,8 @@ class chatbot():
         """
         layer = self.createEmptyLayer()
         for key in layer:
-            for k in layer[key]:
-                if k in words:
-                    layer[key][k] = words[k]
+            if key in words:
+                layer[key] = words[key]
         for k in words:
             layer[wt.sentence].append(k)
         return layer
@@ -209,56 +119,24 @@ class chatbot():
         frame = {
             layer 0: {
                 sentence : [words]
-                misc : {questionWord: String, pronoun: String, verb: String, timeWord; String, websiteName: String,
-                wt.about: String, wt.weather: String, wt.when: String
-                keywords: list}
-                courses : {courseID: String}
-                structuralUnits: {structuralUnitCode: String}
+                questionWord: String,
+                pronoun: String,
+                verb: String,
+                timeWord; String,
+                websiteName: String,
+                about: String,
+                weather: String,
+                when: String,
+                keywords: list,
+                courseID: [String]
+                structuralUnitCode: [String]
             }
         }
         """
         # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
-        misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.about: "",
-                wt.weather: "", wt.when: "", wt.keywords: []}
-        courses = {wt.courseID: ""}
-        sUnit = {wt.structureUnitCode: ""}
-        layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
+        layer = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.about: "",
+                wt.weather: "", wt.when: "", wt.keywords: [], wt.courseID: "", wt.structureUnitCode: "", wt.sentence: []}
         return layer
-
-    def isWHoQuestionAsked(self, currenLayer):
-        """
-        checks if user asked WHO IS question
-        :param currenLayer: currently used layer
-        :return:return if client asked who question
-        """
-        misc = currenLayer[wt.misc]
-        sentence = currenLayer[wt.sentence]
-        if len(sentence) < 2:
-            return False
-        if sentence[1] != wt.verb or sentence[0] != wt.questionWord:
-            return False
-        return (misc[wt.questionWord] in ["kes", "keda"] and len(
-            set(misc[wt.verb]).intersection({"olema", "valima"})
-        )) != 0 and (
-                       sentence[2] == wt.about
-               )
-
-    def isWhatIsQuestionAsked(self, currentLayer):
-        """
-        tries to see if user asked a "What is x" question
-        :param currentLayer: currently used layer
-        :return: Returns if client asked a term explanation question
-        """
-        misc = currentLayer[wt.misc]
-        sentence = currentLayer[wt.sentence]
-        if len(sentence) < 3:
-            return False
-        if sentence[1] != wt.verb or sentence[0] != wt.questionWord:
-            return False
-        return (misc[wt.questionWord] in ["mis", "mida"] and len(
-            set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (
-                       sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID or sentence[2] == wt.about or
-                       sentence[2] == wt.verb)
 
     def askExtraInfo(self, subject, possibleTopics):
         """
@@ -279,377 +157,3 @@ class chatbot():
             result += possibleTopics[-1] + "."
         result += "\nPalun täpsusta!"
         return result
-
-    def answerHelp(self):
-        """
-        Creates answer for help command
-        :return: help
-        """
-        topics = defaultdict(list)
-        topics["Kursused:"] = ['Eap\'de', 'Kursuse kood', 'Eeldusained', 'Õpetamiskeel', 'Kirjeldus', 'Eesmärk',
-                               'Koduleht', 'Õppejõud', 'Hindamine']
-        topics["Struktuuriüksused:"] = ['Koodi tähendus', 'Koduleht', 'Telefoninumber', 'Email', 'Aadress']
-        topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link']
-
-        result = "Mina olen sõbralik(enamasti) õis2 resources. Mult saab küsida järgmiste teemade kohta."
-        for topic in topics:
-            result += "\n" + topic
-            for t in topics[topic]:
-                result += "\n\t" + t
-        return result
-
-    def answerGrade(self, courseIds):
-        """
-        Creates answer for grade question
-        :param courseIds: asked courses
-        :return: courses grading
-        """
-        results = []
-        for id in courseIds:
-            json = oisCourses.coursesId(id)
-            result = "Aine " + json['title']['et'] + "(" + id + ")" + " hindamine on " + \
-                     json['grading']['assessment_scale']['et']
-            if "et" in json['grading']['grade_evaluation']:
-                result += ".\nLõpphinne:\n" + json['grading']['grade_evaluation']['et']
-            if "et" in json['grading']['debt_elimination']:
-                result += "\nVõlgnevuste likvideerimine:\n" + json['grading']['debt_elimination']['et']
-            results.append(result)
-        return "\n".join(results)
-
-    def answerPhoneStructUnit(self, structUnits):
-        """
-        Creates answer for phone question
-        :param structUnits: asked structuralunits
-        :return: structuralunits phonenumber
-        """
-        results = []
-        for id in structUnits:
-            json = oisStructuralUnits.getStructuralUnit(id)
-            name = json['name']['et'].split(" ")
-            name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + " telefoni number on " + json['phone'])
-        return "\n".join(results) + "."
-
-    def answerEmailStructUnit(self, structUnits):
-        """
-        Creates answer for email question
-        :param structUnits: asked structuralunits
-        :return: structuralunits email
-        """
-        results = []
-        for id in structUnits:
-            json = oisStructuralUnits.getStructuralUnit(id)
-            name = json['name']['et'].split(" ")
-            name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + " email on " + json['email'])
-        return "\n".join(results) + "."
-
-    def answerAddressStructUnit(self, structUnits):
-        """
-        Creates answer for address question
-        :param structUnits: asked structuralunits
-        :return: structuralunits address
-        """
-        results = []
-        for id in structUnits:
-            json = oisStructuralUnits.getStructuralUnit(id)
-            name = json['name']['et'].split(" ")
-            name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + " aadress on " + json['street'] + ", " + json['city'])
-        return "\n".join(results) + "."
-
-    def answerLanguage(self, courseIds):
-        """
-        Creates answer for language question
-        :param courseIds: asked courses
-        :return: courses language
-        """
-        results = []
-        for id in courseIds:
-            json = oisCourses.coursesId(id)
-            lang = json['target']['language']['et'].split(" ")
-            lang[-1] = synthesize(lang[-1], "sg in", "S")[0]
-            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " on " + " ".join(lang))
-        return "\n".join(results) + "."
-
-    def answerDescription(self, courseIds):
-        """
-        Creates answer for description question
-        :param courseIds: asked courses
-        :return: courses description
-        """
-        results = []
-        for id in courseIds:
-            json = oisCourses.coursesId(id)
-            results.append(
-                "Aine " + json['title']['et'] + "(" + id + ")" + " kirjeldus:\n" + json['overview']['description'][
-                    'et'])
-        return "\n".join(results)
-
-    def answerObjective(self, courseIds):
-        """
-        Creates answer for objectives question
-        :param courseIds: asked courses
-        :return: courses objective
-        """
-        results = []
-        for id in courseIds:
-            json = oisCourses.coursesId(id)
-            results.append(
-                "Aine " + json['title']['et'] + "(" + id + ")" + " eesmärk:\n" + json['overview']['objectives'][0][
-                    'et'])
-        return "\n".join(results)
-
-    def answerWebsite(self, courseIds):
-        """
-        Creates answer for website question
-        :param courseIds: asked courses
-        :return: courses website
-        """
-        results = []
-        for id in courseIds:
-            json = oisCourses.coursesId(id)
-            results.append(
-                "Aine " + json['title']['et'] + "(" + id + ")" + " veebileht on " + json['resources']['website_url'])
-        return "\n".join(results)
-
-    def answerStructeUnitWebsite(self, StructUnit):
-        """
-        finds and gives possible links as an answer to the asked question
-        :param StructUnit: Structure units, that were in the question
-        :return: Structure unit websites
-        """
-        possibleLinks = set()
-        linkMap = {}
-        for unit in StructUnit:
-            json = oisStructuralUnits.getStructuralUnit(unit)
-            if "webpage_url" in json:
-                link = json["webpage_url"]
-                if link not in possibleLinks:
-                    possibleLinks.add(link)
-                    linkMap[json["name"]["et"]] = link
-
-        if len(possibleLinks) == 0:
-            return "Sain küsimusest valesti aru või küsitud struktuuriüksusel ei ole veebilehte."
-        elif len(possibleLinks) == 1:
-            return "Selle struktuuriüksuse veebileht asub aadressil " + linkMap.popitem()[1]
-        return "Leidsin mitu erinevat veebilehte. Need on: " + ', '.join(possibleLinks)
-
-    def answerImportantUniWebsites(self, siteName):
-        """
-        Returns commonly used university's webpage links
-        :param siteName: webpage name, that was in the question
-        :return: answer with link to asked site
-        """
-        if siteName == "course":
-            return "Courses asub aadressil https://courses.cs.ut.ee/"
-        elif siteName == "moodle":
-            return "Moodle asub aadressil https://moodle.ut.ee/"
-        elif siteName == "õis" or siteName == "õppeinfosüsteem":
-            return "Tartu ülikooli ÕIS asub aadressil https://www.is.ut.ee/pls/ois_sso/tere.tulemast"
-        elif siteName == "raamatukogu":
-            return "Tartu ülikooli raamatukogu asub aadressil https://utlib.ut.ee/"
-        elif siteName == "ester":
-            return "Ester asub aadressil https://www.ester.ee/"
-        elif siteName == "esileht":
-            return "Tartu ülikooli esileht asub aadressil https://www.ut.ee/"
-        return "Arendajad unustasid antud veebilehe lingi lisada või midagi läks valesti."
-
-    def answerLecturers(self, courseIds):
-        """
-        Creates answer for lecturers question
-        :param courseIds: asked courses
-        :return: courses lecturers
-        """
-        results = []
-        for id in courseIds:
-            json = oisCourses.coursesId(id)
-            lecturers = json['participants']['lecturers']
-            result = ""
-            result += "Aine " + json['title']['et'] + "(" + id + ") "
-            responsible = []
-            otherLecturers = []
-            for lecturer in lecturers:
-                if lecturer['is_responsible']:
-                    responsible.append(lecturer['person_name'])
-                else:
-                    otherLecturers.append(lecturer['person_name'])
-            if len(responsible) == 1:
-                result += "vastutav õppejõud on " + responsible[0] + "."
-            else:
-                result += "vastutavad õppejõud on " + ", ".join(responsible) + "."
-            if len(otherLecturers) != 0:
-                result += "\nTeised õppejõud on " + ", ".join(otherLecturers)
-            results.append(result)
-        return "\n".join(results)
-
-    def answerWhatIsStructureCode(self, structureCode):
-        """
-        Creates an answer for a what is structure code question
-        :param structureCode: structure code, that the client wants to know about
-        :return: answer about the structure unit
-        """
-        json = oisStructuralUnits.getStructuralUnit(structureCode[0])
-        return "Antud koodi kasutab struktuuriüksus: " + json["name"]["et"] + "."
-
-    def answerWhatIsCourseCode(self, courseCode):
-        """
-        Creates an answer for what course has this structure code
-        :param courseCode:
-        :return:
-        """
-        json = oisCourses.coursesId(courseCode)
-        return "Antud koodi kasutab kursus: " + json["name"]["et"] + "."
-
-    def answerCourseEcts(self, courseId):
-        """
-        Creates an answer for questions about course ects.
-        :param courseId: Courses which, were asked for
-        :return: an answer
-        """
-        if len(courseId) == 1:
-            json = oisCourses.coursesId(courseId[0])
-            title = json["title"]["et"]
-            if " " in title:
-                return "Kursuse " + title + " maht on " + str(json["credits"]) + " eap."
-            return self.synthesizeWord(title, "g").capitalize() + " maht on " + str(json["credits"]) + " eap."
-
-        else:
-            response = "Selle nimega on " + str(len(courseId)) + " erinevat kursust."
-            json = oisCourses.coursesId(courseId[0])
-            response += " " + courseId[0] + " mille maht on " + str(json["credits"]) + " eap"
-            for i in courseId[1:-1]:
-                json = oisCourses.coursesId(i)
-                response += ", " + i + " mille maht on " + str(json["credits"]) + " eap"
-            json = oisCourses.coursesId(courseId[-1])
-            response += " ja " + courseId[-1] + " mille maht on " + str(json["credits"]) + " eap."
-            return response
-
-    def answerWhoYouAre(self):
-        """
-        Creates an answer for question who you are
-        :return: Describtion of bot
-        """
-        return "Mina olen sõbralik Õis2 bot. Mina aitan sul saada vastust küsimustele, mis sind vaevavad."
-
-    def answerCourseCode(self, courseId):
-        """
-        Creates an answer for questions about course code. like "mis on masinõppe ainekood"
-        :param courseId: Courses which, were asked for
-        :return: an answer with course code(s)
-        """
-        if len(courseId) == 1:
-            id = courseId.pop()
-            json = oisCourses.coursesId(id)
-            title = json["title"]["et"]
-            if " " in title:
-                return "Kursuse " + title + " ainekood on " + id
-            return self.synthesizeWord(title, "g").capitalize() + " ainekood on " + id
-        else:
-            response = "Selle nimega on " + str(len(courseId)) + " erinevat kursust. Nende ainekoodid on "
-            for i in courseId[:-2]:
-                response += i + ", "
-            response += courseId[-2] + " ja "
-            return response + courseId[-1] + "."
-
-    def answerCoursePreReqs(self, courseId):
-        """
-        Creates an answer for question about prerequired courses
-        :param courseId: Courses which, were asked for
-        :return: An answer, that contains prerequired courses
-        """
-        if len(courseId) == 1:
-            result = "Selle kursuse"
-        else:
-            result = "Selle nimega on " + str(len(courseId)) + " erinevat kursust."
-
-        for id in courseId:
-
-            json = oisCourses.coursesId(id)
-            if "prerequisites" in json["additional_info"]:
-                if len(courseId) > 1:
-                    result += " Kursuse " + id
-
-                preReqs = json["additional_info"]["prerequisites"]
-                if len(preReqs) == 1:
-                    result += " eeldusaine on"
-                else:
-                    result += " eeldusained on"
-
-                for req in preReqs:
-                    result += " " + req["code"] + " \"" + req["title"]["et"] + "\""
-                    if "alternatives" in req:
-                        alternatives = req["alternatives"]
-                        for alt in alternatives:
-                            result += " või " + alt["code"] + " \"" + alt["title"]["et"] + "\""
-            elif len(courseId) > 1:
-                result += " Kursusel " + id + " eeldusained puuduvad"
-            else:
-                return "Sellel kursusel pole eeldusaineid."
-        return result + "."
-
-    def answerAuthMyNextCourse(self, questionWord):
-        """
-        answers a question about users next course
-        :param questionWord: word we use to distinguish what the user wants
-        :return: question to the question
-        """
-        return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
-
-    def sayHello(self):
-        greetings = ['Tere!', 'Hello!', 'Ahoi!', 'Tervitus!', 'Ära ehmata! Hommikust sullegi!',
-                     '01010100 01100101 01110010 01100101 00001010', 'Tsau tsau!']
-        return greetings[randint(0, len(greetings) - 1)]
-
-    def answerGeneralWhatQuestion(self, word, verbs):
-        """
-        Answers general what questions about UT
-        :param word: Job title that user asks from chatbot
-        :param verbs: at the moment for later development
-        :return: return answer if chatbot knows the answer, otherwise says that it does not know.
-        """
-        answer = wa.Answers
-        try:
-            a = answer.__getattribute__(answer, word)
-        except AttributeError:
-            a = "Ma ei tea mis " + word + " on."
-        return a
-
-    def answerWhoQuestion(self, word):
-        """
-        Answers general who questions about UT
-        :param word: Noun that the user asks the meaning of
-        :return: If chatbot knows the answer then it returns the answer, otherwise it will return that it does not know
-        """
-        answer = wha.Answers
-        try:
-            a = answer.__getattribute__(answer, word)
-        except AttributeError:
-            a = "Ma ei tea kes " + word + " on."
-        return a
-
-    def answerWeather(self):
-        """
-        Answers question about todays weather
-        :return: returns information about todays weather
-        """
-        return weather.getTodaysWeather()
-
-    def answerWhenWeather(self, param):
-        """
-        Answers questions about tomorrows or day after tomorrow weather information
-        :param param: tomorrow or day after tomorrow
-        :return: answer about weather information
-        """
-        return weather.getWeather(param)
-
-    def synthesizeWord(self, word, f):
-        """
-        Changes the word's form without changing it form plural to singular or vice versa
-        :param word: word to be formed
-        :param f: desired form
-        :return: word in desired form
-        """
-        # need to check if the title is plural or not.
-        form = analyze(word)[0]["analysis"][0]["form"]
-        return synthesize(word, form[:2] + " " + f, "S")[0]

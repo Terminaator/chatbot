@@ -13,9 +13,9 @@ class TestSimpleRequests(unittest.TestCase):
 
         expectedLayer = bot.createEmptyLayer()
         expectedLayer[wt.sentence] = [wt.questionWord, wt.keywords, wt.courseID]
-        expectedLayer[wt.misc][wt.questionWord] = "mitu"
-        expectedLayer[wt.courses][wt.courseID] = "LTAT.05.005"
-        expectedLayer[wt.misc][wt.keywords] = [wt.ects]
+        expectedLayer[wt.questionWord] = "mitu"
+        expectedLayer[wt.courseID] = "LTAT.05.005"
+        expectedLayer[wt.keywords] = [wt.ects]
         actualLayer = bot.fillFrameLayer(words)
 
         self.assertEqual(expectedLayer, actualLayer)
@@ -31,14 +31,14 @@ class TestSimpleRequests(unittest.TestCase):
         layer1[wt.sentence] = [wt.keywords, wt.courseID]
         layer2[wt.sentence] = [wt.questionWord, wt.keywords, wt.courseID]
 
-        layer0[wt.courses][wt.courseID] = "LTAT.05.005"
-        layer1[wt.courses][wt.courseID] = "LTAT.05.005"
-        layer2[wt.courses][wt.courseID] = "LTAT.05.005"
+        layer0[wt.courseID] = "LTAT.05.005"
+        layer1[wt.courseID] = "LTAT.05.005"
+        layer2[wt.courseID] = "LTAT.05.005"
 
-        layer1[wt.misc][wt.keywords] = [wt.ects]
-        layer2[wt.misc][wt.keywords] = [wt.ects]
+        layer1[wt.keywords] = [wt.ects]
+        layer2[wt.keywords] = [wt.ects]
 
-        layer2[wt.misc][wt.questionWord] = "mitu"
+        layer2[wt.questionWord] = "mitu"
 
         expectedFrames = {"layer 0": layer0, "layer 1": layer1, "layer 2": layer2}
 

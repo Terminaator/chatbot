@@ -5,7 +5,6 @@ class WordTag(Enum):
     sentence = -1
 
     #misc
-    misc = 0
     questionWord = 1
     greeting = 2
     pronoun = 3
@@ -22,7 +21,6 @@ class WordTag(Enum):
     when = 14
 
     #courses
-    courses = 20
     courseID = 21
     ects = 22
     preReqs = 23
@@ -39,12 +37,10 @@ class WordTag(Enum):
 
 
     #Structure Units
-    structureUnits = 40
     structureUnitCode = 41
     phone = 42
     email = 43
     address = 44
 
     #User
-    user = 60
     notifications = 61
