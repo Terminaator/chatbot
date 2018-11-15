@@ -10,5 +10,6 @@ git push deploy master
 
 ssh apps@193.40.33.98 -p 22 <<EOF
   cd /var/www/chatbot2/chatbot
-  python manager.py runserver
+  systemcl start apache2
+  #python manager.py runserver
 EOF

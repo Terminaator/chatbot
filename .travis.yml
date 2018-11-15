@@ -25,4 +25,4 @@ install:
   - pip install estnltk==1.6.0b0 --quiet
 script: python -m unittest tests/testsWithoutSIS2.py
 after_success:
-  - deploy.sh
+  - bash deploy.sh
