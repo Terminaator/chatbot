@@ -14,7 +14,3 @@ def getNCourses(n: int, start: int):
         return request.json()
     raise Exception("reguest status code: ", status_code)
 
-
-
-
-
