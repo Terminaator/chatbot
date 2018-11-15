@@ -1,5 +1,4 @@
 from django.conf.urls import url
-from django.urls import re_path
 from django.views.generic import TemplateView
 import oisbotServer.views.client.clientQuestionView
 import oisbotServer.views.auth.authentication

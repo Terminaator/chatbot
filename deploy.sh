@@ -10,6 +10,6 @@ git push deploy
 
 ssh ubuntu@193.40.33.98 -p 22 <<EOF
   cd /var/www/chatbot2/chatbot
-  #systemctl start apache2
+  systemctl reload apache2
   #python manager.py runserver
 EOF
