@@ -5,7 +5,7 @@ chmod 700 tvp2017-dumas.pem # Allow read access to the private key
 ssh-add tvp2017-dumas.pem # Add the private key to SSH
 
 git config --global push.default matching
-git remote add deploy ubuntu@193.40.33.98/var/www/chatbot2/chatbot.git
+git remote add deploy ubuntu@193.40.33.98/var/www/chatbot2/chatbot
 git push deploy
 
 ssh apps@193.40.33.98 -p 22 <<EOF
