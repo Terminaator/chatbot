@@ -25,9 +25,4 @@ install:
   - pip install estnltk==1.6.0b0 --quiet
 script: python -m unittest tests/testsWithoutSIS2.py
 after_success:
-  - eval "$(ssh-agent -s)" # Start ssh-agent cache
-  - chmod 600 tvp2017-dumas.pem # Allow read access to the private key
-  - ssh-add tvp2017-dumas.pem # Add the private key to SSH
-  - cd /var/www/chatbot2/chatbot
-  - git remote add deploy https://github.com/Terminaator/chatbot.git
-  - git push deploy
+  - bash deploy.sh
