@@ -8,8 +8,9 @@ git config --global push.default matching
 git remote add deploy ssh://ubuntu@193.40.33.98:22/var/www/chatbot2/chatbot
 git push deploy
 
-ssh apps@193.40.33.98 -p 22 <<EOF
+ssh ubuntu@193.40.33.98 -p 22 <<EOF
   cd /var/www/chatbot2/chatbot
+  echo wooo
   #git push deploy master
   #systemctl start apache2
   #python manager.py runserver
