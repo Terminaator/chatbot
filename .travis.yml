@@ -29,5 +29,6 @@ after_success:
   - chmod 600 tvp2017-dumas.pem # Allow read access to the private key
   - ssh-add tvp2017-dumas.pem # Add the private key to SSH
   - cd /var/www/chatbot2/chatbot
+  - git config --global push.default matching
   - git remote add deploy https://github.com/Terminaator/chatbot.git
-  - git push deploy
+  - git push deploy master
