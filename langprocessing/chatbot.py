@@ -8,6 +8,7 @@ from random import randint
 from langprocessing.wordTags import WordTag as wt
 import langprocessing.whatAnswers as wa
 import langprocessing.whoAnswers as wha
+import oisbotServer.views.weather.weather as weather
 
 
 class chatbot():
@@ -34,6 +35,7 @@ class chatbot():
         """
         currentLayer = self.frames["layer " + str(self.currentFrame)]
         misc = currentLayer[wt.misc]
+        print(misc)
         courses = currentLayer[wt.courses]
         sUnits = currentLayer[wt.structureUnits]
         possibleTopics = []
@@ -41,7 +43,7 @@ class chatbot():
         # HELP command
         if wt.help in misc[wt.keywords]:
             return self.answerHelp()
-        print(misc[wt.numbers])
+
         # COURSES questions
         if len(courses[wt.courseID]) != 0:
             if wt.ects in misc[wt.keywords]:
@@ -89,7 +91,7 @@ class chatbot():
                 self.askedQuestion = 0
                 return self.answerEmailStructUnit(sUnits[wt.structureUnitCode])
             if wt.address in misc[wt.keywords] or misc[wt.questionWord] in ['kus'] and (
-                            'olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
+                    'olema' in misc[wt.verb] or 'asuma' in misc[wt.verb]):
                 self.askedQuestion = 0
                 return self.answerAddressStructUnit(sUnits[wt.structureUnitCode])
 
@@ -106,14 +108,18 @@ class chatbot():
             wt.questionWord]:
             self.askedQuestion = 0
             return self.answerAuthMyNextCourse(misc[wt.questionWord])
-        if wt.notifications in misc[wt.keywords] and wt.wordNew in misc[wt.keywords]:
-            self.askedQuestion = 0
-            return self.answerAuthMyNewNotifications()
 
         # Greeting
         if wt.greeting in misc[wt.keywords]:
             self.askedQuestion = 0
             return self.sayHello()
+
+        # weather question
+        if misc[wt.weather] != "":
+            self.askedQuestion = 0
+            if misc[wt.when] != "":
+                return self.answerWhenWeather(misc[wt.when])
+            return self.answerWeather()
 
         # WHO IS questions
         if self.isWHoQuestionAsked(currentLayer):
@@ -204,7 +210,8 @@ class chatbot():
             layer 0: {
                 sentence : [words]
                 misc : {questionWord: String, pronoun: String, verb: String, timeWord; String, websiteName: String,
-                keywords: list, numbers: [Int]}
+                wt.about: String, wt.weather: String, wt.when: String
+                keywords: list}
                 courses : {courseID: String}
                 structuralUnits: {structuralUnitCode: String}
             }
@@ -212,7 +219,7 @@ class chatbot():
         """
         # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
         misc = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.about: "",
-                wt.keywords: [], wt.numbers: []}
+                wt.weather: "", wt.when: "", wt.keywords: []}
         courses = {wt.courseID: ""}
         sUnit = {wt.structureUnitCode: ""}
         layer = {wt.sentence: [], wt.misc: misc, wt.courses: courses, wt.structureUnits: sUnit}
@@ -233,7 +240,7 @@ class chatbot():
         return (misc[wt.questionWord] in ["kes", "keda"] and len(
             set(misc[wt.verb]).intersection({"olema", "valima"})
         )) != 0 and (
-                   sentence[2] == wt.about
+                       sentence[2] == wt.about
                )
 
     def isWhatIsQuestionAsked(self, currentLayer):
@@ -250,8 +257,8 @@ class chatbot():
             return False
         return (misc[wt.questionWord] in ["mis", "mida"] and len(
             set(misc[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (
-                   sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID or sentence[2] == wt.about or
-                   sentence[2] == wt.verb)
+                       sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID or sentence[2] == wt.about or
+                       sentence[2] == wt.verb)
 
     def askExtraInfo(self, subject, possibleTopics):
         """
@@ -284,7 +291,7 @@ class chatbot():
         topics["Struktuuriüksused:"] = ['Koodi tähendus', 'Koduleht', 'Telefoninumber', 'Email', 'Aadress']
         topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link']
 
-        result = "Mina olen sõbralik(enamasti) õis2 chatbot. Mult saab küsida järgmiste teemade kohta."
+        result = "Mina olen sõbralik(enamasti) õis2 resources. Mult saab küsida järgmiste teemade kohta."
         for topic in topics:
             result += "\n" + topic
             for t in topics[topic]:
@@ -320,7 +327,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + "(" + id.upper() +")" + " telefoni number on " + json['phone'])
+            results.append(" ".join(name).capitalize() + " telefoni number on " + json['phone'])
         return "\n".join(results) + "."
 
     def answerEmailStructUnit(self, structUnits):
@@ -334,7 +341,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + "(" + id.upper() +")" + " email on " + json['email'])
+            results.append(" ".join(name).capitalize() + " email on " + json['email'])
         return "\n".join(results) + "."
 
     def answerAddressStructUnit(self, structUnits):
@@ -348,7 +355,7 @@ class chatbot():
             json = oisStructuralUnits.getStructuralUnit(id)
             name = json['name']['et'].split(" ")
             name[-1] = synthesize(name[-1], 'sg g')[0]
-            results.append(" ".join(name).capitalize() + "(" + id.upper() +")" +  " aadress on " + json['street'] + ", " + json['city'])
+            results.append(" ".join(name).capitalize() + " aadress on " + json['street'] + ", " + json['city'])
         return "\n".join(results) + "."
 
     def answerLanguage(self, courseIds):
@@ -362,7 +369,7 @@ class chatbot():
             json = oisCourses.coursesId(id)
             lang = json['target']['language']['et'].split(" ")
             lang[-1] = synthesize(lang[-1], "sg in", "S")[0]
-            results.append("Aine " + json['title']['et'] + "(" + id.upper() + ")" + " on " + " ".join(lang))
+            results.append("Aine " + json['title']['et'] + "(" + id + ")" + " on " + " ".join(lang))
         return "\n".join(results) + "."
 
     def answerDescription(self, courseIds):
@@ -589,13 +596,6 @@ class chatbot():
         """
         return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
 
-    def answerAuthMyNewNotifications(self):
-        """
-        shows notifications. If the user should have more than 5, then it asks to show all or n
-        :return: notifications or not authenticated message or specifying question
-        """
-        return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
-
     def sayHello(self):
         greetings = ['Tere!', 'Hello!', 'Ahoi!', 'Tervitus!', 'Ära ehmata! Hommikust sullegi!',
                      '01010100 01100101 01110010 01100101 00001010', 'Tsau tsau!']
@@ -627,6 +627,21 @@ class chatbot():
         except AttributeError:
             a = "Ma ei tea kes " + word + " on."
         return a
+
+    def answerWeather(self):
+        """
+        Answers question about todays weather
+        :return: returns information about todays weather
+        """
+        return weather.getTodaysWeather()
+
+    def answerWhenWeather(self, param):
+        """
+        Answers questions about tomorrows or day after tomorrow weather information
+        :param param: tomorrow or day after tomorrow
+        :return: answer about weather information
+        """
+        return weather.getWeather(param)
 
     def synthesizeWord(self, word, f):
         """

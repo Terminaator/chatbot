@@ -73,9 +73,10 @@ class SentenceProcessor:
                                     'petturlus', 'praktika', 'võta', 'valdkond', 'reimmatrikuleerimine', 'täiskoormus',
                                     'osakoormus', 'akadeemilinekalender', 'eksam', 'korduseksam',
                                     'akadeemilinepuhkus', 'plagiaat', 'õppeprorektor', 'teadusprorektor',
-                                    'arendusprorektor','kantsler', 'looja', 'rektor','tuutor'
+                                    'arendusprorektor', 'kantsler', 'looja', 'rektor', 'tuutor'
                                     }
-
+        keywordsString[wt.weather] = {"ilm", "ilmastik", "ilmake", "ilmuke", "ilmataat"}
+        keywordsString[wt.when] = {"täna", "homme", "ülehomme", "homne", "ülehomne"}
         result = defaultdict(list)
         inputText.tag_layer(['morph_analysis'])
 
@@ -125,7 +126,6 @@ class SentenceProcessor:
                     result[wordCounter] = lemm
                     wordCounter += 1
             i -= 1
-
 
         return result
 

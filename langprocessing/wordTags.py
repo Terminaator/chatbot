@@ -18,6 +18,8 @@ class WordTag(Enum):
     about = 10
     wordNew = 11 # word "uus" has been mentioned
     numbers = 12
+    weather = 13
+    when = 14
 
     #courses
     courses = 20
