@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'oisbotServer.resources',
-    #'rest_framework', mida vittu, kuidas see koguaeg tagasi tuleb?
+    'rest_framework', 
 
 ]
 
