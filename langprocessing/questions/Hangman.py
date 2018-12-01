@@ -162,7 +162,8 @@ class Hangman:
         creates dictionary from iputfile, filters out all the words that are not the right length
         :return: returns all the words that the game choses the final word to be guessed
         """
-        with open("langprocessing/resources/s6nad.txt", encoding="utf8") as file:
+
+        with open("s6nad.txt", encoding="utf8") as file:
             data = file.read().split("\n")
 
         while True:
