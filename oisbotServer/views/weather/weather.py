@@ -47,20 +47,19 @@ def getWeather(when):
     else:
         request = requests.post(
             "http://api.openweathermap.org/data/2.5/forecast?id=7522434&APPID=35e2b07a41ebe595eb82843ac306167e")
-        status_code = request.status_code
-        if status_code == 200:
+
+        if request.status_code == 200:
             json = request.json()
-            listof = json.get('list')
+            listOf = json.get('list')
             if when == "homme" or when == "homne":
                 tomorrow = datetime.datetime.now() + datetime.timedelta(days=1)
             elif when == "ülehomme" or when == "ülehomne":
                 tomorrow = datetime.datetime.now() + datetime.timedelta(days=2)
             else:
                 return "Ma ei tea, mis meid " + when + " ootab"
-            print(tomorrow.day)
-            for i in listof:
-                datetimetom = datetime.datetime.strptime(i.get("dt_txt"), '%Y-%m-%d %H:%M:%S')
-                if datetimetom.day == tomorrow.day and datetimetom.hour == 12:
+            for i in listOf:
+                dateTimeTom = datetime.datetime.strptime(i.get("dt_txt"), '%Y-%m-%d %H:%M:%S')
+                if dateTimeTom.day == tomorrow.day and dateTimeTom.hour == 12:
                     return parseJson(when, i)
         else:
-            raise Exception(status_code)
+            raise Exception(request.status_code)

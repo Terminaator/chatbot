@@ -34,14 +34,14 @@ def authenticate(request):
 
 @api_view(['GET'])
 def isLogged(request):
-    x_access_token = request.META.get("HTTP_X_ACCESS_TOKEN")
-    if(x_access_token == None):
+    xAccessToken = request.META.get("HTTP_X_ACCESS_TOKEN")
+    if(xAccessToken == None):
         return JsonResponse(data={"login": "Logige palun sisse!"},status=401)
     else:
-        check = requests.get("https://ois2dev.ut.ee/api/user",headers={'X-Access-Token': x_access_token})
+        check = requests.get("https://ois2dev.ut.ee/api/user",headers={'X-Access-Token': xAccessToken})
         if(check.status_code == 401):
             return JsonResponse(data={"login": "Logige palun sisse!"})
         elif(check.status_code == 200):
             response = JsonResponse(data={"login": "Olete sisse logitud!"})
-            response["X-Access-Token"] = x_access_token
+            response["X-Access-Token"] = xAccessToken
             return response

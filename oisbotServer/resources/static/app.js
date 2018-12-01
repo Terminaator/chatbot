@@ -10,7 +10,7 @@ function clearfield() {
             var answer = {"answer":"Tere, mina olen ÕIS2 chatbot! Abi saamiseks kirjuta help"};
             $scope.questions = [];
             $scope.questions.push([answer, "False"]);
-
+            var container = $(".container");
             $scope.addItem = function(question){
                 clearfield();
             $scope.questions.push([question,'True']);
@@ -25,15 +25,15 @@ function clearfield() {
                    'Content-Type':  'application/json',
                    'Access-Control-Allow-Origin': 'true',
                     "X-Requested-With": "XMLHttpRequest",
-
                }
             }).then(function(response){
                 $scope.questions.push([response.data,'False']);
-
+                container.stop().animate({ scrollTop: container[0].scrollHeight}, 100);
             },
             function(response){
                 var answer = {"answer":"Ma tõesti ei tea. "};
                 $scope.questions.push([answer,'False']);
+                container.stop().animate({ scrollTop: container[0].scrollHeight}, 100)
             }
             );
         };
