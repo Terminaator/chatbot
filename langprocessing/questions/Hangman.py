@@ -163,7 +163,7 @@ class Hangman:
         :return: returns all the words that the game choses the final word to be guessed
         """
 
-        with open("s6nad.txt", encoding="utf8") as file:
+        with open("oisbotServer/resources/static/s6nad.txt", encoding="utf8") as file:
             data = file.read().split("\n")
 
         while True:
