@@ -1,6 +1,6 @@
 from random import randint
 from langprocessing.wordTags import WordTag as wt
-
+import  langprocessing.questions.answers.dictionary as d
 
 class Hangman:
     def __init__(self):
@@ -162,10 +162,7 @@ class Hangman:
         creates dictionary from iputfile, filters out all the words that are not the right length
         :return: returns all the words that the game choses the final word to be guessed
         """
-
-        with open("oisbotServer/resources/static/s6nad.txt", encoding="utf8") as file:
-            data = file.read().split("\n")
-
+        data = d.Dictionary.dictionary
         while True:
             filtered = [line.strip() for line in data if len(line) == self.wordLen]
             if len(filtered) == 0:
@@ -180,7 +177,7 @@ class Hangman:
         :param char: user input
         """
         newDict = [word for word in self.getCurDict() if char not in word.lower()]
-        if len(newDict) < 10:
+        if len(newDict) < 5:
             dictlen = len(self.getCurDict())
             word = self.getCurDict()[randint(0, dictlen - 1)]
             self.setWord(word)
