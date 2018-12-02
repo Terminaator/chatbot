@@ -27,8 +27,11 @@ function clearfield() {
                     "X-Requested-With": "XMLHttpRequest",
                }
             }).then(function(response){
+                // document.getElementsByTagName('img') .attr("src", 'https://i.redd.it/vc9207gbcr121.png');
+
                 $scope.questions.push([response.data,'False']);
                 container.stop().animate({ scrollTop: container[0].scrollHeight}, 100);
+
             },
             function(response){
                 var answer = {"answer":"Ma tõesti ei tea. "};

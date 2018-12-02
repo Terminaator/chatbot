@@ -55,11 +55,11 @@ class TestSimpleRequests(unittest.TestCase):
         #NOTE: This question doesn't require ÕIS 2.0 API
         bot = cbot.chatbot()
         sentence = "Mis on moodle link?"
-        self.assertEqual("Moodle asub aadressil https://moodle.ut.ee/", bot.getResponse(sentence))
+        self.assertEqual({'answer': 'Moodle asub aadressil https://moodle.ut.ee/'}, bot.getResponse(sentence))
         sentence = "Mis on estri link?"
-        self.assertEqual("Ester asub aadressil https://www.ester.ee/", bot.getResponse(sentence))
+        self.assertEqual({'answer': 'Ester asub aadressil https://www.ester.ee/'}, bot.getResponse(sentence))
         sentence = "Mis on courses link?"
-        self.assertEqual("Courses asub aadressil https://courses.cs.ut.ee/", bot.getResponse(sentence))
+        self.assertEqual({'answer': 'Courses asub aadressil https://courses.cs.ut.ee/'}, bot.getResponse(sentence))
 
 
     def test_simpleGetWords(self):
@@ -80,6 +80,10 @@ class TestSimpleRequests(unittest.TestCase):
         self.assertEqual({wt.keywords: [wt.courseCodeMentioned, wt.preReqs], wt.numbers:[], 0: 'ainekood', 1: 'eeldusaine'},
                          sentProcessor.getWords("ainekood eeldusained"))
 
+    def test_picQuestions(self):
+        bot = cbot.chatbot()
+        sentence = "xkcd"
+        self.assertTrue(bot.getResponse(sentence)["img"].startswith("https://"))
 
 
 if __name__ == '__main__':

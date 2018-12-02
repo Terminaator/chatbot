@@ -19,6 +19,10 @@ class WordTag(Enum):
     numbers = 12
     weather = 13
     when = 14
+    randomJoke = 15
+    randomFunny = 16
+    randomXkcd = 17
+
 
     #courses
     courseID = 21

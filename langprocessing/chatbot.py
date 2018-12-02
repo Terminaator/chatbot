@@ -19,7 +19,11 @@ class chatbot():
             Weather.Weather(),
             WhoAreYou.WhoAreYou(),
             WhatUp.WhatUp(),
-            WhatIsQuestion.WhatIs()
+            WhatIsQuestion.WhatIs(),
+            RandomPost.RandomRedditFunnyPic(),
+            RandomPost.RandomRedditJoke(),
+            RandomPost.RandomXkcd(),
+
         ]
 
     def getResponse(self, inputSentence):
@@ -30,7 +34,13 @@ class chatbot():
         """
         words = self.sentenceProcessor.getWords(inputSentence)
         self.addFrameLayer(words)
-        return self.putTogetherAnAnswer()
+        return self.formDictionary(self.putTogetherAnAnswer())
+
+    def formDictionary(self, answer):
+        if isinstance(answer, dict):
+            return answer
+        return {"answer": answer}
+
 
     def putTogetherAnAnswer(self):
         """

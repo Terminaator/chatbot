@@ -10,17 +10,21 @@
 <div class="wrap">
     <div id="chatWindow" class="container">
         <div ng-repeat="question in questions" >
-            <div ng-if="question[1] == 'True'">
-                <div class="bubble right">
-                    <p>{{ question[0]}}</p>
-                </div>
-            </div>
             <div ng-if="question[1]=='False'">
                 <div class="bubble left" id="answer" style="white-space: pre-wrap;">
                     <p>{{ question[0].answer }}</p>
                 </div>
             </div>
-
+            <div ng-if="question[0].img">
+                <div class="bubble left" id="answer" style="white-space: pre-wrap;">
+                    <p><img src="{{ question[0].img }}" id="image" style="width: 100%"/></p>
+                </div>
+            </div>
+            <div ng-if="question[1] == 'True'">
+                <div class="bubble right">
+                    <p>{{ question[0]}}</p>
+                </div>
+            </div>
         </div>
     </div>
     <form id="inputWindow" class="form">

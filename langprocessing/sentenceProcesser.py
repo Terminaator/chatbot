@@ -55,6 +55,11 @@ class SentenceProcessor:
         keywords[wt.course] = {'aine', 'kursus'}
         keywords[wt.wordNew] = {'uus'}
         keywords[wt.notifications] = {'teade'}
+        keywords[wt.randomJoke] = {'nali'}
+        keywords[wt.randomFunny] = {'pilt'}
+        keywords[wt.randomXkcd] = {'xkcd'}
+
+
 
         # Keywords what needs string in frame
         keywordsString = defaultdict(set)
