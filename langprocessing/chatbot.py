@@ -65,7 +65,7 @@ class chatbot():
                 return answer[1]
             if question.canAnswer(currentLayer):
                 answer = question.answer(currentLayer)
-                if answer[0] == "HANGMAN":
+                if not isinstance(answer, dict) and answer[0] == "HANGMAN":
                     self.setGameTrue()
                     answer = answer[1]
                     return answer
