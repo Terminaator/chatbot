@@ -82,6 +82,7 @@ class SentenceProcessor:
                                     }
         keywordsString[wt.weather] = {"ilm", "ilmastik", "ilmake", "ilmuke", "ilmataat"}
         keywordsString[wt.when] = {"täna", "homme", "ülehomme", "homne", "ülehomne"}
+        keywordsString[wt.hangman] = {"hangman"}
         result = defaultdict(list)
         inputText.tag_layer(['morph_analysis'])
 
@@ -131,7 +132,6 @@ class SentenceProcessor:
                     result[wordCounter] = lemm
                     wordCounter += 1
             i -= 1
-
         return result
 
     def _getNumbersFromText(self, text):

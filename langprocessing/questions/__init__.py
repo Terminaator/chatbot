@@ -1,1 +1,1 @@
-__all__ = ["Courses", "HelpCommand", "StructureUnits", "ImportantUniWebsites", "AuthenticationReqQuestions", "Greeting", "Weather", "WhoAreYou", "WhatUp", "WhatIsQuestion", "RandomPost"]
+__all__ = ["Courses", "Hangman", "HelpCommand", "StructureUnits", "ImportantUniWebsites", "AuthenticationReqQuestions", "Greeting", "Weather", "WhoAreYou", "WhatUp", "WhatIsQuestion", "RandomPost"]

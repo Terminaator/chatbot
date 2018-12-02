@@ -22,6 +22,7 @@ class WordTag(Enum):
     randomJoke = 15
     randomFunny = 16
     randomXkcd = 17
+    hangman = 18
 
 
     #courses
