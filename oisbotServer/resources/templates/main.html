@@ -72,6 +72,11 @@ html, body { height: 100%; overflow: hidden; }
                     <p><img src="{{ question[0].img }}" id="image" style="width: 100%"/></p>
                 </div>
             </div>
+            <div ng-if="question[0].video">
+                <div class="bubble left" id="answer" style="white-space: pre-wrap;">
+                    <p><iframe ng-src="{{question[0].video}}" frameborder="0" allow="autoplay"></iframe></p>
+                </div>
+            </div>
             <div ng-if="question[1] == 'True'">
                 <div class="bubble right">
                     <p>{{ question[0]}}</p>
@@ -102,7 +107,7 @@ html, body { height: 100%; overflow: hidden; }
 (function () {
     let app = angular.module("chatbot", []);
 
-    let MainController = function ($scope, $http,) {
+    let MainController = function ($scope, $http) {
         $scope.message = "kana";
         let answer = {"answer": "Tere, mina olen ÕIS2 chatbot! Abi saamiseks kirjuta help"};
         $scope.questions = [];
@@ -141,6 +146,12 @@ html, body { height: 100%; overflow: hidden; }
         };
 
     };
+    app.config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    'self',
+    'https://www.youtube.com/**'
+  ]);
+});
     app.controller("MainController", MainController);
 }());
 </script>

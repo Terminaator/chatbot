@@ -26,7 +26,8 @@ class chatbot():
             RandomPost.RandomRedditFunnyPic(),
             RandomPost.RandomRedditJoke(),
             RandomPost.RandomXkcd(),
-            Hangman.Hangman()
+            Hangman.Hangman(),
+            VideoQuestion.VideoAnswers(),
         ]
 
     def getResponse(self, inputSentence):
