@@ -7,7 +7,7 @@ class CourseQuestions:
     def __init__(self):
         self.subject = "kursuse"  # todo käänamine või panna kõik juba sobivasse käändesse
         self.possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi", "õpetamiskeelt", "kodulehte", "õppejõude",
-                              "kirjeldust", "eesmärki", "hindamist"]  # todo add words if you add questions
+                               "kirjeldust", "eesmärki", "hindamist"]  # todo add words if you add questions
 
         self.questions = [
             CourseCode(),
@@ -74,21 +74,19 @@ class Ects:
             json = oisCourses.coursesId(courseId[0])
             title = json["title"]["et"]
             if " " in title:
-                return "Kursuse " + title + " maht on " + str(json["credits"]) + " eap."
-            return synthesizeWord(title, "g").capitalize() + " maht on " + str(json["credits"]) + " eap."
+                return "Kursuse " + title + " maht on " + str(json["credits"]) + " EAP."
+            return synthesizeWord(title, "g").capitalize() + " maht on " + str(json["credits"]) + " EAP."
 
         else:
             response = "Selle nimega on " + str(len(courseId)) + " erinevat kursust."
             json = oisCourses.coursesId(courseId[0])
-            response += " " + courseId[0] + " mille maht on " + str(json["credits"]) + " eap"
+            response += " " + courseId[0] + " mille maht on " + str(json["credits"]) + " EAP"
             for i in courseId[1:-1]:
                 json = oisCourses.coursesId(i)
-                response += ", " + i + " mille maht on " + str(json["credits"]) + " eap"
+                response += ", " + i + " mille maht on " + str(json["credits"]) + " EAP"
             json = oisCourses.coursesId(courseId[-1])
-            response += " ja " + courseId[-1] + " mille maht on " + str(json["credits"]) + " eap."
+            response += " ja " + courseId[-1] + " mille maht on " + str(json["credits"]) + " EAP."
             return response
-
-
 
 
 class PreReqs:

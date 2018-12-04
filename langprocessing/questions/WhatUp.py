@@ -1,5 +1,6 @@
 from langprocessing.wordTags import WordTag as wt
 
+
 class WhatUp:
     def canAnswer(self, layer):
         return 'mis' in layer[wt.questionWord] and 'tegema' in layer[wt.verb]

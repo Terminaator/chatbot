@@ -6,9 +6,12 @@ from langprocessing.questions import *
 class chatbot():
     def __init__(self):
         self.frames = {}
+        self.game = False
+        self.hangman = ""
         self.currentFrame = -1
         self.sentenceProcessor = sentProc.SentenceProcessor()
         self.askedQuestion = 0
+        self.inputSentence = ""
         self.possibleQuestions = [
             Courses.CourseQuestions(),
             StructureUnits.StructureUnitQuestions(),
@@ -19,7 +22,12 @@ class chatbot():
             Weather.Weather(),
             WhoAreYou.WhoAreYou(),
             WhatUp.WhatUp(),
-            WhatIsQuestion.WhatIs()
+            WhatIsQuestion.WhatIs(),
+            RandomPost.RandomRedditFunnyPic(),
+            RandomPost.RandomRedditJoke(),
+            RandomPost.RandomXkcd(),
+            Hangman.Hangman(),
+            VideoQuestion.VideoAnswers(),
         ]
 
     def getResponse(self, inputSentence):
@@ -29,8 +37,15 @@ class chatbot():
         :return:A response for the client
         """
         words = self.sentenceProcessor.getWords(inputSentence)
+        self.setInputSentence(inputSentence)
         self.addFrameLayer(words)
-        return self.putTogetherAnAnswer()
+        return self.formDictionary(self.putTogetherAnAnswer())
+
+    def formDictionary(self, answer):
+        if isinstance(answer, dict):
+            return answer
+        return {"answer": answer}
+
 
     def putTogetherAnAnswer(self):
         """
@@ -44,13 +59,20 @@ class chatbot():
 
         # Simple questions
         for question in self.possibleQuestions:
+            if self.game:
+                answer = self.hangman.createAnswer(self.inputSentence)
+                if answer[0]:
+                    self.setGameFalse()
+                return answer[1]
             if question.canAnswer(currentLayer):
                 answer = question.answer(currentLayer)
+                if isinstance(answer, str) and answer is not None and answer[0] == "HANGMAN":
+                    self.setGameTrue()
+                    answer = answer[1]
+                    return answer
                 if answer is not None:
                     self.askedQuestion = 0
                     return answer
-
-
 
         # Questions with memory
         for question in [Courses.CourseQuestions(), StructureUnits.StructureUnitQuestions()]:
@@ -135,7 +157,8 @@ class chatbot():
         """
         # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
         layer = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.about: "",
-                wt.weather: "", wt.when: "", wt.keywords: [], wt.courseID: "", wt.structureUnitCode: "", wt.sentence: []}
+                 wt.weather: "", wt.when: "", wt.keywords: [], wt.courseID: "", wt.structureUnitCode: "",
+                 wt.sentence: [], wt.hangman: ""}
         return layer
 
     def askExtraInfo(self, subject, possibleTopics):
@@ -157,3 +180,25 @@ class chatbot():
             result += possibleTopics[-1] + "."
         result += "\nPalun täpsusta!"
         return result
+
+    def setGameTrue(self):
+        """
+        Sets the game to true, meaing that the game has started
+        """
+        self.game = True
+        self.hangman = Hangman.Hangman()
+
+    def setGameFalse(self):
+        """
+        Sets the hangman game to false, means that the game has ended
+        """
+        self.game = False
+        self.hangman = ""
+
+    def setInputSentence(self, sentence):
+        """
+        sets the user sentence to one of the class variable
+        hangman game uses the user sentence to get all the chars and words inputted, nothing filtered out
+        :param sentence: user sentence
+        """
+        self.inputSentence = sentence
