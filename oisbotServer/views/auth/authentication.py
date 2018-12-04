@@ -45,3 +45,15 @@ def isLogged(request):
             response = JsonResponse(data={"login": "Olete sisse logitud!"})
             response["X-Access-Token"] = x_access_token
             return response
+
+
+def isAuthenticated(request):
+    x_access_token = request.META.get("HTTP_X_ACCESS_TOKEN")
+    if(x_access_token == None):
+        return False
+    else:
+        check = requests.get("https://ois2dev.ut.ee/api/user",headers={'X-Access-Token': x_access_token})
+        if(check.status_code == 401):
+            return False
+        elif(check.status_code == 200):
+            return True
