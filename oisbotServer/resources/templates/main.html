@@ -1,67 +1,119 @@
 {% load staticfiles %}
 <html ng-app="chatbot">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
 
-* { box-sizing: border-box; margin: 0 0 0 0; padding: 0; }
-html, body { height: 100%; overflow: hidden; }
-.wrap {
-    margin: 10px 10px 10px 25%; height: 90%; width: 50%;
-    display: flex; flex-direction: column;
-    box-shadow: 1px 1px 1px 1px #F2F2F2;
-}
-/*.but_my {
-    background: #1976D2;
-}*/
-.container {
-    flex: 1 1 90%; display: flex; flex-direction: column;
-    background-color: #FFFFFF; border: 1px solid #F1F0F0; overflow: auto;
+        * {
+            box-sizing: border-box;
+            margin: 0 0 0 0;
+            padding: 0;
+        }
 
-}
-.header{
-    font-family: "Courier New", Courier, "Courier 10 Pitch", monospace;
-    text-align: center;
-}
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
 
-.form { flex: 0 0 32px; display: flex; border: 1px solid #ddd; }
-.form > input[type=text] { flex: 1 1 auto; border: 1px solid #eee; }
-.form > input[type=button] { flex: 0 0 20%; border: 1px solid #eee; }
-.bubble { flex: 1 1 auto; clear: both; } /* clear the floats here on parent */
-.bubble p {
-    border-radius: 15px;
-    padding: 8px; margin: 8px 12px;
-    max-width: 80%;  /* this will make it not exceed 80% and then wrap */
-    position: relative; transition: background-color 0.5s;
-}
-.left p { background-color: #F1F0F0; float: left; } /* floated left */
-.right p { background-color: #1976D2; color: #fff; float: right; } /* floated right */
-/* classes below are only for arrows, not relevant */
+        .wrap {
+            margin: 10px 10px 10px 25%;
+            height: 90%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 1px 1px 1px 1px #F2F2F2;
+        }
 
-/*.left p::before {
-    content: ''; position: absolute;
-    width: 0; height: 0; left: -8px; top: 8px;
-    border-top: 4px solid transparent;
-    border-right: 8px solid #ccc;
-    border-bottom: 4px solid transparent;
-}
-.right p::after {
-    content: ''; position: absolute;
-    width: 0; height: 0; right: -8px; bottom: 8px;
-    border-top: 4px solid transparent;
-    border-left: 8px solid #1976D2;
-    border-bottom: 4px solid transparent;
-}
-*/
+        /*.but_my {
+            background: #1976D2;
+        }*/
+        .container {
+            flex: 1 1 90%;
+            display: flex;
+            flex-direction: column;
+            background-color: #FFFFFF;
+            border: 1px solid #F1F0F0;
+            overflow: auto;
+
+        }
+
+        .header {
+            font-family: "Courier New", Courier, "Courier 10 Pitch", monospace;
+            text-align: center;
+        }
+
+        .form {
+            flex: 0 0 32px;
+            display: flex;
+            border: 1px solid #ddd;
+        }
+
+        .form > input[type=text] {
+            flex: 1 1 auto;
+            border: 1px solid #eee;
+        }
+
+        .form > input[type=button] {
+            flex: 0 0 20%;
+            border: 1px solid #eee;
+        }
+
+        .bubble {
+            flex: 1 1 auto;
+            clear: both;
+        }
+
+        /* clear the floats here on parent */
+        .bubble p {
+            border-radius: 15px;
+            padding: 8px;
+            margin: 8px 12px;
+            max-width: 80%; /* this will make it not exceed 80% and then wrap */
+            position: relative;
+            transition: background-color 0.5s;
+        }
+
+        .left p {
+            background-color: #F1F0F0;
+            float: left;
+        }
+
+        /* floated left */
+        .right p {
+            background-color: #1976D2;
+            color: #fff;
+            float: right;
+        }
+
+        /* floated right */
+        /* classes below are only for arrows, not relevant */
+
+        /*.left p::before {
+            content: ''; position: absolute;
+            width: 0; height: 0; left: -8px; top: 8px;
+            border-top: 4px solid transparent;
+            border-right: 8px solid #ccc;
+            border-bottom: 4px solid transparent;
+        }
+        .right p::after {
+            content: ''; position: absolute;
+            width: 0; height: 0; right: -8px; bottom: 8px;
+            border-top: 4px solid transparent;
+            border-left: 8px solid #1976D2;
+            border-bottom: 4px solid transparent;
+        }
+        */
 
     </style>
 </head>
+
 <body ng-controller="MainController">
 <h2 class="header">ÕIS2 CHATBOT</h2>
-{%  verbatim %}
+{% verbatim %}
 <div class="wrap">
     <div id="chatWindow" class="container">
-        <div ng-repeat="question in questions" >
+        <div ng-repeat="question in questions track by $index">
             <div ng-if="question[1]=='False'">
                 <div class="bubble left" id="answer" style="white-space: pre-wrap;">
                     <p>{{ question[0].answer }}</p>
@@ -74,7 +126,9 @@ html, body { height: 100%; overflow: hidden; }
             </div>
             <div ng-if="question[0].video">
                 <div class="bubble left" id="answer" style="white-space: pre-wrap;">
-                    <p><iframe ng-src="{{question[0].video}}" frameborder="0" allow="autoplay"></iframe></p>
+                    <p>
+                        <iframe ng-src="{{question[0].video}}" frameborder="0" allow="autoplay"></iframe>
+                    </p>
                 </div>
             </div>
             <div ng-if="question[1] == 'True'">
@@ -87,8 +141,8 @@ html, body { height: 100%; overflow: hidden; }
 
     <form id="inputWindow" class="form">
 
-        <input id="ifield"  type="text" ng-model="question">
-        <button class="but_my btn btn-primary" id="btn" type="submit" ng-click="addItem()" > Küsi </button>
+        <input id="ifield" type="text" ng-model="question">
+        <button class="but_my btn btn-primary" id="btn" type="submit" ng-click="addItem()"> Küsi</button>
     </form>
 </div>
 </div>
@@ -99,61 +153,76 @@ html, body { height: 100%; overflow: hidden; }
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 <script>
     function clearfield() {
-    document.getElementById("ifield").value = "";
-}
+        document.getElementById("ifield").value = "";
+    }
 
 
+    (function () {
+        let app = angular.module("chatbot", []);
 
-(function () {
-    let app = angular.module("chatbot", []);
+        let MainController = function ($scope, $http) {
+            $scope.message = "kana";
+            let answer = {"answer": "Tere, mina olen ÕIS2 chatbot! Abi saamiseks kirjuta help"};
+            $scope.questions = [];
+            $scope.questions.push([answer, "False"]);
+            let container = $(".container");
+            $scope.passwordTyped = false;
+            $scope.addItem = function () {
 
-    let MainController = function ($scope, $http) {
-        $scope.message = "kana";
-        let answer = {"answer": "Tere, mina olen ÕIS2 chatbot! Abi saamiseks kirjuta help"};
-        $scope.questions = [];
-        $scope.questions.push([answer, "False"]);
-        let container = $(".container");
-        $scope.addItem = function () {
-            let question = document.getElementById('ifield').value;
-            clearfield();
-            if (question.length !== 0) {
-                $scope.questions.push([question, 'True']);
-                let dataobject = {
-                    question: question
-                };
 
-                $http({
-                    method: 'POST',
-                    url: 'api/question',
-                    data: dataobject,
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': 'true',
-                        "X-Requested-With": "XMLHttpRequest",
+                let question = document.getElementById('ifield').value;
+                clearfield();
+                if (question.length !== 0) {
+                    if ($scope.passwordTyped) {
+                        $scope.questions.push(["Parool.", 'True']);
+                        $scope.passwordTyped = false
                     }
-                }).then(function (response) {
-                        $scope.questions.push([response.data, 'False']);
-                        container.stop().animate({scrollTop: container[0].scrollHeight}, 100);
-                    },
-                    function () {
-                        let answer = {"answer": "Ma tõesti ei tea. "};
-                        $scope.questions.push([answer, 'False']);
-                        container.stop().animate({scrollTop: container[0].scrollHeight}, 100)
+                    else {
+                        $scope.questions.push([question, 'True']);
                     }
-                );
-            }
+                    let dataobject = {
+                        question: question
+                    };
+                    document.getElementById('ifield').type = 'text';
+
+                    $http({
+                        method: 'POST',
+                        url: 'api/question',
+                        data: dataobject,
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Access-Control-Allow-Origin': 'true',
+                            "X-Requested-With": "XMLHttpRequest",
+                        }
+                    }).then(function (response) {
+
+                            if (response.data['answer'] === 'Palun sisestage parool') {
+                                document.getElementById('ifield').type = 'password';
+                                $scope.passwordTyped = true
+                            }
+                            $scope.questions.push([response.data, 'False']);
+
+                            container.stop().animate({scrollTop: container[0].scrollHeight}, 100);
+                        },
+                        function () {
+                            let answer = {"answer": "Ma tõesti ei tea. "};
+                            $scope.questions.push([answer, 'False']);
+                            container.stop().animate({scrollTop: container[0].scrollHeight}, 100)
+                        }
+                    );
+                }
+
+            };
 
         };
-
-    };
-    app.config(function($sceDelegateProvider) {
-  $sceDelegateProvider.resourceUrlWhitelist([
-    'self',
-    'https://www.youtube.com/**'
-  ]);
-});
-    app.controller("MainController", MainController);
-}());
+        app.config(function ($sceDelegateProvider) {
+            $sceDelegateProvider.resourceUrlWhitelist([
+                'self',
+                'https://www.youtube.com/**'
+            ]);
+        });
+        app.controller("MainController", MainController);
+    }());
 </script>
 
 

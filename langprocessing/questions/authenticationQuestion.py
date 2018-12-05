@@ -38,7 +38,6 @@ class Authenticate:
         response = auth.login(self.username, inputString)
         if response.status_code == 200:
             self.xToken = response["X-Access-Token"]
-            print(self.xToken)
             json = user.getUserBasicDetails(self.xToken)
             return "Tere " + json["first_name"] + "!"
         else:
