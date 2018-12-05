@@ -1,3 +1,4 @@
+# coding: utf-8
 from bs4 import BeautifulSoup
 from django.http import HttpResponse, JsonResponse
 from requests import Session
