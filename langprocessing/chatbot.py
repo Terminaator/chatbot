@@ -1,5 +1,6 @@
 # coding: utf-8
 import langprocessing.sentenceProcesser as sentProc
+from langprocessing.data import Data
 from langprocessing.wordTags import WordTag as wt
 from langprocessing.questions import *
 
@@ -204,3 +205,11 @@ class chatbot():
         :param sentence: user sentence
         """
         self.inputSentence = sentence
+
+    def getData(self):
+        return Data(self.askedQuestion,self.frames,self.currentFrame)
+
+    def setData(self,data):
+        self.currentFrame = data.currentFrame
+        self.frames = data.frames
+        self.askedQuestion = data.askedQuestion
