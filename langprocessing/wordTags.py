@@ -24,7 +24,7 @@ class WordTag(Enum):
     randomXkcd = 17
     hangman = 18
     video = 19
-
+    auth = 20
 
     #courses
     courseID = 21

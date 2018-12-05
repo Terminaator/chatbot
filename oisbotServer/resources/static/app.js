@@ -15,6 +15,7 @@ function clearfield() {
         let container = $(".container");
         $scope.addItem = function () {
             let question = document.getElementById('ifield').value;
+            document.getElementById('ifield').hidden = true;
             clearfield();
             if (question.length !== 0) {
                 $scope.questions.push([question, 'True']);

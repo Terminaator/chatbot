@@ -59,6 +59,7 @@ class SentenceProcessor:
         keywords[wt.randomFunny] = {'pilt'}
         keywords[wt.randomXkcd] = {'xkcd'}
         keywords[wt.video] = {'vastus'}
+        keywords[wt.auth] = {'sisene', 'login'}
 
 
         # Keywords what needs string in frame

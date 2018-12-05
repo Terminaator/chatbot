@@ -15,7 +15,6 @@ class chatbot():
         self.possibleQuestions = [
             Courses.CourseQuestions(),
             StructureUnits.StructureUnitQuestions(),
-            AuthenticationReqQuestions.AuthReqQuestions(),
             ImportantUniWebsites.ImportantUniWebsites(),
             HelpCommand.HelpCommand(),
             Greeting.Greeting(),
@@ -29,13 +28,17 @@ class chatbot():
             Hangman.Hangman(),
             VideoQuestion.VideoAnswers(),
         ]
+        self.authenticateQuestions = authenticationQuestion.Authenticate()
+        self.possibleAuthQuestions = AuthenticationReqQuestions.AuthReqQuestions()
 
-    def getResponse(self, inputSentence):
+    def getResponse(self, request):
         """
         fills the frame and returns an answer
         :param inputSentence: Question that the client asked
         :return:A response for the client
         """
+        self.request = request
+        inputSentence = request.json.get('question')
         words = self.sentenceProcessor.getWords(inputSentence)
         self.setInputSentence(inputSentence)
         self.addFrameLayer(words)
@@ -57,6 +60,18 @@ class chatbot():
         possibleTopics = []
         subject = ""
 
+        # Authentication
+        if (self.authenticateQuestions.authStepInProgress != 0):
+            return self.authenticateQuestions.continueAuth(self.inputSentence)
+
+        # Authentication req questions
+        for question in [self.possibleAuthQuestions, self.authenticateQuestions]:
+            if (question.canAnswer(currentLayer)):
+                self.askedQuestion = 0
+                answer = question.answer(currentLayer, self.request)
+                if answer is not None:
+                    return answer
+
         # Simple questions
         for question in self.possibleQuestions:
             if self.game:
@@ -73,6 +88,7 @@ class chatbot():
                 if answer is not None:
                     self.askedQuestion = 0
                     return answer
+
 
         # Questions with memory
         for question in [Courses.CourseQuestions(), StructureUnits.StructureUnitQuestions()]:
@@ -150,6 +166,8 @@ class chatbot():
                 weather: String,
                 when: String,
                 keywords: list,
+                username: String,
+                password: String,
                 courseID: [String]
                 structuralUnitCode: [String]
             }
