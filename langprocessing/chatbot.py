@@ -63,15 +63,15 @@ class chatbot():
         # Authentication
         if (self.authenticateQuestions.authStepInProgress != 0):
             return self.authenticateQuestions.continueAuth(self.inputSentence)
-
-        # Authentication req questions. Note 
+        """
+        # Authentication req questions.
         for question in [self.possibleAuthQuestions, self.authenticateQuestions]:
             if (question.canAnswer(currentLayer)):
-                answer = question.answer(currentLayer, request)
+                answer = question.answer(currentLayer, None)
                 if answer is not None:
                     self.askedQuestion = 0
                     return answer
-        """
+
         # games
         for game in self.possibleGames:
             if game.active:

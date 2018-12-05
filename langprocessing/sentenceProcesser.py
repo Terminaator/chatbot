@@ -68,7 +68,7 @@ class SentenceProcessor:
         keywordsString[wt.questionWord] = {'kes', 'mis', 'kus', 'mitu', 'kuna'}
         keywordsString[wt.pronoun] = {'mina', 'sina', 'tema', 'teie', 'meie', 'nemad'}
         keywordsString[wt.timeWord] = {'järgmine'}
-        keywordsString[wt.websiteName] = {'course', 'moodle', 'õis', 'õppeinfosüsteem', 'raamatukogu', 'ester',
+        keywordsString[wt.websiteName] = {'courses', 'moodle', 'õis', 'õppeinfosüsteem', 'raamatukogu', 'ester',
                                           'esileht'}
         keywordsString[wt.about] = {'õppekava', 'õppeaine', 'valikaine', 'vabaaine', 'ainepunkt', 'EAP', 'moodul',
                                     'alusmoodul', 'suunamoodul', 'erialamoodul', 'valikmoodul', 'vabaaine',

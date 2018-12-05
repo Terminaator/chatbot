@@ -21,7 +21,7 @@ class AuthReqQuestions:
 
 class NextCourse:
     def canAnswer(self, layer):
-        return False # layer[wt.pronoun] == "mina" and layer[wt.timeWord] == "järgmine" and wt.course in layer[wt.keywords] and layer[wt.questionWord]
+        return layer[wt.pronoun] == "mina" and layer[wt.timeWord] == "järgmine" and wt.course in layer[wt.keywords] and layer[wt.questionWord]
 
     def answer(self, layer, request):
         """
@@ -35,7 +35,7 @@ class NextCourse:
 class NewNotifications:
 
     def canAnswer(self, layer):
-        return False ## wt.wordNew in layer[wt.keywords] and wt.notifications in layer[wt.keywords]
+        return wt.wordNew in layer[wt.keywords] and wt.notifications in layer[wt.keywords]
 
     def answer(self, layer, request):
         """
