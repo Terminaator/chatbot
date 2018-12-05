@@ -25,6 +25,8 @@ install:
   - pip install beautifulsoup4
   - pip install estnltk==1.6.0b0 --quiet
 
-script: python -m unittest tests/testsWithoutSIS2.py
+script:
+  - python -m unittest tests/testsWithoutSIS2.py
+  - python -m unittest tests/testsUsingMock.py
 after_success:
   - bash deploy.sh

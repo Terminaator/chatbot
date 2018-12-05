@@ -7,7 +7,6 @@ from langprocessing.questions import *
 class chatbot():
     def __init__(self):
         self.frames = {}
-        self.request = None
         self.currentFrame = -1
         self.sentenceProcessor = sentProc.SentenceProcessor()
         self.askedQuestion = 0
@@ -68,7 +67,7 @@ class chatbot():
         # Authentication req questions. Note 
         for question in [self.possibleAuthQuestions, self.authenticateQuestions]:
             if (question.canAnswer(currentLayer)):
-                answer = question.answer(currentLayer, self.request)
+                answer = question.answer(currentLayer, request)
                 if answer is not None:
                     self.askedQuestion = 0
                     return answer
@@ -78,7 +77,7 @@ class chatbot():
             if game.active:
                 return game.createAnswer(self.inputSentence)
             elif game.canAnswer(currentLayer):
-                game.answer(currentLayer)
+                return game.answer(currentLayer)
 
         # Simple questions
         for question in self.possibleQuestions:

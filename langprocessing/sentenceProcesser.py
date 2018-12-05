@@ -60,6 +60,7 @@ class SentenceProcessor:
         keywords[wt.randomXkcd] = {'xkcd'}
         keywords[wt.video] = {'vastus'}
         keywords[wt.auth] = {'sisene', 'login'}
+        keywords[wt.hangman] = {'hangman'}
 
 
         # Keywords what needs string in frame
@@ -83,7 +84,7 @@ class SentenceProcessor:
                                     }
         keywordsString[wt.weather] = {"ilm", "ilmastik", "ilmake", "ilmuke", "ilmataat"}
         keywordsString[wt.when] = {"täna", "homme", "ülehomme", "homne", "ülehomne"}
-        keywordsString[wt.hangman] = {"hangman"}
+
 
         result = defaultdict(list)
         inputText.tag_layer(['morph_analysis'])

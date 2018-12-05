@@ -3,6 +3,7 @@ import oisbotServer.views.weather.weather as weather
 
 
 class Weather:
+
     def canAnswer(self, layer):
         return layer[wt.weather] != ""
 

@@ -18,7 +18,7 @@ class Hangman:
         :param layer: layer where to extract information
         :return: return boolean
         """
-        return layer[wt.hangman] != ""
+        return wt.hangman in layer[wt.keywords]
 
     def answer(self, layer):
         """
