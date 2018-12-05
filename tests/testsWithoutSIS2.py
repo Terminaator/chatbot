@@ -58,7 +58,7 @@ class TestSimpleRequests(unittest.TestCase):
         self.assertEqual('Moodle asub aadressil https://moodle.ut.ee/', bot.getResponse(sentence)["answer"])
         sentence = "Mis on estri link?"
         self.assertEqual('Ester asub aadressil https://www.ester.ee/', bot.getResponse(sentence)["answer"])
-        sentence = "Mis on courses link?"
+        sentence = "courses link?"
         self.assertEqual('Courses asub aadressil https://courses.cs.ut.ee/', bot.getResponse(sentence)["answer"])
 
 

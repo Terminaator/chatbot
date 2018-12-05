@@ -12,7 +12,7 @@ class ImportantUniWebsites:
         :return: answer with link to asked site
         """
         siteName = layer[wt.websiteName]
-        if siteName == "course":
+        if siteName == "courses":
             return "Courses asub aadressil https://courses.cs.ut.ee/"
         elif siteName == "moodle":
             return "Moodle asub aadressil https://moodle.ut.ee/"
