@@ -7,7 +7,7 @@ from oisbotServer.views.json.requestJson import RequestJson
 from django.core.cache import cache
 from langprocessing.data import Data
 from secrets import token_urlsafe
-
+time = 60*10
 @method_decorator(csrf_exempt, name='dispatch') #Võimalik, et me eemaldame selle ära
 class ClientQuestionView(View):
     def __init__(self, **kwargs):
@@ -21,13 +21,13 @@ class ClientQuestionView(View):
         cookie = request.COOKIES.get("TakeMeHome")
         if self.getCookie(cookie):
             response = JsonResponse(self.bot.getResponse(inputSentence))
-            cache.set(cookie,self.bot.getData())
+            cache.set(cookie,self.bot.getData(),time)
             return response
         else:
             key = token_urlsafe(16)
             response = JsonResponse(self.bot.getResponse(inputSentence))
-            cache.set(key,self.bot.getData())
-            response.set_cookie("TakeMeHome",key)
+            cache.set(key,self.bot.getData(),time)
+            response.set_cookie("TakeMeHome",key,max_age=time)
             return response
 
 
@@ -35,6 +35,6 @@ class ClientQuestionView(View):
         if cookie is None:
             return False
         else:
-            data = cache.get_or_set(cookie, Data(self.bot.askedQuestion,self.bot.frames,self.bot.currentFrame))
+            data = cache.get_or_set(cookie, Data(self.bot.askedQuestion,self.bot.frames,self.bot.currentFrame),time)
             self.bot.setData(data)
             return True
