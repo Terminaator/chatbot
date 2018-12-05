@@ -14,5 +14,8 @@ class ClientQuestionView(View):
 
     @method_decorator(RequestJson)
     def post(self, request):
+        self.request = request
+        inputSentence = request.json.get('question')
+        return JsonResponse(bot.getResponse(inputSentence))
 
-        return JsonResponse(bot.getResponse(request))
+

@@ -1,5 +1,5 @@
 from langprocessing.wordTags import WordTag as wt
-from oisbotServer.views.auth import authentication as auth
+#from oisbotServer.views.auth import authentication as auth #This class doesnt work properly
 
 
 
@@ -21,7 +21,7 @@ class AuthReqQuestions:
 
 class NextCourse:
     def canAnswer(self, layer):
-        return layer[wt.pronoun] == "mina" and layer[wt.timeWord] == "järgmine" and wt.course in layer[wt.keywords] and layer[wt.questionWord]
+        return False # layer[wt.pronoun] == "mina" and layer[wt.timeWord] == "järgmine" and wt.course in layer[wt.keywords] and layer[wt.questionWord]
 
     def answer(self, layer, request):
         """
@@ -35,7 +35,7 @@ class NextCourse:
 class NewNotifications:
 
     def canAnswer(self, layer):
-        return wt.wordNew in layer[wt.keywords] and wt.notifications in layer[wt.keywords]
+        return False ## wt.wordNew in layer[wt.keywords] and wt.notifications in layer[wt.keywords]
 
     def answer(self, layer, request):
         """
@@ -43,7 +43,8 @@ class NewNotifications:
         :param layer: current layer
         :return: question to the question
         """
-
+        """
         if (auth.isAuthenticated(request)):
             return "siin peaks vastus olema"
+            """
         return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."

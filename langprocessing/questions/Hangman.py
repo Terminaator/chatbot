@@ -4,6 +4,7 @@ import  langprocessing.questions.answers.dictionary as d
 
 class Hangman:
     def __init__(self):
+        self.active = False
         self.wordLen = randint(3, 31)
         self.dictionary = self.createDict()
         self.word = ""
@@ -25,6 +26,7 @@ class Hangman:
         :param layer: not used, because not needed, other questions require
         :return: returns first answer for the hangman game
         """
+        self.active = True
         return "HANGMAN", "Teretulemast mängu HANGMAN! \n Ülesanne on ülilihtne, sina pakud tähti ja mina ütlen, " \
                           "et seda tähte " \
                           "minu mõeldud sõnas ei ole. Okei, nali, kindlasti suudad mõne tähe ka ära arvata. Aga " \
@@ -60,6 +62,7 @@ class Hangman:
                 self.guessedChars) + " \n" + self.wordKnown
         else:
             if self.word == input:
+                self.active = False
                 return True, "Arvasid ära, mõtlesin tõesti sõna " + self.word + "."
             else:
                 self.removeWordFromDict(input)

@@ -6,12 +6,14 @@ from langprocessing.questions import *
 class chatbot():
     def __init__(self):
         self.frames = {}
-        self.game = False
-        self.hangman = ""
+        self.request = None
         self.currentFrame = -1
         self.sentenceProcessor = sentProc.SentenceProcessor()
         self.askedQuestion = 0
         self.inputSentence = ""
+        self.possibleGames = [
+            Hangman.Hangman()
+        ]
         self.possibleQuestions = [
             Courses.CourseQuestions(),
             StructureUnits.StructureUnitQuestions(),
@@ -25,20 +27,17 @@ class chatbot():
             RandomPost.RandomRedditFunnyPic(),
             RandomPost.RandomRedditJoke(),
             RandomPost.RandomXkcd(),
-            Hangman.Hangman(),
-            VideoQuestion.VideoAnswers(),
+            VideoQuestion.VideoAnswers()
         ]
         self.authenticateQuestions = authenticationQuestion.Authenticate()
         self.possibleAuthQuestions = AuthenticationReqQuestions.AuthReqQuestions()
 
-    def getResponse(self, request):
+    def getResponse(self, inputSentence):
         """
         fills the frame and returns an answer
         :param inputSentence: Question that the client asked
         :return:A response for the client
         """
-        self.request = request
-        inputSentence = request.json.get('question')
         words = self.sentenceProcessor.getWords(inputSentence)
         self.setInputSentence(inputSentence)
         self.addFrameLayer(words)
@@ -56,35 +55,34 @@ class chatbot():
         :return: A response for the client
         """
         currentLayer = self.frames["layer " + str(self.currentFrame)]
-
         possibleTopics = []
         subject = ""
 
+        # currently not used, since authentication needs to be reworked
+        """
         # Authentication
         if (self.authenticateQuestions.authStepInProgress != 0):
             return self.authenticateQuestions.continueAuth(self.inputSentence)
 
-        # Authentication req questions
+        # Authentication req questions. Note 
         for question in [self.possibleAuthQuestions, self.authenticateQuestions]:
             if (question.canAnswer(currentLayer)):
-                self.askedQuestion = 0
                 answer = question.answer(currentLayer, self.request)
                 if answer is not None:
+                    self.askedQuestion = 0
                     return answer
+        """
+        # games
+        for game in self.possibleGames:
+            if game.active:
+                return game.createAnswer(self.inputSentence)
+            elif game.canAnswer(currentLayer):
+                game.answer(currentLayer)
 
         # Simple questions
         for question in self.possibleQuestions:
-            if self.game:
-                answer = self.hangman.createAnswer(self.inputSentence)
-                if answer[0]:
-                    self.setGameFalse()
-                return answer[1]
             if question.canAnswer(currentLayer):
                 answer = question.answer(currentLayer)
-                if isinstance(answer, str) and answer is not None and answer[0] == "HANGMAN":
-                    self.setGameTrue()
-                    answer = answer[1]
-                    return answer
                 if answer is not None:
                     self.askedQuestion = 0
                     return answer
@@ -198,20 +196,6 @@ class chatbot():
             result += possibleTopics[-1] + "."
         result += "\nPalun täpsusta!"
         return result
-
-    def setGameTrue(self):
-        """
-        Sets the game to true, meaing that the game has started
-        """
-        self.game = True
-        self.hangman = Hangman.Hangman()
-
-    def setGameFalse(self):
-        """
-        Sets the hangman game to false, means that the game has ended
-        """
-        self.game = False
-        self.hangman = ""
 
     def setInputSentence(self, sentence):
         """
