@@ -8,7 +8,7 @@ from django.core.cache import cache
 from langprocessing.data import Data
 from secrets import token_urlsafe
 
-@method_decorator(csrf_exempt, name='dispatch') #Võimalik, et me eemaldame selle ära
+@method_decorator(csrf_exempt, name='dispatch')
 class ClientQuestionView(View):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
