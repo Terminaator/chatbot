@@ -1,4 +1,4 @@
-from langprocessing.wordTags import WordTag as wt
+from langprocessing.WordTags import WordTag as wt
 # from oisbotServer.views.auth import authentication as auth # ei tööta ilusti
 from oisbotServer.views.auth import user
 

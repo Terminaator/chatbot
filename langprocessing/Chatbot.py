@@ -1,8 +1,9 @@
 # coding: utf-8
-import langprocessing.sentenceProcesser as sentProc
-from langprocessing.data import Data
-from langprocessing.wordTags import WordTag as wt
+import langprocessing.SentenceProcesser as sentProc
+from langprocessing.Data import Data
+from langprocessing.WordTags import WordTag as wt
 from langprocessing.questions import *
+
 
 class chatbot():
     def __init__(self):
@@ -29,7 +30,7 @@ class chatbot():
             RandomPost.RandomXkcd(),
             VideoQuestion.VideoAnswers()
         ]
-        self.authenticateQuestions = authenticationQuestion.Authenticate()
+        self.authenticateQuestions = AuthenticationQuestion.Authenticate()
         self.possibleAuthQuestions = AuthenticationReqQuestions.AuthReqQuestions()
 
     def getResponse(self, inputSentence):
@@ -47,7 +48,6 @@ class chatbot():
         if isinstance(answer, dict):
             return answer
         return {"answer": answer}
-
 
     def putTogetherAnAnswer(self):
         """
@@ -86,7 +86,6 @@ class chatbot():
                 if answer is not None:
                     self.askedQuestion = 0
                     return answer
-
 
         # Questions with memory
         for question in [Courses.CourseQuestions(), StructureUnits.StructureUnitQuestions()]:
@@ -174,7 +173,7 @@ class chatbot():
         # , wt.greeting: False , wt.ects: False, wt.preReqs: False, wt.courseCodeMentioned: False
         layer = {wt.questionWord: "", wt.pronoun: "", wt.verb: "", wt.websiteName: "", wt.timeWord: "", wt.about: "",
                  wt.weather: "", wt.when: "", wt.keywords: [], wt.courseID: "", wt.structureUnitCode: "",
-                 wt.sentence: [], wt.hangman: ""}
+                 wt.sentence: [], wt.hangman: "", wt.what: ""}
         return layer
 
     def askExtraInfo(self, subject, possibleTopics):
@@ -206,9 +205,9 @@ class chatbot():
         self.inputSentence = sentence
 
     def getData(self):
-        return Data(self.askedQuestion,self.frames,self.currentFrame)
+        return Data(self.askedQuestion, self.frames, self.currentFrame)
 
-    def setData(self,data):
+    def setData(self, data):
         self.currentFrame = data.currentFrame
         self.frames = data.frames
         self.askedQuestion = data.askedQuestion

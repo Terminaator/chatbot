@@ -1,4 +1,4 @@
-from langprocessing.wordTags import WordTag as wt
+from langprocessing.WordTags import WordTag as wt
 import oisbotServer.views.ois.courses as oisCourses
 from estnltk.vabamorf.morf import synthesize, analyze
 

@@ -24,10 +24,6 @@
             flex-direction: column;
             box-shadow: 1px 1px 1px 1px #F2F2F2;
         }
-
-        /*.but_my {
-            background: #1976D2;
-        }*/
         .container {
             flex: 1 1 90%;
             display: flex;
@@ -85,25 +81,6 @@
             color: #fff;
             float: right;
         }
-
-        /* floated right */
-        /* classes below are only for arrows, not relevant */
-
-        /*.left p::before {
-            content: ''; position: absolute;
-            width: 0; height: 0; left: -8px; top: 8px;
-            border-top: 4px solid transparent;
-            border-right: 8px solid #ccc;
-            border-bottom: 4px solid transparent;
-        }
-        .right p::after {
-            content: ''; position: absolute;
-            width: 0; height: 0; right: -8px; bottom: 8px;
-            border-top: 4px solid transparent;
-            border-left: 8px solid #1976D2;
-            border-bottom: 4px solid transparent;
-        }
-        */
 
     </style>
 </head>
@@ -176,8 +153,7 @@
                     if ($scope.passwordTyped) {
                         $scope.questions.push(["Parool.", 'True']);
                         $scope.passwordTyped = false
-                    }
-                    else {
+                    } else {
                         $scope.questions.push([question, 'True']);
                     }
                     let dataobject = {

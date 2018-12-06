@@ -1,5 +1,5 @@
-from langprocessing.wordTags import WordTag as wt
-import langprocessing.questions.answers.whoAnswers as wha
+from langprocessing.WordTags import WordTag as wt
+import langprocessing.questions.answers.WhoAnswers as wha
 
 
 class WhoIs:

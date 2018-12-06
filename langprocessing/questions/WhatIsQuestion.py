@@ -1,8 +1,8 @@
-from langprocessing.wordTags import WordTag as wt
-import langprocessing.questions.answers.whatAnswers as wa
+from langprocessing.WordTags import WordTag as wt
+import langprocessing.questions.answers.WhatAnswers as wa
 import oisbotServer.views.ois.courses as oisCourses
 import oisbotServer.views.ois.structuralUnits as oisStructuralUnits
-
+import oisbotServer.views.eki.ekiQuestions as eq
 
 
 class WhatIs:
@@ -27,7 +27,7 @@ class WhatIs:
         return (layer[wt.questionWord] in ["mis", "mida"] and len(
             set(layer[wt.verb]).intersection({"tähendama", "olema"}))) != 0 and (
                        sentence[2] == wt.structureUnitCode or sentence[2] == wt.courseID or sentence[2] == wt.about or
-                       sentence[2] == wt.verb)
+                       sentence[2] == wt.verb) or (layer[wt.questionWord] in ["mis", "mida"])
 
     def answer(self, layer):
         for q in self.questions:
@@ -37,7 +37,8 @@ class WhatIs:
 
 class GeneralWhatQuestion:
     def canAnswer(self, layer):
-        return layer[wt.about] != ""
+        return layer[wt.about] != "" or (
+                layer[wt.structureUnitCode] == "" and layer[wt.courseID] == "")
 
     def answer(self, layer):
         """
@@ -48,10 +49,13 @@ class GeneralWhatQuestion:
                 """
         word = layer[wt.about]
         answer = wa.Answers
+        print(layer[wt.sentence])
         try:
             a = answer.__getattribute__(answer, word)
         except AttributeError:
-            a = "Ma ei tea mis " + word + " on."
+            a = eq.findMeaning(layer[wt.what])
+            if a == []:
+                a = "Ma ei tea mis " + word + " on."
         return a
 
 
@@ -81,4 +85,3 @@ class CourseCode:
         """
         json = oisCourses.coursesId(layer[wt.courseID])
         return "Antud koodi kasutab kursus: " + json["name"]["et"] + "."
-

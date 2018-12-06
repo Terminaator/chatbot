@@ -5,6 +5,7 @@ class WordTag(Enum):
     sentence = -1
 
     #misc
+    what = 0
     questionWord = 1
     greeting = 2
     pronoun = 3

@@ -1,8 +1,9 @@
-from langprocessing.chatbot import chatbot
+from langprocessing.Chatbot import chatbot
 from unittest import TestCase
 from unittest.mock import Mock
 from oisbotServer.views.ois import misc
 import oisbotServer.views.weather.weather as weather
+
 
 class TestUsingMock(TestCase):
     # This class test questions with a bit random results or just if method call needs to be checked
@@ -28,4 +29,3 @@ class TestUsingMock(TestCase):
         res2 = cb.getResponse("nali")
         self.assertEqual({'answer': 'safe', 'img': 'img'}, res1)
         self.assertEqual({"answer": "t\ns"}, res2)
-

@@ -1,13 +1,13 @@
 # coding: utf-8
 import unittest
-from langprocessing import chatbot as cbot
-from langprocessing import sentenceProcesser as sentProc
-from langprocessing.wordTags import WordTag as wt
+from langprocessing import Chatbot as cbot
+from langprocessing import SentenceProcesser as sentProc
+from langprocessing.WordTags import WordTag as wt
 
 
 class TestSimpleRequests(unittest.TestCase):
 
-    def test_fillFrameLayer(self):
+    def testFillFrameLayer(self):
         bot = cbot.chatbot()
         words = {wt.questionWord: "mitu", wt.keywords: [wt.ects], wt.courseID: "LTAT.05.005"}
 
@@ -20,7 +20,7 @@ class TestSimpleRequests(unittest.TestCase):
 
         self.assertEqual(expectedLayer, actualLayer)
 
-    def test_frame(self):
+    def testFrame(self):
         bot = cbot.chatbot()
 
         layer0 = bot.createEmptyLayer()
@@ -51,8 +51,8 @@ class TestSimpleRequests(unittest.TestCase):
 
         self.assertEqual(expectedFrames, bot.frames)
 
-    def test_importantUniWebSite(self):
-        #NOTE: This question doesn't require ÕIS 2.0 API
+    def testImportantUniWebSite(self):
+        # NOTE: This question doesn't require ÕIS 2.0 API
         bot = cbot.chatbot()
         sentence = "Mis on moodle link?"
         self.assertEqual('Moodle asub aadressil https://moodle.ut.ee/', bot.getResponse(sentence)["answer"])
@@ -61,26 +61,33 @@ class TestSimpleRequests(unittest.TestCase):
         sentence = "courses link?"
         self.assertEqual('Courses asub aadressil https://courses.cs.ut.ee/', bot.getResponse(sentence)["answer"])
 
-
-    def test_simpleGetWords(self):
+    def testSimpleGetWords(self):
         sentProcessor = sentProc.SentenceProcessor()
         self.assertEqual(
-            {wt.questionWord: "mitu", wt.keywords: [wt.ects, wt.course], wt.numbers:[], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
+            {wt.questionWord: "mitu", wt.keywords: [wt.ects, wt.course], wt.numbers: [], wt.verb: ["olema"],
+             wt.what: 'eap', 0: "mitu",
+             1: "eap", 2: "aine",
              wt.courseID: ["LTAT.05.005"]},
             sentProcessor.getWords("Mitu eap'd on aine Tarkvaraprojekt"))
         self.assertEqual(
-            {wt.questionWord: "mitu", wt.keywords: [wt.ects, wt.course], wt.numbers:[], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
+            {wt.questionWord: "mitu", wt.keywords: [wt.ects, wt.course], wt.numbers: [], wt.verb: ["olema"],
+             wt.what: 'eap', 0: "mitu",
+             1: "eap", 2: "aine",
              wt.courseID: ["MTAT.03.263"]},
             sentProcessor.getWords("Mitu eap'd on aine Arvutimängude loomine ja disain"))
         self.assertEqual(
-            {wt.questionWord: "mitu", wt.keywords: [wt.ects, wt.course], wt.numbers:[], wt.verb: ["olema"], 0: "mitu", 1: "eap", 2: "aine",
+            {wt.questionWord: "mitu", wt.keywords: [wt.ects, wt.course], wt.numbers: [], wt.verb: ["olema"],
+             wt.what: 'eap', 0: "mitu",
+             1: "eap", 2: "aine",
              wt.courseID: ["LTAT.05.004", "P2NC.01.094"]},
             sentProcessor.getWords("Mitu eap'd on aine Veebirakenduste loomine"))
 
-        self.assertEqual({wt.keywords: [wt.courseCodeMentioned, wt.preReqs], wt.numbers:[], 0: 'ainekood', 1: 'eeldusaine'},
-                         sentProcessor.getWords("ainekood eeldusained"))
+        self.assertEqual(
+            {wt.keywords: [wt.courseCodeMentioned, wt.preReqs], wt.numbers: [],
+             wt.what: 'eeldusaine',0: 'ainekood', 1: 'eeldusaine'},
+            sentProcessor.getWords("ainekood eeldusained"))
 
-    def test_picQuestions(self):
+    def testPicQuestions(self):
         bot = cbot.chatbot()
         sentence = "xkcd"
         self.assertTrue(bot.getResponse(sentence)["img"].startswith("https://"))

@@ -1,4 +1,4 @@
-from langprocessing.wordTags import WordTag as wt
+from langprocessing.WordTags import WordTag as wt
 
 class WhoAreYou:
     def canAnswer(self, layer):

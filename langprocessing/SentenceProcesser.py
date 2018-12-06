@@ -7,7 +7,7 @@ import itertools
 import logging
 import csv
 import os
-from langprocessing.wordTags import WordTag as wt
+from langprocessing.WordTags import WordTag as wt
 
 
 class SentenceProcessor:
@@ -135,6 +135,8 @@ class SentenceProcessor:
                     result[wordCounter] = lemm
                     wordCounter += 1
             i -= 1
+
+        result[wt.what] = result[1]
         return result
 
     def _getNumbersFromText(self, text):

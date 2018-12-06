@@ -1,6 +1,6 @@
 from random import randint
-from langprocessing.wordTags import WordTag as wt
-import  langprocessing.questions.answers.dictionary as d
+from langprocessing.WordTags import WordTag as wt
+import  langprocessing.questions.answers.Dictionary as d
 
 class Hangman:
     def __init__(self):
