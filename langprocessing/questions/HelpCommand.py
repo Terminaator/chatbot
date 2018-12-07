@@ -13,9 +13,9 @@ class HelpCommand:
         """
         topics = defaultdict(list)
         topics["Kursused:"] = ['Eap\'de arv', 'Kursuse kood', 'Eeldusained', 'Õpetamiskeel', 'Kirjeldus', 'Eesmärk',
-                               'Koduleht', 'Õppejõud', 'Hindamine']
+                               'Koduleht', 'Eksami vastused', 'Õppejõud', 'Hindamine']
         topics["Struktuuriüksused:"] = ['Koodi tähendus', 'Koduleht', 'Telefoninumber', 'Email', 'Aadress']
-        topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link', 'Tartu ilma', "Mis/kes on ___", 'Nali', 'Kxcd', 'Hangman']
+        topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link', 'Tartu ilma(Täna, homme, ülehomme)', "Mis/kes on ___", 'Nali', 'Pilt', 'Xkcd', 'Hangman']
 
         result = "Mina olen sõbralik(enamasti) õis2 resources. Mult saab küsida järgmiste teemade kohta."
         for topic in topics:

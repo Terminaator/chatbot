@@ -42,7 +42,7 @@ class SentenceProcessor:
         keywords[wt.courseCodeMentioned] = {'ainekood', 'kood'}
         keywords[wt.preReqs] = {'eeldusaine', 'eeldus'}
         keywords[wt.greeting] = {'tere', 'hei', 'hommikust', 'hommik', 'õhtust', 'tsau', 'ahoi'}
-        keywords[wt.language] = {'keel'}
+        keywords[wt.language] = {'keel', 'õpetamiskeel'}
         keywords[wt.description] = {'kirjeldus'}
         keywords[wt.objective] = {'eesmärk'}
         keywords[wt.website] = {'koduleht', 'leht', 'veeb', 'veebileht', 'link', 'kodulehekülg'}

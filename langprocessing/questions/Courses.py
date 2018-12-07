@@ -6,7 +6,7 @@ from estnltk.vabamorf.morf import synthesize, analyze
 class CourseQuestions:
     def __init__(self):
         self.subject = "kursuse"  # todo käänamine või panna kõik juba sobivasse käändesse
-        self.possibleTopics = ["eelduaineid", "eapde arvu", "ainekoodi", "õpetamiskeelt", "kodulehte", "õppejõude",
+        self.possibleTopics = ["eeldusaineid", "eapde arvu", "ainekoodi", "õpetamiskeelt", "kodulehte", "õppejõude",
                                "kirjeldust", "eesmärki", "hindamist"]  # todo add words if you add questions
 
         self.questions = [
