@@ -19,7 +19,7 @@ before_install:
   - export PIP_USE_MIRRORS=true
   - openssl aes-256-cbc -K $encrypted_8c393341f536_key -iv $encrypted_8c393341f536_iv -in tvp2017-dumas.pem.enc -out tvp2017-dumas.pem -d
 install:
-  - pip install -q Django==$2.1.4
+  - pip install -q Django==$2.1.2
   - pip install djangorestframework
   - pip install requests
   - pip install beautifulsoup4
