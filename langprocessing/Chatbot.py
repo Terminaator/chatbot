@@ -55,7 +55,7 @@ class chatbot():
         currentLayer = self.frames["layer " + str(self.currentFrame)]
         possibleTopics = []
         subject = ""
-        print(self.authenticateQuestions.xToken)
+
         # Authentication
         if self.authenticateQuestions.authStepInProgress != 0:
             return self.authenticateQuestions.continueAuth(self.inputSentence)
