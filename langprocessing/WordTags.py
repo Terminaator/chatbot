@@ -51,3 +51,4 @@ class WordTag(Enum):
 
     #User
     notifications = 61
+    studybookNr = 62

@@ -36,6 +36,6 @@ class ClientQuestionView(View):
         if cookie is None:
             return False
         else:
-            data = cache.get_or_set(cookie, Data(self.bot.askedQuestion, self.bot.frames, self.bot.currentFrame), time)
+            data = cache.get_or_set(cookie, self.bot.getData(), time)
             self.bot.setData(data)
             return True

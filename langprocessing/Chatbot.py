@@ -3,7 +3,7 @@ import langprocessing.SentenceProcesser as sentProc
 from langprocessing.Data import Data
 from langprocessing.WordTags import WordTag as wt
 from langprocessing.questions import *
-
+import random
 
 class chatbot():
     def __init__(self):
@@ -12,9 +12,7 @@ class chatbot():
         self.sentenceProcessor = sentProc.SentenceProcessor()
         self.askedQuestion = 0
         self.inputSentence = ""
-        self.possibleGames = [
-            Hangman.Hangman()
-        ]
+        self.hangman = Hangman.Hangman()
         self.possibleQuestions = [
             Courses.CourseQuestions(),
             StructureUnits.StructureUnitQuestions(),
@@ -57,23 +55,26 @@ class chatbot():
         currentLayer = self.frames["layer " + str(self.currentFrame)]
         possibleTopics = []
         subject = ""
-
-        # currently not used, since authentication needs to be reworked
-        """
+        print(self.authenticateQuestions.xToken)
         # Authentication
-        if (self.authenticateQuestions.authStepInProgress != 0):
+        if self.authenticateQuestions.authStepInProgress != 0:
             return self.authenticateQuestions.continueAuth(self.inputSentence)
-        """
+        if self.authenticateQuestions.canAnswer(currentLayer):
+            answer = self.authenticateQuestions.answer(currentLayer)
+            if answer is not None:
+                self.askedQuestion = 0
+                return answer
+
         # Authentication req questions.
-        for question in [self.possibleAuthQuestions, self.authenticateQuestions]:
-            if (question.canAnswer(currentLayer)):
-                answer = question.answer(currentLayer, None)
+        for question in [self.possibleAuthQuestions]:
+            if question.canAnswer(currentLayer):
+                answer = question.answer(currentLayer, self.authenticateQuestions.xToken)
                 if answer is not None:
                     self.askedQuestion = 0
                     return answer
 
         # games
-        for game in self.possibleGames:
+        for game in [self.hangman]:
             if game.active:
                 return game.createAnswer(self.inputSentence)
             elif game.canAnswer(currentLayer):
@@ -205,9 +206,11 @@ class chatbot():
         self.inputSentence = sentence
 
     def getData(self):
-        return Data(self.askedQuestion, self.frames, self.currentFrame)
+        return Data(self.askedQuestion, self.frames, self.currentFrame, self.hangman.getData(), self.authenticateQuestions.getData())
 
     def setData(self, data):
         self.currentFrame = data.currentFrame
         self.frames = data.frames
         self.askedQuestion = data.askedQuestion
+        self.hangman.setData(data.hangmanData)
+        self.authenticateQuestions.setData(data.authData)

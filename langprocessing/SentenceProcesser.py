@@ -45,12 +45,12 @@ class SentenceProcessor:
         keywords[wt.language] = {'keel'}
         keywords[wt.description] = {'kirjeldus'}
         keywords[wt.objective] = {'eesmärk'}
-        keywords[wt.website] = {'koduleht', 'leht', 'veeb', 'veebileht', 'link'}
+        keywords[wt.website] = {'koduleht', 'leht', 'veeb', 'veebileht', 'link', 'kodulehekülg'}
         keywords[wt.lecturers] = {'õppejõud'}
         keywords[wt.ects] = {'eap', 'eapd'}
         keywords[wt.phone] = {'telefon', 'mobiil', 'number', 'telefoninumber'}
         keywords[wt.email] = {'email', 'mail', 'meil'}
-        keywords[wt.address] = {'aadress', 'asukoht'}
+        keywords[wt.address] = {'aadress', 'asukoht', 'asub', ''}
         keywords[wt.grade] = {'hindamine', 'hinne'}
         keywords[wt.course] = {'aine', 'kursus'}
         keywords[wt.wordNew] = {'uus'}
@@ -61,6 +61,7 @@ class SentenceProcessor:
         keywords[wt.video] = {'vastus'}
         keywords[wt.auth] = {'sisene', 'login'}
         keywords[wt.hangman] = {'hangman'}
+        keywords[wt.studybookNr] = {'matrikel', 'matriklinumber'}
 
 
         # Keywords what needs string in frame

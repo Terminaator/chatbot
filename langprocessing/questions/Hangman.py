@@ -1,6 +1,7 @@
 from random import randint
 from langprocessing.WordTags import WordTag as wt
-import  langprocessing.questions.answers.Dictionary as d
+import langprocessing.questions.answers.Dictionary as d
+
 
 class Hangman:
     def __init__(self):
@@ -39,6 +40,7 @@ class Hangman:
         :param input: char or full word
         :return: answer and state of the game
         """
+
         input = input.strip()
 
         if len(input) == 1:
@@ -82,6 +84,7 @@ class Hangman:
             self.guessedRight.append(input)
             self.setWordKnown()
             if "_" not in self.wordKnown:
+                self.active = False
                 return True, "Kaua läks, aga asja sai. Arvasid ära, sõna on tõesti " + self.wordKnown + "."
             return False, "Täht " + input + " on tõesti sõnas sees. Tubli. Veel on vaja arvata " + str(
                 self.wordKnown.count("_")) + " tähte\n" + "Hetkel proovitud " + ' '.join(
@@ -95,8 +98,8 @@ class Hangman:
         if somehow the user inputted word is in the dictionary then exclude it from the dictionary
         :param word:
         """
-        if word in self.getCurDict():
-            self.setDict(self.getCurDict().remove(word))
+        if word in self.dictionary:
+            self.setDict(self.dictionary.remove(word))
 
     def checkChar(self, char):
         """
@@ -141,12 +144,6 @@ class Hangman:
         """
         self.wordKnown = ''.join(['_ ' if w not in self.guessedRight else w for w in self.getWord()])
 
-    def getCurDict(self):
-        """
-        :return: current dictionary
-        """
-        return self.dictionary
-
     def setDict(self, newDict):
         """
         sets new dictionary
@@ -179,10 +176,10 @@ class Hangman:
         filters the dictionary, takes out all the words that do not contain the inputted char from user
         :param char: user input
         """
-        newDict = [word for word in self.getCurDict() if char not in word.lower()]
+        newDict = [word for word in self.dictionary if char not in word.lower()]
         if len(newDict) < 5:
-            dictlen = len(self.getCurDict())
-            word = self.getCurDict()[randint(0, dictlen - 1)]
+            dictlen = len(self.dictionary)
+            word = self.dictionary[randint(0, dictlen - 1)]
             self.setWord(word)
         else:
             self.setDict(newDict)
@@ -193,3 +190,20 @@ class Hangman:
         :return: returns the hidden word that the user has to guess
         """
         return ''.join(['_ ' for m in range(self.wordLen)])
+
+    def getData(self):
+
+        if self.active:
+            return [True, self.dictionary, self.wordLen, self.word, self.wordKnown, self.guessedChars, self.guessedRight]
+        else:
+            return [False]
+
+    def setData(self, data):
+        self.active = data[0]
+        if self.active:
+            self.dictionary = data[1]
+            self.wordLen = data[2]
+            self.word = data[3]
+            self.wordKnown = data[4]
+            self.guessedChars = data[5]
+            self.guessedRight = data[6]

@@ -6,24 +6,23 @@ from langprocessing.WordTags import WordTag as wt
 class AuthReqQuestions:
     def __init__(self):
         self.questions = [
-            NextCourse(),
-            NewNotifications()
+            StudyBookN(),
         ]
 
     def canAnswer(self, layer):
         return True
 
-    def answer(self, layer, request):
+    def answer(self, layer, token):
         for q in self.questions:
             if q.canAnswer(layer):
-                return q.answer(layer, request)
+                return q.answer(layer, token)
 
 
-class NextCourse:
+class StudyBookN:
     def canAnswer(self, layer):
-        return layer[wt.pronoun] == "mina" and layer[wt.timeWord] == "järgmine" and wt.course in layer[wt.keywords] and layer[wt.questionWord]
+        return layer[wt.pronoun] == "mina" and wt.studybookNr in layer[wt.keywords]
 
-    def answer(self, layer, request):
+    def answer(self, layer, token):
         """
         questions a question about users next course
         :param layer: current layer
@@ -31,20 +30,3 @@ class NextCourse:
         """
         return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
 
-
-class NewNotifications:
-
-    def canAnswer(self, layer):
-        return wt.wordNew in layer[wt.keywords] and wt.notifications in layer[wt.keywords]
-
-    def answer(self, layer, request):
-        """
-        questions a question about users notifications
-        :param layer: current layer
-        :return: question to the question
-        """
-        """
-        if (auth.isAuthenticated(request)):
-            return "siin peaks vastus olema"
-            """
-        return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."

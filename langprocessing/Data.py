@@ -1,10 +1,13 @@
 class Data:
-    def __init__(self,askedQuestion,frames,currentFrame):
-        #chatbot
+    def __init__(self, askedQuestion, frames, currentFrame, hangmanData, authData):
+        # chatbot
         self.askedQuestion = askedQuestion
         self.frames = frames
         self.currentFrame = currentFrame
-        #hangman
+        self.authData = authData
+        # hangman
+        self.hangmanData = hangmanData
 
     def __str__(self):
-        return str(self.askedQuestion) + " " + str(self.frames) + " " + str(self.currentFrame)
+        return str(self.askedQuestion) + " " + str(self.frames) + " " + str(self.currentFrame) + " " + str(
+            self.hangmanData)

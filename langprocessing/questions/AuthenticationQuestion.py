@@ -1,5 +1,5 @@
 from langprocessing.WordTags import WordTag as wt
-# from oisbotServer.views.auth import authentication as auth # ei tööta ilusti
+from oisbotServer.views.auth import authentication as auth # ei tööta ilusti
 from oisbotServer.views.auth import user
 
 class Authenticate:
@@ -15,16 +15,16 @@ class Authenticate:
         :param layer: current layer
         :return: True, if can answer
         """
-        return False #wt.auth in layer[wt.keywords]
+        return wt.auth in layer[wt.keywords]
 
-    def answer(self, layer, request):
+    def answer(self, layer):
         """
         answers based on authentication status
         :param layer: current layer
         :param request: user querry
         :return: answer based on authentication status
         """
-        if (self.xToken != None):
+        if auth.isTokkenValid(self.xToken).status_code == 200:
             return "Te olete juba sisse logitud"
         else:
             self.authStepInProgress = 1
@@ -60,15 +60,21 @@ class Authenticate:
         :return: greets the user by name
         """
         self.authStepInProgress = 0
-        # uncomment this once Authentication api works
-        """
+
         response = auth.login(self.username, inputString)
         if response.status_code == 200:
             self.xToken = response["X-Access-Token"]
             json = user.getUserBasicDetails(self.xToken)
             return "Tere " + json["first_name"] + "!"
-        """
         return "Midagi läks valesti"
+
+    def getData(self):
+        return [self.authStepInProgress, self.xToken, self.username]
+
+    def setData(self, data):
+        self.authStepInProgress = data[0]
+        self.xToken = data[1]
+        self.username = data[2]
 
 
 
