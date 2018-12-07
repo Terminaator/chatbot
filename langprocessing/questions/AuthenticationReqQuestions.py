@@ -1,6 +1,6 @@
 from langprocessing.WordTags import WordTag as wt
-#from oisbotServer.views.auth import authentication as auth #This class doesnt work properly
-
+from oisbotServer.views.auth import authentication as auth
+from oisbotServer.views.auth import user
 
 
 class AuthReqQuestions:
@@ -28,5 +28,9 @@ class StudyBookN:
         :param layer: current layer
         :return: question to the question
         """
-        return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
+        if (auth.isTokkenValid(token).status_code == 200):
+            userInf = user.getUserDetails(token)
+            print(userInf)
+        else:
+            return "Kahjuks ma ei saa teile vastata kuna te pole sisse logitud."
 

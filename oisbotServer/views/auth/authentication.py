@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import django
 from django.http import HttpResponse, JsonResponse
 from requests import Session
 import os
