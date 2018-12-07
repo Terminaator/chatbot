@@ -18,15 +18,13 @@ class RandomRedditJoke:
 
 class RandomRedditFunnyPic:
     def canAnswer(self, layer):
-        return wt.randomJoke in layer[wt.keywords] and wt.randomFunny in layer[wt.keywords]
+        return wt.randomFunny in layer[wt.keywords]
 
     def answer(self, layer):
         data = misc.getRandomPost("funny")
         post = data["data"]["children"][randint(0, 24)]["data"]
         if post["url"].endswith(".jpg") or post["url"].endswith(".png"):
             return {"answer": post["title"], "img": post["url"]}
-        # if "imgur" in post["url"]:
-        #     return {"answer": post["title"], "img": post["url"] }
         return {"answer": "Software lifecycle", "img": "https://wisevishvesh.files.wordpress.com/2010/10/sdlc.jpg"}
 
 
