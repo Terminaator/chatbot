@@ -1,8 +1,12 @@
 from bs4 import BeautifulSoup
 from django.http import HttpResponse, JsonResponse
 from requests import Session
+import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oisbotServer.settings')
+
 from rest_framework.decorators import api_view
 import requests
+
 
 
 def login(username, password):

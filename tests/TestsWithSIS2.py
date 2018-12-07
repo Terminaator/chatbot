@@ -73,8 +73,8 @@ class TestSimpleRequests(unittest.TestCase):
 
     def test_getStructureUnitCodes(self):
         sentProcessor = sentProc.SentenceProcessor()
-        self.assertEqual({wt.structureUnitCode: ['ltat'], wt.numbers: []}, sentProcessor.getWords("LTAT"))
-        self.assertEqual({wt.structureUnitCode: ['bgom01', 'loom01', 'ltom01'], wt.numbers: []},
+        self.assertEqual({1: [], wt.what: [], wt.structureUnitCode: ['ltat'], wt.numbers: []}, sentProcessor.getWords("LTAT"))
+        self.assertEqual({1: [], wt.what: [], wt.structureUnitCode: ['bgom01', 'loom01', 'ltom01'], wt.numbers: []},
                          sentProcessor.getWords("Botaanika osakond"))
 
     def testExtraQuestions(self):
@@ -138,7 +138,7 @@ class TestSimpleRequests(unittest.TestCase):
         bot = cbot.chatbot()
         sentence = "Mis on LTAT telefoninumber?"
         self.assertEqual(
-            "Arvutiteaduse instituudi(LTAT) telefoni number on (+372) 737 5445.",
+            "Arvutiteaduse instituudi(LTAT) telefoni number on +372 737 5445.",
             bot.getResponse(sentence)["answer"])
 
     def testEmailSUQuestion(self):
