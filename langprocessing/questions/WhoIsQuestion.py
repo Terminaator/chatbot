@@ -9,17 +9,13 @@ class WhoIs:
         :param currenLayer: currently used layer
         :return:return if client asked who question
         """
-
         sentence = layer[wt.sentence]
         if len(sentence) < 2:
             return False
         if sentence[1] != wt.verb or sentence[0] != wt.questionWord:
             return False
-        return (layer[wt.questionWord] in ["kes", "keda"] and len(
-            set(layer[wt.verb]).intersection({"olema", "valima"})
-        )) != 0 and (
-                       sentence[2] == wt.about
-               )
+        return (layer[wt.questionWord] in ["kes", "keda"] and
+                len(set(layer[wt.verb]).intersection({"olema", "valima", "on"}))) != 0 and sentence[2] == wt.about
 
     def answer(self, layer):
         """

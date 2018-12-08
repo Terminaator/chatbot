@@ -22,7 +22,7 @@ class ImportantUniWebsites:
             return "Tartu ülikooli raamatukogu asub aadressil https://utlib.ut.ee/"
         elif siteName == "ester":
             return "Ester asub aadressil https://www.ester.ee/"
-        elif siteName == "esileht":
+        elif siteName == "esileht" or siteName == "pealeht":
             return "Tartu ülikooli esileht asub aadressil https://www.ut.ee/"
         return "Arendajad unustasid antud veebilehe lingi lisada või midagi läks valesti."
 
