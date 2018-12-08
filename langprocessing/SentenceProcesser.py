@@ -52,7 +52,7 @@ class SentenceProcessor:
         keywords[wt.email] = {'email', 'mail', 'meil'}
         keywords[wt.address] = {'aadress', 'asukoht', 'asub', ''}
         keywords[wt.grade] = {'hindamine', 'hinne'}
-        keywords[wt.course] = {'aine', 'kursus'}
+        keywords[wt.course] = {'aine', 'kursus', 'õppeaine'}
         keywords[wt.wordNew] = {'uus'}
         keywords[wt.notifications] = {'teade'}
         keywords[wt.randomJoke] = {'nali'}
