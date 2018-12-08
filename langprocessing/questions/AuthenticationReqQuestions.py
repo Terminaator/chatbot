@@ -29,12 +29,11 @@ class StudyBookN:
         :param layer: current layer
         :param token: xAuthToken
         :return: question to the question
-
-        if (auth.isTokkenValid(token).status_code == 200):
-            userInf = user.getUserDetails(token)
-        else:
         """
-        return "Ei tea veel kust seda leiab :("
+        if (auth.isTokkenValid(token).status_code != 200):
+            return "Te peate sisse logima, et ma saaks teile vastata."
+        details = user.getStudentDetails(token)
+        return "Su matriklinumber on " + details["matricula_number"]
 
 class NextCourse:
     def canAnswer(self, layer):

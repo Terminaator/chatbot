@@ -61,7 +61,7 @@ class SentenceProcessor:
         keywords[wt.video] = {'vastus'}
         keywords[wt.auth] = {'sisene', 'login'}
         keywords[wt.hangman] = {'hangman'}
-        keywords[wt.studybookNr] = {'matrikel', 'matriklinumber'}
+        keywords[wt.studybookNr] = {'matrikkel', 'matriklinumber'}
 
 
         # Keywords what needs string in frame
