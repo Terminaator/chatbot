@@ -70,7 +70,7 @@ class SentenceProcessor:
         keywordsString[wt.pronoun] = {'mina', 'sina', 'tema', 'teie', 'meie', 'nemad'}
         keywordsString[wt.timeWord] = {'järgmine'}
         keywordsString[wt.websiteName] = {'courses', 'moodle', 'õis', 'õppeinfosüsteem', 'raamatukogu', 'ester',
-                                          'esileht'}
+                                          'esileht', 'pealeht'}
         keywordsString[wt.about] = {'õppekava', 'õppeaine', 'valikaine', 'vabaaine', 'ainepunkt', 'EAP', 'moodul',
                                     'alusmoodul', 'suunamoodul', 'erialamoodul', 'valikmoodul', 'vabaaine',
                                     'bakalaureusetöö', 'bakalaureus', 'peaeriala', 'kõrvaleriala',

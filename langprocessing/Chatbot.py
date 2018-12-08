@@ -23,6 +23,7 @@ class chatbot():
             WhoAreYou.WhoAreYou(),
             WhatUp.WhatUp(),
             WhatIsQuestion.WhatIs(),
+            WhoIsQuestion.WhoIs(),
             RandomPost.RandomRedditFunnyPic(),
             RandomPost.RandomRedditJoke(),
             RandomPost.RandomXkcd(),
