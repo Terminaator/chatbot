@@ -31,8 +31,8 @@ class Hangman:
         return "Teretulemast mängu HANGMAN! \n Ülesanne on ülilihtne, sina pakud tähti ja mina ütlen, " \
                "et seda tähte " \
                "minu mõeldud sõnas ei ole. Okei, nali, kindlasti suudad mõne tähe ka ära arvata. Aga " \
-               "alustame. Paku täht või miks ma " \
-               "mitte terve sõna."
+               "alustame. Paku täht või kohe õige " \
+               "sõna. Mängu saab kinni panna kirjutades sõna 'aitab'. Edu!"
 
     def createAnswer(self, input):
         """
