@@ -2,16 +2,15 @@ import requests
 import datetime
 
 def getUserBasicDetails(token):
-    request = requests.get('https://ois2dev.ut.ee/api/user/', headers={'X-Access-Token': token})
+    request = requests.get('https://ois2.ut.ee/api/user/', headers={'X-Access-Token': token})
     statusCode = request.status_code
-    print(token)
     if statusCode == 200:
         return request.json()
     raise Exception("reguest status code: ", statusCode)
 
 def getStudentDetails(token):
     personUuid = getUserBasicDetails(token)["person_uuid"]
-    request = requests.get('https://ois2dev.ut.ee/api/students/' + personUuid, headers={'X-Access-Token': token})
+    request = requests.get('https://ois2.ut.ee/api/students/' + personUuid, headers={'X-Access-Token': token})
     statusCode = request.status_code
     if statusCode == 200:
         return request.json()
@@ -23,7 +22,7 @@ def getNextCourseEvent(token):
     :param token:
     :return: Next course and its event
     """
-    request = requests.get('https://ois2dev.ut.ee/api/timetable/personal', headers={'X-Access-Token': token})
+    request = requests.get('https://ois2.ut.ee/api/timetable/personal', headers={'X-Access-Token': token})
     statusCode = request.status_code
     if statusCode != 200:
         raise Exception("reguest status code: ", statusCode)
@@ -55,7 +54,6 @@ def getCourseNextInWeek(json, deltaWeeks):
                 beginTime = datetime.datetime.strptime(t['begin_time'], "%H:%M:%S")
                 eventTimeThisWeek = eventTimeThisWeek.replace(hour=beginTime.hour, minute=beginTime.minute, second=0)
                 if now < eventTimeThisWeek and eventTimeThisWeek - now < comparableTime and eventTimeThisWeek.year == now.year:
-                    print(event)
                     comparableTime = eventTimeThisWeek - now
                     shortestIndex = i
                     nearestEvent = event
