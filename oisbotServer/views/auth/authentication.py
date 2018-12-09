@@ -48,7 +48,7 @@ def isTokkenValid(xAccessToken):
     if (xAccessToken == None):
         return JsonResponse(data={"login": "Logige palun sisse!"}, status=401)
     else:
-        check = requests.get("https://ois2dev.ut.ee/api/user", headers={'X-Access-Token': xAccessToken})
+        check = requests.get("https://ois2.ut.ee/api/user", headers={'X-Access-Token': xAccessToken})
         if (check.status_code == 401):
             return JsonResponse(data={"login": "Logige palun sisse!"}, status=401)
         elif (check.status_code == 200):
@@ -62,7 +62,7 @@ def isAuthenticated(request):
     if (x_access_token == None):
         return False
     else:
-        check = requests.get("https://ois2dev.ut.ee/api/user", headers={'X-Access-Token': x_access_token})
+        check = requests.get("https://ois2.ut.ee/api/user", headers={'X-Access-Token': x_access_token})
         if (check.status_code == 401):
             return False
         elif (check.status_code == 200):
