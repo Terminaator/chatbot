@@ -28,11 +28,11 @@ class Hangman:
         :return: returns first answer for the hangman game
         """
         self.active = True
-        return "HANGMAN", "Teretulemast mängu HANGMAN! \n Ülesanne on ülilihtne, sina pakud tähti ja mina ütlen, " \
-                          "et seda tähte " \
-                          "minu mõeldud sõnas ei ole. Okei, nali, kindlasti suudad mõne tähe ka ära arvata. Aga " \
-                          "alustame. Paku täht või miks ma " \
-                          "mitte terve sõna."
+        return "Teretulemast mängu HANGMAN! \n Ülesanne on ülilihtne, sina pakud tähti ja mina ütlen, " \
+               "et seda tähte " \
+               "minu mõeldud sõnas ei ole. Okei, nali, kindlasti suudad mõne tähe ka ära arvata. Aga " \
+               "alustame. Paku täht või miks ma " \
+               "mitte terve sõna."
 
     def createAnswer(self, input):
         """
@@ -45,7 +45,7 @@ class Hangman:
 
         if len(input) == 1:
             if input in self.guessedChars:
-                return False, "Oled juba tähte " + input + " pakkunud. Paku midagi muud. \nHetkel proovitud " + ' '.join(
+                return "Oled juba tähte " + input + " pakkunud. Paku midagi muud. \nHetkel proovitud " + ' '.join(
                     self.guessedChars) + "\n" + self.wordKnown
             else:
                 self.addChar(input)
@@ -56,22 +56,26 @@ class Hangman:
                     if self.isWordSet():
                         return self.answerIsSet(input)
                     else:
-                        return False, "Kahjuks tähte " + input + " sõnas ei ole. Vaja veel " + str(
+                        return "Kahjuks tähte " + input + " sõnas ei ole. Vaja veel " + str(
                             self.wordKnown.count("_")) + " ära arvata. \nHetkel proovitud " + ' '.join(
                             self.guessedChars) + " \n" + self.wordKnown
         elif input == "":
-            return False, "Võiks midagi ikka sisestada ka...\nHetkel proovitud " + ' '.join(
+            return "Võiks midagi ikka sisestada ka...\nHetkel proovitud " + ' '.join(
                 self.guessedChars) + " \n" + self.wordKnown
         else:
+            if input == "aitab":
+                self.active = False
+                return "Kui aitab siis aitab. Sõna, mida ma mõtlesin, ma sulle ikkagi ei ütle. Jäägu see elu lõpuni " \
+                       "Sind piinama."
             if self.word == input:
                 self.active = False
-                return True, "Arvasid ära, mõtlesin tõesti sõna " + self.word + "."
+                return "Arvasid ära, mõtlesin tõesti sõna " + self.word + "."
             else:
                 self.removeWordFromDict(input)
-                return False, "Ei, ma kohe kindlasti ei mõelnud sõna " + input + "... Proovi veel. \nHetkel proovitud " \
-                                                                                 "" \
-                                                                                 "" \
-                                                                                 "" + ' '.join(self.guessedChars) \
+                return "Ei, ma kohe kindlasti ei mõelnud sõna " + input + "... Proovi veel. \nHetkel proovitud " \
+                                                                          "" \
+                                                                          "" \
+                                                                          "" + ' '.join(self.guessedChars) \
                        + " \n" + self.wordKnown
 
     def answerIsSet(self, input):
@@ -85,11 +89,11 @@ class Hangman:
             self.setWordKnown()
             if "_" not in self.wordKnown:
                 self.active = False
-                return True, "Kaua läks, aga asja sai. Arvasid ära, sõna on tõesti " + self.wordKnown + "."
-            return False, "Täht " + input + " on tõesti sõnas sees. Tubli. Veel on vaja arvata " + str(
+                return "Kaua läks, aga asja sai. Arvasid ära, sõna on tõesti " + self.wordKnown + "."
+            return "Täht " + input + " on tõesti sõnas sees. Tubli. Veel on vaja arvata " + str(
                 self.wordKnown.count("_")) + " tähte\n" + "Hetkel proovitud " + ' '.join(
                 self.guessedChars) + "\n" + self.wordKnown
-        return False, "Kahjuks tähte " + input + " sõnas ei ole. Vaja veel " + str(
+        return "Kahjuks tähte " + input + " sõnas ei ole. Vaja veel " + str(
             self.wordKnown.count("_")) + " ära arvata. \nHetkel proovitud " + ' '.join(
             self.guessedChars) + " \n" + self.wordKnown
 
@@ -194,7 +198,8 @@ class Hangman:
     def getData(self):
 
         if self.active:
-            return [True, self.dictionary, self.wordLen, self.word, self.wordKnown, self.guessedChars, self.guessedRight]
+            return [True, self.dictionary, self.wordLen, self.word, self.wordKnown, self.guessedChars,
+                    self.guessedRight]
         else:
             return [False]
 

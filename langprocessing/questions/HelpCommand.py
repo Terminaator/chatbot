@@ -15,6 +15,7 @@ class HelpCommand:
         topics["Kursused:"] = ['Eap\'de arv', 'Kursuse kood', 'Eeldusained', 'Õpetamiskeel', 'Kirjeldus', 'Eesmärk',
                                'Koduleht', 'Eksami vastused', 'Õppejõud', 'Hindamine']
         topics["Struktuuriüksused:"] = ['Koodi tähendus', 'Koduleht', 'Telefoninumber', 'Email', 'Aadress']
+        topics["Sisse logitud kasutaja:"] = ['Järgmine aine']
         topics["Muu:"] = ['Moodle link', 'Courses link', 'Õisi link', 'Estri link', 'Pealehe link', 'Tartu ilma(Täna, homme, ülehomme)', "Mis/kes on ___", 'Nali', 'Pilt', 'Xkcd', 'Hangman']
 
         result = "Mina olen sõbralik(enamasti) õis2 resources. Mult saab küsida järgmiste teemade kohta."
