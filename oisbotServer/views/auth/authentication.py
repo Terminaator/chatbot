@@ -14,7 +14,7 @@ def login(username, password):
     response = HttpResponse()
     try:
         session = Session()
-        page = session.get("https://ois2dev.ut.ee/api/user/sso")
+        page = session.get("https://ois2.ut.ee/api/user/sso")
         parts = page.url.split("AuthState")
         login = session.post(parts[0] + "username=" + username + "&password=" + password + "&AuthState" + parts[1])
         soup = BeautifulSoup(login.content.decode("utf8"), features="lxml")
@@ -22,7 +22,7 @@ def login(username, password):
             'SAMLResponse': soup.find("input", {"name": "SAMLResponse"})["value"],
             'RelayState': soup.find("input", {"name": "RelayState"})["value"]
         }
-        session.post("https://ois2dev.ut.ee/Shibboleth.sso/SAML2/POST", data=payload)
+        session.post("https://ois2.ut.ee/Shibboleth.sso/SAML2/POST", data=payload)
         response["X-Access-Token"] = session.cookies["X-Access-Token"]
         response.status_code = 200
     except Exception:
