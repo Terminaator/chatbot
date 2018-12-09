@@ -21,7 +21,7 @@ class AuthReqQuestions:
 
 class StudyBookN:
     def canAnswer(self, layer):
-        return layer[wt.pronoun] == "mina" and wt.studybookNr in layer[wt.keywords]
+        return wt.studybookNr in layer[wt.keywords]
 
     def answer(self, layer, token):
         """
@@ -37,7 +37,7 @@ class StudyBookN:
 
 class NextCourse:
     def canAnswer(self, layer):
-        return layer[wt.pronoun] == "mina" and wt.course in layer[wt.keywords] and "järgmine" in layer[wt.timeWord]
+        return wt.course in layer[wt.keywords] and "järgmine" in layer[wt.timeWord]
 
     def answer(self, layer, token):
         """

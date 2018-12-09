@@ -11,7 +11,7 @@ class RandomRedditJoke:
 
 
     def answer(self, layer):
-        data = misc.getRandomPost("jokes")
+        data = misc.getRandomPost("dadjokes")
         post = data["data"]["children"][randint(0, 24)]["data"]
         return post["title"] + "\n" + post["selftext"]
 
